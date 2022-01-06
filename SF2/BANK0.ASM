@@ -13,13 +13,7 @@
 	bank	0		;Bank 0
 
 	db	0,0,0,0,0,0
-
-	incfile	blink.asm
-
-	incfile	sgtabs.asm
 	incfile	sgdata.asm
-
-	incfile	istrats.asm
 
 Do_HDR	=	1
 	INCPUB	shapes
@@ -63,7 +57,11 @@ abort_vn
 
 
 	bankend	0
-
+	bank	32
+	incfile	sgtabs.asm
+	incfile	istrats.asm
+	incfile	blink.asm
+	bankend	32
 	org    $00ffb0,$7fb0
 
     db    $30,$31,$58,$4a,$20,$20,$00,$00
@@ -106,20 +104,20 @@ abort_vn
 
 ;Hardware Vectors	-------------------------
 	org	$00ffe4,$7fe4
-	dw	cop_vn
-	dw	break_vn
-	dw	abort_vn
+	dw	cop_vn&WM
+	dw	break_vn&WM
+	dw	abort_vn&WM
 	dw	$0108
 	dw	$0000
 	dw	$010c
 
 	org	$00fff4,$7ff4
-	dw	cop_ve
+	dw	cop_ve&WM
 	dw	0
-	dw	abort_ve
-	dw	nmi_ve
-	dw	start
-	dw	irq_ve
+	dw	abort_ve&WM
+	dw	nmi_ve&WM
+	dw	start&WM
+	dw	irq_ve&WM
 
 
 

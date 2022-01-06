@@ -1021,7 +1021,9 @@ SelectExpert
 	ldx	#bitmapmes_missionselect_disableexpert&WM
 	lda.l	m_backupflags
 	and	#backupflag_expert
+	IFEQ	EXPERTBYDEFAULT
 	beq	.skip111
+	ENDC
 	ldx	#bitmapmes_missionselect&WM
 .skip111
 

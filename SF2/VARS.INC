@@ -4,16 +4,19 @@
 ;  #                #
 ;  ##################
 
-cesdemo		equ	0	; 0 is normal, 1/2
-janglish	equ	0	; 0 = english, 1 = japanese
-cestime		equ	4	; ces countdown (in minutes)
-pal			equ	0	; PAL/NTSC (1/0)
-contest		equ	0	; contest version
-german		equ	0	; german version
-french		equ	0	; french version
-fast		equ	1	; 21Mhz?
-CacheOn		equ	1	; Super FX chip cache on/off
-cesboot		equ	0	; Winter CES 1995 "Nintendo Presents" screen
+cesdemo				equ	0	; 0 is normal, 1/2
+janglish			equ	0	; 0 = english, 1 = japanese
+cestime				equ	4	; ces countdown (in minutes)
+pal					equ	0	; PAL/NTSC (1/0)
+contest				equ	0	; contest version
+german				equ	0	; german version
+french				equ	0	; french version
+fast				equ	1	; 21Mhz?
+CacheOn				equ	1	; Super FX chip cache on/off
+cesboot				equ	0	; Winter CES 1995 "Nintendo Presents" screen
+lockondef			equ 0	; Enable Lock-On by default
+forcehardandross	equ 0	; Force expert mode Andross on all difficulties
+expertbydefault		equ 0	; enable expert mode by default
 
 tamehomon	equ	0	; tame dama 1:homing on 0:off
 DamageHalf	equ	0	; 1:player no damage wo hanbun ni suru.

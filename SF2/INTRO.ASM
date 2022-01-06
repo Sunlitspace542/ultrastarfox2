@@ -1658,7 +1658,9 @@ check_title
 	km_setval	key_tatemaxptr1,2
 
 	km_bitcheckflag.l	m_backupflags,backupflag_expert
+	IFEQ	EXPERTBYDEFAULT
 	beq	.NoExpert
+	ENDC
 	km_setval	key_tatemaxptr1,3
 .NoExpert
 	inc	tiw_sprmode

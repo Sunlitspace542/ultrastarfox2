@@ -778,7 +778,9 @@ disp_yubi
 	longi
 disp_expert
 	lda	mre_expertdisplay
+	IFEQ	EXPERTBYDEFAULT
 	beq	.end	
+	ENDC
 
 	km_setval	kz_tpx,$10*8
 	km_setval	kz_tpy,$10*8

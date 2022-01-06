@@ -1996,7 +1996,9 @@ andorf_child_eyecube		equ	98
 	P_GSET		B,andorf_core_onetime,0
 .expit	P_EXPORT	andorf_core_hp,pbyte1
 
-;	P_GSET		B,Kdifficulty,dif_hard
+	IFNE	FORCEHARDANDROSS
+	P_GSET		B,Kdifficulty,dif_hard
+	ENDC
 
 	P_GSET		B,eandorf_mode,pm_ground
 	P_SET		area,-1
