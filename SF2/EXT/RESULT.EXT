@@ -1,0 +1,10 @@
+	global	MissionResult_l
+	global	HiscoreInput_l
+	global	Record_l
+	global	CalcTotalScore_l
+
+	global	SelectTestMissionMap_l
+	global	SelectTestPlanetStep_l
+
+;* TABLE *
+	global	timebonustbl

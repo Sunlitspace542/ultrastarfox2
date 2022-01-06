@@ -1,0 +1,428 @@
+	global	path_istrat
+	global	pathdha_istrat
+	global	rampathstart
+	global	pathexplode_istrat
+
+	global	p_reltoplayeron
+	global	p_reltoplayeroff
+	global	p_wait
+	global	p_alwaysgenvecson
+	global	p_alwaysgenvecsoff
+	global	p_setvel
+	global	ep_loop
+	global	p_addb
+	global	p_addw
+	global	p_faceplayer
+;--;	global	p_waitfaceplayer
+;	global	p_firelaser
+;	global	p_firelasercanhit
+;	global	p_firemissile
+	global	p_setb
+	global	p_setw
+	global	p_findshape
+	global	ep_findnextshape
+	global	p_faceshape
+	global	p_remove
+;--;	global	p_gotopos
+;--;	global	p_gotoshapepos
+	global	p_explode
+	global	p_immune
+	global	p_spaceshipon
+	global	p_spaceshipoff
+;	global	p_zacoon
+;	global	p_zacooff
+	global	p_distless
+	global	p_shapedistless
+	global	p_goto
+	global	p_igoto
+	global	p_accel
+	global	p_end
+	global	p_hitground
+;--;	global	p_hitwall
+	global	p_initanim
+	global	p_addanim
+	global	p_initcolanim
+	global	p_addcolanim
+;--;	global	p_debris
+	global	p_friend
+;--;	global	p_link
+	global	p_shapedead
+	global	p_iflevel
+	global	p_leftofplayer
+	global	p_rightofplayer
+	global	p_aboveplayer
+	global	ep_belowplayer
+	global	p_notfriend
+	global	p_msg
+	global	p_damage
+	global	p_almostdead
+	global	p_randomgoto
+	global	p_ifsameb
+	global	p_ifsameW
+	global	p_ifsamebb
+	global	p_ifsameWw
+	global	p_ifbetweenB
+	global	p_ifbetweenW
+	global	p_invincibleon
+	global	p_invincibleoff
+	global	p_playerdead
+	global	p_spawn
+	global	p_spawnlink
+	global	p_spawnchild
+;--;	global	p_zremoveon
+;--;	global	p_zremoveoff
+	global	p_debug
+	global	p_fire
+;--;	global	p_firecanhit
+	global	p_fireatplayer
+;--;	global	p_fireatplayercanhit
+	global	p_fireatshape
+	global	p_fireatshapecanhit
+	global	p_weapon
+	global	p_childdead
+	global	p_linkchild
+	global	p_flagshape
+	global	p_flagchild
+	global	p_flagmother
+	global	p_ifflag
+	global	p_text
+;--;	global	p_trail
+	global	p_gosub
+	global	p_return
+	global	p_do
+	global	p_next
+	global	p_inext
+	global	p_break
+	global	p_breakc
+	global	p_invisibleon
+	global	p_invisibleoff
+	global	p_always
+	global	p_alwaysoff
+	global	p_force
+	global	p_sprite
+	global	ep_setstrat
+	global	p_setvBB
+	global	p_setvBW
+	global	p_setvWW
+	global	p_setvWB
+	global	p_addvBB
+	global	p_addvBW
+	global	p_addvWW
+	global	p_addvWB
+	global	p_negB
+	global	p_negW
+	global	p_setrandomB
+	global	p_setrandomW
+	global	p_ifhitflag
+	global	p_collisionson
+	global	p_collisionsoff
+	global	p_qspawn
+	global	p_unlinkchild
+	global	p_behindplayer
+	global	p_msgwithmeter
+	global	p_doq
+	global	p_doalvarb
+	global	p_doalvarw
+	global	p_gosubalvar
+	global	p_unlinkself
+	global	p_removechild
+	global	p_ifzerob
+	global	p_ifzerow
+	global	p_ifnotzerob
+	global	p_ifnotzerow
+	global	p_set0b
+	global	p_set0w
+	global	p_incb
+	global	p_incw
+	global	p_decb
+	global	p_decw
+	global	p_addrotx
+	global	p_addroty
+	global	p_addrotz
+	global	p_addworldx
+	global	p_addworldy
+	global	p_addworldz
+	global	p_addws
+	global	p_wait1
+	global	p_importb
+	global	p_importbq
+	global	p_importwq
+	global	p_importw
+	global	p_exportb
+	global	p_exportw
+	global	p_exportbq
+	global	p_exportwq
+	global	p_achaseB
+	global	p_achaseW
+	global	p_waitachaseB
+	global	p_waitachaseW
+	global	p_chasevBB
+	global	p_chasevBW
+	global	p_chasevWW
+	global	p_chasevWB
+	global	p_start65816
+	global	p_ifnot
+	global	p_particle
+	global	p_shadowon
+	global	p_shadowoff
+	global	p_div2b
+	global	p_div2w
+	global	p_indexb
+	global	p_indexw
+	global	p_autoindexbb
+	global	ep_autoindexbw
+	global	p_pushb
+	global	p_pushw
+	global	p_pullb
+	global	p_pullw
+	global	p_withinrange
+	global	ep_shapeinrange
+	global	p_becomechild
+	global	p_becomeshape
+	global	p_becomemother
+	global	p_unbecome
+	global	p_become
+	global	p_score
+	global	p_player1
+	global	p_player2
+	global	p_ifplayer
+	global	p_swapplayer
+	global	p_lockplayeron
+	global	p_lockplayeroff
+	global	p_playerincone
+	global	p_circle
+	global	p_circleB
+	global	p_circleW
+	global	p_circleplayer
+	global	p_circleplayerB
+	global	p_circleplayerW
+	global	p_movein
+	global	p_moveinB
+	global	p_moveinW
+	global	p_moveinonplayer
+	global	p_moveinonplayerB
+	global	p_moveinonplayerW
+	global	p_scoreb
+	global	p_scorew
+	global	p_becomeinert
+	global	p_relativeon
+	global	p_relativeoff
+	global	p_stampstart
+	global	p_becomechildb
+	global	p_clearstack
+	global	p_setspweap
+	global	p_forcejump
+	global	ep_transsparwing
+	global	ep_transgdarwing
+	global	ep_plrtranslock
+	global	ep_transrobot
+	global	ep_transufo
+	global	p_incspweap
+	global	p_ifplrarwing
+	global	p_ifplrrobot
+	global	p_ifplrufo
+	global	p_shockcam1
+	global	p_shockcam2
+	global	p_hitflashtrig
+	global	p_begindemo
+	global	p_enddemo
+	global	p_activeon
+	global	p_activeoff
+	global	p_clippingon
+	global	p_clippingoff
+	global	p_behindkplayer
+	global	ep_sound
+	global	ep_sound2
+	global	ep_sounddist
+	global	ep_soundpos
+	global	ep_soundnear
+	global	ep_soundnearpos
+	global	p_sounddistpos
+	global	ep_soundvis
+	global	ep_sounddirect
+	global	p_rangecheckon
+	global	p_rangecheckoff
+	global	p_pool
+	global	p_playertunnelon
+	global	p_playertunneloff
+	global	p_ifpilot
+	global	p_notpilot
+	global	p_ifplrfullhp
+	global	p_ifswitch,p_setswitch,p_clrswitch
+	global	p_ifswitchv,p_setswitchv,p_clrswitchv
+	global	p_plrturnon
+	global	p_plrturnoff
+	global	p_plrforceturn
+	global	p_plrforceway
+
+	global	p_msgalvar
+
+	global	p_ifbossflagon,p_ifbossflagoff
+	global	p_setbossflagon,p_setbossflagoff
+	global	p_clrbossflag
+	global	p_faceplayery
+
+	global	p_gincb,p_gincw
+	global	p_gdecb,p_gdecw
+
+	global	p_addgb,p_addgw
+	global	p_addbg,p_addwg
+
+	global	p_copyplayerpos
+
+	global	p_extracommands
+
+	global	ep_faceplayerimmediate
+	global	ep_faceshapeimmediate
+
+	global	ep_setcameraimmediate,ep_setcamera
+
+	global	p_iflargerb,p_iflargerw
+
+	global	p_setmarker1
+	global	p_setmarker2
+	global	ep_ifplrboost
+	global	ep_ifplrbrake
+	global	ep_findenemyshape
+	global	ep_objincone
+;	global	ep_objdead
+;	global	ep_notobjdead
+	global	ep_plrburn
+
+	global	ep_moveplayeroff,ep_moveplayeron
+
+	global	p_adjustrot
+	global	ep_plrshield
+	global	ep_camrbyofs
+	global	ep_plrweaplevelup
+
+	global	p_nextbossmode
+
+	global	ep_poschildrenon
+	global	ep_poschildrenoff
+	global	ep_Scenery
+	global	ep_clearsequence
+	global	ep_zdistless
+
+	global	ep_inplayerscone
+
+	global	ep_moveinonshape
+	global	ep_moveinonshapeB
+	global	ep_moveinonshapeW
+
+	global	ep_circleshape
+	global	ep_circleshapeB
+	global	ep_circleshapeW
+
+	global	ep_waitB
+
+	global	ep_groundobjon
+	global	ep_groundobjoff
+
+	global	ep_hitflashon
+	global	ep_hitflashoff
+
+	global	ep_andframegoto
+	global	ep_chainpos
+	global	ep_chainposalvar
+	global	ep_faceplayerofs
+	global	ep_Pweaphit
+	global	ep_Pweapinclmt
+	global	ep_Pweapdeclmt
+	global	ep_campanshapeimmediate
+	global	ep_campanshape
+	global	ep_campanplayerimmediate
+	global	ep_campanplayer
+	global	ep_setdemo
+	global	ep_demoend
+	global	ep_demosetmap
+	global	ep_ifdemoend
+	global	ep_ifnotdemo
+	global	ep_ifsamedemo
+	global	ep_copypos2view
+	global	ep_copyrot2view
+	global	ep_copyplayerrot
+	global	ep_copyrot2player
+	global	ep_copypos2player
+	global	ep_ifplrweaplevel
+	global	ep_campandemoshape
+	global	ep_campandemoshapeimmediate
+	global	ep_demoshape
+	global	ep_clrdemoshape
+	global	ep_playershape
+	global	ep_setsndplace
+	global	ep_reboundlaser
+
+	global	ep_faceviewimmediate
+
+	global	p_forcegosub
+
+
+	global	ep_copypos2viewimmediate
+	global	ep_copyrot2viewimmediate
+
+	global	ep_copyviewpos
+	global	ep_copyviewrots
+	global	ep_copyviewpos_demo
+	global	ep_copyviewrots_demo
+
+	global	ep_setbg
+
+	global	ep_hitslope
+
+	global	ep_shiftrb
+	global	ep_shiftrw
+
+	global	p_circlewindow
+	global	p_scrflash
+
+	global	ep_circlewindowpos
+	global	ep_bigcirclewindow
+	global	ep_warpcirclewindow
+
+	global	ep_indexbw,ep_indexww
+	global	p_spawnchildrot0
+
+	global	ep_fadein
+	global	ep_fadeout
+
+	global	ep_quadvecson
+	global	ep_quadvecsoff
+	global	ep_nextmap
+
+
+	global	ep_wobble
+
+	global	ep_ifareaout
+	global	ep_ifplrturnon
+	global	ep_ifplrturnoff
+	global	ep_plrcontrolon
+	global	ep_plrcontroloff
+
+	global	p_gsetb,p_gsetw
+	global	ep_alwayscnt,ep_iflasttrig
+
+	global	ep_passsoundon
+	global	ep_passsoundoff
+
+	global	ep_enemydmgSE
+	global	ep_enemyrbdSE
+	global	p_radarobj
+	global	p_clrtype
+	global	p_trigalways
+	global	p_initanim0
+
+	global	ep_fireobjon
+	global	ep_fireobjoff
+
+	global	ep_addrandomw
+	global	ep_addrandomb
+
+	global	p_always_r
+	global	ep_settype
+	global	ep_setbossmode
+	global	ep_swapvar
+	global	ep_alwaysoff_all
+
+	global	ep_tamehomon
+	global	ep_iftamehomon

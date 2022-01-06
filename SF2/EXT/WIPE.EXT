@@ -1,0 +1,32 @@
+
+	global	wipe_l
+	global  wipeinit_l
+
+	global	nowipeopen_l
+	global	nowipeclose_l
+	global	titleopen_l
+	global	titleclose_l
+	global	misplopen_l
+	global	misplclose_l
+	global	mismapopen_l
+	global	mismapclose_l
+	global	misexpopen_l
+	global	misexpclose_l
+	global	missionopen_l
+	global	missionclose_l
+	global	batplopen_l
+	global	batplclose_l
+	global	batflopen_l
+	global	batflclose_l
+	global	battleopen_l
+	global	battleclose_l
+	global	pauseopen_l
+	global	pauseclose_l
+	global	endingopen_l
+	global	endingclose_l
+
+	global	idx_wipegame_open
+
+
+
+

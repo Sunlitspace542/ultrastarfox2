@@ -1,0 +1,81 @@
+;************************************************************************
+;*			Temporary Path Data				*
+;*									*
+;************************************************************************
+;	global	path_kroty
+
+	IFEQ	1
+	global	path_ktest
+	global	path_ktestlvsnd,path_ktestlvsnd2,path_ktestlvsnd3,path_ktestlvsnd4
+	global	path_ktestsndpos
+	global	path_ktestsnddist
+	global	path_ktestsnddistpos
+	global	path_ktestsndnearpos
+	global	path_ktestsnddirect
+	global	path_ktestsndvis
+	global	path_kexplain
+	global	path_kexp1,path_kexp2,path_kexp3,path_kexp4,path_kexp5
+	global	path_kexp6,path_kexp7,path_kexp8,path_kexp9,path_kexp10
+
+	global	path_khp
+	global	path_kcolloff
+	global	path_kmuteki
+	global	path_k3Dmove
+	global	path_kshadowon
+	global	path_kshadowoff
+	global	path_sprite_0
+	global	path_sprite_1
+	global	path_sprite_2
+	global	path_ksprite
+	global	path_krotx
+	global	path_kroty
+	global	path_krotz
+	global	path_krotxy
+	global	path_krotxyz
+;************************************************************************
+;*			Friend Base Path Data				*
+;************************************************************************
+	global	path_kbase0
+
+;************************************************************************
+;*			Enemy Boss Path Data				*
+;************************************************************************
+	global	path_dancing
+
+;************************************************************************
+;*			Enemy Zaco Path Data				*
+;************************************************************************
+	global	path_kpzaco_5
+	global	path_krobo_0
+	global	path_kbatta_0
+	global	path_kgunshot_0
+;************************************************************************
+;*			Item Path Data					*
+;************************************************************************
+	global	path_kg_coin_0
+;************************************************************************
+;*			Building Path Data				*
+;************************************************************************
+	global	path_kbuild
+	global	path_kisu_0
+;************************************************************************
+;*			Ring Path Data					*
+;************************************************************************
+	global	path_ktest1
+	global	path_ktest2
+	global	path_ktest3
+	global	path_ktest4
+	global	path_ktest5
+	global	path_ktest6
+
+	global	path_kring
+	global	path_kring2
+	global	path_kring3
+	global	path_kring4
+	global	path_kring5
+;************************************************************************
+;*			Recover Path 					*
+;************************************************************************
+	global	path_kboxrecover
+
+	ENDC

@@ -1,0 +1,61 @@
+
+; test object
+
+	global	path_mr_debug
+;	global	path_youwin
+;	global	path_youlost
+
+; boss
+	global	path_superdragon
+	global	path_and_box0
+
+; player's effect
+
+	global	path_healeffect
+	global	path_heal
+	global	path_overheat
+	global	path_playershield
+	global	path_boost
+	global	path_brake
+	global	path_damagespark
+	global	path_wingspark
+;	global	path_armerjet
+;	global	path_armerarm
+	global	path_burnning
+
+	global	path_p_explode_s_rnd31
+	global	path_p_explode_l
+	global	path_p_explode_s
+
+	global	path_bomeffect
+
+	global	path_tametame
+
+; weapon
+
+;;;;	global	path_arwingdummy
+
+; player weapon
+
+	global	path_Ppowerdlaser
+
+	global	path_Prebound
+;;;;	global	path_PreboundBAT
+
+;;;;	global	path_Flaser
+
+
+; title demo pos data
+
+	global	title_cam_cut3_x
+	global	title_cam_cut3_y
+	global	title_cam_cut3_z
+	global	title_cam_cut4_x
+	global	title_cam_cut4_y
+	global	title_cam_cut4_z
+	global	title_cam_cut5_x
+	global	title_cam_cut5_y
+	global	title_cam_cut5_z
+	global	title_cam_cut6_x
+	global	title_cam_cut6_y
+	global	title_cam_cut6_z

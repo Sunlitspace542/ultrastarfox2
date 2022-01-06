@@ -1,0 +1,90 @@
+
+	global	Pcredits_dragon
+	global	Pcredits_stepup
+	global	Pcredits_crusher
+	global	Pcredits_suisei
+
+	global	path_clrrbofdirector
+
+	global	destruct_space_cam_time0
+
+	global	path_superdragon_demo
+
+	global	path_gotochikadirector
+	global	path_gotod_sendirector
+	global	path_gotokaiteidirector
+	global	path_gotofinaldirector
+
+;	global	path_gd_arwing000
+;	global	path_gd_arwing020
+;	global	path_gd_arwing040
+;	global	path_gd_arwing060
+;	global	path_gd_arwing080
+;	global	path_gd_arwing0a0
+;	global	path_gd_arwing0c0
+;	global	path_gd_arwing0e0
+
+	global	path_clrawof
+
+	global	path_goto_es0_last_ka
+
+	global	es0_cam_4x
+	global	es0_cam_4y
+	global	es0_cam_4z
+
+	global	path_credits_dragon
+
+	global	path_letsgo_awing
+	global	path_letsgo_friend
+	global	path_letsgo_clip
+
+	global	suisei_enter_camx
+	global	suisei_enter_camy
+	global	suisei_enter_camz
+	global	suisei_into_camx
+	global	suisei_into_camy
+	global	suisei_into_camz
+
+
+	global	destruct_space_camx	; 27 destructcam
+	global	destruct_space_camy	; 27 destructcam
+	global	destruct_space_camz	; 27 destructcam
+	global	destruct_ground_camx1	; 28 destructcam
+	global	destruct_ground_camy1	; 28 destructcam
+	global	destruct_ground_camz1	; 28 destructcam
+
+;컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+;	DEMO DIRECTOR TABLE
+;컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+
+	global	path_STARWOLFdirector
+
+	global	path_suiseidirector
+	global	path_destructdirector
+	global	path_scrambledirector
+	global	path_armadadirector
+	global	path_letsgodirector
+	global	path_titledirector
+	global	path_logodirector
+	global	path_gameoverlogodirector
+	global	path_d_sendirector
+	global	path_enter_d_sendirector
+	global	path_chikadirector
+	global	path_enter_chikadirector
+	global	path_clear_d_sendirector
+	global	path_clear_chikadirector
+	global	path_clear_kaiteidirector
+	global	path_destruct_coredirector
+	global	path_kaiteidirector
+	global	path_enter_kaiteidirector
+	global	path_start_chikadirector
+	global	path_start_kaiteidirector
+	global	path_start_d_sendirector
+	global	path_start_finaldirector
+	global	path_attackdirector
+	global	path_attackbackdirector
+	global	path_endseq0director
+	global	path_taimandirector
+
+
+

@@ -1,0 +1,21 @@
+	global	bglists
+	global	dec_chr_l,dec_l
+	global	kdecrunchpal_l
+
+	global	bg_title
+	global	bg_missionexplain,bg_missiongameover,bg_missioncontinue
+	global	bg_missionstage1,bg_missionstage2,bg_missionstage3
+	global	bg_missionstage4,bg_missionstage5,bg_missionstage6
+	global	bg_room,bg_tutu,bg_sun,bg_corneria
+
+	global	bg_titledemo,bg_startenemydemo,bg_startarwingdemo
+	global	bg_entermshipdemo,bg_entermeteordemo
+	global	bg_attackcorneriademo,bg_explodecorneriademo
+
+	global	bg_missionextra1,bg_missionextra2
+	global	bg_missionextra3,bg_missionextra4
+	global	bg_missionsos1,bg_missionsos2,bg_missionsos3
+
+	global	bg_battlestage1,bg_battlestage2,bg_battlestage3
+;;;	global	bg_battlestage4,bg_battlestage5
+	global	bg_typeselect,bg_training

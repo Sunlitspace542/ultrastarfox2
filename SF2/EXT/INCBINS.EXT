@@ -1,0 +1,111 @@
+	global	msprites1,msprites2,msprites3,allcolscru
+	global	mworldspr
+
+;******************** CGX DATA ***********************
+
+	global	w0_ccr
+	global	w1_ccr
+	global	kawaguti_cgx		;debug mode sprites cgx
+
+;	global	w3_ccr
+;	global	w5_cgx
+;	global	w1_cgx
+;	global	w2_cgx
+
+	global	a0_ccr
+	global	a1_ccr
+	global	a2_ccr
+	global	a3_ccr
+	global	a4_ccr
+	global	a5_ccr
+	global	a6_ccr
+	global	a7_ccr
+	global	a8_ccr
+;	global	a9_ccr
+;	global	a10_ccr
+	global	a11_ccr
+;	global	a12_ccr
+	global	a13_ccr
+;	global	a14_ccr
+	global	a15_ccr
+;	global	a16_ccr
+
+	global	b0_ccr
+	global	b1_ccr
+;	global	b2_ccr
+;	global	b3_ccr
+	global	b4_ccr
+	global	b7_ccr
+	global	b8_ccr
+	global	b9_ccr
+;	global	b10_ccr
+	global	b12_ccr
+;	global	b13_ccr
+	global	b14_ccr
+	global	b15_ccr
+	global	b16_ccr
+
+	global	e0_ccr
+	global	e1_ccr
+	global	e2_ccr
+	global	e3_ccr
+	global	e4_ccr
+	global	e5_ccr
+	global	e6_ccr
+	global	e7_ccr
+	global	e8_ccr
+	global	e9_ccr
+
+;	global	tst_ccr
+;	global	bg1_pcr
+;;;	global	bg11_cgx
+;;;	global	sen_ccr,sen_pcr
+;******************** SCREEN DATA ***********************
+	global	a0_pcr
+	global	a1_pcr
+	global	a2_pcr
+	global	a3_pcr
+	global	a4_pcr
+	global	a5_pcr
+	global	a6_pcr
+	global	a7_pcr
+	global	a8_pcr
+	global	a9_pcr
+	global	a10_pcr
+	global	a11_pcr
+	global	a12_pcr
+	global	a13_pcr
+	global	a15_pcr
+	global	a18_pcr
+;	global	a27_pcr
+;	global	a28_pcr
+
+;	global	a14_pcr
+;	global	a16_pcr
+;	global	a17_pcr
+;	global	a19_pcr
+;	global	a20_pcr
+;	global	a21_pcr
+;	global	a22_pcr
+;	global	a23_pcr
+;	global	a24_pcr
+;	global	a25_pcr
+
+	global	b0_pcr
+	global	b1_pcr
+	global	b2_pcr
+	global	b3_pcr
+	global	b4_pcr
+	global	b5_pcr
+	global	b6_pcr
+	global	b7_pcr
+	global	b8_pcr
+	global	b10_pcr
+	global	b11_pcr
+	global	b12_pcr
+	global	b13_pcr
+	global	b14_pcr
+	global	b15_pcr
+	global	b16_pcr
+;	global	tst_pcr
+	global	keyscr_l

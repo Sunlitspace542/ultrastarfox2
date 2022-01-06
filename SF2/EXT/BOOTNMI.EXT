@@ -1,0 +1,2 @@
+	global	startboot,restart
+	global	startsfx_l

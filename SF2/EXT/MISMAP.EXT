@@ -1,0 +1,7 @@
+	global	SelectMissionMap_l
+	global	init_mmhvscroll_l
+	global	init_ealcs_l
+	global	mm_ROMRoutine_l
+	global	mm_planetkazutbl
+	global	bs_totalkazutbl
+	global	kplswap_l

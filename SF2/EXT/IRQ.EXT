@@ -1,0 +1,17 @@
+	global	randtrans
+	global	SetDmaVramParams_l,SetDmaCOLAdrLen_l,SetDmaOARAMParams_l
+	global	SetDmaColRAMParams_l
+	global	SetDmaRomRamParams_l,SetDmaRamRamParams_l,SetDmaMRamRamParams_l
+	global	iv_mismapirq
+	global	iv_titleirq	
+	global	iv_sndwaitirq
+;;;	global	iv_irqkawablank
+	global	iv_pauseirq
+	global	iv_newbg2chr
+	global	iv_newpalette
+	global	iv_irqsetmode1
+	global	iv_irqsetmode2
+	global	iv_testirq
+	global	find_window_pri_l
+	global	KGetRandomPtr_l
+	global	data0

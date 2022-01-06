@@ -1,0 +1,14 @@
+	global	gotoheight_srou_l
+	global	gotoxpos_srou_l
+;	global	heatup_tab
+	global	rotzofsdat
+	global	copy_player_shield_l
+	global	copy_Splayer_shield_l
+	global	copy_final_Splayer_shield_l
+	global	copy_kaitei_Splayer_shield_l
+	global	title_bwing_path_l
+	global	STARWOLFdirector_demo_path_l
+	global	pc_cam_path_l
+	global	heal_path00_l
+	global	heal_path01_l
+	global	heal_path02_l

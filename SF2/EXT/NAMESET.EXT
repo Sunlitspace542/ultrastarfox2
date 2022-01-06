@@ -1,0 +1,33 @@
+	
+	global	Init_nameset_l
+	global	Main_nameset_l
+	global	NMI_nameset_l
+
+
+	global	yjresult_init_l
+	global	yjresult_main_l
+
+
+
+	global	yjcheck_hiscore_l
+
+	global	Check_backupRAM_l
+
+	global	Read_backupRAM_coindata_l
+	global	Write_backupRAM_coindata_l
+
+	global	Read_backupRAM_playertype_l
+	global	Write_backupRAM_playertype_l
+
+	global	Write_backupRAM_hiscore_l
+
+	global	Read_backupRAM_playerconfig_l
+	global	Write_backupRAM_playerconfig_l
+
+
+	global	Read_backupRAM_soundmode_l
+	global	Write_backupRAM_soundmode_l
+
+	global	Write_backupRAM_enableexpert_l
+
+

@@ -1,0 +1,39 @@
+;;;	global	SetBGM_l
+	global	Stereo_l
+	global	Initial_sound_l
+	global	TransferSoundBGM_l
+
+	global	sound_title
+	global	sound_selectmissionplayer
+	global	sound_selectmissionmapexp,sound_selectmissionmap,sound_selectmissionmapfinal
+	global	sound_missionresult
+	global	sound_debugmissionmap
+	global	sound_missionexplain
+	global	sound_missionstage1
+	global	sound_missionstage2,sound_missionstage3
+	global	sound_missionstage4,sound_missionstage5
+	global	sound_missionstage6
+	global	sound_missionextra1
+	global	sound_missionextra2
+	global	sound_missionextra3
+	global	sound_missionextra4
+	global	sound_missionsos1
+	global	sound_missionsos2
+	global	sound_missionsos3
+	global	sound_playerdown
+	global	sound_corneriafelldemo
+	global	sound_specialenemydemo
+	global	sound_planetcanondemo
+
+	global	sound_selectbattlefield
+	global	sound_selectbattleplayer
+	global	sound_battlestage1,sound_battlestage2
+	global	sound_battlestage3
+;;;	global	sound_battlestage4,sound_battlestage5
+
+	global	sound_typeselect,sound_training
+
+	global	transfersoundplayer_l
+	global	transfersoundprog_l
+	global	soundtranstbl
+	global	configSNDtbl,configSNDtbllen

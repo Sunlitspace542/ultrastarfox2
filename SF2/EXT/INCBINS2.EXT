@@ -1,0 +1,28 @@
+;*********************************************************************
+;			sound data labels
+;			1995. 6.14(WED)
+;*********************************************************************
+;
+;******************* SOUND *********************
+	global	fox2snd,sdse1,sdse2
+	global	ffset1,ffset2,spset1,spset2,ggset1,ggset2
+	global	foxvox,falvox,pepvox,slpvox,ga1vox,ga2vox
+	global	music01,music02,music03,music04
+	global	music05,music06,music07,music08,music09
+	global	music10,music11,music12,music13,music14
+	global	music15,music16,music17
+	global	music18,music18b
+	global	music19
+	global	music20,music21,music22,music23,music24
+	global	music25
+
+	global	sdgrd1,sdgrd2,sdgrd3
+	global	sdend1
+	global	sdspac
+	global	sdinf,sdcnt,sdovr,sddis,sdtlk			;,sdopn,sdad1
+	global	sdst1,sdst2,sdst3,sdst4,sdst5,sdst6
+	global	sdst7					;,sdst8,sdst9
+	global	grdwtr,vlcwtr,seawtr,mapse
+
+
+

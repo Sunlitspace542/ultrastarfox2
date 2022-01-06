@@ -1,0 +1,285 @@
+;	global	killjet_srou_l
+	global	makehealeffect_srou_l
+	global	calc_sin16_l
+	global	calc_cos16_l
+	global	Pcalc_muls161632_l
+	global	hamonofstab
+;;;	global	makegottun_srou_l
+;	global	tp_alarmon_srou_l
+;	global	tp_alarmoff_srou_l
+	global	checkinthesea_srou_l
+	global	makesplashpool_srou_l
+	global	makeMsplashpool_srou_l
+	global	makeclipeffect_l
+	global	makesmokeryusa_srou_l
+	global	makeboost_srou_l
+	global	makebubble_srou_l
+;;;	global	makerisebubble_srou_l
+;;;	global	makesplash_srou_l
+	global	makeMsplash_srou_l
+	global	makehamon_srou_l
+	global	makesparkL_srou_l
+	global	makeshield_srou_l
+	global	makesparkR_srou_l
+	global	makeoverheat_srou_l
+	global	makebrakeL_srou_l
+	global	makebrakeR_srou_l
+;	global	makejet_srou_l
+;	global	makeLRarm_srou_l			; al_sbyte1	: 1=player1 2=player2
+	global	makeshadow_srou_l
+	global	brokenleg_istrat
+	global	fire_AW_specialweapon_l
+	global	fire_powerd_srou_l
+	global	tp_checkshoot_l
+	global	ARWINGhit_surface_l
+	global	ARWINGhit_slope_l
+	global	ARWINGhit_wall_l
+	global	ARMERhit_tutu_l
+	global	noturnxlmt_srou_l
+	global	checkslantway_srou_l
+	global	checkYclip_srou_l
+	global	makeburnning_l
+	global	cp_playervecspos_l
+	global	blockmap_srou_l
+
+
+;	global	makefriend_srou_l
+
+	global	cc_copy2buffer_l
+	global	cc_alart_l
+	global	cc_bakbuffer_l
+	global	cc_bakbuffer07_l
+	global	cc_addbuffer_white_l
+	global	cc_addbuffer_whiteYOKO_l
+	global	cc_addbuffer_white07_l
+	global	cc_addbuffer_whiteFULL07_l
+	global	cc_addbuffer_whiteFULL07BLUE_l
+	global	cc_setbuffer_black_l
+	global	cc_setbuffer_gray_l
+	global	cc_marinecol_l
+	global	cc_setbuffer_pc_l	; planet cannon
+	global	cc_setbuffer_pc2_l	; planet cannon
+	global	cc_setbuffer_title_l	; title
+	global	cc_whitecolFULL_l
+	global	cc_setbuffer_fire_l
+
+
+;;;	global	maketranslockspark_srou_l
+	global	makedamagespark_srou_l
+
+;	global	Nextmap_trapper_srou_l
+
+;	global	cc_nightcol_l
+	global	cc_andorfcol_l
+	global	cc_whitecol_l
+	global	cc_graycol_l
+	global	cc_destructcol_l
+
+	global	decHP_srou_l
+
+	global	maketametame_srou_l
+
+	global	rebound_srou_l
+
+	global	inclevel_path_l
+
+
+
+	global	wingman_RB_1_shape
+	global	wingman_AW_col
+	global	wingman_RB_col
+	global	player_RB_shape
+	global	player_l_shape
+	global	player_r_shape
+	global	player_swim_l_shape
+	global	player_swim_r_shape
+	global	pprb_posy
+	global	pprb_posx
+
+	global	cds_explosions.rx
+	global	cds_explosions.ry
+	global	cds_explosions.x
+	global	cds_explosions.y
+	global	cds_explosions.z
+	global	cds_explosions.count
+	global	cds_explosions.vel
+
+	global	es0_cam.x
+	global	es0_cam.y
+	global	es0_cam.z
+	global	es0_cam.rx
+	global	es0_cam.ry
+	global	es0_cam.rz
+
+	global	attackdirector.rotxtab
+	global	attackdirector.Ehighttab
+
+	global	armada_d_sen.x
+	global	armada_d_sen.y
+	global	armada_d_sen.z
+	global	armada_d_sen.vz
+	global	armada_d_sen.vy
+
+	global	armada_ninja_warp.nwx
+	global	armada_ninja_warp.nwy
+
+	global	armada_suisei.x
+	global	armada_suisei.y
+	global	armada_suisei.z
+
+	global	destruct_g_buil0.x
+	global	destruct_g_buil0.z
+
+	global	playershield.tab
+
+	global	superdragon_body.hpdat
+
+	global	superdragon_body.toguro_dat
+
+	global	friendNo_shape_srou_l
+
+	global	sw_wolf
+
+	global	title_bwing.x
+	global	title_bwing.y
+	global	title_bwing.z
+	global	title_bwing.rotx
+	global	title_bwing.roty
+	global	title_bwing.count
+	global	title_bwing.childx
+	global	title_bwing.childy
+	global	title_bwing.childz
+	global	title_bwing.crotz
+
+	global	superdragon_demo.dat0
+
+	global	es0_starfox.x
+	global	es0_starfox.y
+	global	es0_starfox.z
+	global	es0_starfox.rx
+	global	es0_starfox.ry
+	global	es0_starfox.rz
+	global	es0_starfox.count
+	global	es0_starfox.count1
+	global	es0_starfox.count2
+	global	es0_starfox.count3
+	global	es0_starfox.count4
+	global	es0_starfox.vel
+
+	global	suisei_friends.x
+	global	suisei_friends.y
+	global	suisei_friends.z
+	global	suisei_friends.count
+	global	suisei_friends.count2
+	global	suisei_friends.count4
+	global	suisei_friends.rx
+	global	suisei_friends.ry
+	global	suisei_friends.rz
+	global	suisei_friends.cry
+	global	suisei_friends.crx
+	global	suisei_friends.vel
+	global	pc_d_sen_beam
+
+	global	suisei_enemy0.x
+	global	suisei_enemy0.y
+	global	suisei_enemy0.z
+	global	suisei_enemy0.rx
+	global	suisei_enemy0.ry
+
+	global	gd_arwing.x
+	global	gd_arwing.y
+	global	gd_arwing.z
+	global	gd_arwing.irx
+	global	gd_arwing.iry
+	global	gd_arwing.irz
+	global	gd_arwing.rx
+	global	gd_arwing.ry
+	global	gd_arwing.rz
+	global	gd_arwing.count
+	global	gd_arwing.count2
+
+	global	gd_arwing.count3
+
+	global	gd_cam.cx
+	global	gd_cam.cy
+	global	gd_cam.cz
+	global	gd_cam.count
+
+	global	title_cam.x
+	global	title_cam.y
+	global	title_cam.z
+
+	global	destruct_s_drop0.cx
+	global	destruct_s_drop0.cy
+	global	destruct_s_drop0.cz
+	global	destruct_s_drop0.count
+
+	global	pc_d_sen_parts.y
+	global	pc_d_sen_parts.z
+
+
+	global	es0_arwing4.x
+	global	es0_arwing4.y
+	global	es0_arwing4.z
+	global	es0_arwing4.rx
+	global	es0_arwing4.ry
+	global	es0_arwing4.rz
+	global	es0_arwing4.count0
+	global	es0_arwing4.count1
+	global	es0_arwing4.count2
+
+	global	Dand_ba_1.cx
+	global	Dand_ba_1.cz
+	global	Dand_ba_1.cry
+
+	global	superdragon.hp
+
+	global	gd_warp.x
+	global	gd_warp.rx
+	global	gd_warp.ry
+
+	global	armada_taiman.hp
+	global	armada_taiman.vel
+;	global	armada_taiman.flag
+
+;컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+	global	gd_arwing0_path_l
+
+	global	titlepilot00_path_l
+
+	global	clrawof_watch00_path_l
+	global	tametame00_path_l
+	global	playershield00_path_l
+	global	healeffect00_path_l
+	global	healeffect01_path_l
+	global	STARWOLFdirector00_path_l
+	global	superdragon00_path_l
+	global	superdragon01_path_l
+	global	superdragon02_path_l
+	global	superdragon03_path_l
+	global	es0_cam00_path_l
+	global	letsgo_cam00_path_l
+	global	gd_arwing_start00_path_l
+	global	sd_swim00_path_l
+
+	global	cds_robo00F_path_l
+	global	cds_robo00_path_l
+	global	cds_robo01F_path_l
+	global	cds_robo01_path_l
+	global	P_PLRFORCEWAY_srou_l
+
+	global	ASHI_player_L_path_l
+	global	SASHI_player_L_path_l
+	global	SASHI_friend_L_path_l
+	global	ASHI_player_R_path_l
+	global	SASHI_player_R_path_l
+	global	SASHI_friend_R_path_l
+	global	RB_SHAPE_friend_path_l	;friend
+	global	RB_SHAPE_player_path_l	;player
+
+	global	superdragon_garakuta
+
+	global	copy_player_damage_l
+	global	copy_player2_damage_l
+
+	global	effectpath_init_srou_l

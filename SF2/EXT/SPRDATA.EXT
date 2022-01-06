@@ -1,0 +1,50 @@
+;*** Data ***
+	global	objcolpaltable
+	global	Sprite32x32Data
+	global	SpriteBlockAnime
+
+	global	spr32x32_MotherShip,spr32x32_Corneria
+	global	spr32x32_CorneriaBL,spr32x32_CorneriaRE
+	global	spr32x32_SenryouPlanet_L
+	global	spr32x32_SenryouPlanet_M,spr32x32_SenryouPlanet_S
+	global	spr32x32_ZacoWaku1,spr32x32_ZacoWaku2
+	global	spr32x32_MissileWaku1,spr32x32_MissileWaku2
+	global	spr32x32_SpecialWaku1,spr32x32_SpecialWaku2
+	global	spr32x32_sand1,spr32x32_sand2
+	global	spr32x32_FOX,spr32x32_FALCO,spr32x32_PEPPY
+	global	spr32x32_SLIPPY,spr32x32_MYU,spr32x32_FAY
+	global	spr32x32_RankS,spr32x32_RankA,spr32x32_RankB
+	global	spr32x32_RankC,spr32x32_RankD,spr32x32_RankE
+
+	global	sprblock_corneriafell,sprblock_ShootDown
+	global	sprblock_MissionClear
+
+;	global	sprblockanm_PauseON,sprblockanm_PauseOFF
+	global	sprblockanm_cannonCharge
+	global	sprblockanm_Record
+	global	sprblockanm_AndorosEye
+;	global	sprblockanm_AndorosHandL,sprblockanm_AndorosHandR
+	global	sprblockanm_TamaCharge
+	global	sprblockanm_Torituki
+	global	sprblockanm_Kirari
+	global	sprblockanm_Expert
+
+	global	SpritesMissionData
+	global	SpriteMaskData
+
+;	global	SpritesBattleData,SpritesBattleData4
+;	global	RoundOverData,TotalData
+
+	global	SpriteBlockData
+	global	kurukurutbl
+	global	Satellitetbl,TameDamaXYTbl,TameDamaCharTbl,HoudaiTbl
+	global	SprSpecialTbl,SprVirusTbl,SprWolfTbl
+	global	EnemyJetXData,EnemyJetYData,EnemyJetData,BSJetData
+	global	mm_enemytbl,mm_enemytypetbl,mm_enemyjettbl,mm_enemynametbl
+
+	global	pause_enemydata,spr_warpselChrtbl
+	global	SpecialWeaponTbl,mm_SpecialWeaponTbl
+	global	arjettbl_x,arjettbl_y,arjettbl_char
+
+	global	map_HPtamaPosTbl
+	global	mis_HPtamaPosTbl

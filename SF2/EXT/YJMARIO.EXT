@@ -1,0 +1,21 @@
+
+
+;========================================================
+;	mmessage.mc		( Yajima's )
+;========================================================
+
+  	global	mmapmessage_entry
+	global	mmapmessage_l
+	global	mprintboxmessage
+
+	global	mariotest
+
+;========================================================
+;	mkawa.mc		( Kawaguchi's)
+;========================================================
+
+	global	MRAMCLEAR,MRAMCLEAR_MC
+	global	MMAKEPLANET,MMAKEPLANET2,MMergePlanet
+
+;========================================================
+

@@ -1,0 +1,17 @@
+
+	global	SelectMissionPlayer_l
+
+
+	ifeq	1	
+
+	global	SelectBattleField_l
+	global	SelectBattleplayer_l
+	global	SelectTestBattleMap_l
+	global	title_l
+	global	SelectTestMissionLevel_l
+	global	selecttraining_l
+	global	SelectTestMap_l
+	global	SelectTestPlayer_l
+	global	testgamemode_l
+	global	testLOCATION_l
+	endc

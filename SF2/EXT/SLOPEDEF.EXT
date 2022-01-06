@@ -1,0 +1,101 @@
+; slopes:
+	global	and_ba_0_slo
+	global	and_z_1_slo
+	global	kaku_0_0_slo
+	global	kaku4_0_slo
+	global	kaku6_0_slo
+	global	kaku5_0_slo
+	global	kaku5_1_slo
+	global	system_2_slo
+	global	cup_1_slo
+	global	kakureto_slo
+	global	t_saka_2_slo
+	global	chika_k_slo
+	global	t_hako_0_slo
+	global	t_hako_1_slo
+	global	miss_dai_slo
+	global	koori_0_slo
+	global	koori_1_slo
+	global	hyouzan_slo
+	global	f_fune_slo
+	global	on_d_slo
+	global	off_d_slo
+	global	hako_0_slo
+	global	pools_0_slo
+	global	machi_0_slo
+	global	nobiru_slo
+	global	hiyasu_0small_slo
+	global	hiyasu_0_slo
+	global	itembox0_slo
+	global	arrowbox_slo
+	global	slopedata
+	global	michi_1_slo
+	global	w_kichi_slo
+	global	kinoko_n_slo
+	global	saka_0_0_slo
+	global	kabe_0_slo
+	global	you_0_0_slo
+	global	you_0_1_slo
+	global	yousai_4_slo
+	global	michi_0_slo		;michi_0,michi_1 no slope data
+	global	michi_2_slo
+	global	michi_3_slo
+	global	michi_4_slo
+	global	michi_5_slo
+	global	michi_6_slo
+	global	michi_7_slo
+	global	rapyuta_slo
+	global	noru_1_SLO
+	global	noru_2_SLO
+	global	noru_3_SLO
+	global	noru_1end_SLO		;test
+	global	noru_2end_SLO		;test
+	global	pyramid0_SLO
+	global	hasi0_0_SLO
+	global	hasi0_1_SLO
+	global	arch_1_0_slo
+	global	arch_1_1_slo
+	global	ita_0_slo
+	global	ita_1_slo
+	global	kinoko_d_slo
+	global	taoreru_1_slo
+	global	taoreru_end_slo
+	global	kaifuku_slo
+	global	arch_2_0_slo
+	global	wel_0_0_slo
+	global	wel_2_0_slo
+	global	wel_2_1_slo
+	global	ike_1_0_slo
+	global	t_saka_0_slo
+	global	t_saka_1_slo
+	global	t_hako_lift_slo
+	global	t_hako_lift_s_slo
+	global	t_roof_slo
+	global	t_to_0_slo
+	global	t_to_1_slo
+	global	t_to_2_slo
+	global	sli_0_slo
+	global	sli_1_slo
+	global	box_0_slo
+
+;	global	oka_0_slo
+;--------------yamada test 4/22 keshiteiiyo ----
+	global	yama_0_0_slo		;;;yamada test slo
+	global	yama_0_1_slo		;;;yamada test slo
+	global	yama_1_0_slo		;;;yamada test slo
+	global	m_iwa_0_slo		;;;yamada test slo
+	global	m_iwa_1_slo		;;;yamada test slo
+	global	m_iwa_2_slo		;;;yamada test slo
+	global	m_iwa_5_slo		;;;yamada test slo
+	global	m_iwa_6_slo		;;;yamada test slo
+	global	house_0_slo		;;;yamada test slo
+	global	house_1_slo		;;;yamada test slo
+	global	house_2_slo		;;;yamada test slo
+	global	KABE_TO_SLO
+	global	KADO_0_SLO
+	global	KADO_1_SLO
+	global	KABE_TO1_SLO
+	global	KABE_1_SLO
+	global	KABE_2_SLO
+	global	KABE_AKU_SLO
+

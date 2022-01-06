@@ -1,0 +1,217 @@
+	MSG	<pepper OTHER ÄÇ_Ó¼ð¿ÄïŒ² ‹Žƒ—­Š? ys™Ž˜š™ì”“ç!!>
+	MSG	<pepper OTHER € ³æËçàÓŠç x‹—„ì””ç!>
+	MSG	<pepper OTHER “—ê °ŠçÁ_Ïß³š ”— kl±Š— ‹””ç!>
+	MSG	<pepper OTHER ³æËçàÓdytop˜ opŠ«nl” klefŠç>
+	MSG	<pepper OTHER Á_Ïß³šúŠì— ö÷z”çé>
+	MSG	<pepper OTHER «šê Þ´ÞðËø Œ–Šabšžê ³æËçàÓdghŠç>
+	MSG	<pepper OTHER –Œ«®ê Á_Ïß³šú abv×Â´àŠç wù®žç¦”é>
+	MSG	<pepper OTHER Žršž ¨ž¬ ‹¤”•”‘Šç Ÿ–ª‚”çé>
+	MSG	<pepper OTHER Á_Ïß³§ê PŒ« ÇçÙ_Ãç™« §•Ž”ƒ­ Ž˜§—ç‹­Šçê §§>
+	MSG	<pepper OTHER ÇçÙ_ÃçŠç 100þš ™ì—£‚˜ê |—Šç„£”ç!>
+	MSG	<pepper OTHER Á_Ïß³QR± —ç‹­”ç„ƒê>
+	MSG	<pepper OTHER ³æËçàÓd±|ûš „Ž¥”çé  ”¥“ç ÄÇ_Ó¼ð¿Ä!!!>
+	MSG	<pepper OTHER ³æËçàÓdghš ôõê meŠ« gh±ij—Œ®é>
+	MSG	<pepper OTHER copšôõ meŠ«ij— lu‘­”çé>
+	MSG	<pepper down Á_Ïß³Šçkl± T—„­é>
+	MSG	<pepper down Á_Ïß³Šçkl®— ­“ç! ™²˜Š™«²Š!!>
+	MSG	<pepper DOWN Á_Ïß³Šçkl®— ­! §‚ €˜Šç™! ž¨Œ O—Œ®!!!>
+	MSG	<pepper down Á_Ïß³Šç×Â´à—ç QR±T” ™š±—­²”ç!!>
+	MSG	<pepper down Á_Ïß³Šç ÓèÞÏðË ¾ñÐækl—ç ÇçÙ_Ãç±T”!>
+	MSG	<pepper OTHER abš ˜‚•íŒ‘­Šê cš ’ì‹²‘­˜ ršõ¬£‘é>
+	MSG	<pepper OTHER ÖÂç_ÃðÓèš§˜ç­˜ cgh™abš  ã_Óè—ç‹£‘é>
+	MSG	<pepper OTHER ½_Æà±÷Šê (—ç ³_µ¹æ ö÷K± V¦—Œ”çé>
+	MSG	<ANDROSS OTHER Až MN”! Á_Ïß³¡ Œî‚± ž”‘”¦šëëë>
+	MSG	<ANDROSS HELP Á_Ïß³¨–«¦ „§­Šçª!>
+	MSG	<ANDROSS DOWN ŽFG—çê §ì˜§ ”ç™§Šç ”ç®™Š˜‚Ž˜±!>
+	MSG	<FOX OTHER =—ç Óç_ÄË± Sƒ­’ç! „¢çƒ—„ª!>
+	MSG	<FALCO OTHER ³_µ¹æÓç_ÄËž =ÕçÇæ”ç! ý/—ç‹­’ç!>
+	MSG	<PEPPY OTHER =±I—­vê Óç_ÄË—çý/ —ç‹­“ç!>
+	MSG	<SLIPPY OTHER =±I—­v Óç_ÄË±Sì— /Œ˜ çÀâ!>
+	MSG	<GIRL1 OTHER ý/”Šì”« =±I—­v Óç_ÄË‘­°ª!>
+	MSG	<GIRL2 OTHER =±I—­v Óç_ÄË— /Œ ˜¡ç­°!>
+	MSG	<FOX OTHER =ÕçÇæÓç_ÄË—ç –’‹‘­²”ç!>
+	MSG	<FALCO OTHER ËâËâ‘²™! =Óç_ÄË±S‚²”ç>
+	MSG	<PEPPY OTHER ”ç ç˜„Œš­“ç =Óç_ÄË±Sƒ!>
+	MSG	<SLIPPY OTHER €²™šúŽ‚”çÀâ! =Óç_ÄË—çý/”ç!>
+	MSG	<GIRL1 OTHER ”ç çúŽ‚š­°! =Óç_ÄË—ç „Š­ª!>
+	MSG	<GIRL2 OTHER =Óç_ÄË±Sì— „Š™˜ šç«®•í‚°!!>
+	MSG	<FOX OTHER Á_Ïß³Šç€ ç™! @#$—ç ŽŽŠ« ž™®ª‚!>
+	MSG	<FALCO OTHER •ì! Š”œˆ @#$—ç ”‘š Ž‚’ç!>
+	MSG	<PEPPY OTHER Á_Ïß³šúŠ„‚! @#$—ç ŽŽ± ›­²”ç!>
+	MSG	<SLIPPY OTHER Á_Ïß³Šç¨«®”« ys”ç! @#$—ç §˜ç¯‚ª!>
+	MSG	<GIRL1 OTHER £…! ys”ç°! @#$—ç ŽŽŠ« ž™®£ï‚!>
+	MSG	<GIRL2 OTHER €«ê Ž£ì”°œˆëëë @#$—ç §˜ç¬£ª‚!>
+	MSG	<FOX OTHER §‚ 'vŠç™“ç! @#$—ç ŽŽž €‹«¦­²”ç!>
+	MSG	<FALCO OTHER £ç—ç ÛÑç´’ç!! @#$—ç ŽŽ± ›ª‚’ç!>
+	MSG	<PEPPY OTHER §‚ ”ç¦”ç!! @#$—ç Ÿ˜£‘ç §˜ç¯‚!>
+	MSG	<SLIPPY OTHER yÒèæÈ!! ‘Œçš @#$—çŠ™˜ ³µË”ç~!>
+	MSG	<GIRL1 OTHER Ÿ˜£‘çŽŽžê €‹«¦£ï‚! @#$±I—!>
+	MSG	<GIRL2 OTHER Ç´Øß×ðËª! Bê @#$—çúŠ° ™˜ „£ª!>
+	MSG	<FOX OTHER qr¶ß³Š« ž‘ç®—­é §˜ç­“çê –—O!>
+	MSG	<FALCO OTHER ’°Šç¨­’ç! qr¶ß³žŽì•”ç –—O™ !!>
+	MSG	<PEPPY OTHER „~ ˜ç‚”? ŽŽšž™š§™“ç! –—O­²”ç!!>
+	MSG	<SLIPPY OTHER Àâ~! ¤•š£ªì” ¤””çÀâé ” ç² Žì•”ç˜„§‚Àâ !>
+	MSG	<GIRL1 OTHER €«€«ê ’°Šç¨­ Ÿ˜œˆé §˜ç­°ª ! –—«ìí !!>
+	MSG	<GIRL2 OTHER œˆê Ž¡²šž ™š§™°é €ì•š ì—¤£ï‚ªëëë>
+	MSG	<FOX OTHER ]^&—ç st—ç‹­’çé „¢çƒ—„ª !>
+	MSG	<FALCO OTHER ³_µ¹æstž ]^&”ç! °‘®²çíœ_“ç!>
+	MSG	<PEPPY OTHER ]^&±I’žç st—ç‹­“çé>
+	MSG	<SLIPPY OTHER ³_µ¹æstž ]^&”çªé °‘®™—çÀâ~!>
+	MSG	<GIRL1 OTHER st”Œ™ì”« ]^&± I‘ª !>
+	MSG	<GIRL2 OTHER ]^&±I”« ³_µ¹æžst‘­° !>
+	MSG	<FOX OTHER ‹±–¯! Ö¿çÖYš„¬”« ÇçÙ_Ãç±T­“ç!>
+	MSG	<FALCO OTHER ¡! Ö¿çÖYš „¬­™ª! ¨˜ç—§«œ_’ç>
+	MSG	<PEPPY OTHER Ö¿çÖš•íŒ•‘­˜ ÇçÙ_Ãç±T­“ç ‹±–¯ª!>
+	MSG	<SLIPPY OTHER €–~ €–~ ½ÞÇçŠç½Þ½Þ”ç~ €–~ €–~ !!!>
+	MSG	<GIRL1 OTHER Ö¿çÖYš„¬”« ÇçÙ_Ãç±T•í‚° ²•ï‚šœ!>
+	MSG	<GIRL2 OTHER ‹±–—! ‚ìŠ¬ „¬”« ÇçÙ_Ãç± T­°ª!>
+	MSG	<FOX OTHER “˜Š«kl—çž ÇçÙ”ç! õâ±üŒ Ä´ðÈ± Šç’!>
+	MSG	<FALCO OTHER •ïŒ’–klž ¥”ç! õâ±üŒÄ´ðÈ± Šç‘²”ç!!>
+	MSG	<PEPPY OTHER klž‹Š™“ç! zšõ­”¦ Š± Šç‘²”ç!!>
+	MSG	<SLIPPY OTHER klž‹Š™Àâ! õâÄ´ðÈ± Šç‘²”çÀâ!!>
+	MSG	<GIRL1 OTHER “˜Š«klšž ŸçŒ˜§™°! õâ±üŠ™‹í!!>
+	MSG	<GIRL2 OTHER ˜çŽŠš õâ±üŒ   Ä´ðÈŠç   €­ž‘çª!!>
+	MSG	<FOX OTHER Ñçß³Šçžì—€ì— •Š–ç™“ç! wx“‚•±j’!!>
+	MSG	<FALCO OTHER Ñçß³wx“‚•± ij™˜ •Š–çœ_’ç!!>
+	MSG	<PEPPY OTHER Ñçß³Šç€­“ç! £‘çê wx“‚•± ij™˜ëëë>
+	MSG	<SLIPPY OTHER gh£°¬š€­Šç Ñçß³wx“‚•”ç j•íƒÀâ!>
+	MSG	<GIRL1 OTHER Ñçß³±‹«™˜ •Š–ç™°! ™²˜Š™‹í!!>
+	MSG	<GIRL2 OTHER Ñçß³Šçžì—€­°! wx“‚•± j‘ª!>
+	MSG	<pepper help copŠ« €«”™ klefŠç nl”“ç!!>
+	MSG	<pepper help abv×Â´àŠç Á_Ïß³šú— wù®”“ç!!>
+	MSG	<pepper help ys”ç! €«”™ copŠç €«°®”“ç!!>
+	MSG	<pepper OTHER Á_Ïß³ÇçÙ_Ãçš •î‚—Œ”çé>
+	MSG	<FOX OTHER >
+	MSG	<andross OTHER ƒ²¬ïž «²“ç ¨–«± „§‹¬ ”¦–—¨­”ç!!>
+	MSG	<pepper OTHER ªŒ¨ì”é Ž®—ç ŽabŠ«×Â´à klž ™Œ™­”ç¯‚é>
+	MSG	<ANDROSS HELP „® ÄÇ_Ó¼ð¿Äëëë £”—§ Açí£± ª‚˜‚Šëëë>
+	MSG	<ANDROSS DOWN ¿ç¼~! ˜ç–§Ž–§ ™š±¨ì—„­”ç~! ¨Œš””›¨–«¦~!!>
+	MSG	<pepper OTHER ªŒ¨ì”! Ž®—ç Á_Ïß³¡kl§ ”ç ç ª°£­“çé>
+	MSG	<FOX OTHER Ñè_ËÌ_—ç ÁæÊ¹Íò_£‘Š?>
+	MSG	<FOX OTHER ž>
+	MSG	<FOX OTHER ƒ>
+	MSG	<pepper OTHER Á_Ïß³±;ì—­ ÂÊÞ´ËëÃÄÊØ”çé>
+	MSG	<pepper OTHER ÂÊÞ´ËëÃÄÊØŠç cš ’²‹ï®—£ì”! ˜¬Šƒ—Œ®!!>
+	MSG	<FOX OTHER MISSION>
+	MSG	<FOX OTHER RECORD>
+	MSG	<FOX OTHER TEST>
+	MSG	<FOX OTHER TRAINING>
+	MSG	<FOX OTHER CONFIG>
+	MSG	<FOX OTHER STEREO>
+	MSG	<FOX OTHER MONO>
+	MSG	<FOX OTHER NORMAL>
+	MSG	<FOX OTHER HARD>
+	MSG	<FOX OTHER EXPERT>
+	MSG	<FOX OTHER ÖÂç_ÃðÓè—çö÷ £‘Š?        ž                  ƒ>
+	MSG	<FOX OTHER ½_Æà±÷Šê (—ç ÖÂç_ÃðÓèö÷K± V¦—Œ”çé>
+	MSG	<pepper OTHER ÂÊÞ´ËëÃÄÊØ± ˜¬Šƒ‘Ž˜Šç —ç‹”é ŽçŒ¯‚!>
+	MSG	<FOX OTHER ,>
+	MSG	<pepper OTHER ÖÂç_ÃðÓèš §˜ç­˜ ³_µ¹æÃ_àËç± LM—ç‹£‘é>
+	MSG	<pepper DOWN ¿ç¸~~~!!! §‚„£”ç~! Á_Ïß³Šçjû”ç~!!>
+	MSG	<ANDROSS OTHER ™š¨« œ‘ç¤Šç •ï¯•ï¯—„­ª‚”ç „§¯ëëë>
+	MSG	<ANDROSS HELP ì— €“²—ç¨®! —Šç²—¨­ ”ç“ç! ½çÑÑÑ!!>
+	MSG	<ANDROSS OTHER ½çÑÑÑÑ!! PŒ« žŽç”ƒŠç ™˜ –£«²Š«™!>
+	MSG	<ANDROSS DOWN Á_Ïß³¡ú abv×Â´àwù”ç!>
+	MSG	<ANDROSS HELP ÓèÞÏðËë¾ñÐæ ùHmš Á_Ïß³± ˜«ƒ”“ç! ½çÑÑ!>
+	MSG	<ANDROSS DOWN Ž®—ç§ Œ«ƒ! ÓèÞÏðËë¾ñÐæwù!!!>
+	MSG	<ANDROSS OTHER Óæ ™Š™Š¨­° ”çŠçrž Ž®Š«”ç!!>
+	MSG	<ANDROSS HELP Ó¼ð Ó¼ð “®Œ«—ç ‹š™ì—­˜ž „¦—ç”¨–«ªëëë>
+	MSG	<ANDROSS DOWN €“Ÿçž ŽŽ£—ç”ç ©! “— ¨–«± Ÿœ¬– ç‘”ç!!>
+	MSG	<ANDROSS DOWN ŽŽ£—ç¨­˜ž ”” §”ç! Ž®ž ”£’ —Œ®” „®”ç!>
+	MSG	<ANDROSS HELP klop! |/—ç Á_Ïß³¡úŠƒ! ÓèÞÏðËë¾ñÐæª‚!!>
+	MSG	<FOX OTHER )—ç Óç_ÄË± Sƒ­’ç! „¢çƒ—„ª!>
+	MSG	<FALCO OTHER ³_µ¹æÓç_ÄËž )ÕçÇæ”ç! ý/—ç‹­’ç!>
+	MSG	<PEPPY OTHER )±I—­vê Óç_ÄË—çý/ —ç‹­“ç!>
+	MSG	<SLIPPY OTHER )±I—­v Óç_ÄË±Sì— /Œ˜ çÀâ!>
+	MSG	<GIRL1 OTHER ý/”Šì”« )±I—­v Óç_ÄË‘­°ª!>
+	MSG	<GIRL2 OTHER )±I—­v Óç_ÄË— /Œ ˜¡ç­°!>
+	MSG	<FOX OTHER )ÕçÇæÓç_ÄË—ç –’‹‘­²”ç!>
+	MSG	<FALCO OTHER ÚÇÚÇ‘²™! )Óç_ÄË±S‚²”ç>
+	MSG	<PEPPY OTHER ”ç ç˜„Œš­“ç )Óç_ÄË±Sƒ!>
+	MSG	<SLIPPY OTHER €²™šúŽ‚”çÀâ! )Óç_ÄË—çý/”ç!>
+	MSG	<GIRL1 OTHER ”ç çúŽ‚š­°! )Óç_ÄË—ç „Š­ª!>
+	MSG	<GIRL2 OTHER )Óç_ÄË±Sì— „Š™˜!!>
+	MSG	<ANDROSS OTHER ¿ç¿ç¿çëëë A± ¢²‹š’­˜žëëë ¢œ€­¨–«”ç!!>
+	MSG	<pepper HELP ÓèÞÏðËë¾ñÐæ¡ ¶Ïà¾ç_ëÈñ_Ãç± ¾ñðÈ! cop¡úƒ!>
+	MSG	<pepper OTHER ÓèÞÏðËë¾ñÐæš ¶Ïà¾ç_±Èñ_Ãçz”ç wù£ƒšlu‘­²”ç!!>
+	MSG	<ANDROSS OTHER ¤Žç˜™ „—™¤”ç™ ÄÇ_Ó¼ð¿Ä!>
+	MSG	<ANDROSS OTHER ‚—ç±€ç”™ ÄÇ_Ó¼ð¿Ä>
+	MSG	<ANDROSS OTHER –š ŽŽ£—ç ¨ì—‹”Š! £•Šœ”“ç>
+	MSG	<ANDROSS HELP ””§”ç! ”çŠç ‹£« •§ ŽŽ£—ç”ç!>
+	MSG	<ANDROSS HELP ‹£™˜ç ï’²ž ÔèÑè_š S°®­ €¨–¬š²‹çï‚ª>
+	MSG	<ANDROSS HELP ™²˜ç§ ™²˜ç§ çí£±„ì—! Á_Ïß³ ›¦!!>
+	MSG	<ANDROSS DOWN ‘Œçš «Œš— ¨­“ç €¬Šç”Œ „§‚Šçª!!>
+	MSG	<ANDROSS DOWN €'‚«¤ ì—°‘®ž™! ŠŒŽç‘­Šç!!>
+	MSG	<ANDROSS DOWN ”ì è¬ Š°Šçì— Œ®­°! ¢ƒ‘ç«ŠŒ™!!>
+	MSG	<FOX OTHER ¿ðëëë ×Â´àŠç „•žç¦”“ç! “—çij‘­²”ç>
+	MSG	<FALCO OTHER Ûâ_! ×Â´àŠç „•žç¦¨Šçì”! “Šçœ_˜!>
+	MSG	<PEPPY OTHER £‘ç! ×Â´àŠç Á_Ïß³š „•žç¦”“ç!!>
+	MSG	<SLIPPY OTHER Àçâ~ð ×Â´àŠç Á_Ïß³š „ìŽ•žç¦”Àâ~!>
+	MSG	<GIRL1 OTHER ¾ñ_ð! Á_Ïß³š ×Â´àŠç„•—Œ°! “—çij™‹í!>
+	MSG	<GIRL2 OTHER ysª! ×Â´àŠç „•žç¦•íì”°! ž¨Œù•„˜‘ª!>
+	MSG	<FOX OTHER Ž®—ç ŽabŠ«ž ×Â´àž wù®™Œ ™­“ç!!>
+	MSG	<FALCO OTHER ¡²! ³æËçàÓgh ™²ç ¦çíœ_’ç!>
+	MSG	<PEPPY OTHER ªìí! Ž®—çŽb Š« ×Â´àkl±  ‚çŽ¦”“ç!!>
+	MSG	<SLIPPY OTHER ¨ì”~ gh±j” ŽbŠ«žê×Â´à—ç kl—ç‹™ª~Çç!>
+	MSG	<GIRL1 OTHER ¨ì”°! ³æËçàÓ gh™²Š ””Ž˜ ™°ªÏð!>
+	MSG	<GIRL2 OTHER ghŠç™®žç ŽbŠ« ×Â´àž ù•€ç«®™°Ï!>
+	MSG	<FOX OTHER ·_À_! Ž–± ””—„žç rž ”ç ç«Œš™­’ç!>
+	MSG	<FALCO OTHER —çŠžçìŠ—ç •ì˜§ žŽç”ƒŠç ™’ç!>
+	MSG	<PEPPY OTHER Ž®—çcklef§ ‘Žž Š‘çŠç ¡­”ç¯‚!>
+	MSG	<SLIPPY OTHER ³æËçàÓop™²Š Èóâ´²”ç™! «Œï‚”çÀâ!!>
+	MSG	<GIRL1 OTHER op±u¦®žç z klef§ìïš Žìžè¤ç²œ!>
+	MSG	<GIRL2 OTHER op±””—„žç klef§¡­ ”ç ç «Œš™­°!>
+	MSG	<wolf DOWN Î¼_ð!!  ‘Šçž ÄÇ_Ó¼ð¿Ä! Ž®¢˜ç ‚—ç˜žëëë>
+	MSG	<chameleon DOWN ¾ç»~ð! µàÓUZê €˜ž ”¤£”’ç!>
+	MSG	<pig DOWN Žì Ž²™¨¯‚šëëë!! °§ ¨‹Šç£°ì” §²çí~!!>
+	MSG	<monkey DOWN ¾¹~ð! Œ¨~!! „¢çƒ—¨Šç®~!! •‹ï~!!>
+	MSG	<wolf DOWN BC˜Ž¯žD E”çëëëé ŽŠ¬žê J‘çŠƒ‘“ç!!>
+	MSG	<chameleon OTHER „ì˜! “Ž£—ç”ç! ÄÇ_µàÓá·æ ””çB XY!!!>
+	MSG	<pig OTHER £”²Š °®~! ÄÇ_µàÓÒè¿çÖ XY! ŠŒŽç’¨!!!>
+	MSG	<monkey OTHER ³àÃç_£ „n£”ç_! Šì—™ £œžê ’œ_“ç!!>
+	MSG	<wolf OTHER ÔèÑè_š’«®— ‹š™¬¨Šçì—! ‘Šœˆ¨¯‚”ç!!>
+	MSG	<chameleon OTHER µàÓUZŠçT” Žç˜™²—ç™ëëë ŽŽ—ç‹ƒ—§«‚’ç!>
+	MSG	<pig OTHER ³æËçàÓŠ« ”²£¬ §«ì”Šç Š²”²™ Žç˜çí~!!>
+	MSG	<monkey OTHER ÄÇ_Ó¼ð¿Ä¨–« ™²Š ¦çíœ_ì— UZŠç ì—”“ç_!!>
+	MSG	<wolf OTHER ŸªìŽŠç ‹Šçì— ¨Šç­˜ ˜ç‚™­Š ”ì è¬ „ƒ—¨­!!>
+	MSG	<pepper OTHER ÂÊÞ´ËëÃÄÊØŠç c—š„•”! ‘Œçš ˜¬§˜ç‘²”ç!!>
+	MSG	<wolf OTHER ï‚žçŠç”‹šž Ž¡²—ç ‹ƒ—§«„‚Š!!>
+	MSG	<chameleon OTHER ¾ç¾ç¾ç!      ¨­™ ÄÇ_Ó¼ð¿Ä!! Š E²“ç!!!>
+	MSG	<pig OTHER ™Š™Š¨­~ ”çŠç ï’²ž „Ž£áÔçà™²çí>
+	MSG	<monkey OTHER Ž²™Ž˜— „£ƒ ””ç—ç‘¥˜ „§‚™ª~! ¾~~!!>
+	MSG	<wolf OTHER £•™! ÄÇ_Ó¼ð¿Ä!! ŽŽŠ«K¡ž ŽµàÓŠç Š’œˆ’ç>
+	MSG	<FOX OTHER ¨ì”™! —ç§ ™Š™Š n—O™Š« ²žè”’ç!!>
+	MSG	<FALCO OTHER Óæ! ²žè’¨Šçì— DŠçžçªŠì”’ç>
+	MSG	<PEPPY OTHER ”ççï‚ çŠ? §‚P—ç ìïš „•­˜Ž¯”çì”“ç!>
+	MSG	<SLIPPY OTHER Àâ~! ìïš ¨«®•í‚Š˜ ÑÞÑÞ•íì”Àâ!>
+	MSG	<GIRL1 OTHER ¨ì”œ! —ç§ ˜ç‚™ì•í‚Š˜ „§ì”°ª!>
+	MSG	<GIRL2 OTHER Ó_ð!  ççš ”çìî–”¤”œ ªŠì”°!>
+	MSG	<FOX special ”ççï‚ ç! D‚—ç± ²ç¯ì—!!>
+	MSG	<FALCO special Óæ! ™£‹™Ž˜ ì—²çíœˆª! «Œï‚”ç’ç!!>
+	MSG	<PEPPY special ²žè Žç¥ª‚! Ž˜‚¬ Ð_ÓèâÓçáØ”ç!!>
+	MSG	<SLIPPY special “‚Àâ! Õç¿§ ç ç²—ç Ëç¾Ëç¾•íì”!!>
+	MSG	<GIRL1 special ™~šì—²! A±”ç®”ç˜ „§ì—²ª!!>
+	MSG	<GIRL2 special €«? Ž²™Ž˜ ’ç~²’ç²¡‹ª! ª©‚€ì”§!!>
+	MSG	<pepper OTHER ÖÂç_ÃðÓè”çé ³_µ¹æÃ_àËçLM¨ abvã_ÓèŠç—ç‹­é>
+	MSG	<pepper down ÂÊÞ´ËëÃÄÊØŠç Á_Ïß³±kl—‹”! ž¨Œ ˜¬Šƒ—Œ®!>
+	MSG	<pepper OTHER €²²”£ƒê ÂÊÞ´ËëÃÄÊØŠç c±ù•„˜”é>
+	MSG	<FOX OTHER +Š*± ‘žç¨Œ2L I‘˜ â_ßæ¿ç—ç ckl±žçŒ’ç!>
+	MSG	<FALCO OTHER +Š*± ‘žç¨Œ2L I‘˜ â_ßæ¿ç— ckl±žçŒ’ç!>
+	MSG	<PEPPY OTHER ‘žç¨Œ2L +Š*± I‘²”ç! ckl± žç­“ç>
+	MSG	<SLIPPY OTHER ‘žç¨Œ2L +Š*± I’žç ckl± žç•í‚Àâ!!>
+	MSG	<GIRL1 OTHER +Š*± ‘žç¨Œ2L I’žç â_ßæ¿ç— ckl± žçŒ°!>
+	MSG	<GIRL2 OTHER +Š*± ‘žç¨Œ2L I‘˜ â_ßæ¿ç— ckl± žçŒ°!>
+	MSG	<pepper OTHER œ²”¦ µ¼_½_ ÁæËâ_àš–— ’–¦ —„Ž‚é>
+	MSG	<pepper OTHER 3—ç4567šö÷ +*—çµ¼_½_ ú‹±sƒ­”çé>
+	MSG	<pepper OTHER /Œö÷”'ž 3±I––ç­˜ ý/— ž­“çé>
+	MSG	<pepper OTHER ÃçñæÓèž8”çé “—]^&±I’žçst—ç‹­é>
+	MSG	<pepper OTHER ³_µ¹æst± ‚£ŒS‚”ç“ç!>
+	MSG	<pepper help ÂÊÞ´ËëÃÄÊØŠç cš‚žç°®”! ‘Œçš úì—Œ®!!>
+	MSG	<pepper OTHER Ž®—ç Þ´ÞðËøm ³æËçàÓdž ì“‚®”é>
+	MSG	<pepper OTHER Ž££ ì‹š ³æËçàÓ± ””—£‚”ç!!>
+	MSG	<pepper OTHER ]^&±I‘˜ Ñè_ËÌ_˜ Ž‚”—ç‹£‘é>
+	MSG	<pepper OTHER ÃçñæÓèž(”çé “—]^&±I’žçst—ç‹­é>
+	MSG	<pepper OTHER Ñèã_ÓçÞÄÇ_Šç áÔçàë³ðÓè—  Õ_×æ¿ç‘­“çé>
+	MSG	<pepper OTHER Ç_ÀçðËÖ_½_—ç âð¿ë·æ— wù‘­”ç!!>
+	MSG	<pepper OTHER Ã_¿áðËëÁâÍ_”çé õì—¤”£ƒé>
+

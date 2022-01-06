@@ -1,0 +1,12 @@
+	global	player_particle_istrat
+
+	global	TSTRATsrous_l.initsprite
+	global	explode_sound_plr1_l
+	global	explode_sound_plr2_l
+	global	setpilotshape_srou_l
+	global	rotateplrpos2childpos_l
+;	global	setd_senpos_srou_l
+	global	setcoreENTERroty_srou_l
+
+
+	global	TSTRAT_000_l

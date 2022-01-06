@@ -1,0 +1,14 @@
+	global	init_sprites_l
+	global	do_sprites_l
+
+	global	oamsuballon_l
+	global	oamclear_l,oamclear_SG_l,oamallclear_l
+
+	global	SetSprSize_double_sub_l
+
+	global	draw_Wave_p1_l
+	global	do_spritesp1radar_l
+	global	oambufclr_data
+
+	global	SetSprDamageMeter_l
+

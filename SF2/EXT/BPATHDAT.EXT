@@ -1,0 +1,51 @@
+; Externs for bpathdat.asm
+
+	global	path_BOSS_Dodora
+	global	path_BOSS_Pierrot
+	global	path_BOSS_Crusher
+	global	path_BOSS_Dragon
+
+	global	path_b_tank
+
+	global	path_boss_runner
+	global	path_boss_andorf
+
+	global	path_NintendoPresents
+	global	path_Credits
+
+	global	path_BOSS_tako
+
+	global	path_GameOver
+	global	path_corneriafell
+
+	global	path_flameburst,path_fishburst
+
+	global	path_creditseq
+
+	global	pcs_stationary_left,pcs_stationary_right
+	global	pcs_stationary
+	global	pcs_sweep_up
+	global	pcs_sweep_down
+	global	pcs_sweep_up2
+	global	pcs_sweep_through
+
+	global	pcs_nosweep
+	global	pcs_theend
+	global	pcs_demo_senkan
+	global	pcs_sweep_through_close
+	global	pcs_sweep_through_mae
+	global	pcs_sweep_through_big
+	global	pcs_baramiss
+	global	pcs_speed_lr,pcs_enkin
+
+	global	pcs_ninja
+	global	pcs_sweep_andorf
+	global	pcs_gattai
+	global	pcs_toge
+	global	pcs_andorf
+	global	pcs_stationaryslow
+	global	pcs_monkey
+
+	global	pcs_sos_2
+	global	pcs_baku
+	global	pcs_batabata

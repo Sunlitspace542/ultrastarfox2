@@ -1,0 +1,22 @@
+	global	sintab,costab,reciptab16s,mrndtab
+	global	mycrapchars,pyoftab,sintab16
+	global	pxoftab,pbittabn,pbittab
+	global	messagetable
+	global	bitmasks
+	global	KEnum_tab,sos1_target,sos2_target
+	global	sos1_target_shape_A,sos1_target_shape_B
+	global	sos2_target_shape_A,sos2_target_shape_B
+	global	PLANET_RANDOM,SOS_RANDOM
+	global	EASY_MISS_RAND,NORM_MISS_RAND,HARD_MISS_RAND
+	global	NORM_STEP_RAND,HARD_STEP_RAND
+	global	cseq_table
+	global	VIRUS_SKILL,WOLF_SKILL,WOLFBOSS_SKILL
+	global	hentai_posx,hentai_posy,hentai_posz
+	global	jumptab,div2_jumptab,track_ang,track_move
+	global	k_tori_tab1,k_tori_s_tab,nin_warp_x,nin_warp_y
+	global	technical_data,TECHNICAL_DATA_TEXT
+	global	cseq_table_norm
+	global	cseq_table_hard
+	global	i_tabsh,i_tabx,fontshapes,fontnumbers
+	global	nintendomsg,gameovermsg,youwinmsg,youlostmsg,tobecontinuedmsg,corneriafellmsg
+

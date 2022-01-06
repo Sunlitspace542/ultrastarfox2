@@ -1,0 +1,7 @@
+
+	global	continue_l
+	global	continue_obj_l
+	global	continue_init_l
+	global	continue_process_l
+	
+

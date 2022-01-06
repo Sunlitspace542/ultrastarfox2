@@ -1,0 +1,9 @@
+	global	mapsysteminit_l
+	global	scaninerts_l
+	global	PurgeArea_l
+	global	CheckAreas_l
+	global	InitBlockmap_l
+	global	ClearBlockmapArea_l
+	global	SetBlockMap_l
+	global	showblockmap_l
+	global	CheckBlockMap_l

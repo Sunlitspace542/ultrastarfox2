@@ -1,0 +1,21 @@
+
+	global	raster_l
+	global	ML_s16s16_l,Multiply_u16u16_l
+
+	global	idx_no_raster
+	global	idx_sea_raster
+	global	idx_test_raster
+	global	idx_boss_raster
+	global	idx_map1_bossVzoom
+	global	idx_explain_raster
+	global	idx_title_raster
+	global	idx_gameover_raster
+	global	idx_continue_raster
+	global	idx_reset_raster
+	global	idx_random_raster
+	global	idx_fire_raster
+	global	idx_yogan_raster
+	global	idx_sea_chikaraster
+
+
+

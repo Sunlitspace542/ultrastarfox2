@@ -1,0 +1,15 @@
+System Monitor v2.00 (C) Copyright 1991-94 By Quarterdeck Office Systems
+
+For Machine: JISHIN (42.108.114.128).
+
+ #  Name                             Status       Display
+컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+ 0  DESQview                         Waiting      
+ 1  DESQview/X Server                Waiting      
+ 2  Novell NetWare IPX               Waiting      
+ 3  DESQview/X Window Manager        Waiting      
+ 4  Remote DOS Drive                 Pausing      
+ 5  DOS Window                       Waiting      Local                        
+ 6  Remote DOS Drive                 Pausing      
+ 7  File Manager                     Waiting      
+ 8  Remote DOS Drive                 Pausing      

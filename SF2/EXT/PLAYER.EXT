@@ -1,0 +1,85 @@
+	global	ps_engine_start_l
+
+	global	player_istrat
+;	global	GOTODEMOplayer_istrat
+	global	INTERDEMOplayer_istrat
+	global	CLEARDEMOplayer_istrat
+	global	EXplayer_istrat,EXplayer2_istrat
+
+	global	addspweapnum_srou_l
+	global	incspweappnt_srou_l
+	global	getspweappnt_srou_l
+	global	get_pilotNoToidx_B_l
+	global	get_pilotNoToidx_W_l
+	global	get_shapeNotoidx_B_l
+	global	get_shapeNotoidx_W_l
+
+	global	plobjinit_srou_l
+
+	global	achaselimit_srou_l
+	global	copy_hitflash_srou_l
+
+;	global	checkYclip_srou_l
+
+;	include	kplayer.ext
+;	include	tplayer.ext
+
+	global	modechangesrou_l
+
+; player mode
+
+;	global	of_Arwing_init
+;	global	cs_Arwing_init
+;	global	DM_AWC_0_0_init
+;	global	DM_AWC_0_1
+
+	global	hit_effect_small_l
+	global	hit_effect_l
+
+	global	attackSE_srou_l
+
+; shape table
+
+	global	shape_ARWING
+
+	global	playerstatus_init_l
+	global	playerstatus_swap_l
+	global	shock_wave_srou_l
+	global	rotate_Proty_l
+	global	pass_sound_srou_l
+
+	global	map_arwing_init_l
+	global	map_camerainit_1screen_l
+	global	map_camerainit_2screen_l
+	global	map_setplayerpos_1_l
+	global	map_setplayerpos_2_l
+	global	map_vscroll_off_l
+	global	map_playerblockmap_on_1_l
+	global	map_playerblockmap_on_2_l
+	global	map_playerblockmap_off_1_l
+	global	map_playerblockmap_off_2_l
+	global	map_playerTUTUmode_l
+	global	map_setplayerpos_relative_l
+	global	map_setplayerpos_battleship_l
+
+	global	msg_clear_srou_l
+
+	global	weap_relative2player1_srou_l
+	global	weap_relative2player_srou_l
+
+	global	makedirector_srou_l
+
+	global	chk_spweappnt_srou_l
+	global	setenemymark_srou_l
+	global	chk_laser_lmt_l
+	global	dec_laser_lmt_l
+
+	global	tp_booston_srou_l
+	global	tp_boostoff_srou_l
+	global	tp_brakeon_srou_l
+	global	tp_brakeoff_srou_l
+
+	global	wingman_AW_shape
+	global	wingman_RB_shape
+
+	global	reflectSE_srou_l

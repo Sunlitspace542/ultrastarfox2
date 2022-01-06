@@ -1,0 +1,48 @@
+	global	mm_startmario_l
+	global	Parallel_mismap_l
+	global	calobjangle_l,conv_velxy_l
+	global	mm_freeenemylistptr_l
+	global	FreeEnemyList_l
+	global	kspeedupA_l
+	global	mm_GameFrameRAMRoutine_l
+	global	calc_enangvelxy_l
+	global	mm_BGCheck_l
+	global	mm_enemydest_l
+	global	DecCorneriaHP_mission_l
+	global	DecCorneriaHP_map_l
+	global	check_enemyarrive_l
+	global	enmv_searchplanet_l
+	global	enmv_aroundplanet_l
+	global	kenemybomb_sub_l
+	global	calc_envelxy24_l
+	global	Setenemypostion_l
+
+	global	bs_moveparams_l
+	globaL	calc_bsspeed_l
+	global	kmissilefell_sub_l
+	global	mm_setenstack_l
+	global	eg_states_l
+	global	SetAttackPoint_l
+	global	eg_sosskill_l
+
+	global	mm_enemydemosequence_l
+	global	mm_enemydemomove_l
+	global	mm_enemydemoseqmove_l
+	global	mm_enemydemoseqmovecoll_l
+
+	global	mm_BattleShipSequence_l
+	global	mm_PlanetSequence_l
+
+	global	CheckPCTmPri_l
+
+;* tables *
+	global	mm_destpostbl
+	global	mm_objnumbertbl
+	global	sendmarktbl
+	global	planetskilloff
+	global	self_destruction_l
+	global	mm_getenemylistptr_l,mm_getenemylistptrX_l
+
+	global	mm_SpriteSizeFlag,mm_SpriteSizeFlag16
+	global	mm_ZacoChartTable
+	global	mm_soundtable

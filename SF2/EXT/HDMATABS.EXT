@@ -1,0 +1,66 @@
+;======== h-dma definition ==========
+	global	hdmaf_circle
+
+;======== window definition =========
+	global	xhdma_window
+	global	xhdma_window_battle
+	global	hdmawindow_battle1
+	global	hdmawindow_battle2
+;;;	global	hdmawindowon
+;;;	global	hdmawindowoff
+
+;======== h scroll  definition =========
+	global	xhdma_bg2hscroll_mis
+	global	xh_hscrolladr0_mis
+	global	xh_hscrolladr1_mis
+	global	xh_hscrolladr2_mis
+
+	global	xhdma_bg2hscroll_bat
+	global	xh_hscrolladr0_bat
+	global	xh_hscrolladr1_bat
+	global	xh_hscrolladr2_bat
+
+	global	xhdma_bg1hvscroll_mismap
+	global	xhdma_bg2hvscroll_mismap
+
+;======== v scroll  definition =========
+	global	xhdma_bg2vscroll_mis
+	global	xh_vscrolladr0_mis
+	global	xh_vscrolladr1_mis
+	global	xh_vscrolladr2_mis
+
+	global	xhdma_bg2vscroll_bat
+	global	xh_vscrolladr0_bat
+	global	xh_vscrolladr1_bat
+	global	xh_vscrolladr2_bat
+
+
+;======== window definition =========
+;	global	xhdma_outhofsp1
+;	global	xhdma_outhofsp2
+;	global	xhdma_pausehofsp1
+;	global	xhdma_pausehofsp2
+;	global	xhdma_htflhofsp2
+;	global	xhdma_htflhofsp1
+;	global	xhdma_circhofsp1
+;	global	xhdma_circhofsp2
+
+
+;	global	xhdma_bg2hvscroll_bps
+;	global	xhdma_seahscroll
+;	global	xhdma_bg2hscroll_normal
+;	global	xh_player1hscroll
+;	global	xh_player1vscroll
+;	global	xh_player2hscroll
+;	global	xh_player2vscroll
+;	global	xh_p1marinehscroll
+;	global	xh_p1marinevscroll
+;	global	xh_p2marinehscroll
+;	global	xh_p2marinevscroll
+;	global	xh_seahscrolladr1
+;	global	xh_seahscrolladr2
+;	global	xh_vscrolladr1
+;	global	xh_vscrolladr2
+;	global	seavscroll_buf
+
+	global	xinidisp1,xinidisp2

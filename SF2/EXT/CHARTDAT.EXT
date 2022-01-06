@@ -1,0 +1,44 @@
+
+	global	ROMobjchart
+
+	global	cd_objanime_sos1
+	global	cd_objanime_sos2
+	global	cd_objanime_faceopen
+	global	cd_objanime_faceopen2
+	global	cd_objanime_faceclose
+	global	cd_objanime_faceclose2
+	global	cd_objanime_bigcursor
+	global	cd_objanime_smallcursor
+	global	cd_objanime_sosbomb
+
+	global	cd_objanime_yajirushi_up
+	global	cd_objanime_yajirushi_dw
+
+	global	cd_objanime_crash
+
+	global	cd_objanime_meteor
+
+	global	cd_objanime_enemyplanetstart
+	global	cd_objanime_enemyplanet
+
+	global	cd_objanime_nextmark
+	global	cd_objanime_sosplanein
+	global	cd_objanime_bossappear
+
+	global	cd_objanime_bossopen
+	global	cd_objanime_battleship
+	global	cd_objanime_battleship_dap
+	global	cd_objanime_battleship_app
+	global	cd_objanime_finalboss_dap
+	global	cd_objanime_explode_zaco	
+	global	cd_objanime_explode_planet
+	global	cd_objanime_explode_bship
+	global	cd_objanime_cannonfire1
+	global	cd_objanime_cannonfire2
+	global	cd_objanime_cannonexplode
+	global	cd_objanime_missileexplode
+	global	cd_objanime_spenemyappear
+	global	cd_objanime_mothership_dap
+	global	cd_objanime_mothership_app
+	global	cd_objanime_planetsenryou
+	global	cd_objanime_itemplanet

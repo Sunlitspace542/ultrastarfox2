@@ -1,0 +1,6 @@
+	global	set_kscreen_l
+	global	kcopyscreen_sub_l
+	global	Clear_BGKakikaeBuffer_l,Set_BGKakikaeBuffer_l
+	global	kmre_scorechart,kmre_lookdetail
+
+	global	SetBGNumber_8x8_l

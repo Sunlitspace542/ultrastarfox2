@@ -1,0 +1,16 @@
+
+	global	gameobj_l
+	global	init_gameobj_l
+	global	irq_gameobj_l
+	
+	global	clear_YJgameparam_l
+
+	global	idx_demo_targetcount
+	global	idx_demo_enemygone
+
+	global	calc_bossraster_l
+	global	calc_fireraster_l
+
+	global	Clear_ALLraster_buffer_l
+
+

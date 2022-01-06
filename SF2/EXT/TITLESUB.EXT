@@ -1,0 +1,24 @@
+	global	clear_data
+	global	VRAMClear_l
+
+	global	printbinary_l
+
+	global	Check_triggerUD_l
+	global	Check_triggerLR_l
+
+	global	autotrigger_l
+	global	Check_autotrig_l
+	global	Check_autotrigUD_l
+	global	Check_autotrigLR_l
+
+	global	Check_updwkey_l
+	global	Check_LRkey_l
+
+	global	mozaikufadein_l
+	global	mozaikufadeout_l
+
+	global	Init_MRScreen_l,Init_HIScreen_l,Init_HSScreen_l
+
+;* data table *
+	global	TitSPrData,MMapSelSprData,PlanetStepSprData
+

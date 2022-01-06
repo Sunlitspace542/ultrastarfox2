@@ -1,0 +1,15 @@
+	global	init_nopolywindows_l
+	global	initfadewhite2norm_l
+	global	dyingred_l,dyingredoff_l
+	global	fadewhite2norm_l
+	global	flashturq_l,flashturq2_l,flashred_l,initblack_l
+	global	bossflash_l,setblack_l
+	global	kwipefadewait_l,kwipewait_l
+	global	kfadeout_l
+	global	KBGMFade_l,KBGMFade2_l
+	global	check_wipeopen_l,check_wipeclose_l
+	global	kwipeclose_l
+	global	setwindowtabs_l
+	global	PauseWindow_l
+
+

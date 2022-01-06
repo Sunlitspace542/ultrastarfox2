@@ -1,0 +1,44 @@
+	global	BOMBcircle_path_srou_l
+
+	global	addcol_path_srou_l
+	global	call_arctan16_l
+	global	set_player_cursor_P1_l
+	global	set_player_cursor_P2_l
+	global	set_enemy_cursor_P1_l
+	global	set_enemy_cursor_P2_l
+	global	set_Target_l
+
+;	global	set_dmgmeterVAL_srou_l
+	global	set_dmgmeterVAL_1_srou_l
+;	global	set_Target_p1_l
+;	global	set_Target_p2_l
+	global	set_hudrot_srou_l
+;	global	spline_l
+;	global	waterline_pros_l
+
+; spline table
+
+;	global	testboss_tab
+;	global	spline_tab
+;	global	arwing_demo_flight
+;	global	calc_scrpos_l
+
+
+; enemy altmeter
+
+	global	addEaltlist_inert_l
+	global	initEalt_srou_l
+	global	addEaltlist_p1_l
+	global	addEaltlist_p2_l
+
+	global	string_target
+;	global	calc_scrpos_l
+
+	global	circle_on_srou_l
+	global	circle_pos_srou_l
+	global	circle_objpos_srou_l
+	global	circle_RGB_srou_l
+	global	circle_decRGB_srou_l
+	global	circle_path_srou_l
+	global	bigcircle_path_srou_l
+	global	warpcircle_path_srou_l

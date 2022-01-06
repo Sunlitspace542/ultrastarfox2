@@ -1,0 +1,19 @@
+# Object files
+*.sob
+*.SOB
+
+#ROMs
+*.sfc
+*.smc
+*.SFC
+*.SMC
+
+# build logs
+*.LOG
+*.log
+*/SF/*.DOC
+*/SF/*.doc
+*/SF/*.TMP
+*/SF/*.tmp
+*/SF/*.txt
+*.TXT

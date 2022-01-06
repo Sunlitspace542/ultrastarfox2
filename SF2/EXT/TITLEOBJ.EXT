@@ -1,0 +1,7 @@
+
+	global	Init_titleobj_l
+	global	Main_titleobj_l
+
+	global	titlestruct
+	global	idx_titleobj_startwait
+

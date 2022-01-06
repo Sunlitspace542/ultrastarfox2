@@ -1,0 +1,41 @@
+;
+;		gamesequence
+;
+	global	timechart_l
+;	global	chart_boss00
+	global	chart_playerdead
+	global	chart_playerwin
+;	global	chart_battlestart
+;	global	chart_battlestart2
+;	global	chart_gameclear
+;	global	chart_battlestart_again
+
+	global	setclearseq_l
+;	global	setdirector_srou_l
+
+
+	global	chart_specialbomb
+
+	global	chart_suisei
+	global	chart_destruct
+	global	chart_scramble
+	;;global	chart_andboxdead
+	;;global	chart_andorfappear
+;	global	chart_meteo
+	global	chart_armada
+	global	chart_letsgo
+	global	chart_chika
+	global	chart_enter_chika
+;	global	chart_interdemo_
+	global	chart_nextmap_chika
+	global	chart_nextmap_d_sen
+	global	chart_nextmap_kaitei
+	global	chart_nextmap_final
+	global	chart_enemyhasgone_
+	global	chart_goto_d_sen
+	global	chart_goto_final
+	global	chart_endseq0
+
+	global	demodirector_tab
+	global	demodirector_tab_max
+

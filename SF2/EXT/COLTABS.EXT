@@ -1,0 +1,108 @@
+	global	depthtables,depthtabs
+	global	red_c,textureaddrtab,white_c
+	global	shadestab2_0,shadestab2_1,shadestab2_2,shadestab2_3
+	global	texturexytab
+	global	id_0_c,id_1_c,id_2_c,id_3_c
+	global	night,night1,mist,mist1,desert,desert1,marine,marine1,red
+	global	explode_c,explode2_c,explode3_c
+	global	tametame_c,tamatama_c
+	global	black_c
+	global	whitefont_c
+
+	global	fieryfont_c
+
+	global	hyper_c
+
+;* depth length step *
+	global	depth_1
+	global	depth_2
+	global	depth_3
+	global	depth_4
+
+	global	depth_normal
+	global	depth_ground
+	global	depth_mist
+	global	depth_sky
+	global	depth_marine
+	global	depth_space
+	global	depth_tunnel
+	global	depth_tutu
+	global	depth_explain
+	global	depth_large
+
+;---- software sprite definitions (kawaguchi) -----
+	global	bullet_c,ebullet_c,smoke_c,boost_c,bossball_c,splash_c
+	global	item_00_c,jet_c,plasma1_c
+	global	enemybomb_c,bubble_c,wakame_c
+	global	kusa_c
+	global	msplash_c
+	global	magmaball_c
+	global	wallflash_c
+	global	kirakira_c
+	global	meteo_c,bigmeteo_c
+	global	meramera_c
+	global	flame_c
+	global	fire_c
+	global	ringlaser_c
+	global	bomb_c
+	global	dokuro_c
+
+; Global definitions for texture-maps and scaled sprites:
+	global	splash1_spr
+	global	boost4_spr
+	global	smoke1_spr
+	global	plasma1_spr
+;;;	global	largeexplosion1_spr
+
+;18/11/93 :bank3(coltabs.asm)---> bank8
+	global	gamepal_night,gamepal_marine,gamepal_magma
+	global	gamepal_mist,gamepal_sun
+	global	paladdr
+
+;	global	planet1_spr
+;	global	planet2_spr
+;	global	planet3_spr
+;	global	planet4_spr
+;	global	planet6_spr
+;	global	corneria_spr
+;	global	shadow_spr
+
+;* spt_4.cgx *
+	global	fox1_spr
+	global	fox2_spr
+	global	falco1_spr
+	global	falco2_spr
+	global	peppy1_spr
+	global	peppy2_spr
+	global	slippy1_spr
+	global	slippy2_spr
+	global	pony1_spr
+	global	pony2_spr
+	global	girl1_spr
+	global	girl2_spr
+	global	pepper1_spr
+	global	pepper2_spr
+	global	pepper3_spr
+	global	pepper4_spr
+	global	andross1_spr
+	global	andross2_spr
+	global	msgopening1_spr
+	global	msgopening2_spr
+	global	msgopening3_spr
+	global	msgopening4_spr
+;	global	msgopening5_spr
+	global	explain_spr
+	global	enemydata_spr
+
+	global	titlechar1_spr
+	global	titlechar2_spr
+	global	titlechar3_spr
+	global	titlechar4_spr
+
+;* spt_5.cgx *
+	global	wolf1_spr,wolf2_spr
+	global	pig1_spr,pig2_spr
+	global	monkey1_spr,monkey2_spr
+	global	chameleon1_spr,chameleon2_spr
+	global	wolfdead_spr,pigdead_spr
+	global	monkeydead_spr,chameleondead_spr

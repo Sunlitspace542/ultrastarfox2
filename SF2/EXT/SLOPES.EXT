@@ -1,0 +1,9 @@
+	global	getheight_l
+	global	generaldynamics_l
+	global	suck_l
+	global	whichside_l
+	global	whichside2_l
+	global	pdpcalc_l
+	global	WIthinPoly_l
+	global	clamptoside_l
+	global	weirdness_l

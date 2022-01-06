@@ -1,0 +1,868 @@
+	IFND	do_hdr
+do_hdr	=	1
+	ENDC
+
+	IFNE	do_hdr
+
+
+;
+;       global  shapename	;/pathname
+;				;/_epath/_estrat	eguchi
+;				;/_tpath/_tstrat	kawagoe
+;				;/_kpath/_kstrat	kawaguchi
+;				;/_dpath/_dstrat	dylan
+
+;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;บ                                                              บ
+;บ basic                                                        บ
+;บ       (all)  (set_only,rotatin_only,animation_only)          บ
+;บ                                                              บ
+;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+
+
+	global	NULLSHAPE
+
+;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;บ                                                              บ
+;บ kawagoe                                                      บ
+;บ        (player & player's weapons)                           บ
+;บ                                                              บ
+;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ  
+
+	global	nullplayer	;/player_istrat&player2_istrat
+	global	nullROBOTA	;/player_istrat&player2_istrat
+	global	nullROBOTB	;/player_istrat&player2_istrat
+
+; A-WING
+	global	a_wing		;/player_istrat&player2_istrat
+; B-WING
+	global	b_wing		;/player_istrat&player2_istrat
+; C-WING
+	global	c_wing		;/player_istrat&player2_istrat
+;A_UFO
+	global	my_body		;/player_istrat&player2_istrat
+	global	my_l		;/player_istrat&player2_istrat
+	global	my_r		;/player_istrat&player2_istrat
+;C_UFO
+	global	c_ufo_bo	;/player_istrat&player2_istrat
+	global	c_ufo_l		;/player_istrat&player2_istrat
+	global	c_ufo_r		;/player_istrat&player2_istrat
+;B_UFO
+	global	b_ufo_bo	;/player_istrat&player2_istrat
+	global	b_ufo_l		;/player_istrat&player2_istrat
+	global	b_ufo_r		;/player_istrat&player2_istrat
+
+;A-ROBO
+	global	a_robo		;/player_istrat&player2_istrat
+	global	a_ashi_l	;/player_istrat&player2_istrat
+	global	a_ashi_r	;/player_istrat&player2_istrat
+	global	a_swim_l	;/player_istrat&player2_istrat
+	global	a_swim_r	;/player_istrat&player2_istrat
+;B-ROBO
+	global	b_ashi		;/player_istrat&player2_istrat
+	global	b_robo		;/player_istrat&player2_istrat
+	global	b_swim_l	;/player_istrat&player2_istrat
+	global	b_swim_r	;/player_istrat&player2_istrat
+;C-ROBO
+	global	c_ashi_l	;/player_istrat&player2_istrat
+	global	c_ashi_r	;/player_istrat&player2_istrat
+	global	c_robo		;/player_istrat&player2_istrat
+	global	c_swim_l	;/player_istrat&player2_istrat
+	global	c_swim_r	;/player_istrat&player2_istrat
+
+;ROBOT no SHADOW
+
+	global	s_8		;/makeshadow_l(kplayer.asm)
+
+; A-WING <--transform--> A-UFO
+
+	global	ar_ufo_0	;/player_istrat&player2_istrat
+	global	ar_ufo_1	;/player_istrat&player2_istrat
+
+; C-WING <--transform--> B-UFO
+
+	global	c_ufo_0		;/player_istrat&player2_istrat
+	global	c_ufo_1		;/player_istrat&player2_istrat
+
+; B-WING <--transform--> B-UFO
+
+	global	b_ufo_0		;/player_istrat&player2_istrat
+	global	b_ufo_1		;/player_istrat&player2_istrat
+
+; A-WING <--transform--> A-ROBO
+
+	global	a_wing_0	;/player_istrat&player2_istrat
+	global	a_wing_1	;/player_istrat&player2_istrat
+
+; B-WING <--transform--> B-ROBO
+
+	global	b_wing_0	;/player_istrat&player2_istrat
+	global	b_wing_1	;/player_istrat&player2_istrat
+
+; C-WING <--transform--> C-ROBO
+
+	global	c_wing_0	;/player_istrat&player2_istrat
+	global	c_wing_1	;/player_istrat&player2_istrat
+
+; special weapon(player only)
+
+;(arwing's dummy weapon)
+
+	global	aw_dummy
+	global	bw_dummy
+	global	cw_dummy
+	global	ar_dummy
+	global	br_dummy
+	global	cr_dummy
+	global	au_dummy
+	global	bu_dummy
+	global	cu_dummy
+
+; arwing's laser
+
+	global	elaser2		;firelaser1_l(weapons.asm)
+
+; Star Fox base
+
+	global	base_0_F
+	global	base_0_B
+	global	base_0_1
+	global	base_0_2
+	global	base_0_l
+	global	base_0_r
+
+;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;บ                                                              บ
+;บ dylan                                                        บ
+;บ        (boss)                                                บ
+;บ                                                              บ
+;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;บ                                                              บ
+;บ Eguchi's block                                               บ
+;บ        (zaco,neta)                                           บ
+;บ                                                              บ
+;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+
+;======= in ushapes.asm==========
+	global	station
+	global	demo_target
+	global	kirakira
+	global	zaco_mother
+	global	stg_checker
+
+;======= in eshapes.asm==========
+	global	eisei_1
+;	global	jigoku		;azukarihin		;aa
+	global	way_0		;e_nocolobj
+	global	way_1		;e_nocolobj
+	global	way_2		;e_nocolobj
+	global	way_3		;e_nocolobj
+;	global	arch_0_0	;(e_building),e_buil_shadow_off		;aabat
+;	global	arch_0_1	;e_building				;aabat
+;	global	arch_0_2	;(e_building),e_buil_shadow_off		;aabat
+;	global	arch_1_0	;e_tunnel_0				;aabat
+;	global	arch_1_1	;path de jidoutekini set sareru.	;aabat
+	global	hasi0_0		;(e_building),e_buil_shadow_off
+	global	hasi0_1		;e_building
+	global	hasi0_2		;(e_building),e_buil_shadow_off
+	global	pyramid0	;(e_building),e_buil_shadow_off , e_buil_180_s_off ,(e_buil_180_s_on)
+;	global	pyramid1	;(e_building),e_buil_shadow_off		;aa
+;	global	pyramid1_180	;(e_building),e_buil_shadow_off , e_buil_180_s_off ,(e_buil_180_s_on)	;aa
+	global	lamp_0		;e_lamp_0
+	global	lamp_0short	;path de jidoutekini set sareru
+;	global	ita_0		;e_ita_m,e_ita_s			;aabat
+;	global	ita_1		;e_ita_m,e_ita_s			;aabat
+	global	kusha_0		;path de jidoutekini set sareru.
+	global	kusha_20		;path de jidoutekini set sareru.
+	global	kusha_1		;e_kusha
+	global	kusha_21		;e_kusha
+	global	kusha_2		;e_kusha
+	global	kusha_22		;e_kusha
+;	global	gun_0_0		;e_player_hou				;aabat
+;	global	gun_0_1		;path de jidoutekini set sareru		;aabat
+;	global	noru_1		;e_noru_small				;aabat
+	global	noru_2		;e_noru_small				;aabat
+;	global	noru_1end	;path de jidoutekini set sareru.	;aabat
+	global	noru_2end	;path de jidoutekini set sareru.	;aabat
+;	global	build_0		;(e_building), e_buil_shadow_off	;aa
+;	global	build_1		;(e_building), e_buil_shadow_off	;aa
+;	global	build_2		;(e_building), e_buil_shadow_off	;aa
+;	global	build_3		;(e_building), e_buil_shadow_off	;aa
+;	global	build_4		;(e_building), e_buil_shadow_off	;aa
+;	global	build_490	;(e_buil_90_s_on), e_buil_90_s_off	;aa
+;	global	build_5		;(e_building), e_buil_shadow_off	;aa
+;	global	build_590	;(e_buil_90_s_on), e_buil_90_s_off	;aa
+;	global	build_6		;(e_building), e_buil_shadow_off	;aa
+;	global	build_690	;(e_buil_90_s_on), e_buil_90_s_off	;aa
+;	global	build_7		;(e_building), e_buil_shadow_off	;aa
+;	global	build_790	;(e_buil_90_s_on), e_buil_90_s_off	;aa
+;	global	build_8		;(e_building), e_buil_shadow_off	;aa
+;	global	build_890	;(e_buil_90_s_on), e_buil_90_s_off	;aa
+;	global	tou_0		;					;aabat
+	global	kumo_0
+	global	ori_0
+;	global	wanwan_0						;aa
+;	global	wanwan_1						;aa
+;	global	wanwan_2						;aa
+;	global	wanwan_3						;aa
+;	global	iwa_0
+;	global	iwa_0half						;aa
+;	global	iwa_1
+;	global	iwa_2
+;	global	iwa_3							;aa
+;	global	iwa_390							;aa
+;	global	iwa_3half						;aa
+;	global	iwa_290							;aa
+	global	track_0
+	global	track_0end
+	global	d_robo
+	global	d_robo_ori
+;	global	d_robo_1
+	global	zaco_0
+	global	zaco_0far
+	global	d_keep_0
+	global	d_keep_1
+	global	d_keep_1end
+	global	d_keep_2
+;	global	totem_0							;aa
+;	global	totem_1							;aa
+;	global	downship						;aa
+	global	flower_0
+	global	flower_1
+;	global	ibara_0
+;	global	ibara_1
+;	global	saru_0							;aa
+;	global	saru_1							;aa
+	global	saru_2
+	global	saru_2end
+	global	guru2bar
+;	global	kinoko_0
+;	global	kinoko_1
+;	global	kinoko_2
+;	global	kinoko_3
+;	global	kinoko_4
+	global	kino_n_0
+	global	kinoko_n
+	global	kino_d_s
+	global	kinoko_d
+	global	kinoko_dlow
+;	global	jump_dai
+;	global	ibara_kinoko
+;	global	kogame_0						;aa
+	global	taoreru1
+	global	taoreru_end
+	global	munyu_0
+	global	munyu_0end
+	global	munyu_big
+	global	yashi_0
+	global	souko_0
+	global	souko_1
+	global	souko_2
+	global	saka_0_0
+	global	saka_0_1
+	global	ana_0
+	global	ana_0big
+	global	kazan_0
+	global	w_kichi	
+	global	yuka_0
+	global	yuka_1
+	global	yuka_2
+	global	yuka_to
+	global	tsu_hou
+	global	te_0_0
+	global	te_0_1
+	global	yamori_b
+	global	yamori_l
+	global	yamori_r
+	GLOBAL	COLO_0_0
+	GLOBAL	COLO_0_1
+	global	colo_1_0
+	global	colo_1_1
+	global	colo_1_2
+	global	colo_1_3
+	global	extra1_0
+	global	extra1_1
+	global	extra1_2
+	global	extra1_3
+	global	extra2_0
+	global	extra2_1
+	global	extra2_2
+	global	extra2_0_b
+	global	extra2_1_b
+	global	extra2_2_b
+	global	tekikan
+	global	kado_0
+	global	kabe_ak1
+	global	kabe_ak1adamy
+	global	kabe_ak1final
+	global	kabe_to1
+
+;======= in eshapes2.asm==========
+
+;	global	noru_dai	;e_noru_dai_0
+	global	gate_0
+	global	ring_0		;e_ring_0
+	global	kaifuku
+	global	kabe_0
+	global	noru_3_0
+	global	noru_3_1
+	global	noru_3_2
+	global	arch_2_0
+	global	arch_2_1_l
+	global	arch_2_1_r
+	global	arch_2_2
+	global	arch_2_3
+	global	enemy_maker1
+	global	kao_man
+	global	kao_manwork
+;	global	iwa_4
+;	global	iwa_4big
+	global	m_iwa_0
+	global	m_iwa_1
+	global	m_iwa_2
+	global	m_iwa_5
+	global	m_iwa_6
+	global	eisei_0
+	global	k_tori_0
+	global	totem_2
+;	global	hasami_0
+	global	hasami_1
+	global	hasami_2
+;	global	hasami_3
+;	global	hasami_4
+	global	p3_ashi
+	global	mukade_0
+	global	mukade_1
+	global	mukade_2
+	global	yama_0_0
+	global	yama_0_1
+;;;	global	yama_0_2
+	global	yama_1_0
+;	global	yama_1_1
+	global	yama_1_2
+	global	nazca_0
+;	global	nazca_1
+	global	michi_0
+	global	michi_1
+	global	michi_2
+	global	michi_3
+	global	michi_4
+	global	michi_5
+	global	michi_6
+	global	michi_7
+	global	pyramid2
+;	global	pyramid3
+	global	sagyou_0
+	global	sagyou_1
+	global	osu_0
+	global	colony_0
+	global	colony_1
+	global	colony_2
+	global	room_0_0
+	global	room_0_1
+	global	room_0_2
+	global	room_0_3
+	global	room_0_4
+	global	room_1_0
+	global	room_1_1
+	global	room_1_2
+	global	room_1_3
+	global	room_1_4
+	global	rapyuta
+	global	caldera
+	global	miss_dai
+	global	miss_0
+	global	house_0
+	global	house_1
+	global	house_2
+;;;	global	house_3
+	global	ike_0
+	global	wel_0_0
+	global	wel_0_2
+	global	wel_1_0
+	global	wel_1_1
+	global	wel_2_0
+	global	wel_2_1
+	global	antenna
+	global	antenna_m
+	global	antenna_c
+	global	antenna_end
+	global	taihou_0
+;	global	taihou_0s
+	global	you_0_0
+	global	you_0_1
+	global	yousai_4
+;	global	yousai_1
+;	global	yousai_2
+;	global	yousai_3
+	global	kani_0
+	global	kani_1
+	global	kani_2
+	global	ike_1_0
+;	global	ike_1_1
+	global	ike_1_2
+	global	ka_0
+	global	mikako
+	global	mikako_op
+	global	box_0
+	global	tsutsu_0
+	global	ryuhyou
+	global	colony
+
+;======= in shapes2.asm==========
+;	global	pyonta		;World Y should be -80 / e_pyonta			;aabat
+;	global	pyonta_k	;World Y should be -80 / e_pyonta_kx / e_pyonta_kz	;aabat
+;	global	pyonta_t	;e_pyonta_t						;aabat
+	global	kakashi
+;	global	yajiro_0						;aa
+;	global	yajiro_1						;aa
+;	global	yajiro_2						;aa
+;	global	yajiro_3						;aa
+	global	kabe_to
+	global	kabe_aku
+	global	kabe_akufinal
+	global	kabe_akufar
+	global	kabe_akufarfinal
+	global	kabe_1
+	global	kabe_2
+	global	kurage_0
+	global	kurage_0_1
+	global	kurage_1
+	global	kurage_2
+
+;======= in shapes.asm==========
+	global	tetra		;e_tetra
+	global	tetra_0
+	global	tetra_1
+	global	tetra_2
+	global	tetra_3
+	global	tetra_c
+	global	damyexp
+	global	damyexp_s
+	global	zaco_1
+	global	zaco_2
+	global	fuse_0
+;	global	fuse_0_1
+	global	t_hako_0
+	global	t_hako_1
+	global	t_saka_0
+	global	t_saka_1
+	global	t_to_0
+	global	t_to_1
+	global	t_to_2
+	global	m_box
+	global	lock_man
+;	global	pole_0
+;	global	pole_1
+;	global	pole_1_s
+;	global	pole_2
+;	global	pole_2_s
+;	global	pole_3
+;	global	pole_5
+	global	iwashi_0
+	global	miss_man
+	global	saku_0
+	global	saku_0_1
+	global	saku_1
+	global	saku_1_1
+	global	saku_m_0
+	global	saku_m_1
+	global	saku_m_2
+	global	saku_m_3
+	global	hana_hou
+	global	sasori_0
+	global	men_0_s
+	global	men_0_e
+	global	men_1
+	global	tomato_0
+	global	tomato_1
+	global	tomato_2
+	global	hey1_n
+	global	hey1_h
+	global	hey2_n
+	global	hey2_h
+	global	hey2_in
+	global	hey2_out
+	global	hey3_n
+	global	hey3_h
+	global	hey3_in
+	global	hey3_out
+	global	hey4_n
+	global	hey4_h
+	global	hey5_n
+	global	hey6_n
+	global	hey_s
+	global	hey_sh
+	global	hey_sin
+	global	hey_sout
+	global	ataru_0
+	global	ataru_1
+	global	c_cup_0
+	global	c_cup_1
+	global	sli_0
+	global	sli_1
+;	global	slide_0
+;	global	slide_1
+	global	ataru2_0
+	global	ataru2_1
+	global	f_robo_0
+	global	f_robo_1
+	global	hae_0
+	global	hiyasu_0
+	global	sagyou_r
+;           
+;ษออออออออออออออออออออออออป
+;บ   EGUCHI'S BLOCK END   บ
+;ศออออออออออออออออออออออออผ
+;           
+
+
+
+
+
+;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;บ                                                              บ
+;บ kawaguchi                                                    บ
+;บ        (sprite)                                              บ
+;บ                                                              บ
+;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;============ sprites =========
+	global	smoke
+	global	boost
+	global	splash
+	global	item_00
+;	global	wave
+	global	jet
+	global	plasma1
+	global	egplasma1
+;	global	robobomb
+	global	enemybomb
+	global	help
+	global	thanks
+	global	kusa
+	global	kusabig
+	global	capsule1
+	global	capsule2
+	global	msplash
+	global	magmaball
+	global	bubble
+	global	wallflash
+;============ explosion shapes =========
+
+	global	explosion
+	global	explosion2
+	global	explosion3
+	global	explosion4
+	global	explosion5
+
+;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;บ                                                              บ
+;บ test                                                         บ
+;บ        (all)                                                 บ
+;บ                                                              บ
+;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+
+;****************************************************************
+;*			Player Shape				*
+;****************************************************************
+;TEST SHAPE
+	global	ITEM_0
+;**********
+
+;	global	cockpit
+
+
+; -- PLAYER SHAPE (ARWING TYPE) --
+
+; ARWING
+;	global	friendship_4
+;	global	arwing
+;	global	arwing_red
+; DRWING
+;	global	drwing
+
+; DRWING2
+;	global	drwing_2
+; SS2
+;	global	ss2
+; SS3
+;	global	ss3
+
+
+; -- PLAYER SHAPE (ARMER TYPE) --
+
+
+;SUGIYAMA ARMER
+
+;	global	u2_c
+;	global	u2_l
+;	global	u2_r
+;	global	u3_c
+;	global	u3_l
+;	global	u3_r
+
+; -- PLAYER SHAPE (WALKER TYPE) --
+
+; WATANABE WALKER
+
+;4	global	ar_walk		; walker walk
+;4
+;4	global	walk_l		; walker walk left
+;4	global	walk_r		; walker walk right
+;4
+;4	global	wa_tu_l		; walker turn
+;4	global	wa_tu_r
+;4	global	wa_st_l		; walker stop turnning
+;4	global	wa_st_r
+;4	global	wa_si
+
+
+; SUGIYAMA WALKER RR2
+
+;	global	rr2
+;	global	rr2_walk	; walker walk
+;	global	rr2_lw		; walker walk left
+;	global	rr2_rw		; walket walk right
+;	global	rr2_lt		; walker turn left
+;	global	rr2_rt		; walker turn right
+
+; SUGIYAMA WALKER RR3
+
+;	global	rr3		;
+;	global	rr3_walk	; walker walk
+;	global	rr3_lw		; walker walk left
+;	global	rr3_rw		; walket walk right
+;	global	rr3_lt		; walker turn left
+;	global	rr3_rt		; walker turn right
+
+; SUGIYAMA WALKER RR2
+
+;	global	ss2_w		; walker walk
+
+; SUGIYAMA WALKER RR3
+
+;	global	ss3_w		; walker walk
+
+
+; HONE HONE WALKER
+
+
+; -- PLAYER SHAPE (TRANSFORMATION) --
+
+; ARWING <---> ROBOT
+
+;	global	ar_wa_0
+;	global	ar_wa_1
+
+; SS2 <---> ARMER
+
+;	global	ssu2a	; SS2 --> U2
+;	global	ssu2b
+
+; SS3 <---> WALKER
+
+;	global	sss3a	; SS3 --> ss2_w
+;	global	sss3b	;
+
+; SS3 <---> ARMER	
+
+;	global	ssu3a	; SS3 --> U3
+;	global	ssu3b	;
+
+
+
+; -- PLAYER'S BASE --
+
+	global	otachi_0
+	global	otachi_1
+	global	otachi_2
+	global	otachi_3
+	global	otachi_r
+	global	otachi_l
+	global	otachida
+
+; -- player's device --
+
+	global	barrier
+
+;=================== walker kick =================
+;	global	wa_kick
+;===================== shoot shape ===============
+	global	paintball
+	global	bomb
+	global	bullet
+;====================== WEAPON SHAPE ==============
+	global	laser_0
+	global	missile
+	global	miss_1
+	global	miss_2
+	global	miss_3
+	global	miss_4
+
+	global	hou_5	; SHAPE for TEST(KGE)
+
+;****************************************************************
+;*			TEST SHAPES				*
+;****************************************************************
+	global	q
+;****************************************************************
+;*			Boss Enemy Shape			*
+;****************************************************************
+	global	ninja_0
+	global	ninja_1
+	global	ninja_2
+	global	runner_0
+	global	runner_1
+	global	runner_2
+	global	runner_3
+	global	run_2_s
+	global	run_3_s
+	global	dada_0_0
+	global	dada_0_1
+	global	dada_0_2
+	global	ship_0
+	global	hou_1
+	global	spin_0
+	global	spin_1
+	global	spin_2
+	global	spin_3
+	global	spin_4
+	global	phoenix
+	global	takoashi
+	global	mimizu
+	global	tako_0
+	global	tako_1
+	global	tako_2
+	global	dragon_0
+	global	dragon_1
+	global	dragon_2
+	global	dodora_0
+	global	dodora_1
+	global	dodora_2
+	global	dodora_3
+	global	dodora_l
+	global	dodora_r
+	global	d_ashi_l
+	global	d_ashi_r
+	global	pierrot
+	global	hand_r
+	global	hand_l
+	global	phoe_b
+	global	phoe_l
+	global	phoe_r
+	global	phoe_t
+	global	kao
+	global	arizigok
+	global	sunayama
+;****************************************************************
+;*			Special Enemy Shapes			*	
+;****************************************************************
+;======= zaco enemy =========
+;****************************************************************
+;*			Zaco Enemy Shape		[move]	*
+;****************************************************************
+;======= Robo shape ==============
+	global	robo_0
+	global	robo_1
+	global	robo_1_sp
+
+	global	gun_walk
+	global	gun_look
+	global	gun_shot
+	global	gun_pose
+;======= batta shape =============
+	global	batta_0
+;;======= tank shapes ============
+;	global	tank_0
+;
+;======= Flying shapes ==========
+;	global	zaco_5
+;	global	shark_0
+
+;======= dacho shapes ===========
+	global	dacho
+;======= yajirobe shapes ========
+;****************************************************************
+;*			ZACOENEMY		[notmove]	*
+;****************************************************************
+;======= houdai ========
+;	global	hou_0
+;	global	hou_0_1
+;	global	nobi_0
+;	global	nobi_0_0
+;	global	nobi_0_1
+;****************************************************************
+;*			KAGE					*
+;****************************************************************
+	global	s_4
+;****************************************************************
+;*			Item shape				*
+;****************************************************************
+;	global	kanban_0
+;	global	kanban_1
+;	global	kanban_2
+;
+;
+;****************************************************************
+;*			Font shape				*
+;****************************************************************
+;	global	font_l
+;	global	font_n
+	global	font_o
+;	global	font_s
+	global	font_t
+;	global	font_w
+;****************************************************************
+;*			Interrupt shape				*
+;****************************************************************
+;============ gate shapes ==========
+;	global	isu_yane
+;	global	isu_0
+;	global	isu_1
+;	global	isu_2
+;	global	isu_3
+
+;============ building shapes ======
+;	global	bu_0
+;	global	bu_1
+;	global	bu_2
+;	global	bu_3
+;	global	bu_4
+;	global	bu_5
+;	global	bu_6
+;	global	bu_7
+;
+;============ ring shape ===========
+	global	training
+;;============ daruma shape =========
+;	global	daruma_0
+;	global	daruma_1
+;	global	daruma_2
+;
+;;============ test shapes =========
+;	global	swi_pool
+;
+;;=======  kame shapes  =================
+;
+;	global	kame_0_0
+;	global	kame_0_1
+;	global	kame_0_2
+;	global	kame_0_3
+;	global	kame_0_4
+;
+;;=======  tunnel shapes  =================
+;	global	kabe_ta
+;	global	kabe_yo
+;
+;======================================================================
+
+;ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤยฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+;ณ Dylan's BOSS Shapes ณ
+;ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+	global	firebr
+
+	global	flame
+
+	ENDC
+

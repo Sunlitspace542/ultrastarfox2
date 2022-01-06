@@ -1,0 +1,217 @@
+	MSG	<pepper OTHER Í„ Ïx teœ_Õ Ìu ¾ad ´? I ¯Æ t‰¿ e news.>
+	MSG	<pepper OTHER OÉ swoš “”y, –e «“d §oÀ, ƒ ŒiÆ!>
+	MSG	<pepper OTHER Ev“ ž ˜ ×eak, ° ƒ la‘£±g ‚ žÁÈt ¸ ™š‰›.>
+	MSG	<pepper OTHER •e B‡tï C„¿‰s ‚d ‡Ž f»Šs € §oÀ>
+	MSG	<pepper OTHER „e nñ adv‚c±g ¸ ™š‰›.>
+	MSG	<pepper OTHER ¨”y ¡‹s ¯Æ †“ es ƒ°d ¸ ¹‰r‘ ½‚ªs.>
+	MSG	<pepper OTHER ¼‚ª„y µÀiïs Ëî † «¾d ¬º –e‹ “”y ¡‹s.>
+	MSG	<pepper OTHER OnŠ Ÿa±, ˜  žk Ìu …r ÌÉ aÀƒnŠ, Sr Ïx.>
+	MSG	<pepper OTHER ™š‰› Ëî ÃrÇÆ ² ’ Ãs±s µ·r ¥³®, but ²>
+	MSG	<pepper OTHER ¥³® ¾a£es 100 p‰Šnt, ’ ƒ Œl ¹‰.>
+	MSG	<pepper OTHER ¨­® –e …rŠs € §oÀ àiï ‡ –e Á´ Ñ´ íep±g>
+	MSG	<pepper OTHER ¥³®  ™š‰› ‡ –e lo˜ ïÆl çÀibï. Goð LuŽ!>
+	MSG	<pepper OTHER Yò  ±«lÔ‡e –e “”y ¡‹ ‚d ‚nihil‡e ’.>
+	MSG	<pepper OTHER FÛ ± –e B‡tï C„¿‰ ‚d ¦roy ’s “‰gy c»e.>
+	MSG	<pepper down ™š‰› ƒ nñ ‘d‰ žÁÈt!>
+	MSG	<pepper down ™š‰› ƒ ‘d‰ di¾¤ “”y ‡Ž! õlp Ê...>
+	MSG	<pepper down ¨”÷s ‡Ž±g ™š‰›...¦f“‹s ˜ak“±g...>
+	MSG	<pepper down — ¯Æ †“ h’ ¢ a ½‚ª„y µÀiï!>
+	MSG	<pepper down •e ¼‚ª C‚n¸ ¯s öÊ© °avy ¥³® °¾!>
+	MSG	<pepper OTHER Ò “­® –e “”y, l‚d ¸ ½‚ªs ‚d ±t‰Špt Äìs.>
+	MSG	<pepper OTHER RªÉn  ÌÉ Mo–‰Äì  w„p  ‚y ¬ee ½‚ª.>
+	MSG	<pepper OTHER Seï¤ a ¦±‡i¸ ¢ m¹±g –e cÉs», –“ p¾À (.>
+	MSG	<ANDROSS OTHER I ¯Æ ¾Åš©! I ÄŒl ³í –e ™š‰›ns Ãff‰!>
+	MSG	<andross help In¯b’‚ts € ™š‰›_Ìu ÄŒl fe„ my v“®‚Š.>
+	MSG	<andross down I Ëî ¦m¸r‡e my a˜Î´ ç˜r ¸ Œl € Lyl‡!>
+	MSG	<FOX OTHER D¸Ö …r®t  p¾À =  «¾ ÌÉ Þo‰s!>
+	MSG	<FALCO OTHER ùÉ Þo‰s „e a¤iv‡© ¢ p¾À±g =.>
+	MSG	<PEPPY OTHER By p¾À±g =, Ìu c‚ Þo ÌÉ ×e©.>
+	MSG	<SLIPPY OTHER FÛ Ð‰ ¢ p¾À±g_¿ß’!_ =.>
+	MSG	<GIRL1 OTHER ø Ìu w‚t  ×e© ˆ, u‹ =.>
+	MSG	<GIRL2 OTHER P¾À = ‚d Ìu Ëî a¤iv‡e ÌÉ Þo‰s!>
+	MSG	<FOX OTHER Boo ÌÉ ×e© ‚d £a‹ Õã “”÷s Ë– =!>
+	MSG	<FALCO OTHER Yò'¾ fÛ±g o slñ! U‹ =  ×e© ˆ.>
+	MSG	<PEPPY OTHER —'¾ Ðî±g †h±d. P¾À =  Þo ×e©!>
+	MSG	<SLIPPY OTHER •Ú'¾ ®Ó±g ØÙ! P¾À =_ èr¿ß’!>
+	MSG	<GIRL1 OTHER •Ú „e esöp±g! C‡£ –e “”y ¢ p¾À±g =!>
+	MSG	<GIRL2 OTHER ø ˜ d¸Ö Þo oÉ ×e© Ë– =, –Ú'î ®t ØÙ!>
+	MSG	<FOX OTHER ™š‰› ƒ ‘d‰ ‡Ž. H’ @#$!>
+	MSG	<FALCO OTHER HÚ! —  ®t ¡Ž  ™š‰›. P¾À @#$.>
+	MSG	<PEPPY OTHER — ¯Æ æt  ¾Åš  ™š‰›! P¾À @#$.>
+	MSG	<SLIPPY OTHER •‰e's Ôòbï ¡Ž ‡ ™š‰›! P¾À @#$.>
+	MSG	<GIRL1 OTHER Oh, oh! ™š‰› ƒ ± Ôòbï. P¾À @#$  ¾Åš.>
+	MSG	<GIRL2 OTHER So´–±g's ˆ ‡ ™š‰›. P¾À @#$!>
+	MSG	<FOX OTHER •ƒ ƒ k±g o l¸g. P¾À @#$.>
+	MSG	<FALCO OTHER Lª's ®t òt € °¾! P¾À @#$.>
+	MSG	<PEPPY OTHER It's · æð! Ò ®t òt € °¾, p¾À @#$.>
+	MSG	<SLIPPY OTHER —'¾ á±g Ñ´ °¾. P¾À @#$_cèroak!>
+	MSG	<GIRL1 OTHER Lª's ¡g –ƒ. — ok o l¸g. P¾À @#$.>
+	MSG	<GIRL2 OTHER Ti´ ƒ lim’©, Î ït's giÆ –ƒ ˆ. P¾À @#$.>
+	MSG	<FOX OTHER —'Æ ïft –e b‡tï«eÜ. Ïîñ ´ ¡Ž!>
+	MSG	<FALCO OTHER OÉ b‡tï Âte ƒ ¡Ž –‰e. I'î ïad Ê ¡Ž.>
+	MSG	<PEPPY OTHER HÚ, –‰e's · ¸e òt °¾! Ïîñ ´ ¡Ž!>
+	MSG	<SLIPPY OTHER — ³y † lo. I –±k ˜ ÄòÜ æ ¡Ž. Ïîñ ´!>
+	MSG	<GIRL1 OTHER — ÄòÜ ¾Åš ‚d ‡Ž –e “”y. Ïîñ ´!>
+	MSG	<GIRL2 OTHER •‰e „e · “eµes òt °¾. ™´ Ë– ´!>
+	MSG	<FOX OTHER R””b‰, p¾À ]^& ± »d‰  Ô‚s…ô.>
+	MSG	<FALCO OTHER P¾À ]^& ² Ìu w‚t  Ô‚s…ô!>
+	MSG	<PEPPY OTHER Tr‚s…ô ÌÉ Äì ¢ p¾À±g ]^&.>
+	MSG	<SLIPPY OTHER D¸Ö …r®t,  p¾À ]^&  Ô‚s…ô!>
+	MSG	<GIRL1 OTHER ø Ìu w‚t  Ô‚s…ô, p¾À ]^&!>
+	MSG	<GIRL2 OTHER P¾À ]^&, ‚d ÌÉ Äì Ëî Ô‚s…ô!>
+	MSG	<FOX OTHER ™uÑ¸! L‚d±g ¸ MŸ³ öu‹s ¥³®.>
+	MSG	<FALCO OTHER D¸Ö l‚d! Yò í ¥³® àiï ¸ –e sÉÐŠ.>
+	MSG	<PEPPY OTHER •e sÉÐŠ € MŸ³ ƒ buš±g hot! D¸Ö l‚d.>
+	MSG	<SLIPPY OTHER Hot! Hot! Hot! I'm §y±g òt! D¸Ö l‚d_¿ß’.>
+	MSG	<GIRL1 OTHER •e sÉÐŠ ƒ molt“! D¸Ö l‚d, okÙ?>
+	MSG	<GIRL2 OTHER W‡£ ’! Yò í ¥³® ² Ìu l‚d ¸ MŸ³.>
+	MSG	<FOX OTHER AtŽ±g ¬º °¾ ƒ · æð. F±d a sw’£.>
+	MSG	<FALCO OTHER — ¶©  «nd a sw’£  op“ –e “Ô‚Š.>
+	MSG	<PEPPY OTHER AtŽs ¬º òt_ Â¦ „e u‹ïÀ. A¤iv‡e a sw’£.>
+	MSG	<SLIPPY OTHER —  f±d a sw’£ –‡ op“s ‚ “Ô‚Š.>
+	MSG	<GIRL1 OTHER Ext‰nŒ ‡Žs „e i¶ffe¤iÆ. F±d a sw’£.>
+	MSG	<GIRL2 OTHER •‰e ƒ a sw’£ Î´½aŠ –‡ op“s –e “Ô‚Š.>
+	MSG	<FOX OTHER •‰e's a b„¿‰! K·Ž òt –e Ä÷Ü g“‰‡»s.>
+	MSG	<FALCO OTHER Deroy –e Ä÷Ü g“‰‡»s, –“ „t –e žÁÈt!>
+	MSG	<PEPPY OTHER B„¿‰ ¦te¤©. F±d ‚d ¦roy ’s pñ‰ ÎÉŠ.>
+	MSG	<SLIPPY OTHER A Ä÷Ü g“‰‡» ƒ °¾ Î´w°¾. Deroy ’_¿ß’!>
+	MSG	<GIRL1 OTHER Cut €f pñ‰  –e b„¿‰, –“ ‡Ž –e rgª.>
+	MSG	<GIRL2 OTHER •‰e's a Ä÷Ü! —  ¦roy ’s g“‰‡»s.>
+	MSG	<pepper help A B‡tï C„¿‰ ¯s la‘£© ‚ ‡Ž …rŠ.>
+	MSG	<pepper help W„n±g! ¼‚ª„y µÀiï °ad© …r ™š‰›!>
+	MSG	<pepper help Em‰g“cy! A ¶w B‡tï C„¿‰ ¯s sudd“Û appe„©.>
+	MSG	<pepper OTHER Keep ‚ Úe ¸ –e ¥³® Õ¶  ™š‰›.>
+	MSG	<FOX OTHER >
+	MSG	<ANDROSS OTHER Shñ · m‰cy. CruÄ –” ¢ ‚y ´‚s çsÂbï.>
+	MSG	<pepper OTHER —î Õ¶! MƒÂï ‡Žs ¬º –‡ ½‚ª ¯Æ “d©.>
+	MSG	<ANDROSS help Sr Ïx, Ìu m‚gy cÉ, hñ ¥¾ Ìu c¯î“® ´ a­±?>
+	MSG	<ANDROSS down Gárg!! Yò p‡hªic …ols „e compïteÛ w»–ïÀ!>
+	MSG	<pepper OTHER Goð Äñ! Nñ ˜ c‚ expe¤ few‰ ‡Žs.>
+	MSG	<FOX OTHER C¸t±ue ž Ëng m‚?>
+	MSG	<FOX OTHER Yes>
+	MSG	<FOX OTHER No>
+	MSG	<pepper OTHER •ƒ ƒ oÉ S‡eî’e Def“‹ ¼‡…ô. It prote¤s ™š‰›.>
+	MSG	<pepper OTHER •e s‡eî’e ¯s †“ öptÉ©! Yò  lib‰‡e ’.>
+	MSG	<FOX OTHER MISSION>
+	MSG	<FOX OTHER RECORD>
+	MSG	<FOX OTHER TEST>
+	MSG	<FOX OTHER TRAINING>
+	MSG	<FOX OTHER CONFIG>
+	MSG	<FOX OTHER STEREO>
+	MSG	<FOX OTHER MONO>
+	MSG	<FOX OTHER NORMAL>
+	MSG	<FOX OTHER HARD>
+	MSG	<FOX OTHER EXPERT>
+	MSG	<FOX OTHER W„p Ça ÌÉ Mo–‰Äì?     Yes                 No>
+	MSG	<FOX OTHER ¼aŠ –e cÉs» ¸ ÌÉ ¦±‡i¸ ‚d p¾À (.>
+	MSG	<pepper OTHER Yò ¾öptÉ© –e s‡eî’e ½‡…ô. Incr©ibï job!>
+	MSG	<FOX OTHER |>
+	MSG	<pepper OTHER ùÉ Äì's Ä÷Üs „e ¾£„g© ‡ ÌÉ Mo–‰Äì.>
+	MSG	<pepper down Ayaah! It's Œl ¹‰! ™š‰› ƒ «niÄ©!>
+	MSG	<ANDROSS OTHER It appe„s a p‘y pª r‡ ƒ r‘n±g abòt...hñ cute!>
+	MSG	<ANDROSS help Go ½Ù Ë– ÌÉ pª. Ju ½Ù niŠ...Gáh ¯ ¯!>
+	MSG	<ANDROSS OTHER G„g gya ¯ ¯! It's · f‘ à“ –‰e's · ¾Â‚Š.>
+	MSG	<ANDROSS down La‘£ ½‚ª„y mƒÂïs ‡ ™š‰›!>
+	MSG	<ANDROSS help ™š‰›'s Ë–± r‚® € –e ¼‚ª C‚n¸! Gw„g ¯ ¯!>
+	MSG	<ANDROSS down •ƒ ƒ ´‚t …r Ìu Œ¸e. ¼‚ª C‚n¸ ...FIRE!!>
+	MSG	<ANDROSS OTHER Hmm...Ìu did ˜î, but –e ¾Œ b‡tï ¯snÖ ev“ †g‘.>
+	MSG	<ANDROSS help Hy»g! Hy»g! Hy»g! ø Ìu –±k Ìu Õ ˜î, Ìu „e a …ol!>
+	MSG	<ANDROSS down ¼Ù Ñ´ ƒ ¹‰! Deroy –e ˜akl±gs!>
+	MSG	<ANDROSS down Yò'Æ Ãrprƒ© ´. H‰e ƒ ÌÉ ¾w„d …r œÊ±g ´.>
+	MSG	<ANDROSS help B‡tï C„¿‰s! On  ™š‰›! P¾p„e –e ¼‚ª C‚n¸!>
+	MSG	<FOX OTHER Boo ÌÉ ×e© ¢ p¾À±g ). D¸Ö …rgª!>
+	MSG	<FALCO OTHER •e ) buÓ¸ acÑv‡es ÌÉ Þo‰s!>
+	MSG	<PEPPY OTHER U‹ )  Þo ÌÉ ×e©!>
+	MSG	<SLIPPY OTHER P¾À±g ) ³ís Ìu fÛ Ð‰! Rè¿ß’!>
+	MSG	<GIRL1 OTHER Ò ×e© ˆ, p¾À )  a¤iv‡e Þo‰s!>
+	MSG	<GIRL2 OTHER Yò c‚ Þo ÌÉ ×e© ¢ Ê±g )!>
+	MSG	<FOX OTHER C¯‹ –e “”y Õã Ë– )!>
+	MSG	<FALCO OTHER Yò'¾ fÛ±g o slñ! U‹ )  Þo ×e©.>
+	MSG	<PEPPY OTHER •e “”y ƒ wÙ ahead € Ê. U‹ )  ×e© ˆ!>
+	MSG	<SLIPPY OTHER •Ú'¾ ®Ó±g ØÙ! Boo ×e© Ë– )_cèroak!>
+	MSG	<GIRL1 OTHER —'¾ f„ †h±d! C‡£ ˆ ¢ Ê±g )!>
+	MSG	<GIRL2 OTHER Yò'î ¯Æ  u‹ )  £a‹ –e “”y Õã.>
+	MSG	<ANDROSS OTHER Ah! So ÌÉ ¾ÎlÆ ƒ r¸g! Nñ ’'s Ñ´  gª ‹¿oÊ.>
+	MSG	<pepper help A Pl‚ª C‚·n's £„g±g. ùu  ‡Ž –e öèi‰!>
+	MSG	<pepper OTHER •e “”y's £„g±g –e ¼‚ª C‚n¸! Deroy –” quiŽÛ!>
+	MSG	<ANDROSS OTHER Not ¡d...·t ¡d ‡ Œl, Í„ Ïx.>
+	MSG	<ANDROSS OTHER Yò „e impr¹±g, Í„ Ïx.>
+	MSG	<ANDROSS OTHER So, Ìu ³¦ ’ –ƒ f„. I'Æ †“ á’±g …r Ìu.>
+	MSG	<ANDROSS help Imp¾ÀiÆ!_but ÌÉ exƒt“Š “ds °¾.>
+	MSG	<ANDROSS help Yò „e ju a pˆpª € –‡ …ol Pepp‰!>
+	MSG	<ANDROSS help Yò'Æ ±t‰f‰© …r –e la Ñ´, ™š‰i‚ Õgs!>
+	MSG	<ANDROSS down I Ëî put Ìu  ¾. D¸Ö woèy_ ’ Ëî † quiŽ.>
+	MSG	<ANDROSS down I ¯Æ ·t yª …ræÓ“ à‡ Ìu did  ´ †…¾.>
+	MSG	<ANDROSS down Ev‰y–±g ƒ ± my c¸Ôol! In –e “d, Ìu'î ˜ep.>
+	MSG	<FOX OTHER •‰e ƒ a mƒÂï °ad±g w„d ™š‰›! Sp ’!>
+	MSG	<FALCO OTHER Ah ¯! A mƒÂï ¯s †“ la‘£©! Lª's ¦roy ’!>
+	MSG	<PEPPY OTHER A mƒÂï's †“ Âght© °ad±g …r ™š‰›!>
+	MSG	<SLIPPY OTHER Riß’! •‰e's a mƒÂï °ad© …r ™š‰›!>
+	MSG	<GIRL1 OTHER Yñ! ™š‰›'s †“ rgª© ¢ a mƒÂï!>
+	MSG	<GIRL2 OTHER Em‰g“cy! MƒÂï °ad© …r ™š‰›!>
+	MSG	<FOX OTHER •‡ ÄòÜ op  mƒÂïs coµng ¬º –‡ ½‚ª!>
+	MSG	<FALCO OTHER Ha! §oÀ's ¡‹s „e ·–±g!>
+	MSG	<PEPPY OTHER Aî ¿ght! No mo¾ mƒÂïs ¬º –‡ ½‚ª!>
+	MSG	<SLIPPY OTHER — did ’! •e ¡‹ ‚d ’s mƒÂïs „e æ¶!>
+	MSG	<GIRL1 OTHER Ha, ¯, ¯! •‡ ¡‹ wžnÖ o ugh!>
+	MSG	<GIRL2 OTHER No ¡‹ ´‚s · mo¾ mƒÂïs ¬º –‡ ½‚ª!>
+	MSG	<FOX OTHER OkÙ! — ok ’ òt! Nñ oÉ job ƒ eaÂ‰.>
+	MSG	<FALCO OTHER It wž big, but ’ wžnÖ o ugh …r Ê!>
+	MSG	<PEPPY OTHER •‡ wž a ³j»  ñ  –e “”y!>
+	MSG	<SLIPPY OTHER •e B‡tï C„¿‰ wž ·t Î ¡d. Lª's moÆ ¸!>
+	MSG	<GIRL1 OTHER Deroy±g –e c„¿‰ ¦roys –e «ght‰s, o!>
+	MSG	<GIRL2 OTHER OÉ job ƒ eaÂ‰ ¸Š ˜ ¦roy –e c„¿‰s.>
+	MSG	<wolf down I'm imp¾À©, Í„ Ïx. Yò „e tŒ“t©...>
+	MSG	<chameleon down Yiís! Cap'n åÝ ƒ g¸na ¯Æ  ¦Œ Ë– yò!>
+	MSG	<pig down Un†l÷vabï! I  † ®Ó±g oÜ » Î´–±g!>
+	MSG	<monkey down Aaa„gh! — w¸Ö …rgª –ƒ! Nooo!>
+	MSG	<wolf down Ò¥y, I lo‹. But moèñ I Äaî cruÄ Ìu!>
+	MSG	<chameleon OTHER Ha! Le¸ € –e Í„ åÝ Ëng ƒ ·w °¾!>
+	MSG	<pig OTHER I'm Pig³ € –e Í„ åÝ Ëng! BehoÜ my l“t!>
+	MSG	<monkey OTHER My na´ ƒ Algy, ‚d I oã Ìu. ™´ ¸!>
+	MSG	<wolf OTHER Pepp‰ ¦Šiv© Ìu. I œ –e † pilot ± Lyl‡.>
+	MSG	<chameleon OTHER Cap'n åÝ ¯s »d‰© ´  cruÄ Ìu.>
+	MSG	<pig OTHER §oÀ paid ´ ˜î. •ƒ Ëî † ‚ ežy job!>
+	MSG	<monkey OTHER Cap'n åÝ Ü ´ –e Í„ Ïx teœ wž ·–±g!>
+	MSG	<wolf OTHER W»–ïÀ cñ„ds. Yò a¤ ugh, but I'î ¦roy Ìu.>
+	MSG	<pepper OTHER •e “”y's k“ –e s‡eî’e ½‡…ô. õlp Ê!>
+	MSG	<wolf OTHER My opp¸“ts ŒwÙs evaçr‡e ± ×aŠ du!>
+	MSG	<chameleon OTHER Ho, ho! Yò ¯Æ Î´ skiîs, but I Ëî ·t lo‹!>
+	MSG	<pig OTHER Yò'¾ ·t ¡d_  …r ‚ œ‡eÉ!>
+	MSG	<monkey OTHER •‰e ƒ · safe ½aŠ …r Ìu ·w!>
+	MSG	<wolf OTHER õ„ ´, Í„ Ïx! I, Í„ åÝ, Ëî ¦fe‡ Ìu ·w!>
+	MSG	<FOX OTHER WÙ  æ! Yò did ’, but I wž a b’ w»¿©.>
+	MSG	<FALCO OTHER I æt w»¿©, ‚d I w‚t©  í ÌÉ ½aŠ.>
+	MSG	<PEPPY OTHER A¾ Ìu okÙ? Nñ –‡ wž a te € ÌÉ skiîs!>
+	MSG	<SLIPPY OTHER Cèroak! I –òght ’ wž Œl ¹‰ …r a µnute!>
+	MSG	<GIRL1 OTHER Goð job! •‡ wž a nail_b’‰!>
+	MSG	<GIRL2 OTHER Whew! — Œmo didnÖ ®t òt € –‡ scrape!>
+	MSG	<FOX special It's Œl ¿ght! Yò ju æt †l÷Æ!>
+	MSG	<FALCO special Yò ÄòÜnÖ ¯Æ woèi©, ’ wžnÖ –‡ ugh!>
+	MSG	<PEPPY special HÚ, ’ wž · probïm! P÷Š € öí!>
+	MSG	<SLIPPY special Rr¿ß’! •‡'s ¿ght! I wž ¶rvoÊ, o.>
+	MSG	<GIRL1 special P„d¸? It wž ežy! R””b‰, I'Æ æt skiîs!>
+	MSG	<GIRL2 special Wh‡? It wžnÖ Œl –‡ ¡d...˜ žt© '”!>
+	MSG	<pepper OTHER ùÉ Mo–‰Äì. U‹ –e Äì  pñ‰ ˆ Ä÷Üs ‚d w„p.>
+	MSG	<pepper down •e s‡eî’e ƒ ‡Ž±g ™š‰›. ReöpÅ¾ ’!>
+	MSG	<pepper OTHER •e ¦f“‹ sy” ¦roy© ‚ “”y t„gª.>
+	MSG	<FOX OTHER QuiŽÛ p¾À + » * tËŠ  avoid “”y Äots.>
+	MSG	<FALCO OTHER P¾À + » * tËŠ, ‚d Ìu c‚ avoid Äots.>
+	MSG	<PEPPY OTHER QuiŽÛ p + » * tËŠ  avoid “”y Äots.>
+	MSG	<SLIPPY OTHER Ò roî ‚d avoid “”y Äots, p + » * tËŠ.>
+	MSG	<GIRL1 OTHER Tap + » * tËŠ  roî ‚d Õd® “”y Äots.>
+	MSG	<GIRL2 OTHER Ò avoid “”y Äots, quiŽÛ p + » * tËŠ.>
+	MSG	<pepper OTHER Lª ´ teî Ìu hñ  c¸Ôol a WŒk±g craft.>
+	MSG	<pepper OTHER U‹ 3  c¸Ôol –e di¾¤i¸, ‚d + ‚d *  ×±.>
+	MSG	<pepper OTHER Ò moÆ Ð‰, p 3 tËŠ ± ‚y di¾¤i¸.>
+	MSG	<pepper OTHER U‹ =  jump. P¾À ]^&  Ô‚s…ô.>
+	MSG	<pepper OTHER Maí æð u‹ € –e Ô‚s…ô±g öpabiliÑes.>
+	MSG	<pepper help •e s‡eîite ¯s †“ ¹‰r‘. Taí ’ ¡Ž!>
+	MSG	<pepper OTHER F±ŒÛ, §oÀ's …rŠs ± –e Lyl‡ sy” „e ¦fe‡©!>
+	MSG	<pepper OTHER P¾À ¸! Yò  ¶uÔŒize §oÀ ¸Š ‚d …r Œl!>
+	MSG	<pepper OTHER Sw’£ çs’i¸s Ë– ÌÉ Ëng ³n ¢ p¾À±g ]^&.>
+	MSG	<pepper OTHER U‹ (  jump, ‚d p¾À ]^&  Ô‚s…ô.>
+	MSG	<pepper OTHER Blžt‰ leÆl ·w raƒ©. Hº±g Äots “abl©!>
+	MSG	<pepper OTHER PlaŠ –e rgª m„k‰ ¸ ‚ “”y ‚d «re!>
+	MSG	<pepper OTHER ùu'Æ loc‡© a ‹crª ¡‹! Try  ­± “Ô‚Š.>
+

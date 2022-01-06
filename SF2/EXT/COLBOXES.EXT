@@ -1,0 +1,96 @@
+	global	elaser2_col
+	global	elaser0_col
+
+;ROBOT
+	global	ROBOT_col
+	global	ROBOTA_col
+	global	ROBOTB_col
+
+;ARWING
+	global	player_col
+	global	B_WING_COL
+	global	C_WING_COL
+;ษออออออออออออออออออป
+;บ  EGUCHI'S BLOCK  บ 
+;ศออออออออออออออออออผ
+;
+;------TEST
+	global	elaser2s_col
+	global	beam_s_col
+	global	elaser2m_col
+	global	elaser2b_col
+;------
+	global	b_meteo_col
+	global	firebr_col	;ushapes,colboxes
+	global	yoyo_col
+	global	miss2_col
+	global	core6_col
+	global	bou_0_col
+	global	tako_0_col
+	global	chi_hou_col
+	global	yuka_hou_col
+;;	global	ha_hou_col
+
+	global	room_hou_col
+	global	da_ha_yo_col
+	global	tousen_col
+;;;	global	fuse_col
+;	global	senkan_0_col
+	global	big_l_f_col
+;;;	global	kan_shield_col
+	global	bara_miss_col
+	global	stepup_fly_col
+	global	shield_col
+	global	dandou_col
+;	global	dandou_half_col
+	global	kusha_col
+;	global	kurage_col
+;	global	kurage1_col
+;	global	kurage2_col
+;;;	global	f_robo_col
+;	global	colo_00_col
+;	global	d_keep_1_col
+	global	kani_1_col
+	global	kani_2_col
+;	global	mikako_col1
+;	global	mikako_col2
+	global	mukade_0_col
+	global	mukade_2_col
+;	global	sagyou_0_col1
+	global	sagyou_1_col1
+;	global	miss_0_col1
+;	global	hasami_0_col
+	global	hasami_2_col1
+;	global	ibara_1_col1
+	global	guru2bar_col1
+;	global	gun_0_0_col
+;	global	flower_1_col
+;	global	saru_2_col
+;	global	track_0_col
+        
+
+;           
+;ษออออออออออออออออออออออออป
+;บ   EGUCHI'S BLOCK END   บ
+;ศออออออออออออออออออออออออผ
+;           
+; oka :
+; collision boxes:
+;	global	bu_4_col
+;	global	bu_5_col
+;	global	bu_6_col
+;	global	box_5_col
+	global	tank_0_col
+	global	big_gate_col1
+	global	spin_0_col
+	global	spin_0yoko_col
+	global	spin_1_col
+	global	spin_2_col
+;	global	dragon_0_col
+;	global	dragon_1_col
+;	global	dragon_2_col
+
+	global	warpl_col
+
+	global	mask_col
+

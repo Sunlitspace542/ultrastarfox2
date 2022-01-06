@@ -1,0 +1,84 @@
+	global	mbumwipe
+	global	mcalcperc,mprt2zeros,mkrisdivu3115
+	global	mdrawloop_con
+
+	global	oopspal,oopschr,oopspic
+	global	mdo_3d_display
+	global	mclrbitmaps2,mclrbitmaps3
+	
+	global	mcalc_circle
+	
+	global	mprintstr,mprtdecstop
+	global	mprtperc,mshowteammate
+	global	mwmatrotp16
+	
+	global	mvanishx,mvanishy,mcallarctan16
+	
+	global	mdecclear
+	global	mcrotwmatzxy16
+	
+	global	mdecrunch
+	global	mshowobj
+	global	minitdust
+	global	mshowobj3,mcopyface,mshowdust2
+	global	mshowpercgraph
+	global	musprite
+	
+	global	mfprintstr,msprintstr
+	global	mprintclippedstr
+	global	mgprintstr,mshowteammate2
+	
+	global	mallrotzsort,mdrawsprite32
+
+	global	mclrmapscreen
+	global	mclrpepperscreen
+	global	mclrbitmap1
+	global	mclrbitmap2
+	
+	global	mshowgrid2
+
+	global	mradarrot
+	global	mproject_a_point
+	global	mnorm16
+	
+	global	mconvertscreen,msetupscreen
+	global	mcrotwmatyxz16
+	
+  	global	mprintstring,mprintdecimal,mprinthex
+	global	mprintbinary,mtestit
+	global  mprintdecimal2
+ 
+	global	mbegin_3d_display
+
+
+;------------------------------------------------------------------------
+; 	yajima
+;------------------------------------------------------------------------
+
+	global	mprintWWstringn	
+	global	mprintWWstringn_l	; long jump WWstringN
+	global	mDisplayFace_l		; long jump DrawFace
+	global	mStringHeight_l		
+	
+;------------------------------------------------------------------------
+;*									*
+;*			Kawaguchi Using Area				*
+;*									*
+;------------------------------------------------------------------------
+
+ 	global	mprintWWstring
+	global	mprint_mapmessage
+
+	global	mDisplayFace
+	global	mStringHeight
+
+	global	mdrawblockmap
+
+	global	mTurboSprites
+	global	mdrawsphere_l
+
+
+	global	mprintstringn_l
+	global	mstringlen_l
+
+	global	mclrforcredits_l

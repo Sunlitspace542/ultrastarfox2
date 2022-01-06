@@ -1,0 +1,21 @@
+; enemy weapon
+
+	global	path_HomEmissile
+
+	global	path_Elaser
+	global	path_RelElaser
+	global	path_RelElaser_hsp
+
+	global	path_Ering
+	global	path_RelEring
+
+	global	path_Eplasma1
+	global	path_RelEplasma1
+
+	global	path_Erebound
+
+	global	path_Plaser
+	global	path_Pplasma0
+
+
+

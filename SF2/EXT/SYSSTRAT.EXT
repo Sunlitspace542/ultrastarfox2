@@ -1,0 +1,8 @@
+	global	explode_istrat
+	global	hit_istrat
+	global	set_restart_position_l
+	global	restart_L
+	global	initgame_strats_l
+	global	playerstart_init_l
+	global	explode_strat
+	global	pre_explode_istrat

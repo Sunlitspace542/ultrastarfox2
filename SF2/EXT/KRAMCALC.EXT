@@ -1,0 +1,6 @@
+	global	kcpumultu8u8_l,kcpumults8s8_l
+
+	global	karctan16_l
+	global	kdivu16u8_l,kdivu16u8_sub_l
+	global	KDivide_u32u16_l
+

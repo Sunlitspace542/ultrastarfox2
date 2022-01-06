@@ -1,0 +1,61 @@
+	global	sealimit_view_srou_l
+	global	set_inbet_l
+	global	set_inbet_path_l
+	global	MAIN_VIEWBRANCH_L
+
+	global	VIEW_CHANGE_INIT_l
+;	global	Arwing0_horizon_l
+	global	cam_looksobj_l
+
+;	global	INSPACE_ARWING_VIEW
+;	global	INSPACE_ARMER_VIEW
+;	global	TEST_DUEL_VIEW
+;	global	ONMARINE_ARWING_VIEW
+	global	ONFIELD_ARWING_VIEW
+	global	COSMO_ARWING_VIEW
+	global	ONFIELD_ROBO_VIEW
+	global	no_VIEW
+
+
+;	global	DEMO_AWCLEAR_0_0_VIEW
+;	global	DEMO_AWDEAD_0_0_VIEW
+;	global	DEMO_BATTLESTART_0_0_VIEW
+;	global	DEMO_BATTLESTART_0_0_init_l
+;	global	DEMO_AWDEAD_0_0_init_l
+
+;	global	DEMO_AW2RB_VIEW
+;	global	DEMO_AW2RB_init_l
+;	global	DEMO_RB2AW_VIEW
+;	global	DEMO_RB2AW_init_l
+;	global	DEMO_AW2AM_VIEW
+;	global	DEMO_AW2AM_init_l
+;	global	DEMO_AM2AW_VIEW
+;	global	DEMO_AM2AW_init_l
+
+	global	RB_CAMROTX_L
+
+	global	set_vscroll_offset_l
+	global	set_hscroll_offset_l
+
+	global	set_horizon_l
+
+; demo view strat
+
+;	global	DVSTRAT_startenter
+;	global	DVSTRAT_entertutu_0
+;	global	DVSTRAT_gototutu_0
+;	global	DVSTRAT_waitenter
+;	global	DVSTRAT_rollenter
+	global	DVSTRAT_chika
+	global	DVSTRAT_clrawof
+	global	DVSTRAT_goto_endseq0
+	global	DVSTRAT_playerdead
+	global	DVSTRAT_enemyhasgone
+;	global	DVSTRAT_trapper
+;	global	DVSTRAT_gamestart
+;	global	DVSTRAT_gamestart_2
+;	global	DVSTRAT_awclear_1
+;	global	DVSTRAT_bossenter
+;	global	DVSTRAT_RBclear_gnd
+
+;	global	copy_camoldposrots_l

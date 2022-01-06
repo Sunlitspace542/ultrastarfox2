@@ -1,0 +1,130 @@
+	global	titlemap
+	global	exp1map
+	global	pldownmap
+
+	global	stg1map
+	global	stg2map
+	global	stg3map
+	global	stg4map
+	global	stg5map
+	global	stg6map
+	global	ext1map
+	global	ext2map
+	global	ext3map
+	global	ext4map	
+	global	sos1map
+	global	sos2map
+	global	sos3map
+
+	global	titledemomap		
+	global	startenemydemomap	
+	global	startarwingdemomap
+	global	corneriafelldemomap
+	global	endingdemomap
+	global	specialenemydemomap
+	global	cannondemomap
+	global	dummy0demomap
+	global	dummy1demomap
+	global	dummy2demomap
+	global	tra1map
+
+	ifeq	1
+	global	rdstg1map
+	global	radarmaptbl
+
+	global	rdmap_battlestage1START
+	global	rdmap_battlestage1END
+
+	global	radarmaptbl
+
+	global	rdmap_missionstage1START
+	global	rdmap_missionstage1END
+
+	global	rdmap_titleSTART
+	global	rdmap_titleEND
+
+	global	rdmap_missionstage1START
+	global	rdmap_missionstage2START
+	global	rdmap_missionstage3START
+	global	rdmap_missionstage4START
+	global	rdmap_missionstage5START
+	global	rdmap_missionstage6START
+	global	rdmap_missionextra1START
+	global	rdmap_missionextra2START
+	global	rdmap_missionextra3START
+	global	rdmap_missionextra4START
+
+	global	rdmap_missionsos1START
+	global	rdmap_missionsos2START
+	global	rdmap_missionsos3START
+
+	global	rdmap_battlestage1START
+	global	rdmap_battlestage2START
+	global	rdmap_battlestage3START
+	global	rdmap_battlestage4START
+	global	rdmap_battlestage5START
+
+	global	rdmap_missionstage1END
+	global	rdmap_missionstage2END
+	global	rdmap_missionstage3END
+	global	rdmap_missionstage4END
+	global	rdmap_missionstage5END
+	global	rdmap_missionstage6END
+	global	rdmap_missionextra1END
+	global	rdmap_missionextra2END
+	global	rdmap_missionextra3END
+	global	rdmap_missionextra4END
+
+	global	rdmap_missionsos1END
+	global	rdmap_missionsos2END
+	global	rdmap_missionsos3END
+
+	global	rdmap_battlestage1END
+	global	rdmap_battlestage2END
+	global	rdmap_battlestage3END
+	global	rdmap_battlestage4END
+	global	rdmap_battlestage5END
+
+	global	rdmap_typeselectSTART
+	global	rdmap_trainstage1START
+	global	rdmap_trainstage2START
+	global	rdmap_trainstage3START
+	global	rdmap_typeselectEND
+	global	rdmap_trainstage1END
+	global	rdmap_trainstage2END
+	global	rdmap_trainstage3END
+
+
+	global	rdmap_kmapSTART
+	global	rdmap_kmapEND
+	global	rdmap_tmapSTART
+	global	rdmap_tmapEND
+	global	rdmap_dmapSTART
+	global	rdmap_dmapEND
+	global	rdmap_ymapSTART
+	global	rdmap_ymapEND
+	global	rdmap_emapSTART
+	global	rdmap_emapEND
+
+	endc
+;***** ima wa tukatte inai ***
+
+;	global	testmap
+;	global	bat1map
+;	global	bat2map
+;	global	bat3map
+;	global	bat4map
+;	global	bat5map
+
+;	global	tra2map
+;	global	tra3map
+;	global	groundmap	
+;	global	marinemap	
+;	global	spacemap	
+;	global	desertmap
+;	global	tunnelmap
+;	global	megane3Dmap
+;	global	intromap
+;	global	mapscr_map
+;	global	gameovermap
+;	global	titlemap

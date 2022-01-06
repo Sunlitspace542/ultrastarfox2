@@ -1,0 +1,9 @@
+
+	global gameover_l
+	global gameover_obj_l
+	global gameover_init_l
+	global gameover_process_l
+
+
+
+

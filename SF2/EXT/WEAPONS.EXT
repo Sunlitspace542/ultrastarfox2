@@ -1,0 +1,32 @@
+
+	global	hitsomething_snd_srou_l
+
+	global	hitsomething_srou_l
+
+;	global	firespreadplasma_l
+;	global	firemissile1_l
+
+	global	fireAWlaser_l
+	global	fireAWlaser_twin_l
+	global	fireAWlaser_twintwin_l
+	global	fireAWpowerdlaser_l
+	global	fireAWpowerdlaser_twin_l
+	global	fireAWpowerdlaser_twintwin_l
+
+	global	fireeplasma1_l
+	global	firePplasma_l
+;;;;	global	fireawdummy_l
+	global	firerebound_l
+
+	global	fireElaser_l
+	global	fireRelElaser_l
+	global	fireRelElaser_hsp_l
+	global	fireRelEplasma1_l
+	global	fireHomEmissile_l
+
+	global	fireEring_l
+	global	fireRelEring_l
+
+;;;;	global	fireFlaser_l
+
+;;;;	global	WEAP_RELATIVE2PLAYER_SROU_L

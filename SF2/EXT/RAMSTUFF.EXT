@@ -1,0 +1,16 @@
+	global	xrstart
+
+	global	runmario_l
+
+	global	begin_3d_display_l
+	global	finish_3d_display_l
+
+	global	begin_3d_display1_l
+	global	finish_3d_display1_l
+	global	begin_3d_display2_l
+	global	finish_3d_display2_l
+
+	global	pollmario_l
+	global	unpollmario_l
+
+	global	random_l

@@ -1,0 +1,43 @@
+	global	kill_list_l
+	global	setpal_l
+	global	initialise_l,initgame_l
+	global	clearhvofs_l,initgame3d_l
+	global	screenoff_l
+	global	setinidisp1_l,setnoclash_l
+	global	setgamepal_l
+
+
+	global	batabata_name	
+	global	dandou_name		
+	global	sos_0_name		
+	global	taigun_name		
+	global	sos_1_name		
+	global	jyouge_name		
+	global	demo_senkan_name	
+	global	dragon_name		
+	global	wolf_name		
+	global	andorf_name		
+	global	andross_name
+
+	global	enkin_name		
+	global	baramiss_name	
+	global	virus_name		
+	global	speed_name		
+	global	baku_name		
+	global	ninja_name		
+	global	stepup_0_name	
+
+	global	gattai_name		
+	global	toge_name		
+	global	kuru0_name		
+	global	sos_2_name		
+	global	crusher_name		
+	global	suisei_name
+	global	jyouge_1_name
+
+	global	name_algy,name_pigma,name_leon,name_wolf
+	global	name_tako,name_runner,name_crusher
+	global	name_dodora
+	global	name_kani,name_kama,name_fantron,name_tectron,name_mirage
+	global	name_knight,name_kick,name_yoyo
+
