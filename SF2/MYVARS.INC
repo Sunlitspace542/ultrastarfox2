@@ -19,14 +19,14 @@
 ;*********************************************************************
 
 	malc	m_yajimaDB,8
-	malc	m_yjtest,0
+	malc	m_yjtest,32
 	malc	m_testcount,2
 
 	malc	m_dpolywork,2
 
 
 	malc	m_rainflag,2		; rain flag 
-	malc	m_rainbuffer,0	; rain buffer
+	malc	m_rainbuffer,128*2	; rain buffer
 	
 ;*********************************************************************
 ;	message & score draw works

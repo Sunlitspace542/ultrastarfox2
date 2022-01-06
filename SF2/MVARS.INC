@@ -321,15 +321,15 @@ m_clipright	equ	m_sprxmax
 mmaxxpos	=	224
 mmaxypos	=	192
 
-mmaxpnts	=	155
-mmaxpolysize	=	155
+mmaxpnts	=	80
+mmaxpolysize	=	128
 mmaxgroups	=	16
 mmaxstack	=	256
 mmaxbsp	=	64
 mmaxdust	=	128
 mdustsizeof	=	6+6+2
 mmaxdrawlist	=	dl_sizeof*number_al
-mmaxvistab	=	155
+mmaxvistab	=	128
 
 
 	malc	m_meters,2
@@ -341,15 +341,13 @@ mmaxvistab	=	155
 	malc	m_projpnts,6*mmaxpnts
 	malc	m_uvlist,0
 
-;	malc	m_clippolybuf,mmaxpolysize
-	malc	m_clippolybuf,0
+	malc	m_clippolybuf,mmaxpolysize
 	malc	m_cpolybuf,mmaxpolysize
 	malc	m_bsplist,mmaxbsp
 	malc	m_zbuf,mmaxgroups
 	malc	m_uvlist2,0
 ; IFNE msmooth_shading
-;	malc	m_intpnts,mmaxpnts
-	malc	m_intpnts,0
+	malc	m_intpnts,mmaxpnts
 ; ENDC
 	malc	m_vistab,mmaxvistab
 	malc	m_drawlist,mmaxdrawlist
@@ -359,14 +357,13 @@ mmaxvistab	=	155
 	malc	m_dustpnts1,mdustsizeof*mmaxdust
 	malc	m_dustpnts2,mdustsizeof*mmaxdust
 	malc	m_dustptr,2
+;	malc	m_dustpnts,mdustsizeof*mmaxdust
 
 	zmalc	m_dustflags,2	; flag defs in dalcs.inc
 	zmalc	m_realdustflags,2
 
-;	malc	m_scuptab,mmaxypos*2
-;	malc	m_scdwntab,mmaxypos*2
-	malc	m_scuptab,0
-	malc	m_scdwntab,0
+	malc	m_scuptab,mmaxypos*2
+	malc	m_scdwntab,mmaxypos*2
 
 
 	malc	m_planetstars,2
