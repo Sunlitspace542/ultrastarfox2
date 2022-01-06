@@ -1,1 +1,1 @@
-tools\superfamicheckx64 -f SFBUILT.SFC
+tools\superfamicheckx64 -f SF2.SFC

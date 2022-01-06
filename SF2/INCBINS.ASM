@@ -120,7 +120,7 @@ mworldspr	equ	msprites3
 	incfile	sprdata.asm
 	inccru	e4_ccr,data\e4.ccr
 kawaguti_cgx	inccgx4	data\kawaguti.cgx,$30
-	inccru	allcolscru,data\allcols.pac
+	inccru	allcolscru,data\gfx\allcols.pac
 keyscr_l	incfile	keyscr.asm
 
 	inccru	b0_ccr,data\b0.ccr
@@ -226,7 +226,7 @@ keyscr_l	incfile	keyscr.asm
 	inccru	e4_ccr,data\e4_a.ccr
 	inccru	e7_ccr,data\e7_a.ccr
 kawaguti_cgx	inccgx4	data\kawaguti.cgx,$30
-	inccru	allcolscru,data\allcols.pac
+	inccru	allcolscru,data\gfx\allcols.pac
 
 	incfile d3_3.asm
 	incfile	sprdata.asm
@@ -330,7 +330,7 @@ keyscr_l	incfile	keyscr.asm
 	inccru	e4_ccr,data\e4.ccr
 	inccru	e7_ccr,data\e7.ccr
 kawaguti_cgx	inccgx4	data\kawaguti.cgx,$30
-	inccru	allcolscru,data\allcols.pac
+	inccru	allcolscru,data\gfx\allcols.pac
 keyscr_l	incfile	keyscr.asm
 
 	inccru	b0_ccr,data\b0.ccr

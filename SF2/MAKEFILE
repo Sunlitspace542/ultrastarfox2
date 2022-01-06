@@ -1,3 +1,7 @@
+#######################
+# Star Fox 2 Makefile #
+#######################
+
 STDFILES= HEADER.INC MACROS.INC VARS.INC SOUNDEQU.INC STRUCTS.INC ALCS.INC \
  GILESALX.INC GILESALC.INC GILESAL.INC KALCS.INC DALCS.INC PALETTES.INC \
  TALCS.INC YALCS.INC PLAYER.INC KMACS.INC TMACROS.INC KVARS.INC MVARS.INC \
@@ -5,7 +9,7 @@ STDFILES= HEADER.INC MACROS.INC VARS.INC SOUNDEQU.INC STRUCTS.INC ALCS.INC \
 STRATFILES= STRATMAC.INC STRATLIB.INC STRATEQU.INC SHMACS.INC STRATHDR.INC \
  WEAPONS.INC SCALEVAR.INC
 ASM=ARGSFXX
-ASMFLAGS=-efilelist=0
+ASMFLAGS=-efilelist=0 -xsymbols.txt
 include symson.mak
 LINK=arglink
 LOPTS=-b30 -h1024
@@ -162,7 +166,7 @@ data\b1.pcr data\b2.pcr data\b3.pcr data\b4.pcr \
 data\b5.pcr data\b6.pcr data\b7.pcr data\b8.pcr \
 data\b10.pcr data\b11.pcr data\b12.pcr data\b13.pcr \
 data\b14.pcr data\b15.pcr data\b16.pcr \
-data\allcols.pac data\kawaguti.cgx \
+data\gfx\allcols.pac data\kawaguti.cgx \
 data\moji_2.fon mdata.mc d3_3.asm sprdata.asm
 
 ## Banks 26, 27, 28, 29, 30, 31
