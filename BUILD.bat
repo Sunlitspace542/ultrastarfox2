@@ -6,5 +6,7 @@ cd ..
 copy sf2\sf.rom sf2.sfc
 del sf2\*.rom
 del sf2\*.sob
+copy sf2\symbols.txt symbols.txt
+del sf2\symbols.txt
 pause
 exit
