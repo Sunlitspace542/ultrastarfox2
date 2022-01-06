@@ -13,12 +13,12 @@ german		equ	0	; german version
 french		equ	0	; french version
 fast		equ	1	; 21Mhz?
 CacheOn		equ	1	; Super FX chip cache on/off
-cesboot		equ	0	; CES Nintendo Presents screen
+cesboot		equ	0	; Winter CES 1995 "Nintendo Presents" screen
 
 tamehomon	equ	0	; tame dama 1:homing on 0:off
 DamageHalf	equ	0	; 1:player no damage wo hanbun ni suru.
 
-kyear	equ	96	;95/96/97 = 1995/1996/1997
+kyear		equ	96	; 95/96/97 = 1995/1996/1997
 
 ; debugging:
 
