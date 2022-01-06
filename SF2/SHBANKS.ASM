@@ -44,9 +44,11 @@ do_hdr	=	0
 ;------------------------------------------------------------------
 	bank	17
 	incshapes	pshapes2.asm
-	incshapes	shapes2.asm
 	bankend	17
 
+	bank	35
+	incshapes	shapes2.asm
+	bankend	35
 
 	include	tail.inc
 

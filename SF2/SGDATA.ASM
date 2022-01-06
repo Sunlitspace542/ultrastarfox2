@@ -866,7 +866,7 @@ typenames
 
 
 menutab
-	db	"STAR GLIDER 01 NOV 1991"
+;	menub	"STAR GLIDER 01 NOV 1991"
 ;	menub	<WALKER JUMP TIME    >,0,0,255,NULL
 ;	menub	<WALKER JUMP SPEED   >,0,0,255,NULL
 ;	menub	<ALIEN MISSILE2 ANGLE>,0,0,deg90,NULL
@@ -2217,92 +2217,92 @@ __lp	=	__lp+1
 ; numbers 26-35
 	db	6
 	deffont	<        >
-	deffont	< ÛÛÛ    >
-	deffont	<Û  ÛÛ   >
-	deffont	<Û Û Û   >
-	deffont	<ÛÛ  Û   >
-	deffont	< ÛÛÛ    >
+	deffont	< ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½  ï¿½ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½ï¿½  ï¿½   >
+	deffont	< ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	3
 	deffont	<        >
-	deffont	< Û      >
-	deffont	<ÛÛ      >
-	deffont	< Û      >
-	deffont	< Û      >
-	deffont	< Û      >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ï¿½      >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<   Û    >
-	deffont	< ÛÛ     >
-	deffont	<Û       >
-	deffont	<ÛÛÛÛ    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<   ï¿½    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	<   Û    >
-	deffont	< ÛÛ     >
-	deffont	<   Û    >
-	deffont	<ÛÛÛ     >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<   ï¿½    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<   ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<ÛÛÛÛ    >
-	deffont	<  Û     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<  ï¿½     >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
-	deffont	<Û       >
-	deffont	<ÛÛÛ     >
-	deffont	<   Û    >
-	deffont	<ÛÛÛ     >
-	deffont	<        >
-
-	db	5
-	deffont	<        >
-	deffont	< Û      >
-	deffont	<Û       >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<   ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
-	deffont	<   Û    >
-	deffont	<  Û     >
-	deffont	<  Û     >
-	deffont	<  Û     >
+	deffont	< ï¿½      >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<   ï¿½    >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
-	deffont	< ÛÛÛ    >
-	deffont	<   Û    >
-	deffont	<  Û     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<        >
+
+	db	5
+	deffont	<        >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½ï¿½    >
+	deffont	<   ï¿½    >
+	deffont	<  ï¿½     >
 	deffont	<        >
 
 
@@ -2310,243 +2310,243 @@ __lp	=	__lp+1
 ; alphabet  -25
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛÛ    >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛ     >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛÛ    >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	< ÛÛÛ    >
+	deffont	< ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	< ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛ     >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
-	deffont	<Û       >
-	deffont	<ÛÛÛ     >
-	deffont	<Û       >
-	deffont	<ÛÛÛÛ    >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
-	deffont	<Û       >
-	deffont	<ÛÛÛ     >
-	deffont	<Û       >
-	deffont	<Û       >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û       >
-	deffont	<Û ÛÛ    >
-	deffont	<Û  Û    >
-	deffont	< ÛÛÛ    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ ï¿½ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛÛ    >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	< Û      >
-	deffont	< Û      >
-	deffont	< Û      >
-	deffont	<ÛÛÛ     >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛÛ    >
-	deffont	<   Û    >
-	deffont	<   Û    >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
+	deffont	< ï¿½ï¿½ï¿½    >
+	deffont	<   ï¿½    >
+	deffont	<   ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<Û  Û    >
-	deffont	<Û Û     >
-	deffont	<ÛÛ      >
-	deffont	<Û Û     >
-	deffont	<Û  Û    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½  ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<ÛÛÛÛ    >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	<ÛÛ ÛÛ   >
-	deffont	<Û Û Û   >
-	deffont	<Û   Û   >
-	deffont	<Û   Û   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½ï¿½ ï¿½ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½   ï¿½   >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	<ÛÛ  Û   >
-	deffont	<Û Û Û   >
-	deffont	<Û  ÛÛ   >
-	deffont	<Û   Û   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½ï¿½  ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½  ï¿½ï¿½   >
+	deffont	<ï¿½   ï¿½   >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛ     >
-	deffont	<Û       >
-	deffont	<Û       >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<ÛÛ Û    >
-	deffont	<Û ÛÛ    >
-	deffont	< ÛÛÛ    >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ ï¿½    >
+	deffont	<ï¿½ ï¿½ï¿½    >
+	deffont	< ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<ÛÛÛ     >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û       >
-	deffont	< ÛÛ     >
-	deffont	<   Û    >
-	deffont	<ÛÛÛ     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	< ï¿½ï¿½     >
+	deffont	<   ï¿½    >
+	deffont	<ï¿½ï¿½ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<ÛÛÛÛÛ   >
-	deffont	<  Û     >
-	deffont	<  Û     >
-	deffont	<  Û     >
-	deffont	<  Û     >
+	deffont	<ï¿½ï¿½ï¿½ï¿½ï¿½   >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	<Û   Û   >
-	deffont	<Û   Û   >
-	deffont	< Û Û    >
-	deffont	<  Û     >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	< ï¿½ ï¿½    >
+	deffont	<  ï¿½     >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	<Û   Û   >
-	deffont	<Û Û Û   >
-	deffont	<Û Û Û   >
-	deffont	< Û Û    >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	< ï¿½ ï¿½    >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	< Û Û    >
-	deffont	<  Û     >
-	deffont	< Û Û    >
-	deffont	<Û   Û   >
+	deffont	<ï¿½   ï¿½   >
+	deffont	< ï¿½ ï¿½    >
+	deffont	<  ï¿½     >
+	deffont	< ï¿½ ï¿½    >
+	deffont	<ï¿½   ï¿½   >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	< Û Û    >
-	deffont	<  Û     >
-	deffont	<  Û     >
-	deffont	<  Û     >
+	deffont	<ï¿½   ï¿½   >
+	deffont	< ï¿½ ï¿½    >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
-	deffont	<ÛÛÛÛÛ   >
-	deffont	<   Û    >
-	deffont	<  Û     >
-	deffont	< Û      >
-	deffont	<ÛÛÛÛÛ   >
+	deffont	<ï¿½ï¿½ï¿½ï¿½ï¿½   >
+	deffont	<   ï¿½    >
+	deffont	<  ï¿½     >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ï¿½ï¿½ï¿½ï¿½   >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
 	deffont	<        >
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
 	deffont	<        >
 	deffont	<        >
 	deffont	<        >
@@ -2554,235 +2554,235 @@ __lp	=	__lp+1
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	< ÛÛ     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<ÛÛ      >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<ÛÛ      >
-	deffont	<        >
-
-	db	4
-	deffont	<        >
-	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	< ÛÛ     >
-	deffont	<        >
-
-	db	4
-	deffont	<        >
-	deffont	<  Û     >
-	deffont	< ÛÛ     >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	< ÛÛ     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½      >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	< Û      >
-	deffont	<Û Û     >
-	deffont	<ÛÛ      >
-	deffont	< ÛÛ     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û       >
-	deffont	<ÛÛ      >
-	deffont	<Û       >
-	deffont	<Û       >
+	deffont	<  ï¿½     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½ï¿½     >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û Û     >
-	deffont	< ÛÛ     >
-	deffont	<  Û     >
-	deffont	<ÛÛ      >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½      >
+	deffont	< ï¿½ï¿½     >
+	deffont	<        >
 
 	db	4
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<ÛÛ      >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<        >
+
+	db	4
+	deffont	<        >
+	deffont	<        >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<ï¿½ï¿½      >
+
+	db	4
+	deffont	<        >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
 	deffont	<        >
 
 	db	2
 	deffont	<        >
-	deffont	<Û       >
+	deffont	<ï¿½       >
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
 	deffont	<        >
 
 	db	3
 	deffont	<        >
-	deffont	< Û      >
+	deffont	< ï¿½      >
 	deffont	<        >
-	deffont	< Û      >
-	deffont	< Û      >
-	deffont	< Û      >
-	deffont	<Û       >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
+	deffont	<ï¿½       >
 
 	db	5
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<Û Û     >
-	deffont	<ÛÛ      >
-	deffont	<Û Û     >
-	deffont	<Û  Û    >
+	deffont	<ï¿½       >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½  ï¿½    >
 	deffont	<        >
 
 	db	2
 	deffont	<        >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
 	deffont	<        >
-	deffont	< Û Û    >
-	deffont	<Û Û Û   >
-	deffont	<Û Û Û   >
-	deffont	<Û Û Û   >
+	deffont	< ï¿½ ï¿½    >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	<ÛÛ      >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	< Û      >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	< Û      >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½      >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	<ÛÛ      >
-	deffont	<Û Û     >
-	deffont	<ÛÛ      >
-	deffont	<Û       >
-	deffont	<Û       >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½      >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<Û Û     >
-	deffont	< ÛÛ     >
-	deffont	<  Û     >
-	deffont	<  Û     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<  ï¿½     >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	<ÛÛÛ     >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<Û       >
-	deffont	<        >
-
-	db	4
-	deffont	<        >
-	deffont	<        >
-	deffont	< ÛÛ     >
-	deffont	<ÛÛ      >
-	deffont	<  Û     >
-	deffont	<ÛÛ      >
-	deffont	<        >
-
-	db	4
-	deffont	<        >
-	deffont	< Û      >
-	deffont	<ÛÛÛ     >
-	deffont	< Û      >
-	deffont	< Û      >
-	deffont	< Û      >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
+	deffont	<ï¿½       >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<ÛÛÛ     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½ï¿½      >
+	deffont	<  ï¿½     >
+	deffont	<ï¿½ï¿½      >
+	deffont	<        >
+
+	db	4
+	deffont	<        >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
+	deffont	< ï¿½      >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	< Û      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ï¿½ï¿½     >
+	deffont	<        >
+
+	db	4
+	deffont	<        >
+	deffont	<        >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½      >
 	deffont	<        >
 
 	db	6
 	deffont	<        >
 	deffont	<        >
-	deffont	<Û   Û   >
-	deffont	<Û Û Û   >
-	deffont	<Û Û Û   >
-	deffont	< Û Û    >
+	deffont	<ï¿½   ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	<ï¿½ ï¿½ ï¿½   >
+	deffont	< ï¿½ ï¿½    >
 	deffont	<        >
 
 	db	5
 	deffont	<        >
 	deffont	<        >
-	deffont	<Û  Û    >
-	deffont	< ÛÛ     >
-	deffont	< ÛÛ     >
-	deffont	<Û  Û    >
+	deffont	<ï¿½  ï¿½    >
+	deffont	< ï¿½ï¿½     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<ï¿½  ï¿½    >
 	deffont	<        >
 
 	db	4
 	deffont	<        >
 	deffont	<        >
-	deffont	<Û Û     >
-	deffont	<Û Û     >
-	deffont	< ÛÛ     >
-	deffont	<  Û     >
-	deffont	<ÛÛ      >
+	deffont	<ï¿½ ï¿½     >
+	deffont	<ï¿½ ï¿½     >
+	deffont	< ï¿½ï¿½     >
+	deffont	<  ï¿½     >
+	deffont	<ï¿½ï¿½      >
 
 	db	5
 	deffont	<        >
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
-	deffont	<  Û     >
-	deffont	< Û      >
-	deffont	<ÛÛÛÛ    >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
+	deffont	<  ï¿½     >
+	deffont	< ï¿½      >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
 	deffont	<        >
 
 	db	2
@@ -2791,7 +2791,7 @@ __lp	=	__lp+1
 	deffont	<        >
 	deffont	<        >
 	deffont	<        >
-	deffont	<Û       >
+	deffont	<ï¿½       >
 	deffont	<        >
 
 	db	4
@@ -2801,13 +2801,13 @@ __lp	=	__lp+1
 	deffont	<        >
 	deffont	<        >
 	deffont	<        >
-	deffont	<ÛÛÛÛ    >
+	deffont	<ï¿½ï¿½ï¿½ï¿½    >
 
 	ENDC
 
-;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ; Game messages:
-;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	string	temp[200];
 
@@ -2899,7 +2899,8 @@ bitmasks	dw	1<<0
 	dw	1<<15
 
 ;----------------------------
-nintendomsg	db	"NINTENDO",0
+nintendomsg
+	db	"NINTENDO",0
 	db	"PRESENTS",0
 gameovermsg
 	db	"  GAME",0

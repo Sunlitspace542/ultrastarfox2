@@ -2228,12 +2228,12 @@ KURU1_U_EBSP
 	endc
 ;--Shape file ----- C:\SHAPED\FONT\CHR_A.TXT ----
 	ifne	DO_HDR
-chr_d
-chr_j
-chr_q
-chr_x
-chr_y
-chr_z
+;chr_d
+;chr_j
+;chr_q
+;chr_x
+;chr_y
+;chr_z
 CHR_A
 	ShapeHdr	CHR_A_P,0,CHR_A_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_A>
 OPCHR_A
@@ -2725,50 +2725,50 @@ OPCHR_C_f1	Faces
 ;
 ;	endc
 ;;--Shape file ----- C:\SHAPED\FONT\CHR_D.TXT ----
-;	ifne	DO_HDR
-;
-;CHR_D
-;	ShapeHdr	CHR_D_P,0,CHR_D_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_D>
-;	elseif
-;CHR_D_P
-;	Pointsb	6
-;	pb	15,30,0	;0
-;	pb	-25,30,0	;1
-;	pb	25,20,0	;2
-;	pb	25,-20,0	;3
-;	pb	15,-30,0	;4
-;	pb	-25,-30,0	;5
-;	PointsXb	4
-;	pb	-5,30,0	;6
-;	pb	5,20,0	;8
-;	pb	-5,-20,0	;10
-;	pb	5,-30,0	;12
-;
-;	EndPoints
-;CHR_D_F
-;	Vizis	2			;8
-;	Viz	8,9,6,0,0,-127	;0
-;	Viz	9,8,7,0,0,127	;1
-;;	Viz	12,13,10,0,0,-127	;2
-;;	Viz	13,12,11,0,0,127	;3
-;;	Viz	13,5,1,0,0,-127	;4
-;;	Viz	5,13,6,0,0,127	;5
-;;	Viz	12,7,0,0,0,-127	;6
-;;	Viz	12,4,3,0,0,127	;7
-;
-;CHR_D_f1	Faces
-;	Face4	3,0,0,0,-127,8,9,6,7
-;	Face4	0,1,0,0,127,9,8,7,6
-;	Face4	3,0,0,0,-127,12,13,10,11
-;	Face4	0,1,0,0,127,13,12,11,10
-;	Face4	3,0,0,0,-127,13,5,1,6
-;	Face4	0,1,0,0,127,5,13,6,1
-;	Face6	3,0,0,0,-127,12,7,0,2,3,4
-;	Face6	0,1,0,0,127,12,4,3,2,0,7
-;	Fend
-;	EndShape
-;
-;	endc
+	ifne	DO_HDR
+
+CHR_D
+	ShapeHdr	CHR_D_P,0,CHR_D_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_D>
+	elseif
+CHR_D_P
+	Pointsb	6
+	pb	15,30,0	;0
+	pb	-25,30,0	;1
+	pb	25,20,0	;2
+	pb	25,-20,0	;3
+	pb	15,-30,0	;4
+	pb	-25,-30,0	;5
+	PointsXb	4
+	pb	-5,30,0	;6
+	pb	5,20,0	;8
+	pb	-5,-20,0	;10
+	pb	5,-30,0	;12
+
+	EndPoints
+CHR_D_F
+	Vizis	2			;8
+	Viz	8,9,6,0,0,-127	;0
+	Viz	9,8,7,0,0,127	;1
+;	Viz	12,13,10,0,0,-127	;2
+;	Viz	13,12,11,0,0,127	;3
+;	Viz	13,5,1,0,0,-127	;4
+;	Viz	5,13,6,0,0,127	;5
+;	Viz	12,7,0,0,0,-127	;6
+;	Viz	12,4,3,0,0,127	;7
+
+CHR_D_f1	Faces
+	Face4	3,0,0,0,-127,8,9,6,7
+	Face4	0,1,0,0,127,9,8,7,6
+	Face4	3,0,0,0,-127,12,13,10,11
+	Face4	0,1,0,0,127,13,12,11,10
+	Face4	3,0,0,0,-127,13,5,1,6
+	Face4	0,1,0,0,127,5,13,6,1
+	Face6	3,0,0,0,-127,12,7,0,2,3,4
+	Face6	0,1,0,0,127,12,4,3,2,0,7
+	Fend
+	EndShape
+
+	endc
 ;--Shape file ----- C:\SHAPED\FONT\CHR_E.TXT ----
 	ifne	DO_HDR
 
@@ -3205,46 +3205,46 @@ OPCHR_I_f1	Faces
 	EndShape
 
 	endc
-;;--Shape file ----- C:\SHAPED\FONT\CHR_J.TXT ----
-;	ifne	DO_HDR
-;
-;CHR_J
-;	ShapeHdr	CHR_J_P,0,CHR_J_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_J>
-;	elseif
-;CHR_J_P
-;	Pointsb	10
-;	pb	5,30,0	;0
-;	pb	-12,30,0	;1
-;	pb	15,30,0	;2
-;	pb	6,20,0	;3
-;	pb	-8,20,0	;4
-;	pb	25,20,0	;5
-;	pb	-25,17,0	;6
-;	pb	-20,8,0	;7
-;	pb	5,-30,0	;8
-;	pb	25,-30,0	;9
-;
-;	EndPoints
-;CHR_J_F
-;	Vizis	2			;6
-;	Viz	2,0,8,0,0,127	;0
-;	Viz	2,5,9,0,0,-127	;1
-;;	Viz	4,3,0,0,0,127	;2
-;;	Viz	3,4,1,0,0,-127	;3
-;;	Viz	7,4,1,0,0,127	;4
-;;	Viz	4,7,6,0,0,-127	;5
-;
-;CHR_J_f1	Faces
-;	Face5	0,0,0,0,127,2,0,8,9,5
-;	Face5	3,1,0,0,-127,2,5,9,8,0
-;	Face4	0,0,0,0,127,4,3,0,1
-;	Face4	3,1,0,0,-127,3,4,1,0
-;	Face4	0,0,0,0,127,7,4,1,6
-;	Face4	3,1,0,0,-127,4,7,6,1
-;	Fend
-;	EndShape
-;
-;	endc
+;--Shape file ----- C:\SHAPED\FONT\CHR_J.TXT ----
+	ifne	DO_HDR
+
+CHR_J
+	ShapeHdr	CHR_J_P,0,CHR_J_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_J>
+	elseif
+CHR_J_P
+	Pointsb	10
+	pb	5,30,0	;0
+	pb	-12,30,0	;1
+	pb	15,30,0	;2
+	pb	6,20,0	;3
+	pb	-8,20,0	;4
+	pb	25,20,0	;5
+	pb	-25,17,0	;6
+	pb	-20,8,0	;7
+	pb	5,-30,0	;8
+	pb	25,-30,0	;9
+
+	EndPoints
+CHR_J_F
+	Vizis	2			;6
+	Viz	2,0,8,0,0,127	;0
+	Viz	2,5,9,0,0,-127	;1
+;	Viz	4,3,0,0,0,127	;2
+;	Viz	3,4,1,0,0,-127	;3
+;	Viz	7,4,1,0,0,127	;4
+;	Viz	4,7,6,0,0,-127	;5
+
+CHR_J_f1	Faces
+	Face5	0,0,0,0,127,2,0,8,9,5
+	Face5	3,1,0,0,-127,2,5,9,8,0
+	Face4	0,0,0,0,127,4,3,0,1
+	Face4	3,1,0,0,-127,3,4,1,0
+	Face4	0,0,0,0,127,7,4,1,6
+	Face4	3,1,0,0,-127,4,7,6,1
+	Fend
+	EndShape
+
+	endc
 ;--Shape file ----- C:\SHAPED\FONT\CHR_K.TXT ----
 	ifne	DO_HDR
 
@@ -3608,57 +3608,57 @@ OPCHR_P_f1	Faces
 	Fend
 	EndShape
 	endc
-;;--Shape file ----- C:\SHAPED\FONT\CHR_Q.TXT ----
-;	ifne	DO_HDR
-;
-;CHR_Q
-;	ShapeHdr	CHR_Q_P,0,CHR_Q_F,0,0,0,0,font_p_scale,0,25,44,0,120,id_0_c,0,0,0,0,<CHR_Q>
-;	elseif
-;CHR_Q_P
-;	Pointsb	4
-;	pb	10,44,0	;0
-;	pb	20,39,0	;1
-;	pb	-10,34,0	;2
-;	pb	0,29,0	;3
-;	PointsXb	8
-;	pb	5,30,0	;4
-;	pb	15,30,0	;6
-;	pb	5,20,0	;8
-;	pb	25,20,0	;10
-;	pb	-5,-20,0	;12
-;	pb	25,-20,0	;14
-;	pb	5,-30,0	;16
-;	pb	15,-30,0	;18
-;
-;	EndPoints
-;CHR_Q_F
-;	Vizis	2			;10
-;	Viz	6,10,14,0,0,-127	;0
-;	Viz	6,4,16,0,0,127	;1
-;;	Viz	8,9,5,0,0,-127	;2
-;;	Viz	9,8,4,0,0,127	;3
-;;	Viz	16,17,12,0,0,-127	;4
-;;	Viz	17,16,13,0,0,127	;5
-;;	Viz	7,5,17,0,0,-127	;6
-;;	Viz	7,11,15,0,0,127	;7
-;;	Viz	3,2,0,0,0,-127	;8
-;;	Viz	2,3,1,0,0,127	;9
-;
-;CHR_Q_f1	Faces
-;	Face6	3,0,0,0,-127,6,10,14,18,16,4
-;	Face6	0,1,0,0,127,6,4,16,18,14,10
-;	Face4	3,0,0,0,-127,8,9,5,4
-;	Face4	0,1,0,0,127,9,8,4,5
-;	Face4	3,0,0,0,-127,16,17,12,13
-;	Face4	0,1,0,0,127,17,16,13,12
-;	Face6	3,0,0,0,-127,7,5,17,19,15,11
-;	Face6	0,1,0,0,127,7,11,15,19,17,5
-;	Face4	3,0,0,0,-127,3,2,0,1
-;	Face4	0,1,0,0,127,2,3,1,0
-;	Fend
-;	EndShape
-;
-;	endc
+;--Shape file ----- C:\SHAPED\FONT\CHR_Q.TXT ----
+	ifne	DO_HDR
+
+CHR_Q
+	ShapeHdr	CHR_Q_P,0,CHR_Q_F,0,0,0,0,font_p_scale,0,25,44,0,120,id_0_c,0,0,0,0,<CHR_Q>
+	elseif
+CHR_Q_P
+	Pointsb	4
+	pb	10,44,0	;0
+	pb	20,39,0	;1
+	pb	-10,34,0	;2
+	pb	0,29,0	;3
+	PointsXb	8
+	pb	5,30,0	;4
+	pb	15,30,0	;6
+	pb	5,20,0	;8
+	pb	25,20,0	;10
+	pb	-5,-20,0	;12
+	pb	25,-20,0	;14
+	pb	5,-30,0	;16
+	pb	15,-30,0	;18
+
+	EndPoints
+CHR_Q_F
+	Vizis	2			;10
+	Viz	6,10,14,0,0,-127	;0
+	Viz	6,4,16,0,0,127	;1
+;	Viz	8,9,5,0,0,-127	;2
+;	Viz	9,8,4,0,0,127	;3
+;	Viz	16,17,12,0,0,-127	;4
+;	Viz	17,16,13,0,0,127	;5
+;	Viz	7,5,17,0,0,-127	;6
+;	Viz	7,11,15,0,0,127	;7
+;	Viz	3,2,0,0,0,-127	;8
+;	Viz	2,3,1,0,0,127	;9
+
+CHR_Q_f1	Faces
+	Face6	3,0,0,0,-127,6,10,14,18,16,4
+	Face6	0,1,0,0,127,6,4,16,18,14,10
+	Face4	3,0,0,0,-127,8,9,5,4
+	Face4	0,1,0,0,127,9,8,4,5
+	Face4	3,0,0,0,-127,16,17,12,13
+	Face4	0,1,0,0,127,17,16,13,12
+	Face6	3,0,0,0,-127,7,5,17,19,15,11
+	Face6	0,1,0,0,127,7,11,15,19,17,5
+	Face4	3,0,0,0,-127,3,2,0,1
+	Face4	0,1,0,0,127,2,3,1,0
+	Fend
+	EndShape
+
+	endc
 ;--Shape file ----- C:\SHAPED\FONT\CHR_R.TXT ----
 	ifne	DO_HDR
 
@@ -4097,115 +4097,115 @@ OPCHR_W_f1	Faces
 	EndShape
 
 	endc
-;;--Shape file ----- C:\SHAPED\FONT\CHR_X.TXT ----
-;	ifne	DO_HDR
-;
-;CHR_X
-;	ShapeHdr	CHR_X_P,0,CHR_X_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_X>
-;	elseif
-;CHR_X_P
-;	Pointsb	4
-;	pb	5,30,0	;0
-;	pb	-14,30,0	;1
-;	pb	-5,-30,0	;2
-;	pb	15,-30,0	;3
-;	PointsXb	2
-;	pb	25,30,0	;4
-;	pb	-25,-30,0	;6
-;
-;	EndPoints
-;CHR_X_F
-;	Vizis	2			;4
-;	Viz	2,6,0,0,0,-127	;0
-;	Viz	6,2,4,0,0,127	;1
-;;	Viz	3,7,1,0,0,127	;2
-;;	Viz	7,3,5,0,0,-127	;3
-;
-;CHR_X_f1	Faces
-;	Face4	3,0,0,0,-127,2,6,0,4
-;	Face4	0,1,0,0,127,6,2,4,0
-;	Face4	0,1,0,0,127,3,7,1,5
-;	Face4	3,0,0,0,-127,7,3,5,1
-;	Fend
-;	EndShape
-;
-;	endc
-;;--Shape file ----- C:\SHAPED\FONT\CHR_Y.TXT ----
-;	ifne	DO_HDR
-;
-;CHR_Y
-;	ShapeHdr	CHR_Y_P,0,CHR_Y_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_Y>
-;	elseif
-;CHR_Y_P
-;	Pointsb	3
-;	pb	0,0,0	;0
-;	pb	-5,-30,0	;1
-;	pb	15,-30,0	;2
-;	PointsXb	3
-;	pb	-10,30,0	;3
-;	pb	10,0,0	;5
-;	pb	-25,-30,0	;7
-;
-;	EndPoints
-;CHR_Y_F
-;	Vizis	2			;6
-;	Viz	5,6,3,0,0,-127	;0
-;	Viz	6,5,4,0,0,127	;1
-;;	Viz	7,1,5,0,0,127	;2
-;;	Viz	1,7,6,0,0,-127	;3
-;;	Viz	2,8,5,0,0,127	;4
-;;	Viz	8,2,0,0,0,-127	;5
-;
-;CHR_Y_f1	Faces
-;	Face4	3,0,0,0,-127,5,6,3,4
-;	Face4	0,1,0,0,127,6,5,4,3
-;	Face4	0,1,0,0,127,7,1,5,6
-;	Face4	3,0,0,0,-127,1,7,6,5
-;	Face4	0,1,0,0,127,2,8,5,0
-;	Face4	3,0,0,0,-127,8,2,0,5
-;	Fend
-;	EndShape
-;
-;	endc
-;;--Shape file ----- C:\SHAPED\FONT\CHR_Z.TXT ----
-;	ifne	DO_HDR
-;
-;CHR_Z
-;	ShapeHdr	CHR_Z_P,0,CHR_Z_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_Z>
-;	elseif
-;CHR_Z_P
-;	Pointsb	6
-;	pb	-4,28,0	;0
-;	pb	-19,20,0	;1
-;	pb	25,20,0	;2
-;	pb	19,-20,0	;3
-;	pb	-25,-20,0	;4
-;	pb	4,-28,0	;5
-;	PointsXb	2
-;	pb	25,30,0	;6
-;	pb	-25,-30,0	;8
-;
-;	EndPoints
-;CHR_Z_F
-;	Vizis	2			;6
-;	Viz	8,9,3,0,0,127	;0
-;	Viz	9,8,4,0,0,-127	;1
-;;	Viz	1,2,6,0,0,127	;2
-;;	Viz	2,1,7,0,0,-127	;3
-;;	Viz	5,9,0,0,0,127	;4
-;;	Viz	9,5,7,0,0,-127	;5
-;
-;CHR_Z_f1	Faces
-;	Face4	0,0,0,0,127,8,9,3,4
-;	Face4	3,1,0,0,-127,9,8,4,3
-;	Face4	0,0,0,0,127,1,2,6,7
-;	Face4	3,1,0,0,-127,2,1,7,6
-;	Face4	0,0,0,0,127,5,9,0,7
-;	Face4	3,1,0,0,-127,9,5,7,0
-;	Fend
-;	EndShape
-;
-;	endc
+;--Shape file ----- C:\SHAPED\FONT\CHR_X.TXT ----
+	ifne	DO_HDR
+
+CHR_X
+	ShapeHdr	CHR_X_P,0,CHR_X_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_X>
+	elseif
+CHR_X_P
+	Pointsb	4
+	pb	5,30,0	;0
+	pb	-14,30,0	;1
+	pb	-5,-30,0	;2
+	pb	15,-30,0	;3
+	PointsXb	2
+	pb	25,30,0	;4
+	pb	-25,-30,0	;6
+
+	EndPoints
+CHR_X_F
+	Vizis	2			;4
+	Viz	2,6,0,0,0,-127	;0
+	Viz	6,2,4,0,0,127	;1
+;	Viz	3,7,1,0,0,127	;2
+;	Viz	7,3,5,0,0,-127	;3
+
+CHR_X_f1	Faces
+	Face4	3,0,0,0,-127,2,6,0,4
+	Face4	0,1,0,0,127,6,2,4,0
+	Face4	0,1,0,0,127,3,7,1,5
+	Face4	3,0,0,0,-127,7,3,5,1
+	Fend
+	EndShape
+
+	endc
+;--Shape file ----- C:\SHAPED\FONT\CHR_Y.TXT ----
+	ifne	DO_HDR
+
+CHR_Y
+	ShapeHdr	CHR_Y_P,0,CHR_Y_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_Y>
+	elseif
+CHR_Y_P
+	Pointsb	3
+	pb	0,0,0	;0
+	pb	-5,-30,0	;1
+	pb	15,-30,0	;2
+	PointsXb	3
+	pb	-10,30,0	;3
+	pb	10,0,0	;5
+	pb	-25,-30,0	;7
+
+	EndPoints
+CHR_Y_F
+	Vizis	2			;6
+	Viz	5,6,3,0,0,-127	;0
+	Viz	6,5,4,0,0,127	;1
+;	Viz	7,1,5,0,0,127	;2
+;	Viz	1,7,6,0,0,-127	;3
+;	Viz	2,8,5,0,0,127	;4
+;	Viz	8,2,0,0,0,-127	;5
+
+CHR_Y_f1	Faces
+	Face4	3,0,0,0,-127,5,6,3,4
+	Face4	0,1,0,0,127,6,5,4,3
+	Face4	0,1,0,0,127,7,1,5,6
+	Face4	3,0,0,0,-127,1,7,6,5
+	Face4	0,1,0,0,127,2,8,5,0
+	Face4	3,0,0,0,-127,8,2,0,5
+	Fend
+	EndShape
+
+	endc
+;--Shape file ----- C:\SHAPED\FONT\CHR_Z.TXT ----
+	ifne	DO_HDR
+
+CHR_Z
+	ShapeHdr	CHR_Z_P,0,CHR_Z_F,0,0,0,0,font_p_scale,0,25,30,0,120,id_0_c,0,0,0,0,<CHR_Z>
+	elseif
+CHR_Z_P
+	Pointsb	6
+	pb	-4,28,0	;0
+	pb	-19,20,0	;1
+	pb	25,20,0	;2
+	pb	19,-20,0	;3
+	pb	-25,-20,0	;4
+	pb	4,-28,0	;5
+	PointsXb	2
+	pb	25,30,0	;6
+	pb	-25,-30,0	;8
+
+	EndPoints
+CHR_Z_F
+	Vizis	2			;6
+	Viz	8,9,3,0,0,127	;0
+	Viz	9,8,4,0,0,-127	;1
+;	Viz	1,2,6,0,0,127	;2
+;	Viz	2,1,7,0,0,-127	;3
+;	Viz	5,9,0,0,0,127	;4
+;	Viz	9,5,7,0,0,-127	;5
+
+CHR_Z_f1	Faces
+	Face4	0,0,0,0,127,8,9,3,4
+	Face4	3,1,0,0,-127,9,8,4,3
+	Face4	0,0,0,0,127,1,2,6,7
+	Face4	3,1,0,0,-127,2,1,7,6
+	Face4	0,0,0,0,127,5,9,0,7
+	Face4	3,1,0,0,-127,9,5,7,0
+	Fend
+	EndShape
+
+	endc
 ;--Shape file ----- C:\SHAPED\FONT\CHR_0.TXT ----
 	ifne	DO_HDR
 
