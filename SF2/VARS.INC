@@ -1,9 +1,8 @@
-;  ����������������ͻ
-;  �                ǿ
-;  � Assembly Flags ��
-;  �                ��
-;  ����������������ͼ�
-;   ������������������
+;  ##################
+;  #                #
+;  # Assembly Flags #
+;  #                #
+;  ##################
 
 cesdemo		equ	0	; 0 is normal, 1/2
 janglish	equ	0	; 0 = english, 1 = japanese
@@ -58,12 +57,11 @@ user_yajima		equ	8
 
 	run	"user equ user_%$username"
 
-;  ���������������������ͻ     
-;  �                     ǿ
-;  � Version Definitions ��
-;  �                     ��
-;  ���������������������ͼ�
-;   �����������������������
+;  ########################
+;  #                     ##
+;  # Version Definitions ##
+;  #                     ##
+;  ########################
 
 	STRING	version[80]
 
