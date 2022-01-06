@@ -61,6 +61,7 @@ abort_vn
 	incfile	sgtabs.asm
 	incfile	istrats.asm
 	incfile	blink.asm
+
 	bankend	32
 	org    $00ffb0,$7fb0
 

@@ -17,3 +17,19 @@ nalogtab8s 	equ tabstart+256*6
 nalogtab8sl equ tabstart+256*7
 muldivtab 	equ tabstart+256*8
 
+	FOPEN	msgtable.tmp
+
+	IFNE	JANGLISH
+	include	japanese.msg
+	fileslog english.msg
+	ELSEIF
+	include	english.msg
+	fileslog japanese.msg
+	ENDC	
+
+	FCLOSE	!
+
+	fileslog	japanese.msg
+	fileslog	english.msg
+
+messagetable	include	msgtable.tmp
