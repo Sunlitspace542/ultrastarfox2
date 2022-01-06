@@ -343,25 +343,6 @@ xlen	=	31*1024+512
 	zalc	sz,1
 	zalc	cz,1
 
-	alc	rmat11w,1
-	alc	rmat11,1
-	alc	rmat12w,1
-	alc	rmat12,1
-	alc	rmat13w,1
-	alc	rmat13,1
-	alc	rmat21w,1
-	alc	rmat21,1
-	alc	rmat22w,1
-	alc	rmat22,1
-	alc	rmat23w,1
-	alc	rmat23,1
-	alc	rmat31w,1
-	alc	rmat31,1
-	alc	rmat32w,1
-	alc	rmat32,1
-	alc	rmat33w,1
-	alc	rmat33,1
-
 	alc	pmat11w,1
 	alc	pmat11,1
 	alc	pmat12w,1
@@ -564,15 +545,15 @@ mio_mode	equ	$303a
 	alc	shieldup,1
 
 ; planets
-	alc	routes,2*num_routes
+;	alc	routes,2*num_routes
 	alc	stage,2
-	alc	whichroute,1
-	alc	currentplanet,2
+;	alc	whichroute,1
+;	alc	currentplanet,2
 	alc	dmatemp,2
 	alc	mapmode,2
 	alc	bg_dmalist,2
 	alc	bgtransspeed,2
-	alc	newtm,1
+;	alc	newtm,1
 	alc	lives,1
 
 ; draw
