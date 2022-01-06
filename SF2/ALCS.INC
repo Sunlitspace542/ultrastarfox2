@@ -782,7 +782,6 @@ max_timer	=	timer_size*8
 
 	include	dalcs.inc
 	include	kalcs.inc
-	include	ealcs.inc
 	include	talcs.inc
 	include	yalcs.inc
 
