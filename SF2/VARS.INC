@@ -14,9 +14,9 @@ french				equ	0	; french version
 fast				equ	1	; 21Mhz?
 CacheOn				equ	1	; Super FX chip cache on/off
 cesboot				equ	0	; Winter CES 1995 "Nintendo Presents" screen
-lockondef			equ 1	; Enable Lock-On by default
+lockondef			equ 0	; Enable Lock-On by default
 forcehardandross	equ 0	; Force expert mode Andross on all difficulties
-expertbydefault		equ 1	; enable expert mode by default
+expertbydefault		equ 0	; enable expert mode by default
 
 DamageHalf	equ	0	; 1:player no damage wo hanbun ni suru.
 
@@ -25,7 +25,7 @@ kyear		equ	96	; 95/96/97 = 1995/1996/1997
 ; debugging:
 
 debuginfo		equ	0	; full strategy debugging
-debuginfo2		equ	1 	; stage selection/ speed up mode
+debuginfo2		equ	0 	; stage selection/ speed up mode
 portinfo		equ	0	; 0/1 ... sound port display off/on 
 randominfo		equ	0	; 0/1 ... random on/off
 demoinfo		equ	0	; 0/1 ... polygon demo on / off
