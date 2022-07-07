@@ -20,7 +20,7 @@ expertbydefault		equ 0	; enable expert mode by default
 
 DamageHalf	equ	0	; 1:player no damage wo hanbun ni suru.
 
-kyear		equ	96	; 95/96/97 = 1995/1996/1997
+kyear		equ	96	; 95/96 = 1995/1996
 
 ; debugging:
 
