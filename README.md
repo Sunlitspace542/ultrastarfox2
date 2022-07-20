@@ -4,6 +4,7 @@ Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hack
 ## Notes
 - **This codebase is difficult to work with.**  
 - The game will not assemble without some files being present in the root of the SF2 directory for some reason.
+- Currently, a Japanese ROM cannot be built.
 
 ## Features
 - Kando was involved
