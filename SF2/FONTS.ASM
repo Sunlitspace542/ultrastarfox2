@@ -1,18 +1,18 @@
 smallfont
-	incbinfile	font_1.bin
+	incbinfile	FONT\font_1.bin
 largefont
-;	incbinfile	font_0.bin
+;	incbinfile	FONT\font_0.bin
 normalfont
 	IFEQ	JANGLISH
-	incbinfile	mme.bin
-	fileslog	mmj.bin
+	incbinfile	FONT\mme.bin
+	fileslog	FONT\mmj.bin
 	ELSEIF
-	incbinfile	mmj.bin
-	fileslog	mme.bin
+	incbinfile	FONT\mmj.bin
+	fileslog	FONT\mme.bin
 	ENDC
 
 displayfont
-	incbinfile	mf.bin
+	incbinfile	FONT\mf.bin
 
-atozfont	incbinfile	atoz.bin
+atozfont	incbinfile	FONT\atoz.bin
 

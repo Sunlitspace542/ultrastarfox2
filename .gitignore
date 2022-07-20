@@ -11,9 +11,9 @@
 # build logs
 *.LOG
 *.log
-*/SF/*.DOC
-*/SF/*.doc
-*/SF/*.TMP
-*/SF/*.tmp
-*/SF/*.txt
+*/SF2/*.DOC
+*/SF2/*.doc
+*/SF2/*.TMP
+*/SF2/*.tmp
+*/SF2/*.txt
 *.TXT
