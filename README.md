@@ -2,7 +2,7 @@
 Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use. 
 
 ## Notes
-- This codebase is difficult to work with.  
+- **This codebase is difficult to work with.**  
 - The game will not assemble without some files being present in the root of the SF2 directory for some reason.
 
 ## Features
