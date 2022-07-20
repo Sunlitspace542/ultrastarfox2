@@ -1,6 +1,10 @@
 # UltraStarFox2
 Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use. 
 
+## Notes
+The game will not assemble without some files being present in the root of the SF2 directory for some reason.  
+This codebase is difficult to work with.
+
 ## Features
 - Kando was involved
 
@@ -19,11 +23,6 @@ to rebuild color palettes, run ``build palette.cmd``
 After building, a debug symbol map will be created at ``SYMBOLS.TXT``.
 
 Build flags can be found in ``SF2/VARS.INC``
-
-## Notes
-
-The game will not assemble without some files being present in the root of the SF2 directory for some reason.  
-This codebase is difficult to work with.
 
 ## Project Structure
 ```
