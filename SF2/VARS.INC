@@ -7,7 +7,7 @@
 cesdemo				equ	0	; 0 is normal, 1/2
 janglish			equ	0	; 0 = english, 1 = japanese
 cestime				equ	4	; ces countdown (in minutes)
-pal					equ	1	; PAL/NTSC (1/0) (PAL IS WIP)
+pal					equ	1	; PAL/NTSC (1/0)
 contest				equ	0	; contest version
 german				equ	0	; german version
 french				equ	0	; french version
