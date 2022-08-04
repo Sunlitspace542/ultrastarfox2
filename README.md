@@ -1,12 +1,12 @@
 # UltraStarFox2
-Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use. 
+Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use.
 
 ## Notes
 - **This codebase is difficult to work with.**  
 - The game will not assemble without some files being present in the root of the SF2 directory for some reason.
-- PAL version is currently WIP
 
 ## Features
+- PAL version support, change ``pal`` to 1 in ``VARS.INC`` (StarWing 2 Logo by Josete2k, edited by Sunlitspace542)  
 - Kando was involved
 
 ## Building
