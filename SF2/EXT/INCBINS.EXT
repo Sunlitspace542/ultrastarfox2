@@ -34,7 +34,7 @@
 	global	b1_ccr
 ;	global	b2_ccr
 ;	global	b3_ccr
-	global	b4_ccr
+
 	global	b7_ccr
 	global	b8_ccr
 	global	b9_ccr
@@ -51,9 +51,12 @@
 	global	e3_ccr
 	global	e4_ccr
 	global	e5_ccr
-	global	e6_ccr
+	IFEQ	janglish
+	global	b4_ccr
 	global	e7_ccr
+	global	e6_ccr
 	global	e8_ccr
+	ENDC
 	global	e9_ccr
 
 ;	global	tst_ccr

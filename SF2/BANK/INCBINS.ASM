@@ -90,8 +90,7 @@ mworldspr	equ	msprites3
 	inccru	w0_ccr,data\w0.ccr
 	inccru	w1_ccr,data\w1.ccr
 	inccru	e5_ccr,data\e5.ccr
-	inccru	e6_ccr,data\e6.ccr
-	inccru	e8_ccr,data\e8.ccr
+
 
 	ifeq	kyear-95
 	inccru	e9_ccr,data\e9.ccr
@@ -107,8 +106,7 @@ mworldspr	equ	msprites3
 	inccru	e1_ccr,data\e1.ccr
 	inccru	e2_ccr,data\e2.ccr
 	inccru	e3_ccr,data\e3.ccr
-	inccru	e7_ccr,data\e7.ccr
-	inccru	b4_ccr,data\b4.ccr
+
 	bankend	23
 
 	bank	24

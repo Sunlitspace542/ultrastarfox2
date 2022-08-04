@@ -6,6 +6,7 @@
 	include	INC\bgmacs.inc
 	include	INC\shmacs.inc
 	include	INC\gamelist.inc
+	include	EXT\BANK.EXT
 
 	bank	4
 ;---------- Kawaguchi -------------

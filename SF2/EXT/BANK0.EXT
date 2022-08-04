@@ -1,0 +1,4 @@
+;	IFNE	janglish
+	global	e6_ccr
+	global	e8_ccr
+;	ENDC

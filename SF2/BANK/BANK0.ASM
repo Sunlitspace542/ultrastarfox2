@@ -9,6 +9,8 @@
 
 	include	INC\pathmacs.inc
 
+
+	incpub	bank
 ;------------------------------------
 	bank	0		;Bank 0
 
@@ -61,7 +63,12 @@ abort_vn
 	incfile	ASM\sgtabs.asm
 	incfile	ASM\istrats.asm
 	incfile	ASM\blink.asm
-
+	IFNE	janglish
+	inccru	e6_ccr,data\e6.ccr
+	inccru	e8_ccr,data\e8.ccr
+	inccru	e7_ccr,data\e7.ccr
+	inccru	b4_ccr,data\b4.ccr
+	ENDC
 	bankend	32
 	org    $00ffb0,$7fb0
 
