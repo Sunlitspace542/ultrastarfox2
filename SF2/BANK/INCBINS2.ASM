@@ -64,32 +64,62 @@ musicsize	=	0
 
 	elseif
 ;**** music for PAL ****
-	incsnd	music01,sound\m01_p.bin
-	incsnd	music02,sound\m02_p.bin
-	incsnd	music03,sound\m03_p.bin
-	incsnd	music04,sound\m04_p.bin
-	incsnd	music05,sound\m05_p.bin
-	incsnd	music06,sound\m06_p.bin
-	incsnd	music07,sound\m07_p.bin
-	incsnd	music08,sound\m08_p.bin
-	incsnd	music09,sound\m09_p.bin
-	incsnd	music10,sound\m10_p.bin
-	incsnd	music11,sound\m11_p.bin
-	incsnd	music12,sound\m12_p.bin
-	incsnd	music13,sound\m13_p.bin
-	incsnd	music14,sound\m14_p.bin
-	incsnd	music15,sound\m15_p.bin
-	incsnd	music16,sound\m16_p.bin
-	incsnd	music17,sound\m17_P.bin
-	incsnd	music18,sound\m18_p.bin
-	incsnd	music18b,sound\m18b_p.bin
-	incsnd	music19,sound\m19_p.bin
-	incsnd	music20,sound\m20_p.bin
-	incsnd	music21,sound\m21_p.bin
-	incsnd	music22,sound\m22_p.bin
-	incsnd	music23,sound\m23_p.bin
-	incsnd	music24,sound\m24_p.bin
-	incsnd	music25,sound\m25_p.bin
+
+; NOTE: I don't think audio data for PAL actually exists so for now just include NTSC data again,
+;       but if it's found, include the PAL stuff instead
+	incsnd	music01,sound\music01.bin
+	incsnd	music02,sound\music02.bin
+	incsnd	music03,sound\music03.bin
+	incsnd	music04,sound\music04.bin
+	incsnd	music05,sound\music05.bin
+	incsnd	music06,sound\music06.bin
+	incsnd	music07,sound\music07.bin
+	incsnd	music08,sound\music08.bin
+	incsnd	music09,sound\music09.bin
+	incsnd	music10,sound\music10.bin
+	incsnd	music11,sound\music11.bin
+	incsnd	music12,sound\music12.bin
+	incsnd	music13,sound\music13.bin
+	incsnd	music14,sound\music14.bin
+	incsnd	music15,sound\music15.bin
+	incsnd	music16,sound\music16.bin
+	incsnd	music17,sound\music17.bin
+	incsnd	music18,sound\music18.bin
+	incsnd	music18b,sound\music18b.bin
+	incsnd	music19,sound\music19.bin
+	incsnd	music20,sound\music20.bin
+	incsnd	music21,sound\music21.bin
+	incsnd	music22,sound\music22.bin
+	incsnd	music23,sound\music23.bin
+	incsnd	music24,sound\music24.bin
+	incsnd	music25,sound\music25.bin
+
+	;incsnd	music01,sound\m01_p.bin
+	;incsnd	music02,sound\m02_p.bin
+	;incsnd	music03,sound\m03_p.bin
+	;incsnd	music04,sound\m04_p.bin
+	;incsnd	music05,sound\m05_p.bin
+	;incsnd	music06,sound\m06_p.bin
+	;incsnd	music07,sound\m07_p.bin
+	;incsnd	music08,sound\m08_p.bin
+	;incsnd	music09,sound\m09_p.bin
+	;incsnd	music10,sound\m10_p.bin
+	;incsnd	music11,sound\m11_p.bin
+	;incsnd	music12,sound\m12_p.bin
+	;incsnd	music13,sound\m13_p.bin
+	;incsnd	music14,sound\m14_p.bin
+	;incsnd	music15,sound\m15_p.bin
+	;incsnd	music16,sound\m16_p.bin
+	;incsnd	music17,sound\m17_P.bin
+	;incsnd	music18,sound\m18_p.bin
+	;incsnd	music18b,sound\m18b_p.bin
+	;incsnd	music19,sound\m19_p.bin
+	;incsnd	music20,sound\m20_p.bin
+	;incsnd	music21,sound\m21_p.bin
+	;incsnd	music22,sound\m22_p.bin
+	;incsnd	music23,sound\m23_p.bin
+	;incsnd	music24,sound\m24_p.bin
+	;incsnd	music25,sound\m25_p.bin
 	endc
 
 	incsnd	sdgrd1,sound\sdgrd1.bin

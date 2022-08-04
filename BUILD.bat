@@ -1,6 +1,7 @@
 cls
 set path=%path%;c:\bin
 cd sf2
+echo deleting any pre-existing SOB files. An "unable to delete" error means the .SOB files were properly cleared after the previous assembly.
 del .\bank\*.sob
 make sf.rom
 cd ..

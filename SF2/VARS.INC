@@ -7,7 +7,7 @@
 cesdemo				equ	0	; 0 is normal, 1/2
 janglish			equ	0	; 0 = english, 1 = japanese
 cestime				equ	4	; ces countdown (in minutes)
-pal					equ	0	; PAL/NTSC (1/0) (PAL IS WIP)
+pal					equ	1	; PAL/NTSC (1/0) (PAL IS WIP)
 contest				equ	0	; contest version
 german				equ	0	; german version
 french				equ	0	; french version
@@ -74,17 +74,17 @@ user_yajima		equ	8
 	defs	version,"US"
 	STRING	version_name[32]="STARFOX2             "
 	ELSEIF
-	IFEQ	GERMAN+FRANCE
+	IFEQ	GERMAN+FRENCH
 	defs	version,"UK"
-	STRING	version_name[32]="STARFOX2             "
+	STRING	version_name[32]="STARWING2            "
 	ENDC
 	IFNE	GERMAN
 	defs	version,"GERMAN"
-	STRING	version_name[32]="STARFOX2             "
+	STRING	version_name[32]="STARWING2            "
 	ENDC
-	IFNE	FRANCE
+	IFNE	FRENCH
 	defs	version,"FRANCE"
-	STRING	version_name[32]="STARFOX2             "
+	STRING	version_name[32]="STARWING2            "
 	ENDC
 	ENDC
 	ELSEIF
