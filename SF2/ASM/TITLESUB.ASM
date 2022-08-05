@@ -1047,7 +1047,7 @@ titx	equ	$20
 tity	equ	$18
 titchr	equ	$0
 TitSPrData
-	km_datacnt	W,TitSprData
+	km_datacnt	W,TitSprData ; Build date/Compile date (95-09-12 PM 07-30)
 	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_5)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
