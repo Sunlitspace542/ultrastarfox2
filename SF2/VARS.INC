@@ -4,14 +4,14 @@
 ;  #                #
 ;  ##################
 
-cesdemo				equ	0	; 0 is normal, 1/2
+cesdemo				equ	0	; 0 is normal, 1/2 (unused)
 janglish			equ	0	; 0 = english, 1 = japanese
-cestime				equ	4	; ces countdown (in minutes)
+cestime				equ	4	; ces countdown (in minutes) (unused)
 pal					equ	0	; PAL/NTSC (1/0)
-contest				equ	0	; contest version
-german				equ	0	; german version
-french				equ	0	; french version
-fast				equ	1	; 21Mhz?
+contest				equ	0	; contest version (unused)
+german				equ	0	; german version  (unused)
+french				equ	0	; french version  (unused)
+fast				equ	1	; 21Mhz
 CacheOn				equ	1	; Super FX chip cache on/off
 cesboot				equ	0	; Winter CES 1995 "Nintendo Presents" screen
 lockondef			equ 0	; Enable Lock-On by default
@@ -20,7 +20,7 @@ expertbydefault		equ 0	; enable expert mode by default
 
 nosecuritychk		equ	0	; disable region/controller port checks on boot
 
-DamageHalf	equ	0	; 1:player no damage wo hanbun ni suru.
+DamageHalf	equ	0	; 1:Half of the player's damage is reduced.
 
 kyear		equ	96	; 95/96 = 1995/1996
 
@@ -33,7 +33,7 @@ randominfo		equ	0	; 0/1 ... random on/off
 demoinfo		equ	0	; 0/1 ... polygon demo on / off
 blockmap_dbg	equ	0	; display map blockmap?
 pathcount		equ	0	; display amount of path commands executed
-sos_test_egu	equ	0	; 0=off/1=on test mode no sos1,sos2 de teki wo riset
+sos_test_egu	equ	0	; 0=off/1=on test mode Set SOS1 and SOS2.
 polllaginfo		equ	0	; display cycles used up while polling mario chip
 
 ; user list:
@@ -128,7 +128,7 @@ user_yajima		equ	8
 	IFNE	fast
 	defs	version,"%$version/21Mhz"
 	ELSEIF
-	defs	version,"%$version/10�Mhz"
+	defs	version,"%$version/10#Mhz"
 	ENDC
 
 
@@ -137,12 +137,12 @@ user_yajima		equ	8
 
 
 
-;  �������������������ͻ     
-;  �                   ǿ
-;  � Angle Definitions ��
-;  �                   ��
-;  �������������������ͼ�
-;   ���������������������
+;  ####################     
+;  #                   #
+;  # Angle Definitions ##
+;  #                   ##
+;  #####################
+;   #####################
 
 deg360	equ	256
 deg180	equ	deg360/2
@@ -168,12 +168,12 @@ deg216	equ	(deg360*3)/5
 deg288	equ	(deg360*4)/5
 
 
-;  �����������������ͻ
-;  �                 ǿ
-;  � Processor Flags ��
-;  �                 ��
-;  �����������������ͼ�
-;   �������������������
+;  ##################
+;  #                 #
+;  # Processor Flags ##
+;  #                 ##
+;  ###################
+;   ###################
 
 p_n	equ	10000000b
 p_v	equ	01000000b
@@ -186,12 +186,12 @@ p_c	equ	00000001b
 
 
 
-;  ���������������ͻ
-;  �               ǿ
-;  � Key Pad Codes ��
-;  �               ��
-;  ���������������ͼ�
-;   �����������������
+;  ################
+;  #               #
+;  # Key Pad Codes ##
+;  #               ##
+;  #################
+;   #################
 
 pad_B	equ	1<<15
 pad_Y	equ	1<<14
@@ -220,12 +220,12 @@ padl_TLEFT	equ	pad_TLEFT
 padl_TRIGHT	equ	pad_TRIGHT
 
 
-;  ���������������������������ͻ
-;  �                           ǿ
-;  � Miscellaneous Definitions ��
-;  �                           ��
-;  ���������������������������ͼ�
-;   �����������������������������
+;  ############################
+;  #                           #
+;  # Miscellaneous Definitions ##
+;  #                           ##
+;  #############################
+;   #############################
 
 NULL	equ	0
 TRUE	equ	-1
@@ -286,12 +286,12 @@ tdcol_LIGHTGREY =	13
 tdcol_WHITE	=	14
 tdcol_GREEN	=	15
 
-;  ��������������������������������ͻ
-;  �                                ǿ
-;  � Equates For training screen    ��
-;  �                                ��
-;  ��������������������������������ͼ�
-;   ����������������������������������
+;  #################################
+;  #                                #
+;  # Equates For training screen    ##
+;  #                                ##
+;  ##################################
+;   ##################################
 
 bitmapwidth_tr	equ	22
 bitmapheight_tr	equ	24
@@ -300,12 +300,12 @@ bitmapvheight_tr	equ	12
 player1_wx_tr	equ	2	; x position of player 1's window
 player1_wy_tr	equ	2	; x position of player 1's window
 
-;  ��������������������������������ͻ
-;  �                                ǿ
-;  � Equates For 3d glasses Bitmaps ��
-;  �                                ��
-;  ��������������������������������ͼ�
-;   ����������������������������������
+;  #################################
+;  #                                #
+;  # Equates For 3d glasses Bitmaps ##
+;  #                                ##
+;  ##################################
+;   ##################################
 
 bitmapwidth_3d	equ	22
 bitmapheight_3d	equ	16
@@ -314,12 +314,12 @@ bitmapvheight_3d	equ	16
 player1_wx_3d	equ	5	; x position of player 1's window
 player1_wy_3d	equ	2	; x position of player 1's window
 
-;  ��������������������������������ͻ
-;  �                                ǿ
-;  � Equates For One Player Bitmaps ��
-;  �                                ��
-;  ��������������������������������ͼ�
-;   ����������������������������������
+;  #################################
+;  #                                #
+;  # Equates For One Player Bitmaps ##
+;  #                                ##
+;  ##################################
+;   ##################################
 
 bitmapwidth_1	equ	28
 bitmapheight_1	equ	24
@@ -339,12 +339,12 @@ player1_wy_1		equ	2	; x position of player 1's window
 player1_wx_1c	equ	2	; x position of player 1's window
 player1_wy_1c	equ	2	; x position of player 1's window
 
-;  ��������������������������������ͻ
-;  �                                ǿ
-;  � Equates For Two Player Bitmaps ��
-;  �                                ��
-;  ��������������������������������ͼ�
-;   ����������������������������������
+;  #################################
+;  #                                #
+;  # Equates For Two Player Bitmaps ##
+;  #                                ##
+;  ##################################
+;   ##################################
 
 bitmapwidth	equ	22
 bitmapheight	equ	16
@@ -365,12 +365,12 @@ player2_wy	equ	player1_wy+bitmapvheight+1	; x position of player 2's window
 
 
 
-;  �����������������������������������ͻ
-;  �                                   ǿ
-;  � VRAM Layout For Two Player Screen ��
-;  �                                   ��
-;  �����������������������������������ͼ�
-;   �������������������������������������
+;  ####################################
+;  #                                   #
+;  # VRAM Layout For Two Player Screen ##
+;  #                                   ##
+;  #####################################
+;   #####################################
 
 _bg1_cgx1	equ	(0*k)/2
 _bg1_cgx2	equ	(24*k)/2
@@ -404,12 +404,12 @@ bg2_cgx_len	equ	8*k
 bg2_scr_len	equ	4*k
 
 
-;  �����������������������������������ͻ
-;  �                                   ǿ
-;  � Base Addresses For RAM Allocation ��
-;  �                                   ��
-;  �����������������������������������ͼ�
-;   �������������������������������������
+;  ####################################
+;  #                                   #
+;  # Base Addresses For RAM Allocation ##
+;  #                                   ##
+;  #####################################
+;   #####################################
 
 zmempt	=	0	;zero page
 wmempt	=	$300	;work space
@@ -420,12 +420,12 @@ mmempt	=	$700200
 
 
 
-;  ����������������������ͻ
-;  �                      ǿ
-;  � Game Limit Variables ��
-;  �                      ��
-;  ����������������������ͼ�
-;   ������������������������
+;  #######################
+;  #                      #
+;  # Game Limit Variables ##
+;  #                      ##
+;  ########################
+;   ########################
 
 number_al	equ	60	;52		;Max aliens
 number_zb	equ	number_al	;Max z srot blocks
@@ -450,12 +450,12 @@ blockmap_numblocks  equ 65536/blockmap_Resolution
 
 
 
-;  �������������������������ͻ
-;  �                         ǿ
-;  � Collision Box Hit Flags ��
-;  �                         ��
-;  �������������������������ͼ�
-;   ���������������������������
+;  ##########################
+;  #                         #
+;  # Collision Box Hit Flags ##
+;  #                         ##
+;  ###########################
+;   ###########################
 
 HF1	equ	1<<0
 HF2	equ	1<<1
@@ -466,24 +466,24 @@ HF6	equ	1<<5
 HF7	equ	1<<6
 HF8	equ	1<<7
 
-;  ����������������������ͻ
-;  �                      ǿ
-;  � Decruncher Variables ��
-;  �                      ��
-;  ����������������������ͼ�
-;   ������������������������
+;  #######################
+;  #                      #
+;  # Decruncher Variables ##
+;  #                      ##
+;  ########################
+;   ########################
 
 dec_base	equ	bitmap1-1200	;2800h
 palettes_base equ	dec_base+13000
 
 
 
-;  ����������������������ͻ
-;  �                      ǿ
-;  � BG variables         ��
-;  �                      ��
-;  ����������������������ͼ�
-;   ������������������������
+;  #######################
+;  #                      #
+;  # BG variables         ##
+;  #                      ##
+;  ########################
+;   ########################
 
 
 scr_offset	equ	0	;(vchr_logback-vchr_physback)/16
@@ -502,12 +502,12 @@ if_pollen	equ	64
 ;---------------------------------------------------------------
 
 
-;  ����������������������ͻ
-;  �                      ǿ
-;  � Clipping planes      ��
-;  �                      ��
-;  ����������������������ͼ�
-;   ������������������������
+;  #######################
+;  #                      #
+;  # Clipping planes      ##
+;  #                      ##
+;  ########################
+;   ########################
 
 
 plane_OFF	equ	0
@@ -555,15 +555,11 @@ plane_BOSS4	equ	7
 wallhgt	equ	120
 walldist	equ	60+10
 
-;ebugp	equ	0	; 0/1 off/on debug print carl 
-;debugpete	equ	0	; 0/1 off/on debug print pete
-;itlines	equ	0	; 0/1 off/on line bit flags
 dma_clr_screen equ	1	; 0/1 off/on
 mario_test	equ	0
 mario_test1	equ	0
 mario_board	equ	1
 FastTrans	equ	0	; 0/1 0ff/on Fast transfer
-;colours4	equ	1
 
 mario_stats3d	equ	0
 

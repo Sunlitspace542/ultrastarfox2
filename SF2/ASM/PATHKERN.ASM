@@ -473,7 +473,8 @@ smt_modenum	=	0
 
 	s_mode_table_end
 
-	printf	"%01%31Warning:%00%36 Path command wa ",256-smt_modenum," shika nokottenai yo!%00%n"
+	;printf	"%01%31Warning:%00%36 Path command wa ",256-smt_modenum," shika nokottenai yo!%00%n"
+	printf	"%01%31Warning:%00%36 The only PATH command would be ",256-smt_modenum," !%00%n"
 
 
 
@@ -665,7 +666,8 @@ smt_modenum	=	0
 
 	s_mode_table_end
 
-	printf	"%01%31Warning:%00%36 EXTRA Path command wa ",256-smt_modenum," shika nokottenai yo!%00%n"
+	;printf	"%01%31Warning:%00%36 EXTRA Path command wa ",256-smt_modenum," shika nokottenai yo!%00%n" ; original romanized japanese string
+	printf	"%01%31Warning:%00%36 EXTRA path command must be ",256-smt_modenum,"!%00%n"
 
 	IFEQ	1
 ;**********
