@@ -105,7 +105,11 @@ mworldspr	equ	msprites3
 	inccru	e0_ccr,data\e0.ccr
 	inccru	e1_ccr,data\e1.ccr
 	inccru	e2_ccr,data\e2.ccr
+	ifne	janglish
 	inccru	e3_ccr,data\e3.ccr
+	elseif
+	inccru	e3_ccr,data\e3_a.ccr
+	endc
 
 	bankend	23
 
@@ -208,7 +212,11 @@ keyscr_l	incfile	ASM\keyscr.asm
 	bank	23
 	inccru	e0_ccr,data\e0_a.ccr
 	inccru	e2_ccr,data\e2_a.ccr
+	ifne	janglish
+	inccru	e3_ccr,data\e3.ccr
+	elseif
 	inccru	e3_ccr,data\e3_a.ccr
+	endc
 
 	inccru	b1_ccr,data\b1_a.ccr
 	inccru	b8_ccr,data\b8_a.ccr
@@ -318,7 +326,11 @@ keyscr_l	incfile	ASM\keyscr.asm
 	bank	23
 	inccru	e0_ccr,data\e0_a.ccr
 	inccru	e2_ccr,data\e2_a.ccr
+	ifne	janglish
+	inccru	e3_ccr,data\e3.ccr
+	elseif
 	inccru	e3_ccr,data\e3_a.ccr
+	endc
 
 	inccru	b1_ccr,data\b1_a.ccr
 	inccru	b8_ccr,data\b8_a.ccr
