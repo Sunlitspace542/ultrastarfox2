@@ -5,7 +5,7 @@
 ;  ##################
 
 cesdemo				equ	0	; 0 is normal, 1/2 (unused)
-janglish			equ	0	; 0 = english, 1 = japanese
+janglish			equ	1	; 0 = english, 1 = japanese
 cestime				equ	4	; ces countdown (in minutes) (unused)
 pal					equ	0	; PAL/NTSC (1/0)
 contest				equ	0	; contest version (unused)
@@ -14,11 +14,11 @@ french				equ	0	; french version  (unused)
 fast				equ	1	; 21Mhz
 CacheOn				equ	1	; Super FX chip cache on/off
 cesboot				equ	0	; Winter CES 1995 "Nintendo Presents" screen
-lockondef			equ 0	; Enable Lock-On by default
+lockondef			equ 1	; Enable Lock-On by default
 forcehardandross	equ 0	; Force expert mode Andross on all difficulties
-expertbydefault		equ 0	; enable expert mode by default
+expertbydefault		equ 1	; enable expert mode by default
 
-nosecuritychk		equ	0	; disable region/controller port checks on boot
+nosecuritychk		equ	1	; disable region/controller port checks on boot
 
 DamageHalf	equ	1	; 1:Half of the player's damage is reduced. (not sure if this actually does anything)
 

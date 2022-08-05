@@ -1065,6 +1065,7 @@ TitSPrData
 	;SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_3)&BM,colpal0,pri3,noflip
 	;SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
 
+	IFEQ PAL
 	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_a)&BM,colpal0,pri3,noflip
@@ -1073,6 +1074,17 @@ TitSPrData
 	SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_o)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_x)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
+	ELSEIF
+	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_a)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_r)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_w)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_i)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_n)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_g)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+8*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
+	ENDC
 
 	SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_e)&BM,colpal0,pri3,noflip
@@ -1096,6 +1108,7 @@ MMapSelSprData
 	SpriteDataB	mmx+03*8,mmy+ty*8,titchr+conf_o,colpal0,pri3,noflip
 	SpriteDataB	mmx+04*8,mmy+ty*8,titchr+conf_m,colpal0,pri3,noflip
 ty = ty+1
+	IFNE	JANGLISH
 	SpriteDataB	mmx+00*8,mmy+ty*8,titchr+conf_t,colpal0,pri3,noflip
 	SpriteDataB	mmx+01*8,mmy+ty*8,titchr+conf_a,colpal0,pri3,noflip
 	SpriteDataB	mmx+02*8,mmy+ty*8,titchr+conf_i,colpal0,pri3,noflip
@@ -1104,6 +1117,15 @@ ty = ty+1
 	SpriteDataB	mmx+05*8,mmy+ty*8,titchr+conf_n,colpal0,pri3,noflip
 	SpriteDataB	mmx+06*8,mmy+ty*8,titchr+conf_i,colpal0,pri3,noflip
 	SpriteDataB	mmx+07*8,mmy+ty*8,titchr+conf_a,colpal0,pri3,noflip
+	ELSEIF
+	SpriteDataB	mmx+00*8,mmy+ty*8,titchr+conf_t,colpal0,pri3,noflip
+	SpriteDataB	mmx+01*8,mmy+ty*8,titchr+conf_i,colpal0,pri3,noflip
+	SpriteDataB	mmx+02*8,mmy+ty*8,titchr+conf_t,colpal0,pri3,noflip
+	SpriteDataB	mmx+03*8,mmy+ty*8,titchr+conf_a,colpal0,pri3,noflip
+	SpriteDataB	mmx+04*8,mmy+ty*8,titchr+conf_n,colpal0,pri3,noflip
+	SpriteDataB	mmx+05*8,mmy+ty*8,titchr+conf_i,colpal0,pri3,noflip
+	SpriteDataB	mmx+06*8,mmy+ty*8,titchr+conf_a,colpal0,pri3,noflip
+	ENDC
 ty = ty+1
 	SpriteDataB	mmx+00*8,mmy+ty*8,titchr+conf_m,colpal0,pri3,noflip
 	SpriteDataB	mmx+01*8,mmy+ty*8,titchr+conf_a,colpal0,pri3,noflip
