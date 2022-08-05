@@ -1047,24 +1047,41 @@ titx	equ	$20
 tity	equ	$18
 titchr	equ	$0
 TitSPrData
-	km_datacnt	W,TitSprData ; Build date/Compile date (95-09-12 PM 07-30)
-	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_5)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_1)&BM,colpal0,pri3,noflip
+	km_datacnt	W,TitSprData ; Build date/Compile date (Original was: 95-09-12 PM 07-30)
+	;SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_5)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_1)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
+
+	;SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_p)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+3*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+4*8,tity+1*8,(titchr+conf_7)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+5*8,tity+1*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_3)&BM,colpal0,pri3,noflip
+	;SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
+
+	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_a)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_r)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_f)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_o)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_x)&BM,colpal0,pri3,noflip
 	SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
 
-	SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_p)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+3*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+4*8,tity+1*8,(titchr+conf_7)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+5*8,tity+1*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_3)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
-
+	SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_e)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+2*8,tity+1*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+3*8,tity+1*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+4*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+5*8,tity+1*8,(titchr+conf_e)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_n)&BM,colpal0,pri3,noflip
+	SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_u)&BM,colpal0,pri3,noflip
 TitSPrDataEND
 ;----------------------------------------------------------------------------------------------
 mmx	=	$60
