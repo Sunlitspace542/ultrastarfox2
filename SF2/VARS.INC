@@ -18,6 +18,8 @@ lockondef			equ 0	; Enable Lock-On by default
 forcehardandross	equ 0	; Force expert mode Andross on all difficulties
 expertbydefault		equ 0	; enable expert mode by default
 
+nosecuritychk		equ	0	; disable region/controller port checks on boot
+
 DamageHalf	equ	0	; 1:player no damage wo hanbun ni suru.
 
 kyear		equ	96	; 95/96 = 1995/1996

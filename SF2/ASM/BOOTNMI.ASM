@@ -28,11 +28,13 @@ startboot	disable		;IRQ disable
 	jsl	startsfx_l	;reset SFX register
 	jsr	initialise_ram	;clear SFX & Mario RAM
 ;--------------------------------------------------------------------
+	IFEQ	nosecuritychk
 ;**** Ver Check *****
 	jsr	VersionCheck
 
 ;**** ima conect shiteiru controller ha nanika check *****
 	jsr	Check_ConectCont
+	ENDC
 ;--------------------------------------------------------------------
 ;[Back Up Ram Clear] :Yajima's
 	jsl	Check_backupRAM_l   	;; backup ram initialize
