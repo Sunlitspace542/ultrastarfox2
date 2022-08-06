@@ -223,10 +223,13 @@ ONFIELD_ROBO_CTL_l
 
 ;------------------------------------------------------------------------------
 
-; ROLLING OFF	jsl	RB_rolling_srou_l
-
+; ROLLING OFF	
+	IFNE	walkertwirl ; walker twirl
+	jsl	RB_rolling_srou_l
+	ELSEIF ; vanilla
 	lda	#0
 	sta	exal_rollingoffset,y
+	ENDC
 
 ;------------------------------------------------------------------------------
 ; store old exal_motiondir
@@ -422,12 +425,15 @@ ROBOJMP_srou
 ;ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
 
 ; rolling jump
+; R twice is lower than L twice, why?										
 
-;	lda	exal_rollingoffset,y
-;	cmp	#20H
-;	beq	.trigon
-;	cmp	#-20H
-;	beq	.trigon
+	IFNE	walkertwirl ; walker twirl
+	lda	exal_rollingoffset,y
+	cmp	#20H
+	beq	.trigon
+	cmp	#-20H
+	beq	.trigon
+	ENDC
 
 	TESTJOYPAD		jump2,ptrig	;B,ptrig
 	bne			.trigon
@@ -998,7 +1004,66 @@ ROBO3dvecs_srou
 .notinsand
 
 ;---------------------------------------------------------------------
+	IFNE	walkertwirl ; walker twirl code
+	lda	exal_RBrollingoffset,y
+	bne	.no_turn
 
+	pl_jmp_LASTLRkey	x,.m_turnL,.m_turnR,.no_turn,y
+
+;------------
+.m_turnL
+	s_achase_alvar	W,y,exal_rotyoffset,#RBrotyoffset<<8,2
+	s_achase_alvar	B,y,exal_acclroty,x1,3
+
+	bra		.end_turn
+.endm_turnL
+;------------
+.m_turnR
+	s_achase_alvar	W,y,exal_rotyoffset,#-RBrotyoffset<<8,2
+	s_neg_var	B,x1
+	s_achase_alvar	B,y,exal_acclroty,x1,3
+
+	bra		.end_turn
+.endm_turnR
+;------------
+.no_turn
+	s_achase_alvar	B,y,exal_acclroty,#0,2
+	s_achase_alvar	W,y,exal_rotyoffset,#0,2
+
+;------------
+.end_turn
+
+	pl_jmp_ifturn		x,.turnon
+
+	jsr			OF_AW_lrLR.forceroty
+	bra			.setroty
+
+.turnon	s_add_alvars		B,y,exal_roty+1,y,exal_acclroty
+
+.setroty
+
+	lda	exal_roty+1,y
+	clc
+	adc	exal_rotyoffset+1,y
+
+
+	pha
+	clc
+	adc	exal_RBrollingoffset,y
+	sta	al_roty,x
+	pla
+	nega
+	clc
+	adc	R3VdirY
+	sta	R3VdirY
+
+
+	s_copy_alvar2alvar	B,x,al_roty,y,exal_roty+1
+	s_add_alvars		B,x,al_roty,y,exal_rotyoffset+1
+	s_add_alvars		B,x,al_roty,y,exal_RBrollingoffset
+
+.exitsetroty
+	ELSEIF ; vanilla code starts here
 	pl_jmp_LASTLRkey	x,.m_turnL,.m_turnR,.no_turn,y
 
 ;------------
@@ -1040,7 +1105,7 @@ ROBO3dvecs_srou
 	clc
 	adc	exal_roty+1,y
 	sta	al_roty,x
-
+	ENDC
 ;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
 ;	calc player's vector
 ;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
@@ -5129,7 +5194,7 @@ jetnoseposz	shapetab	W,jetheadz_
 ;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
 ;	WALKER(ARMER)'s rolling
 ;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
-	IFEQ	1
+	IFNE	walkertwirl ; walker twirl
 ;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	s_start_strat
