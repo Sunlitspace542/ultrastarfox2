@@ -68,9 +68,9 @@ mf_hp	equ	24 ; Miyu/Fay
 ;*********************************************************************
 ;*			Score Bonus				*
 ;*********************************************************************
-timebonus_easy	equ	100
-timebonus_normal	equ	180
-timebonus_hard	equ	280
+timebonus_easy	equ	100 ; Normal
+timebonus_normal	equ	180 ; Hard
+timebonus_hard	equ	280 ; Expert
 
 ;*********************************************************************
 ;*			Freeze Timer				*
@@ -119,7 +119,7 @@ zacokazu_1st		equ	3	;1st Zaco Enemy toujyou kazu
 zacokazu_2nd		equ	2	;2nd Zaco Enemy toujyou kazu 
 missiletm_1st	equ	10	;1st Missile hasyya Timer 
 
-;**** Item Planet Appear Jyouken (amount of medals needed on each difficulty to make the secret base appear) ****
+;**** Item Planet Appear Jyouken (amount of Pepper Medals needed on each difficulty to make the secret base appear) ****
 kemedal_easy		equ	13 ; Normal
 kemedal_normal	equ	19 ; Hard
 kemedal_hard		equ	20 ; Expert
@@ -300,9 +300,9 @@ btship_apsp	equ	$1000	;Battle Ship Appear Speed
 ;---------------------------------------------------------------------
 btship_collision	equ	8
 ;---------------------------------------------------------------------
-bsskill_easy		equ	0
-bsskill_normal	equ	4
-bsskill_hard		equ	12
+bsskill_easy		equ	0 ; Normal
+bsskill_normal	equ	4 ; Hard
+bsskill_hard		equ	12 ; Expert
 ;---------------------------------------------------------------------
 btship_ASX	equ	$0a*8
 btship_ASY	equ	$05*8
@@ -531,9 +531,9 @@ vir_collision	equ	6
 ;=====================================================================
 ;*			SpecialEnemy 		[taimankun]	*
 ;=====================================================================
-sp_easykazu		equ	1
-sp_normalkazu	equ	1
-sp_hardkazu		equ	2
+sp_easykazu		equ	1 ; Normal
+sp_normalkazu	equ	1 ; Hard
+sp_hardkazu		equ	2 ; Expert
 sp_skillbase		equ	$1c
 taiman_collision	equ	8
 ;=====================================================================
@@ -547,9 +547,9 @@ sos_zacotmH	equ	15*60	;hard
 ;=====================================================================
 ;*			Missile Appear Time			*
 ;=====================================================================
-sos_easytmbase	equ	00
-sos_normaltmbase	equ	06
-sos_hardtmbase	equ	12
+sos_easytmbase	equ	00 ; Normal
+sos_normaltmbase	equ	06 ; Hard
+sos_hardtmbase	equ	12 ; Expert
 ;---------------------------------------------------------------------
 sos_stg1tmE	equ	20*60	;18
 sos_stg2tmE	equ	32*60	;30
