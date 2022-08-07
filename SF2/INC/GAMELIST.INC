@@ -121,7 +121,7 @@ missiletm_1st	equ	10	;1st Missile hasyya Timer
 
 ;**** Item Planet Appear Jyouken (amount of medals needed on each difficulty to make the secret base appear) ****
 kemedal_easy		equ	13 ; Normal
-kemedal_normal		equ	19 ; Hard
+kemedal_normal	equ	19 ; Hard
 kemedal_hard		equ	20 ; Expert
 
 ;********************************************************************
