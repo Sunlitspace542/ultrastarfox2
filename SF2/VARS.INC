@@ -13,7 +13,7 @@ german				equ	0	; german version  (unused)
 french				equ	0	; french version  (unused)
 fast				equ	1	; 21Mhz
 CacheOn				equ	1	; Super FX chip cache on/off
-cesboot				equ	0	; Winter CES 1995 "Nintendo Presents" screen
+cesboot				equ	0	; WCES 1995 "Nintendo Presents" screen
 lockondef			equ 0	; Enable Lock-On by default
 forcehardandross	equ 0	; Force expert mode Andross on all difficulties
 expertbydefault		equ 0	; enable expert mode by default
