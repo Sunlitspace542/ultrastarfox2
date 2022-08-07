@@ -25,8 +25,6 @@ DamageHalf			equ 0	; Any damage taken is reduced by half.
 
 kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
-; to tweak other aspects of the game, see INC/GAMELIST.INC
-
 ; debugging:
 
 debuginfo		equ	0	; full strategy debugging
@@ -38,6 +36,10 @@ blockmap_dbg	equ	0	; display map blockmap?
 pathcount		equ	0	; display amount of path commands executed
 sos_test_egu	equ	0	; 0=off/1=on test mode Set SOS1 and SOS2.
 polllaginfo		equ	0	; display cycles used up while polling mario chip
+
+;	###############################################################
+;	## to tweak other aspects of the game, see INC/GAMELIST.INC. ##
+;	###############################################################
 
 ; user list:
 
