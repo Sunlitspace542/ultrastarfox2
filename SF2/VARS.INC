@@ -23,7 +23,7 @@ nosecuritychk		equ	0	; disable region/controller port checks on boot
 
 DamageHalf			equ 0	; Any damage taken is reduced by half.
 
-kyear				equ	96	; 95/96/97 = 1995/1996/1997
+kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
 ; debugging:
 
