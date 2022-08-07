@@ -425,7 +425,7 @@ ROBOJMP_srou
 ;ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
 
 ; rolling jump
-; R twice is lower than L twice in debug builds, why?										
+; R twice is lower than L twice, why?										
 
 	IFNE	walkertwirl ; walker twirl
 	lda	exal_rollingoffset,y
