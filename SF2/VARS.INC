@@ -23,12 +23,12 @@ nosecuritychk		equ	0	; disable region/controller port checks on boot
 
 DamageHalf	equ	0	; 1:Half of the player's damage is reduced. (not sure if this actually does anything)
 
-kyear		equ	96	; 95/96 = 1995/1996
+kyear		equ	97	; 95/96/97 = 1995/1996/1997
 
 ; debugging:
 
-debuginfo		equ	1	; full strategy debugging
-debuginfo2		equ	1 	; stage selection/ speed up mode
+debuginfo		equ	0	; full strategy debugging
+debuginfo2		equ	0 	; stage selection/ speed up mode
 portinfo		equ	0	; 0/1 ... sound port display off/on 
 randominfo		equ	0	; 0/1 ... random on/off
 demoinfo		equ	0	; 0/1 ... polygon demo on / off
