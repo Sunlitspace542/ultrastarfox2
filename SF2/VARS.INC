@@ -25,6 +25,8 @@ DamageHalf			equ 0	; Any damage taken is reduced by half.
 
 kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
+; to tweak other aspects of the game, see INC/GAMELIST.INC
+
 ; debugging:
 
 debuginfo		equ	0	; full strategy debugging
