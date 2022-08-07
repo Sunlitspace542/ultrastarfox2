@@ -43,5 +43,7 @@ ultrastarfox2
 │   ├── MSPRITES: contains 4 DAT files (interleaved textures)
 │   ├── SHAPES: contains all shape files
 │   └── SOUND: sound/music data
-└── TOOLS: tools such as packer and ShapeEd
+├── TOOLS: tools such as packer and ShapeEd
+├── OPTIONALSTUFF: optional graphics files
+└── OTHER: Files for building MSPRITES /bin files
 ```
