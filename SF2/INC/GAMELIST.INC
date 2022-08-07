@@ -13,7 +13,7 @@ kcannonsw	equ	0	; planet cannon enable / disable
 kbattle	equ	0	; off / on
 kdamage0	equ	0	; off/on :(damage0)
 kennum	equ	0	; test mode kenemynumber
-ktdifficulty	equ	0	; difficulty (0:easy,1:normal,2:hard)
+ktdifficulty	equ	0	; difficulty (0:easy/normal,1:normal/hard,2:hard/expert)
 kdebugrsbgm	equ	0	; mission result BGM Debug
 kdebugresult	equ	0	; mission result debug
 kendingtest	equ	0	; ending demo (easy,normal,hard) test
@@ -32,7 +32,7 @@ kcannonsw	equ	0	; planet cannon enable / disable
 kbattle	equ	0	; off / on :(battlemode off)
 kdamage0	equ	0	; off/on :(damage0)
 kennum	equ	9	; test mode kenemynumber
-ktdifficulty	equ	2	; difficulty (0:easy,1:normal,2:hard)
+ktdifficulty	equ	2	; difficulty (0:easy/normal,1:normal/hard,2:hard/expert)
 kdebugrsbgm	equ	0	; mission result BGM Debug
 kdebugresult	equ	0	; mission result debug
 kendingtest	equ	0	; ending demo (easy,normal,hard) test
