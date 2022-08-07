@@ -15,6 +15,8 @@ fast				equ	1	; 21Mhz
 CacheOn				equ	1	; Super FX chip cache on/off
 cesboot				equ	0	; WCES 1995 "Nintendo Presents" screen
 lockondef			equ 0	; Enable Lock-On by default
+forceeasyandross	equ 0	; Force normal mode Andross on all difficulties
+forcenormalandross	equ 0	; Force hard mode Andross on all difficulties
 forcehardandross	equ 0	; Force expert mode Andross on all difficulties
 expertbydefault		equ 0	; enable expert mode by default
 walkertwirl			equ 0	; enable walker twirl from WCES 1995 (note: egdata is now in bank 36)
@@ -27,8 +29,8 @@ kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
 ; debugging:
 
-debuginfo		equ	0	; full strategy debugging
-debuginfo2		equ	0 	; stage selection/ speed up mode
+debuginfo		equ	1	; full strategy debugging
+debuginfo2		equ	1 	; stage selection/ speed up mode
 portinfo		equ	0	; 0/1 ... sound port display off/on 
 randominfo		equ	0	; 0/1 ... random on/off
 demoinfo		equ	0	; 0/1 ... polygon demo on / off
