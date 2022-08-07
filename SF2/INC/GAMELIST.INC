@@ -119,10 +119,10 @@ zacokazu_1st		equ	3	;1st Zaco Enemy toujyou kazu
 zacokazu_2nd		equ	2	;2nd Zaco Enemy toujyou kazu 
 missiletm_1st	equ	10	;1st Missile hasyya Timer 
 
-;**** Item Planet Appear Jyouken ****
-kemedal_easy		equ	13
-kemedal_normal	equ	19
-kemedal_hard		equ	20
+;**** Item Planet Appear Jyouken (amount of medals needed on each difficulty to make the secret base appear) ****
+kemedal_easy		equ	13 ; Normal
+kemedal_normal		equ	19 ; Hard
+kemedal_hard		equ	20 ; Expert
 
 ;********************************************************************
 ;*			GameTimer				*
