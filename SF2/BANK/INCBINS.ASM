@@ -93,7 +93,7 @@ mworldspr	equ	msprites3
 
 
 	ifeq	kyear-95
-	inccru	e9_ccr,data\e9.ccr
+	inccru	e9_ccr,data\e9_95.ccr
 	endc
 	ifeq	kyear-96
 	inccru	e9_ccr,data\e9_96.ccr
@@ -202,7 +202,7 @@ keyscr_l	incfile	ASM\keyscr.asm
 	inccru	e8_ccr,data\e8_a.ccr
 
 	ifeq	kyear-95
-	inccru	e9_ccr,data\e9_a.ccr
+	inccru	e9_ccr,data\e9_a_95.ccr
 	endc
 	ifeq	kyear-96
 	inccru	e9_ccr,data\e9_a_96.ccr
@@ -319,7 +319,7 @@ keyscr_l	incfile	ASM\keyscr.asm
 	inccru	e8_ccr,data\e8_a.ccr
 
 	ifeq	kyear-95
-	inccru	e9_ccr,data\e9_a.ccr
+	inccru	e9_ccr,data\e9_a_95.ccr
 	endc
 	ifeq	kyear-96
 	inccru	e9_ccr,data\e9_a_96.ccr

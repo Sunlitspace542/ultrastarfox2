@@ -21,9 +21,9 @@ walkertwirl			equ 0	; enable walker twirl from WCES 1995 (note: egdata is now in
 
 nosecuritychk		equ	0	; disable region/controller port checks on boot
 
-DamageHalf	equ	0	; 1:Half of the player's damage is reduced. (not sure if this actually does anything)
+DamageHalf			equ 0	; Any damage taken is reduced by half.
 
-kyear		equ	97	; 95/96/97 = 1995/1996/1997
+kyear		equ	96	; 95/96/97 = 1995/1996/1997
 
 ; debugging:
 
