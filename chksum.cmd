@@ -1,1 +1,0 @@
-tools\superfamicheckx64 -f SF2.SFC
