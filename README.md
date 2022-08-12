@@ -58,11 +58,12 @@ ultrastarfox2
 │   ├── INC: .inc files, arc tangent table
 │   ├── MAPS: map scripts
 │   ├── MARIO: .MC SuperFX Code files
-│   ├── MSG: Message files for English, Japanese, German, and French
+│   ├── MSG: Message files for English and Japanese
 │   ├── MSPRITES: contains 4 DAT files (interleaved textures)
 │   ├── SHAPES: contains all shape files
 │   └── SOUND: sound/music data
 ├── TOOLS: tools such as packer and ShapeEd
+├── DOCS: .md format text files covering various aspects of SF2
 ├── OPTIONALSTUFF: optional graphics files
 └── OTHER: Files for building MSPRITES /bin files
 ```
