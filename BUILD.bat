@@ -12,6 +12,7 @@ del .\sf2\msgtable.tmp
 del .\sf2\alvars.txt
 del .\sf2\techdata.txt
 del .\sf2\externs.log
+del .\sf2\*.map
 copy sf2\symbols.txt symbols.txt
 del sf2\symbols.txt
 pause
