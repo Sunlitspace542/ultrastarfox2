@@ -1,12 +1,12 @@
 ``Note: since the PATH language was expanded so much from Star Fox 1's, any documentation for UltraStarFox2 will refer to the version of PATH SF2 uses as PATH2.``  
-# PATH2 Language Documentation (from PATHMACS.INC) (some descriptions need translation)
+# PATH2 Language Documentation (modified from PATHMACS.INC) (some descriptions need translation)
 
 ```
-                            ###############
-             ################             ################
-             #              # PATH MACROS #              #
-             ################             ################
-                            ###############
+                            #################
+             #################              ################
+             #               # PATH2 MACROS #              #
+             #################              ################
+                            #################
 
      ########################
 ###### MISCELLANEOUS MACROS ################################################
@@ -54,7 +54,7 @@
 #                                     type can be gravity or normal        #
 #                                     amount is amount added every frame   #
 #                                     life is how long you want to last    #
-# P_SOUND         num                 trigger continuous sound effect      #
+# P_SOUND               num           trigger continuous sound effect      #
 # P_SOUNDEFFECT         num           trigger one-shot sound effect        #
 # P_SOUNDEFTDIST        num           trigger sound effect from dist(n,m,l)#
 # P_SOUNDEFTPOS         num           trigger sound effect from L/C/R      #
@@ -604,7 +604,7 @@
 #                                                                           #
 #############################################################################
      #################################
-###### PLAYER wo CONTROL suru MACROS ###########################################
+######  MACROS TO CONTROL THE PLAYER ###########################################
 #    #################################                                         #
 #                                                                              #
 # P_FORCEJUMP          value      player(ROBOT) wo jump saseru. (normal 5)     #
@@ -645,23 +645,23 @@
 ################################################################################
 
      ##############################
-###### PLAYER no WEAPON no MACROS #########################################################
+######    PLAYER WEAPON MACROS    #########################################################
 #    ##############################                                                       #
 # P_FINDENEMYSHAPE    maxradius,range,addr find enemy shape                               #
-# P_OBJINCONE          range,addr          is "objct(al_ptr)" within -range・->range・      #
+# P_OBJINCONE          range,addr          is "objct(al_ptr)" within -range->range        #
 # P_PLRWEAPLEVELUP     player no laser no levelup(normal -> twin -> twinbeam)             #
 # P_IFPLRWEAPLEVEL     level,addr if player's laser level = "level(0,1,2)" then goto addr #
 #                                                                                         #
 ###########################################################################################
      ##########################
-###### GAME SEQUENCE no MACRO ################################################
+######  GAME SEQUENCE MACROS  ################################################
 #    ##########################                                              #
 # P_CLEARSEQUENCE      set clear sequence.                                   #
 #                                                                            #
 ##############################################################################
      ################
 ###### EFFECT MACRO #########################################################
-#    ########### ####                                                       #
+#    ################                                                       #
 #                                                                           #
 # P_HITFLASHTRIG           set hitflash flag                                #
 # P_CIRCLEWINDOW     stepoffset[,mode]      circle window on                #
@@ -670,9 +670,9 @@
 # P_SCREENFLASH      screen wo flash suru.(Don't use with P_CIRCLEWINDOW)   #
 #                                                                           #
 #############################################################################
-     ################
-###### CAMERA MACRO ###########################################################
-#    ################                                                         #
+     #################
+###### CAMERA MACROS ##########################################################
+#    #################                                                        #
 #                                                                             #
 # P_SHOCKCAM     1or2,value      camera wo sindou saseru.value=128 kurai.     #
 # P_SHOCKCAM     1or2,value      camera wo sindou saseru.value=128 kurai.     #
@@ -682,22 +682,22 @@
 ###### ENEMY MARKER MACRO #########################################################################
 #    ######################                                                                       #
 #                                                                                                 #
-#  P_SETMARKER     1or2,offdist      enemy marker wo set suru.                                    #
+#  P_SETMARKER     1or2,offdist      Set enemy markers.                                           #
 #  P_ROBOTCAMYOFS   offset(16bit)    robot no view no offset. (-) de ue wo muki                   #
 #                                                                                                 #
 ###################################################################################################
-     ########################################
-###### PLAYER no STATUS wo check suruMACROS #####################################
-#    ########################################                                   #
+     ############################################
+###### MACROS TO CHECK THE STATUS OF THE PLAYER #################################
+#    ############################################                               #
 #                                                                               #
-# P_IFARWING          addr      if player is arwing  then goto addr             #
-# P_IFROBOT          addr      if player is robot   then goto addr              #
-# P_IFUFO               addr      if player is ufo     then goto addr           #
-# P_IFPLAYERFULLHP      addr      if player's HP = max then goto addr           #
-# P_IFPILOT          name(FOX,FALCO....),addr     if pilot = pilot then jmp addr#
-# P_NOTPILOT     name,addr               if pilot != pilot then jmp addr        #
-# P_IFPLAYERBOOST   addr     if player using "boost" then goto addr             #
-# P_IFPLAYERBRAKE   addr     if player using "brake" then goto addr             #
+# P_IFARWING        addr       if player is arwing  then goto addr              #
+# P_IFROBOT         addr       if player is robot   then goto addr              #
+# P_IFUFO           addr       if player is ufo     then goto addr              #
+# P_IFPLAYERFULLHP  addr       if player's HP = max then goto addr              #
+# P_IFPILOT         name(FOX,FALCO....),addr     if pilot = pilot then jmp addr #
+# P_NOTPILOT        name,addr  if pilot != pilot then jmp addr                  #
+# P_IFPLAYERBOOST   addr       if player using "boost" then goto addr           #
+# P_IFPLAYERBRAKE   addr       if player using "brake" then goto addr           #
 #                                                                               #
 #################################################################################
 ```
