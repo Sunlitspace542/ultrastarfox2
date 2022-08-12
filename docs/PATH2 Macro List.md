@@ -1,4 +1,4 @@
-``Note: since the PATH language was expanded so much from Star Fox 1's, any documentation for UltraStarFox2 will refer to the version of PATH SF2 as PATH2.``  
+``Note: since the PATH language was expanded so much from Star Fox 1's, any documentation for UltraStarFox2 will refer to the version of PATH SF2 uses as PATH2.``  
 # PATH2 Language Documentation (from PATHMACS.INC) (some descriptions need translation)
 
 ```
