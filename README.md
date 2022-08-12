@@ -5,6 +5,7 @@ Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hack
 - **This codebase is difficult to work with.**  
 - The game will not assemble without some files being present in the root of the SF2 directory for some reason.
 - In the source code, the Normal, Hard and Expert difficulties are referred to as Easy, Normal, and Hard.
+- A lot of source files use the DOS (CP437) encoding.
 
 ## Features
 - PAL version support, change ``pal`` to 1 in ``VARS.INC`` (StarWing 2 Logo by Josete2k, edited by Sunlitspace542)  
