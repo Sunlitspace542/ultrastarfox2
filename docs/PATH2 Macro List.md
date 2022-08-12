@@ -62,9 +62,9 @@
 #                                                    & left/center/right   #
 # P_SOUNDEFTNEAR        num           trigger sound effect from near dist  #
 # P_SOUNDEFTNEARPOS     num           trigger sound effect from L/C/R(near)#
-# P_SOUNDEFTVIS         num           trigger sound effect visible		   #
+# P_SOUNDEFTVIS         num           trigger sound effect visible         #
 # P_SOUNDEFTDIRECT      num,flag      trigger sound effect direct          #
-# 		       flag = (nearL,nearC,nearR,midL,midC,midR,far)               #
+#              flag = (nearL,nearC,nearR,midL,midC,midR,far)               #
 # P_SOUNDPLACE     place              set sound place                      #
 # P_BECOME                            becomes the last shape created       #
 # P_BECOMESHAPE                       become shape                         #
@@ -127,11 +127,11 @@
 # P_FIREOBJ       ON|OFF              player ni hi wo tsukeru object       #
 # P_QUADVECS      ON|OFF              multiply vectors by 4?               #
 # P_PASSSOUND     ON|OFF    player to surechigatta toki no SOUND no ON|OFF #
-# P_ENEMYDMGSE    name	 hit sitatokino damage sound                       #
+# P_ENEMYDMGSE    name      hit sitatokino damage sound                       #
 #                            bs_cry_1(dragon)                              #
 #                            en_cry_2(seibutsu small)                      #
 #                            en_cry_3(seibutsu large)                      #
-# P_ENEMYRBDSE    name	 hit sitatokino damage sound                       #
+# P_ENEMYRBDSE    name      hit sitatokino damage sound                       #
 #                            reboundlaser2(STARWOLF)                       #
 #                                                                          #
 ############################################################################
@@ -186,7 +186,7 @@
 # P_SETSTRAT      address             sets strategy (active immediately)    #
 # P_IFHITFLAG     addr[,1[,2]]...     check for hitflags (and clear them)   #
 #                                     if none specified, checks for any     #
-# P_ANDFRAMEGOTO     and,addr    	  gameframe&and=0 then goto addr        #
+# P_ANDFRAMEGOTO     and,addr           gameframe&and=0 then goto addr        #
 # P_CHAINPOS         zofs                                                   #
 # P_HITSLOPE      addr   if hit slope then goto addr(osoi kamo)             #
 # P_IFAREAOUT     addr   AREA out sitara ADDR ni jump.                      #
@@ -223,7 +223,7 @@
 # P_MOVEINPLAYER  num|alvar           move towards or away from the player #
 # P_CIRCLEPLAYER  angle|alvar         rotates object around player (y-rot) #
 # P_COPYPLAYERPOS                     copy the player's position           #
-# P_REBOUNDLASER		 player no laser wo hanekaesu.                     #
+# P_REBOUNDLASER           player no laser wo hanekaesu.                     #
 # P_FACEPLAYEROFS xofs,yofs,zofs   face playerpos+xofs<<4+yofs<<4+zofs<<4  #
 #                                                                          #
 #                                                                          #
@@ -239,9 +239,9 @@
 # P_PWEAPDECLMT      player no weapon no limitter(sonzai dekiru kazu)      #
 #                    wo DECRIMENT suru.                                    #
 # P_PWEAPHIT   addr0,addr1,addr2  If hit slope or obj                      #
-#	                gimen ni atatta toki addr0                             #
-#	                damage wo ataetara   addr1                             #
-#	                rebound saretara     addr2                             #
+#                     gimen ni atatta toki addr0                             #
+#                     damage wo ataetara   addr1                             #
+#                     rebound saretara     addr2                             #
 #                                                                          #
 ############################################################################
      #####################
@@ -253,9 +253,9 @@
 # P_CAMPANDEMOSHAPE num,reduce,[immediate] pan with "demoobjptr"            #
 # P_COPYPOS2VIEW    num,[immediate]   copy pos to view (1 or 2)             #
 # P_COPYROT2VIEW    num,[immediate]   copy rot to view (1 or 2)             #
-# P_SETBG		name	 change bg                                          #
+# P_SETBG          name      change bg                                          #
 #                                                                           #
-# P_NEXTMAP    	 set mapptr & mapbank 2 next map                            #
+# P_NEXTMAP          set mapptr & mapbank 2 next map                            #
 #                                                                           #
 #                                                                           #
 #    #####################                                                  #
@@ -273,9 +273,9 @@
 # P_IFDEMOEND     addr           demo ga owattara REMOVE suru...            #
 # P_IFNOTDEMO  num,addr       if demomode != num then goto addr             #
 # P_IFSAMEDEMO num,addr       if demomode  = num then goto addr             #
-# P_DEMOSHAPE		  current obj pointer wo demoobjptr ni set              #
-# P_CLRDEMOSHAPE	 Clear demo no toki ni camara ga miru you ni naru.      #
-# P_PLAYERSHAPE	 player no shape(only arwing) wo copy suru.                 #
+# P_DEMOSHAPE            current obj pointer wo demoobjptr ni set              #
+# P_CLRDEMOSHAPE      Clear demo no toki ni camara ga miru you ni naru.      #
+# P_PLAYERSHAPE      player no shape(only arwing) wo copy suru.                 #
 #                                                                           #
 #                                                                           #
 #############################################################################
@@ -607,39 +607,39 @@
 ###### PLAYER wo CONTROL suru MACROS ########################################
 #    #################################                                      #
 #                                                                           #
-# P_FORCEJUMP     	value	 player(ROBOT) wo jump saseru. (normal 5)	    #
-# P_FORCETRANSFORM	type	 player wo transform saseru.(ARWING,ROBOT,UFO)  #
-# P_PLRTRANSLOCK	P_FORCETRANSFORM no ato ni tsukau.	                    #
+# P_FORCEJUMP          value      player(ROBOT) wo jump saseru. (normal 5)         #
+# P_FORCETRANSFORM     type      player wo transform saseru.(ARWING,ROBOT,UFO)  #
+# P_PLRTRANSLOCK     P_FORCETRANSFORM no ato ni tsukau.                         #
 # P_PLRTRANSLOCKOFF                                                         #
-# P_INCSPWEAP	num	 special weapon no kazu wo huyasu.(max15)               #
-# P_SETSPWEAP	type	 special weapon no type wo set suru.                #
-#			(pbyte2 wo tsukau!)                                             #
+# P_INCSPWEAP     num      special weapon no kazu wo huyasu.(max15)               #
+# P_SETSPWEAP     type      special weapon no type wo set suru.                #
+#               (pbyte2 wo tsukau!)                                             #
 #                            missile1                                       #
 #                            dummy                                          #
 #                            flamethrower                                   #
 #                            smartplasma                                    #
-# P_INCSPWEAP	num,addr special weapon no kazu wo huyasu.(max15)           #
-# 			(P_SETSPWEAP 1 kai set sitaato ni tsukau!                       #
+# P_INCSPWEAP     num,addr special weapon no kazu wo huyasu.(max15)           #
+#                (P_SETSPWEAP 1 kai set sitaato ni tsukau!                       #
 #                           kazu ga sudeni max ni natte itara,addr ni jump. #
 #                                                                           #
-# P_PLRSHIELD	frame(max255)    player no shield wo set suru.              #
-# P_PLRTURN		on/off	 starfox1 mode on/off. on:turn dekinai              #
-# P_PLRFORCETURN	roty,width				                                #
+# P_PLRSHIELD     frame(max255)    player no shield wo set suru.              #
+# P_PLRTURN          on/off      starfox1 mode on/off. on:turn dekinai              #
+# P_PLRFORCETURN     roty,width                                                    #
 #                                                                           #
-#	roty 	: 1 houkou mode no muki                                         #
-#	width	: idou no haba(hankei)                                          #
+#     roty      : 1 houkou mode no muki                                         #
+#     width     : idou no haba(hankei)                                          #
 #                                                                           #
-# P_PLRFORCEWAY	roty,width,length				                            #
+# P_PLRFORCEWAY     roty,width,length                                                #
 #                                                                           #
-#	roty 	: 1 houkou mode no muki                                         #
-#	width	: idou no haba(hankei)                                          #
-#	length	: check suru nagasa                                             #
+#     roty      : 1 houkou mode no muki                                         #
+#     width     : idou no haba(hankei)                                          #
+#     length     : check suru nagasa                                             #
 # P_PLRBURN pos     pos = L(wing),C(body),R(wing),ALL                       #
 #                    player ga moeru.                                       #
-# P_IFPLRTURN	on/off,addr  player ga turn dekiruka check                  #
-# P_PLRCONTROL	on/off	     player no control wo on/off suru.              #
-# P_TAMEHOMON	 player no tamedama no HOMING wo ON ni suru.                #
-# P_IFTAMEHOMON	addr  player no homing ga ON nara addr ni JUMP suru.        #
+# P_IFPLRTURN     on/off,addr  player ga turn dekiruka check                  #
+# P_PLRCONTROL     on/off          player no control wo on/off suru.              #
+# P_TAMEHOMON      player no tamedama no HOMING wo ON ni suru.                #
+# P_IFTAMEHOMON     addr  player no homing ga ON nara addr ni JUMP suru.        #
 #                                                                           #
 #                                                                           #
 #############################################################################
@@ -649,8 +649,8 @@
 #    ##############################                                                       #
 # P_FINDENEMYSHAPE    maxradius,range,addr find enemy shape                               #
 # P_OBJINCONE          range,addr          is "objct(al_ptr)" within -range・->range・      #
-# P_PLRWEAPLEVELUP	player no laser no levelup(normal -> twin -> twinbeam)                #
-# P_IFPLRWEAPLEVEL	level,addr if player's laser level = "level(0,1,2)" then goto addr    #
+# P_PLRWEAPLEVELUP     player no laser no levelup(normal -> twin -> twinbeam)                #
+# P_IFPLRWEAPLEVEL     level,addr if player's laser level = "level(0,1,2)" then goto addr    #
 #                                                                                         #
 ###########################################################################################
      ##########################
@@ -663,26 +663,26 @@
 ###### EFFECT MACRO #########################################################
 #    ########### ####                                                       #
 #                                                                           #
-# P_HITFLASHTRIG		 set hitflash flag                                  #
-# P_CIRCLEWINDOW	stepoffset[,mode]	 circle window on                   #
+# P_HITFLASHTRIG           set hitflash flag                                  #
+# P_CIRCLEWINDOW     stepoffset[,mode]      circle window on                   #
 #                   mode=big(big window),warp(blue window)                  #
-# P_CIRCLEWINDOWPOS	 circle window no position wo kaerutoki tsukau..        #
-# P_SCREENFLASH	 screen wo flash suru.(Don't use with P_CIRCLEWINDOW)       #
+# P_CIRCLEWINDOWPOS      circle window no position wo kaerutoki tsukau..        #
+# P_SCREENFLASH      screen wo flash suru.(Don't use with P_CIRCLEWINDOW)       #
 #                                                                           #
 #############################################################################
      ################
 ###### CAMERA MACRO ###########################################################
 #    ################                                                         #
 #                                                                             #
-# P_SHOCKCAM	1or2,value	 camera wo sindou saseru.value=128 kurai.         #
-# P_SHOCKCAM	1or2,value	 camera wo sindou saseru.value=128 kurai.         #
+# P_SHOCKCAM     1or2,value      camera wo sindou saseru.value=128 kurai.         #
+# P_SHOCKCAM     1or2,value      camera wo sindou saseru.value=128 kurai.         #
 #                                                                             #
 ###############################################################################
      ######################
 ###### ENEMY MARKER MACRO #########################################################################
 #    ######################                                                                       #
 #                                                                                                 #
-#  P_SETMARKER	1or2,offdist	 enemy marker wo set suru.                                        #
+#  P_SETMARKER     1or2,offdist      enemy marker wo set suru.                                        #
 #  P_ROBOTCAMYOFS   offset(16bit)    robot no view no offset. (-) de ue wo muki                   #
 #                                                                                                 #
 ###################################################################################################
@@ -690,12 +690,12 @@
 ###### PLAYER no STATUS wo check suruMACROS #################################
 #    ########################################                               #
 #                                                                           #
-# P_IFARWING     	addr	 if player is arwing  then goto addr            #
-# P_IFROBOT     	addr	 if player is robot   then goto addr            #
-# P_IFUFO     		addr	 if player is ufo     then goto addr            #
-# P_IFPLAYERFULLHP 	addr	 if player's HP = max then goto addr            #
-# P_IFPILOT		name(FOX,FALCO....),addr	if pilot = pilot then jmp addr  #
-# P_NOTPILOT	name,addr			if pilot != pilot then jmp addr         #
+# P_IFARWING          addr      if player is arwing  then goto addr            #
+# P_IFROBOT          addr      if player is robot   then goto addr            #
+# P_IFUFO               addr      if player is ufo     then goto addr            #
+# P_IFPLAYERFULLHP      addr      if player's HP = max then goto addr            #
+# P_IFPILOT          name(FOX,FALCO....),addr     if pilot = pilot then jmp addr  #
+# P_NOTPILOT     name,addr               if pilot != pilot then jmp addr         #
 # P_IFPLAYERBOOST   addr     if player using "boost" then goto addr         #
 # P_IFPLAYERBRAKE   addr     if player using "brake" then goto addr         #
 #                                                                           #
