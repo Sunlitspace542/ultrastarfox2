@@ -59,7 +59,7 @@ ultrastarfox2
 │   ├── MAPS: map scripts
 │   ├── MARIO: .MC SuperFX Code files
 │   ├── MSG: Message files for English and Japanese
-│   ├── MSPRITES: contains 4 DAT files (interleaved textures)
+│   ├── MSPRITES: contains 7 BIN files (interleaved textures)
 │   ├── SHAPES: contains all shape files
 │   └── SOUND: sound/music data
 ├── TOOLS: tools such as packer and ShapeEd
