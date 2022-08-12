@@ -10,7 +10,7 @@ Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hack
 - PAL version support, change ``pal`` to 1 in ``VARS.INC`` (StarWing 2 Logo by Josete2k, edited by Sunlitspace542)  
 - Kando was involved
 
-## Building
+## Building on Windows
 
 Requirements: Microsoft Windows, Python 3
 
@@ -25,6 +25,24 @@ to rebuild color palettes, run ``build palette.cmd``
 After building, a debug symbol map will be created at ``SYMBOLS.TXT``.
 
 Build flags can be found in ``SF2/VARS.INC``
+
+## Building on Linux (Ubuntu)
+
+**NOTE: this was tested on WSL with Ubuntu installed. there is a chance stuff doesn't work.**  
+
+Requirements: Ubuntu (might work with Debian) DOSBox-x, Python 3, git
+
+DOSBox-X deb package: https://cdn.discordapp.com/attachments/928458781266960415/1007476106485583872/dosbox-x_0.83.4-0.83.4_amd64-SDL2-deb.zip
+
+Clone repository: ``git clone https://github.com/Sunlitspace542/ultrastarfox2`` 
+
+to build ROM, run ``build.sh``  
+
+to build ROM with Logging, run ``buildtolog.sh``
+
+to rebuild color palettes, run ``buildpalette.sh`` (as of right now, it does not appear to be working.)  
+
+After building, a debug symbol map will be created at ``SYMBOLS.TXT``.
 
 ## Project Structure
 ```

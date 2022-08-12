@@ -1,0 +1,1 @@
+dosbox-x BLDPAL.BAT
