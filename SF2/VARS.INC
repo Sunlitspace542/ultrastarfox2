@@ -13,31 +13,31 @@ german				equ	0	; german version  (unused)
 french				equ	0	; french version  (unused)
 fast				equ	1	; 21Mhz
 CacheOn				equ	1	; Super FX chip cache on/off
-cesboot				equ	1	; WCES 1995 "Nintendo Presents" screen
-lockondef			equ 1	; Enable Lock-On by default
+cesboot				equ	0	; WCES 1995 "Nintendo Presents" screen
+lockondef			equ 0	; Enable Lock-On by default
 forceeasyandross	equ 0	; Force normal mode Andross on all difficulties
 forcenormalandross	equ 0	; Force hard mode Andross on all difficulties
-forcehardandross	equ 1	; Force expert mode Andross on all difficulties
-expertbydefault		equ 1	; enable expert mode by default
-walkertwirl			equ 1	; enable walker twirl from WCES 1995 (note: egdata is now in bank 36)
+forcehardandross	equ 0	; Force expert mode Andross on all difficulties
+expertbydefault		equ 0	; enable expert mode by default
+walkertwirl			equ 0	; enable walker twirl from WCES 1995 (note: egdata is now in bank 36)
 
-nosecuritychk		equ	1	; disable region/controller port checks on boot
+nosecuritychk		equ	0	; disable region/controller port checks on boot
 
-DamageHalf			equ 1	; Any damage taken is reduced by half.
+DamageHalf			equ 0	; Any damage taken is reduced by half.
 
-kyear				equ	97	; 95/96/97/17 = 1995/1996/1997/2017
+kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
 ; debugging:
 
 debuginfo		equ	1	; full strategy debugging
 debuginfo2		equ	1 	; stage selection/ speed up mode
-portinfo		equ	1	; 0/1 ... sound port display off/on 
-randominfo		equ	1	; 0/1 ... random on/off
-demoinfo		equ	1	; 0/1 ... polygon demo on / off
+portinfo		equ	0	; 0/1 ... sound port display off/on 
+randominfo		equ	0	; 0/1 ... random on/off
+demoinfo		equ	0	; 0/1 ... polygon demo on / off
 blockmap_dbg	equ	0	; display map blockmap?
-pathcount		equ	1	; display amount of path commands executed
-sos_test_egu	equ	1	; 0=off/1=on test mode Set SOS1 and SOS2.
-polllaginfo		equ	1	; display cycles used up while polling mario chip
+pathcount		equ	0	; display amount of path commands executed
+sos_test_egu	equ	0	; 0=off/1=on test mode Set SOS1 and SOS2.
+polllaginfo		equ	0	; display cycles used up while polling mario chip
 
 ;	###############################################################
 ;	## to tweak other aspects of the game, see INC/GAMELIST.INC. ##
