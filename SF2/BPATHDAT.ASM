@@ -2323,10 +2323,10 @@ andorf_child_eyecube		equ	98
 .notdeadyet2	P_GOTO		.lp433
 
 	P_END
-;.dothat	P_FORCE		.exp
-;	P_TRIGGER	.dothat,OFF
-;	P_RETURN
-;.exp	P_EXPLODE
+.dothat	P_FORCE		.exp
+	P_TRIGGER	.dothat,OFF
+	P_RETURN
+.exp	P_EXPLODE
 
 ; --- check if smoke is required from eyes ---
 

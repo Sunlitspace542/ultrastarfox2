@@ -1,11 +1,18 @@
 # Tools
-All these tools are DOS executables and are intended to be run through DOSBox, with the exception of sf_decrunch/crunch (Windows EXE), and RomExtender.py(Python 3 Script), and SuperFamiCheckx64.exe (Windows EXE)
+All these tools are DOS executables and are intended to be run through DOSBox, with the exception of sf_decrunch/crunch (Windows EXE), and RomExtender.py(Python 3 Script), and SuperFamiCheckx64.exe (Windows EXE), and unmerge.exe (Windows EXE)
 
 ## PACKER
 Star Fox Palette packer. A copy of this EXE is run from SF/DATA/GFX when you run ``build palette.cmd`` or ``BLDPAL.BAT``.
 
 ## MERGE
 Texture interleaving tool.
+To use:  
+``merge.exe [infile1] [infile2] [outfile] /cgx``  
+
+## unmerge
+Texture deinterleaving tool. Based on fx.cpp from [Star Fox 2 Font Tools](https://www.romhacking.net/utilities/346/), modified by Sega Mega Drive.  
+To use:  
+``unmerge extract [bin/dat file] [file1] [file2]`` (no brackets, obviously)  
 
 ## SHAPED
 Tool that can convert Videoscape 3DG1 models to Star Fox ASM BSP format.
