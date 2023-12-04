@@ -740,7 +740,9 @@ tm_fox2	equ	12
 tm_fox3	equ	14
 tm_planets2	equ	34
 
-
+; Date and Time
+day	equ	_DAY
+month	equ	_MONTH
 
 
 
