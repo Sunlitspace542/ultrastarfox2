@@ -362,9 +362,9 @@
 	P_WAIT		10
 
 	P_REMOVE
-;;;;����������������ͻ
-;;;;� SPECIAL OBJECT �
-;;;;����������������ͼ
+;;;;##################
+;;;;# SPECIAL OBJECT #
+;;;;##################
 ;---------
 	START_PATH	e_test_0
 
@@ -600,9 +600,9 @@
 ;;;	P_WAIT		10
 ;;;.rem
 ;;;	P_REMOVE
-;;;;������������ͻ
-;;;;� SEA OBJECT �
-;;;;������������ͼ
+;;;;##############
+;;;;# SEA OBJECT #
+;;;;##############
 	START_PATH	e_kozakana
 
 	P_RADAROBJ	ra_enemy
@@ -1311,18 +1311,18 @@
 	P_GOTO		.lp
 	P_END
 
-;;;;�����������ͻ
-;;;;� MY WEAPON �
-;;;;�����������ͼ
+;;;;#############
+;;;;# MY WEAPON #
+;;;;#############
 ;;;	START_PATH	e_eplasma_hou
 ;;;
 ;;;	P_WEAPON	Eplasma1
 ;;;	P_FACEPLAYER	IMMEDIATE
 ;;;	P_FIRE
 ;;;	P_REMOVE
-;;;;;;;�����������������������ͻ
-;;;;;;;� SOFTWARE SPRITE SMOKE �
-;;;;;;;�����������������������ͼ
+;;;;;;;#########################
+;;;;;;;# SOFTWARE SPRITE SMOKE #
+;;;;;;;#########################
 ;;;;;;dandou_smoke
 ;;;;;;	P_SOUNDEFTDISTPOS	en_wormappear	;$7f
 ;;;;;;	P_QSPAWN	smoke,e_sp_smoke,100,60

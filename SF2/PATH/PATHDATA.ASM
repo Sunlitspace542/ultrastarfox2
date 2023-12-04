@@ -1,41 +1,52 @@
-;;;
+;;;;ebyte1: Re-display the ebyte1 message; all good if 0=OK/num=DAME.
 ;;;;
-;;;;ebyte1 msg wo aratani hyoujishitemo yoika 0=OK/num=DAME
-;;;;ebyte2 final door no lock kaijyono owatta kaisuu
-;;;;ebyte2 space no wolf no tamedama 0=ataru/1=ataranai
-;;;;ebyte3 tojikome door no lock kaijyono owatta kaisuu
-;;;;ebyte4 semi final door no lock kaijyono owatta kaisuu
-;;;;ebyte5 roomde de 1way_door no jyoutai 0=open/1=crose
-;;;;ebyte5 bit3		space de msg_maker no jyoutai 0=inai/1=iru
-;;;;ebyte6 bit1		demo ga owattaka doukano flag 0=demo/1=finished
-;;;;ebyte6 bit2,3,4	yousai no antenna no jyoutai 0=mada/1=finished
-;;;;ebyte6 bit5		modore no friend hikoucyuu flag 0=nashi/1=hikoucyuu
-;;;;ebyte6 bit6,7,8	c_cup_switch no jyoutai 0=mada/1=finished
-;;;;ebyte6 all_bit   space de carier kara deru teki no kazu
-;;;;ebyte7 tsuuro no jyoutai 0=groundobj ON/1=groundobj OFF
-;;;;ebyte8 base nai no teki detemo iika 0=ok/1=dame
-;;;;eword1 item no switch (stage gotoni init sareru) 0=mada/1=totta
-;;;;eword2 dono hajimete msg wo hyoujisuruka 0=hyouji shinai/num=message number
-;;;;eword3 hajimete msg no flag 1		2		3		4	      
+;;;;ebyte2: The final count of unlocking the last door is complete.
+;;;;
+;;;;ebyte2: In space, there's no wolf, just a tamedama; 0=hit/1=miss.
+;;;;
+;;;;ebyte3: The count of locking the opponent's door is complete.
+;;;;
+;;;;ebyte4: The semi-final count of locking the opponent's door is complete.
+;;;;
+;;;;ebyte5: In the room, the 1-way door status is 0=open/1=closed.
+;;;;    Bit3: In space, the msg_maker's status is 0=absent/1=present.
+;;;;
+;;;;ebyte6:
+;;;;    Bit1: Demo is finished; flag 0=demo/1=finished.
+;;;;    Bits 2, 3, 4: Antenna status of the satellite is 0=ongoing/1=finished.
+;;;;    Bit5: Return to friend's flight flag is 0=absent/1=in progress.
+;;;;    Bits 6, 7, 8: c_cup_switch status is 0=ongoing/1=finished.
+;;;;    All bits: Number of enemies departing from the carrier in space.
+;;;;
+;;;;ebyte7: State of the railway is 0=groundobj ON/1=groundobj OFF.
+;;;;
+;;;;ebyte8: It's okay to defeat enemies without a base; 0=ok/1=not okay.
+;;;;
+;;;;eword1: Switch status of items (initialized for each stage) is 0=ongoing/1=collected.
+;;;;
+;;;;eword2: Which message is displayed for the first time? 0=not displayed/num=message number.
+;;;;
+;;;;eword3: Flags for displaying messages for the first time.
+;;;;
 ;;;;			saisyu line	teach base	teach robo	teach magma
 ;;;;			5		6		7		8
 ;;;;			teach boost	teach airLR	teach robLR	teach fuse
 ;;;;			9		16
-;;;;			pepper teach	teach henkei 
-;;;
-;;;;omake medal no number
+;;;;			pepper teach	teach transformation
 ;;;;
-;;;;$40 mukade koroshitara
-;;;;$41 sagyou box taoshitara
-;;;;$42 hae box taoshitara
-;;;;$43 kao man wo uttara
-;;;;$44 kabemukade stg1_3
-;;;;$45 kabemukade stg4_5
-;;;;$46 kabemukade ext2_2
-;;;;$47 kabemukade stg1_5
+;;;;omake: Medal numbers for special achievements.
+;;;;
+;;;;$40: If you kill a centipede.
+;;;;$41: If you break a work box.
+;;;;$42: If you break a leaf box.
+;;;;$43: If you hit a moai.
+;;;;$44: Wall centipede in stg1_3.
+;;;;$45: Wall centipede in stg4_5.
+;;;;$46: Wall centipede in ext2_2.
+;;;;$47: Wall centipede in stg1_5.
 ;;;;
 ;;;;;;;;;;;;;;;;;;;;;
-;;;;;slope ni nottatokino takasa ga wakaru (pword1)
+;;;;;Getting the height when climbing a slope. (pword1)
 ;;;;
 ;;;;	P_JSL65816	getheight_l
 ;;;;	P_IMPORT	pword1,y1	
@@ -64,11 +75,11 @@
 ;;;
 ;;;	P_END65816
 ;;;	P_RETURN
-;;;;������������������������������������������������������������ͻ
-;;;;�                                                            �
-;;;;�                    EGUCHI'S PATHDATA                       �
-;;;;�                                                            �
-;;;;������������������������������������������������������������ͼ
+;;;;##############################################################
+;;;;#                                                            #
+;;;;#                    EGUCHI'S PATHDATA                       #
+;;;;#                                                            #
+;;;;##############################################################
 	incpub	pathdata
 
 junko_speed		equ	10
@@ -77,9 +88,9 @@ sankai_speed		equ	60
 
 action_dist		equ	10000
 
-;;;;����������ͻ
-;;;;� DARK FOX �
-;;;;����������ͼ
+;;;;############
+;;;;# DARK FOX #
+;;;;############
 ;;	START_PATH	e_wolf_demo
 ;;
 ;;	P_RADAROBJ	ra_sonota
@@ -21542,11 +21553,11 @@ missile_fire_l
 	P_RETURN
 ;.hen_1_y_tab
 ;	dw	0,-3000,3000,3000,0,0
-;;;;��������������������������������������ͻ
-;;;;�                                      �
-;;;;�        FOR CYUURITSU EISEI           �
-;;;;�                                      �
-;;;;��������������������������������������ͼ
+;;;;########################################
+;;;;#                                      #
+;;;;#        FOR CYUURITSU EISEI           #
+;;;;#                                      #
+;;;;########################################
 ;-----------
 	START_PATH	e_eisei_tame_ck
 
@@ -21710,11 +21721,11 @@ eiseidist_ck
 
 ;hackroot_tab
 ;	db	0,1,-1
-;;;;��������������������������������ͻ
-;;;;�                                �
-;;;;�        FOR OMAKE MEDAL         �
-;;;;�                                �
-;;;;��������������������������������ͼ
+;;;;##################################
+;;;;#                                #
+;;;;#        FOR OMAKE MEDAL         #
+;;;;#                                #
+;;;;##################################
 	START_PATH	e_omake_medal_sea
 
 	P_GOSUB		sea_init_below
@@ -21823,11 +21834,11 @@ eiseidist_ck
 .md4
 	P_IMPORT	pword1,emedal_4
 	P_RETURN
-;;;;���������������������������������������������ͻ
-;;;;�                                             �
-;;;;�        FOR MISSION EXPLAIN SCREEN           �
-;;;;�                                             �
-;;;;���������������������������������������������ͼ
+;;;;###############################################
+;;;;#                                             #
+;;;;#        FOR MISSION EXPLAIN SCREEN           #
+;;;;#                                             #
+;;;;###############################################
 ;---------
 ;PLANET_1 0
 ;PLANET_2 1
