@@ -33,7 +33,7 @@ xrstart =	*
 
 	incfile ASM\kramcalc.asm
 
-	incfile ramsound.asm
+	incfile ASM\ramsound.asm
 
 	incfile ASM\yjradar.asm
 

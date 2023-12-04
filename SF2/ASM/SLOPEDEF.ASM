@@ -4,6 +4,7 @@
 ;-------------------------------------------------------------
 ;-------------------------------------------------------------
 
+	incpub	slopedef
 
 ; SLOPE INFORMATION:
 
@@ -12,11 +13,11 @@ slopedata
 
 
 ;           
-;ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-;º  EGUCHI'S BLOCK SLOPE º 
-;ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+;ï¿½  EGUCHI'S BLOCK SLOPE ï¿½ 
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 17 June 1995, 10:04PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 17 June 1995, 10:04PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 AND_BA_0_slo
 	SLOPES	1
 
@@ -34,7 +35,7 @@ AND_BA_0_poly0_0
 	SLOPEPOINT	-62,-60
 	SLOPEPOINT	-92,0
 	SLOPEPOINT	-62,60
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 17 June 1995, 09:37PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 17 June 1995, 09:37PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 AND_Z_1_slo
 	SLOPES	7
 
@@ -110,7 +111,7 @@ AND_Z_1_poly6_0
 	SLOPEPOINT	-64,0
 	SLOPEPOINT	-32,64
 	SLOPEPOINT	-16,32
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 21 June 1995, 10:01PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 21 June 1995, 10:01PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KAKU4_0_slo
 	SLOPES	9
 
@@ -161,7 +162,7 @@ KAKU4_0_poly8_0
 	SLOPEPOINT	-30,40
 	SLOPEPOINT	-30,30
 
-;;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 21 June 1995, 07:57PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 21 June 1995, 07:57PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;KAKU4_0_slo
 ;	SLOPES	9
 ;
@@ -244,7 +245,7 @@ KAKU4_0_poly8_0
 ;	SLOPEPOINT	-30,40
 ;	SLOPEPOINT	-30,30
 ;
-;;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 24 May 1995, 08:38PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 24 May 1995, 08:38PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;KAKU4_0_slo
 ;	SLOPES	9
 ;
@@ -326,7 +327,7 @@ KAKU4_0_poly8_0
 ;	SLOPEPOINT	-40,30
 ;	SLOPEPOINT	-30,40
 ;	SLOPEPOINT	-30,30
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 24 May 1995, 03:56PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 24 May 1995, 03:56PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KAKU_0_0_slo
 	SLOPES	9
 
@@ -376,7 +377,7 @@ KAKU_0_0_poly3_0
 	SLOPEPOINT	-62,20
 	SLOPEPOINT	-20,62
 	SLOPEPOINT	-20,20
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 15 May 1995, 02:29PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 15 May 1995, 02:29PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KAKU6_0_slo
 	SLOPES	9
 
@@ -458,7 +459,7 @@ KAKU6_0_poly8_0
 	SLOPEPOINT	-10,30
 	SLOPEPOINT	-5,5
 	SLOPEPOINT	-30,10
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 17 May 1995, 09:46AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 17 May 1995, 09:46AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KAKU5_0_slo
 	SLOPES	9
 
@@ -556,7 +557,7 @@ KAKU5_0_poly8_0
 	SLOPEPOINT	-15,38
 	SLOPEPOINT	-11,27
 	SLOPEPOINT	-27,11
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 17 May 1995, 09:53AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 17 May 1995, 09:53AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KAKU5_1_slo
 	SLOPES	1
 
@@ -574,7 +575,7 @@ KAKU5_1_poly0_0
 	SLOPEPOINT	46,18
 	SLOPEPOINT	46,-18
 	SLOPEPOINT	18,-46
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 10 May 1995, 06:21PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 10 May 1995, 06:21PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 SYSTEM_2_slo
 	SLOPES	2
 
@@ -598,7 +599,7 @@ SYSTEM_2_poly1_0
 	SLOPEPOINT	-74,-53
 	SLOPEPOINT	-7,14
 	SLOPEPOINT	1,-20
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 17 April 1995, 08:47AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 17 April 1995, 08:47AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CUP_1_slo
 	SLOPES	5
 
@@ -652,13 +653,13 @@ CUP_1_poly4_0
 	SLOPEPOINT	-26,-20
 	SLOPEPOINT	26,-20
 	SLOPEPOINT	30,-30
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 13 February 1995, 01:28PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 13 February 1995, 01:28PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KAKURETO_slo
 	SLOPES	1
 
 	SLOPE	0,50,0,100,30,0,127,0,-25,-25,50,KAKURETO_scale,WALL
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 06 February 1995, 07:40PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 06 February 1995, 07:40PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_SAKA_2_slo
 	SLOPES	1
 
@@ -673,7 +674,7 @@ T_SAKA_2_poly0_0
 	SLOPEPOINT	20,40
 
 
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 02 February 1995, 02:55PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 02 February 1995, 02:55PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CHIKA_K_slo
 	SLOPES	9
 
@@ -771,7 +772,7 @@ CHIKA_K_poly8_0
 	SLOPEPOINT	-55,-25
 	SLOPEPOINT	-15,-7
 	SLOPEPOINT	-7,-15
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 15 November 1994, 11:10AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 15 November 1994, 11:10AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 miss_dai_slo
 	SLOPES	7
 
@@ -847,7 +848,7 @@ miss_dai_poly6_0
 	SLOPEPOINT	-30,-50
 	SLOPEPOINT	-60,0
 	SLOPEPOINT	-30,50
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 24 October 1994, 08:35PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 24 October 1994, 08:35PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KOORI_0_slo
 	SLOPES	2
 
@@ -876,7 +877,7 @@ KOORI_0_poly1_0
 	SLOPEPOINT	0,28
 	SLOPEPOINT	30,18
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 24 October 1994, 08:36PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 24 October 1994, 08:36PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KOORI_1_slo
 	SLOPES	1
 
@@ -893,7 +894,7 @@ KOORI_1_poly0_0
 	SLOPEPOINT	-33,10
 	SLOPEPOINT	-20,23
 	SLOPEPOINT	0,28
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 14 October 1994, 03:53PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 14 October 1994, 03:53PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 HYOUZAN_slo
 	SLOPES	9
 
@@ -991,7 +992,7 @@ HYOUZAN_poly8_0
 	SLOPEPOINT	-10,-15
 	SLOPEPOINT	-20,-5
 	SLOPEPOINT	-20,5
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 03 October 1994, 06:12PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 03 October 1994, 06:12PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 F_FUNE_slo
 	SLOPES	9
 
@@ -1085,7 +1086,7 @@ F_FUNE_poly8_0
 	SLOPEPOINT	10,-45
 	SLOPEPOINT	5,-58
 	SLOPEPOINT	-5,-58
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 17 May 1995, 10:21AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 17 May 1995, 10:21AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ON_D_slo
 	SLOPES	5
 
@@ -1131,7 +1132,7 @@ ON_D_poly3_0
 	SLOPEPOINT	25,25
 	SLOPEPOINT	-25,25
 	SLOPEPOINT	-56,56
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 27 October 1994, 09:54AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 27 October 1994, 09:54AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;ON_D_slo
 ;	SLOPES	5
 ;
@@ -1177,7 +1178,7 @@ ON_D_poly3_0
 ;	SLOPEPOINT	20,-20
 ;	SLOPEPOINT	20,20
 ;	SLOPEPOINT	50,50
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 27 October 1994, 09:55AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 27 October 1994, 09:55AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 OFF_D_slo
 	SLOPES	5
 
@@ -1223,7 +1224,7 @@ OFF_D_poly3_0
 	SLOPEPOINT	20,-20
 	SLOPEPOINT	20,20
 	SLOPEPOINT	50,50
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 15 September 1994, 08:17PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 15 September 1994, 08:17PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 HAKO_0_slo
 	SLOPES	1
 
@@ -1363,7 +1364,7 @@ HAKO_0_poly0_14
 	SLOPEPOINT	51,40
 	SLOPEPOINT	51,-40
 	SLOPEPOINT	-68,-40
-;ÄÄÄÄÄÄ Created with SFCAD (Sunday, 04 September 1994, 08:57AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Sunday, 04 September 1994, 08:57AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 pools_0_slo
 	SLOPES	5
 
@@ -1409,7 +1410,7 @@ pools_0_poly4_0
 	SLOPEPOINT	30,40
 	SLOPEPOINT	35,45
 	SLOPEPOINT	35,-45
-;ÄÄÄÄÄÄ Created with SFCAD (Sunday, 04 September 1994, 08:56AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Sunday, 04 September 1994, 08:56AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MACHI_0_slo
 	SLOPES	6
 
@@ -1434,7 +1435,7 @@ MACHI_0_poly1_0
 	SLOPEPOINT	35,0
 	SLOPEPOINT	15,0
 	SLOPEPOINT	15,20
-;ÄÄÄÄÄÄ Created with SFCAD (Sunday, 04 September 1994, 10:12AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Sunday, 04 September 1994, 10:12AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 NOBIRU_slo
 	SLOPES	1
@@ -1446,7 +1447,7 @@ NOBIRU_slo
 	SLOPE	0,80,0,60,60,0,127,0,-28,-28,80,NOBIRU_scale,GROUND
 	SLOPE	0,100,0,60,60,0,127,0,-28,-28,100,NOBIRU_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 02 September 1994, 08:56PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 02 September 1994, 08:56PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 HIYASU_0small_slo
 	SLOPES	1
 
@@ -1464,7 +1465,7 @@ HIYASU_0small_poly0_0
 	SLOPEPOINT	-30,90
 	SLOPEPOINT	30,90
 	SLOPEPOINT	90,30
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 02 September 1994, 08:56PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 02 September 1994, 08:56PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 HIYASU_0_slo
 	SLOPES	1
 
@@ -1482,7 +1483,7 @@ HIYASU_0_poly0_0
 	SLOPEPOINT	-30,90
 	SLOPEPOINT	30,90
 	SLOPEPOINT	90,30
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 25 May 1995, 03:03PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 25 May 1995, 03:03PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;itembox0_slo
 ;	SLOPES	5
 ;
@@ -1528,7 +1529,7 @@ HIYASU_0_poly0_0
 ;	SLOPEPOINT	30,30
 ;	SLOPEPOINT	-30,30
 ;	SLOPEPOINT	-50,50
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 27 October 1994, 09:53AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 27 October 1994, 09:53AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 itembox0_slo
 	SLOPES	5
 
@@ -1574,7 +1575,7 @@ itembox0_poly3_0
 	SLOPEPOINT	20,20
 	SLOPEPOINT	-20,20
 	SLOPEPOINT	-50,50
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 03 September 1994, 08:39PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 03 September 1994, 08:39PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ARROWBOX_slo
 	SLOPES	1
 
@@ -1604,7 +1605,7 @@ kinoko_n_slo
 	SLOPE	0,100,0,20,20,0,127,0,-26,-26,100,kinoko_scale,GROUND
 
 
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 16 July 1994, 12:28PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 16 July 1994, 12:28PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 PYRAMID0_slo
 	SLOPES	13
 
@@ -1690,7 +1691,7 @@ ita_1_slo
 	SLOPE	0,50,0,90,10,0,127,0,-26,-26,50,ita_0_scale,GROUND
 
 
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 16 June 1994, 12:58PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 16 June 1994, 12:58PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KINOKO_D_slo
 	SLOPES	1
 
@@ -1699,7 +1700,7 @@ KINOKO_D_slo
 	SLOPE	0,33,0,100,100,0,127,0,-25,-25,33,KINOKO_D_scale,GROUND
 	SLOPE	0,53,0,100,100,0,127,0,-25,-25,53,KINOKO_D_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 02 May 1995, 12:44PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 02 May 1995, 12:44PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 TAORERU_END_slo
 	SLOPES	2
 
@@ -1708,7 +1709,7 @@ TAORERU_END_slo
 	SLOPE	0,19,7,50,15,0,84,95,-60,-25,18,TAORERU_END_scale,GROUND
 
 
-;;;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 15 October 1994, 02:39PM) ÄÄÄÄÄÄ
+;;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 15 October 1994, 02:39PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;;TAORERU_END_slo
 ;;	SLOPES	4
 ;;
@@ -1720,7 +1721,7 @@ TAORERU_END_slo
 ;;
 ;;	SLOPE	0,44,5,80,10,0,57,114,-71,-25,25,TAORERU_END_scale,GROUND
 ;;
-;ÄÄÄÄÄÄ Created with SFCAD (wednesday, 14 june 1995, 12:49PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (wednesday, 14 june 1995, 12:49PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 TAORERU_1_slo
 	SLOPES	4
 
@@ -1732,7 +1733,7 @@ TAORERU_1_slo
 
 	SLOPE	0,2,-37,50,10,0,114,-57,-7,-25,12,TAORERU_1_scale,GROUND
 
-;;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 02 May 1995, 12:49PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 02 May 1995, 12:49PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;TAORERU_1_slo
 ;	SLOPES	4
 ;
@@ -1744,7 +1745,7 @@ TAORERU_1_slo
 ;
 ;	SLOPE	0,2,-30,50,10,0,114,-57,-7,-25,12,TAORERU_1_scale,GROUND
 ;
-;;;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 15 October 1994, 02:39PM) ÄÄÄÄÄÄ
+;;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 15 October 1994, 02:39PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;;TAORERU_1_slo
 ;;	SLOPES	4
 ;;
@@ -1767,13 +1768,13 @@ TAORERU_1_slo
 kaifuku_slo
 	SLOPES	1
 	SLOPE	0,5,0,80,80,0,127,0,-26,-26,5,kaifuku_scale,GROUND
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 09 June 1994, 01:28PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 09 June 1994, 01:28PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ARCH_2_0_slo
 	SLOPES	1
 
 	SLOPE	0,60,0,30,30,0,127,0,-25,-25,60,ARCH_2a_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 02 May 1994, 03:43PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 02 May 1994, 03:43PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 YAMA_0_0_slo
 	SLOPES	9
 	SLOPE	47,10,0,45,40,52,116,0,-25,-43,28,YAMA00_scale,GROUND
@@ -1814,7 +1815,7 @@ YAMA_0_0_poly7_0
 	SLOPEPOINT	70,-20
 	SLOPEPOINT	25,-65
 
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 16 July 1994, 01:57PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 16 July 1994, 01:57PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 yama_0_1_slo
 	SLOPES	4
 
@@ -1858,7 +1859,7 @@ yama_0_1_poly3_0
 	SLOPEPOINT	20,0
 	SLOPEPOINT	-20,0
 	SLOPEPOINT	-70,50
-;;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 16 July 1994, 01:57PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 16 July 1994, 01:57PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;yama_0_1_slo
 ;	SLOPES	4
 ;
@@ -1902,7 +1903,7 @@ yama_0_1_poly3_0
 ;	SLOPEPOINT	20,0
 ;	SLOPEPOINT	-20,0
 ;	SLOPEPOINT	-65,45
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 10 May 1994, 07:13PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 10 May 1994, 07:13PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 RAPYUTA_slo
 	SLOPES	2
 	SLOPE	-2,25,20,60,50,0,127,0,-25,-25,25,RAPYUTA_scale,GROUND,RAPYUTA_poly0_0
@@ -1924,7 +1925,7 @@ RAPYUTA_poly1_0
 	SLOPEPOINT	-30,-10
 	SLOPEPOINT	30,20
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 02 May 1994, 03:46PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 02 May 1994, 03:46PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 YAMA_1_0_slo
 	SLOPES	16
 
@@ -2021,7 +2022,7 @@ YAMA_1_0_poly15_0
 	SLOPEPOINT	30,-10
 	SLOPEPOINT	40,-10
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 08 August 1994, 08:45PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 08 August 1994, 08:45PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 SLI_0_slo
 	SLOPES	2
 
@@ -2029,7 +2030,7 @@ SLI_0_slo
 
 	SLOPE	0,25,-15,20,10,0,90,-90,6,-25,28,slide_0_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 24 June 1995, 06:49PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 24 June 1995, 06:49PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 SLI_1_slo
 	SLOPES	5
 
@@ -2042,7 +2043,7 @@ SLI_1_slo
 	SLOPE	14,20,-10,8,16,0,127,0,-25,-25,20,slide_1_scale,GROUND
 
 	SLOPE	0,0,-13,20,6,0,127,0,-25,-25,0,slide_1_scale,GROUND
-;;ÄÄÄÄÄÄ Created with SFCAD (Monday, 08 August 1994, 08:46PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 08 August 1994, 08:46PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;SLI_1_slo
 ;	SLOPES	3
 ;
@@ -2052,7 +2053,7 @@ SLI_1_slo
 ;
 ;	SLOPE	0,0,-12,20,5,0,127,0,-25,-25,0,slide_1_scale,GROUND
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 09 August 1994, 12:46PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 09 August 1994, 12:46PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 box_0_slo
 	SLOPES	3
 
@@ -2064,10 +2065,10 @@ box_0_slo
 
 
 
-;ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-;º   EGUCHI'S BLOCK END   º
-;ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 31 May 1995, 07:33PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+;ï¿½   EGUCHI'S BLOCK END   ï¿½
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 31 May 1995, 07:33PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 IKE_1_0_slo
 	SLOPES	31
 
@@ -2316,7 +2317,7 @@ IKE_1_0_poly30_0
 	SLOPEPOINT	-34,20
 	SLOPEPOINT	-34,-3
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 02 September 1994, 08:37PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 02 September 1994, 08:37PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 M_IWA_0_slo
 	SLOPES	9
 
@@ -2367,7 +2368,7 @@ M_IWA_0_poly8_0
 	SLOPEPOINT	20,20
 	SLOPEPOINT	20,60
 
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 12 May 1994, 02:10PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 12 May 1994, 02:10PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;M_IWA_0_slo
 ;	SLOPES	9
 ;
@@ -2418,7 +2419,7 @@ M_IWA_0_poly8_0
 ;	SLOPEPOINT	20,-20
 ;	SLOPEPOINT	60,-20
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 12 May 1994, 02:11PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 12 May 1994, 02:11PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 M_IWA_1_slo
 	SLOPES	9
 
@@ -2470,7 +2471,7 @@ M_IWA_1_poly8_0
 	SLOPEPOINT	-60,20
 
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 02 September 1994, 08:38PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 02 September 1994, 08:38PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 M_IWA_2_slo
 	SLOPES	12
 
@@ -2558,7 +2559,7 @@ M_IWA_2_poly11_0
 	SLOPEPOINT	20,-68
 	SLOPEPOINT	20,-40
 	SLOPEPOINT	36,-40
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 12 May 1994, 03:31PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 12 May 1994, 03:31PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;M_IWA_2_slo
 ;	SLOPES	12
 ;
@@ -2647,7 +2648,7 @@ M_IWA_2_poly11_0
 ;	SLOPEPOINT	-20,30
 ;	SLOPEPOINT	-45,30
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 12 May 1994, 02:14PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 12 May 1994, 02:14PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 M_IWA_5_slo
 	SLOPES	4
 
@@ -2688,7 +2689,7 @@ M_IWA_5_poly3_0
 	SLOPEPOINT	0,0
 	SLOPEPOINT	15,-11
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 02 September 1994, 08:39PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 02 September 1994, 08:39PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 M_IWA_6_slo
 	SLOPES	15
 
@@ -2830,7 +2831,7 @@ M_IWA_6_poly14_0
 	SLOPEPOINT	90,30
 	SLOPEPOINT	55,5
 	SLOPEPOINT	45,15
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 19 May 1994, 08:11AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 19 May 1994, 08:11AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 HOUSE_0_slo
 	SLOPES	11
 
@@ -2917,7 +2918,7 @@ HOUSE_0_poly10_0
 	SLOPEPOINT	-40,-10
 	SLOPEPOINT	-50,0
 
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 19 May 1994, 08:25AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 19 May 1994, 08:25AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 HOUSE_1_slo
 	SLOPES	8
 
@@ -2970,7 +2971,7 @@ HOUSE_1_poly7_0
 	SLOPEPOINT	-20,-20
 	SLOPEPOINT	-30,-10
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 20 June 1994, 09:10AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 20 June 1994, 09:10AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 house_2_slo
 	SLOPES	10
 
@@ -3075,7 +3076,7 @@ house_2_poly9_0
 	SLOPEPOINT	-60,20
 	SLOPEPOINT	-20,20
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 03 June 1994, 05:17PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 03 June 1994, 05:17PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 WEL_0_0_slo
 	SLOPES	9
 
@@ -3165,14 +3166,14 @@ WEL_0_0_poly8_0
 	SLOPEPOINT	-20,0
 	SLOPEPOINT	20,0
 	SLOPEPOINT	60,-10
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 10:09AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 10:09AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_0_slo
 	SLOPES	1
 
 	SLOPE	0,6,0,34,200,0,127,0,-25,-25,6,MICHI_0_scale,GROUND
 
 
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 12 July 1994, 01:37PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 12 July 1994, 01:37PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_1_slo
 	SLOPES	1
 
@@ -3186,14 +3187,14 @@ MICHI_1_poly0_0
 	SLOPEPOINT	17,100
 	SLOPEPOINT	17,-100
 	SLOPEPOINT	-17,-100
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 16 June 1994, 10:57AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 16 June 1994, 10:57AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;MICHI_1_slo
 ;	SLOPES	1
 ;
 ;	SLOPE	0,9,0,34,200,0,127,0,-25,-25,9,MICHI_0_scale,GROUND
 ;
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 12 July 1994, 01:37PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 12 July 1994, 01:37PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_2_slo
 	SLOPES	2
 
@@ -3217,13 +3218,13 @@ MICHI_2_poly1_0
 	SLOPEPOINT	17,-100
 	SLOPEPOINT	-17,-100
 	SLOPEPOINT	-17,-90
-;;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 10:10AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 10:10AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;MICHI_2_slo
 ;	SLOPES	1
 ;
 ;	SLOPE	0,14,0,34,200,0,126,-19,-19,-25,15,MICHI_2_scale,GROUND
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 12 July 1994, 01:38PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 12 July 1994, 01:38PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_3_slo
 	SLOPES	1
 
@@ -3237,13 +3238,13 @@ MICHI_3_poly0_0
 	SLOPEPOINT	17,100
 	SLOPEPOINT	17,-100
 	SLOPEPOINT	-17,-100
-;;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 10:10AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 10:10AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;MICHI_3_slo
 ;	SLOPES	1
 ;
 ;	SLOPE	0,19,0,34,200,0,126,-13,-21,-25,19,MICHI_3_scale,GROUND
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 12 July 1994, 01:38PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 12 July 1994, 01:38PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_4_slo
 	SLOPES	2
 
@@ -3267,13 +3268,13 @@ MICHI_4_poly1_0
 	SLOPEPOINT	17,-100
 	SLOPEPOINT	-17,-100
 	SLOPEPOINT	-17,-90
-;;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 10:11AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 10:11AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;MICHI_4_slo
 ;	SLOPES	1
 ;
 ;	SLOPE	0,4,0,34,200,0,127,-6,-24,-25,4,MICHI_4_scale,GROUND
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 10:11AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 10:11AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_5_slo
 	SLOPES	3
 
@@ -3308,7 +3309,7 @@ MICHI_5_poly2_0
 	SLOPEPOINT	44,-44
 	SLOPEPOINT	10,-44
 
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 12 July 1994, 01:38PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 12 July 1994, 01:38PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_6_slo
 	SLOPES	3
 
@@ -3342,7 +3343,7 @@ MICHI_6_poly2_0
 	SLOPEPOINT	24,0
 	SLOPEPOINT	44,-44
 	SLOPEPOINT	10,-44
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 16 June 1994, 10:57AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 16 June 1994, 10:57AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;MICHI_6_slo
 ;	SLOPES	3
 ;
@@ -3377,7 +3378,7 @@ MICHI_6_poly2_0
 ;	SLOPEPOINT	-44,10
 ;	SLOPEPOINT	-44,44
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 12 July 1994, 01:39PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 12 July 1994, 01:39PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 MICHI_7_slo
 	SLOPES	1
 
@@ -3391,14 +3392,14 @@ MICHI_7_poly0_0
 	SLOPEPOINT	-14,3
 	SLOPEPOINT	14,3
 	SLOPEPOINT	14,-3
-;;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 10:09AM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 10:09AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;MICHI_7_slo
 ;	SLOPES	1
 ;
 ;	SLOPE	0,24,0,28,6,0,127,0,-14,-3,24,MICHI_0_scale,GROUND
 ;
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 04:30PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 04:30PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 WEL_2_0_slo
 ;	SLOPES	13
 ;
@@ -3457,7 +3458,7 @@ WEL_2_0_slo
 ;	SLOPEPOINT	25,50
 ;	SLOPEPOINT	60,23
 
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 25 May 1994, 04:19PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 25 May 1994, 04:19PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 WEL_2_1_slo
 	SLOPES	1
 
@@ -3465,7 +3466,7 @@ WEL_2_1_slo
 
 
 
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 30 May 1994, 09:56AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 30 May 1994, 09:56AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 YOU_0_0_slo
 	SLOPES	17
 
@@ -3636,7 +3637,7 @@ YOU_0_0_poly16_0
 	SLOPEPOINT	50,-30
 	SLOPEPOINT	90,-30
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 03 June 1994, 05:25PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 03 June 1994, 05:25PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 YOUSAI_4_slo
 	SLOPES	2
 
@@ -3700,7 +3701,7 @@ YOUSAI_4_poly1_2
 	SLOPEPOINT	-5,-30
 	SLOPEPOINT	-15,-20
 	SLOPEPOINT	15,-20
-;ÄÄÄÄÄÄ Created with SFCAD (Monday, 30 May 1994, 09:56AM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Monday, 30 May 1994, 09:56AM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 YOU_0_1_slo
 	SLOPES	5
 
@@ -3755,7 +3756,7 @@ YOU_0_1_poly4_0
 	SLOPEPOINT	-20,20
 	SLOPEPOINT	-30,30
 
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 11 June 1994, 03:52PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 11 June 1994, 03:52PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 W_KICHI_slo
 	SLOPES	12
 
@@ -3818,7 +3819,7 @@ W_KICHI_poly3_0
 	SLOPEPOINT	5,40
 	SLOPEPOINT	40,5
 
-;ÄÄÄÄÄÄ Created with SFCAD (Wednesday, 22 June 1994, 01:27PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Wednesday, 22 June 1994, 01:27PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kabe_0_slo
 	SLOPES	1
 
@@ -3832,7 +3833,7 @@ kabe_0_poly0_0
 	SLOPEPOINT	64,-64
 	SLOPEPOINT	-64,-64
 	SLOPEPOINT	-64,64
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 06 April 1995, 01:33PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 06 April 1995, 01:33PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kabe_aku_slo
 	SLOPES	1
 
@@ -3845,13 +3846,13 @@ kabe_aku_poly0_0
 	SLOPEPOINT	30,18
 	SLOPEPOINT	30,-18
 
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 06 April 1995, 01:33PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 06 April 1995, 01:33PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;kabe_aku_slo
 ;	SLOPES	1
 ;
 ;	SLOPE	0,50,0,60,36,0,127,0,-25,-25,50,kabe_aku_scale,wall
 ;
-;;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 23 June 1994, 01:50PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 23 June 1994, 01:50PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;kabe_aku_slo
 ;	SLOPES	1
 ;
@@ -3866,7 +3867,7 @@ kabe_aku_poly0_0
 ;	SLOPEPOINT	30,15
 ;	SLOPEPOINT	30,-15
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 27 January 1995, 01:48PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 27 January 1995, 01:48PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kabe_to_slo
 	SLOPES	2
 
@@ -3891,7 +3892,7 @@ kabe_to_poly1_0
 	SLOPEPOINT	-08,64
 	SLOPEPOINT	-08,-64
 
-;;ÄÄÄÄÄÄ Created with SFCAD (Friday, 27 January 1995, 01:48PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 27 January 1995, 01:48PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;kabe_to_slo
 ;	SLOPES	2
 ;
@@ -3916,7 +3917,7 @@ kabe_to_poly1_0
 ;	SLOPEPOINT	-15,64
 ;	SLOPEPOINT	-15,-64
 ;
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 24 June 1994, 03:59PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 24 June 1994, 03:59PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kado_0_slo
 	SLOPES	1
 
@@ -3932,7 +3933,7 @@ kado_0_poly0_0
 	SLOPEPOINT	64,-100
 	SLOPEPOINT	-100,-100
 
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 28 January 1995, 03:13PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 28 January 1995, 03:13PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 KADO_1_slo
 	SLOPES	1
 
@@ -3947,7 +3948,7 @@ KADO_1_poly0_0
 	SLOPEPOINT	-10,64
 	SLOPEPOINT	32,64
 	SLOPEPOINT	64,32
-;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 28 January 1995, 03:13PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 28 January 1995, 03:13PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kabe_to1_slo
 	SLOPES	2
 
@@ -3971,7 +3972,7 @@ kabe_to1_poly1_0
 	SLOPEPOINT	58,64
 	SLOPEPOINT	58,-64
 	SLOPEPOINT	10,-64
-;;ÄÄÄÄÄÄ Created with SFCAD (Saturday, 28 January 1995, 03:13PM) ÄÄÄÄÄÄ
+;;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Saturday, 28 January 1995, 03:13PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ;kabe_to1_slo
 ;	SLOPES	2
 ;
@@ -3995,7 +3996,7 @@ kabe_to1_poly1_0
 ;	SLOPEPOINT	50,64
 ;	SLOPEPOINT	50,-64
 ;	SLOPEPOINT	16,-64
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 24 June 1994, 04:52PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 24 June 1994, 04:52PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kabe_1_slo
 	SLOPES	1
 
@@ -4010,7 +4011,7 @@ kabe_1_poly0_0
 	SLOPEPOINT	-48,-32
 	SLOPEPOINT	-48,32
 
-;ÄÄÄÄÄÄ Created with SFCAD (Friday, 24 June 1994, 04:52PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Friday, 24 June 1994, 04:52PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 kabe_2_slo
 	SLOPES	1
 
@@ -4025,7 +4026,7 @@ kabe_2_poly0_0
 	SLOPEPOINT	-64,-32
 	SLOPEPOINT	-64,32
 
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 16 February 1995, 02:09PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 16 February 1995, 02:09PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_ROOF_slo
 	SLOPES	1
 
@@ -4039,7 +4040,7 @@ T_ROOF_poly0_0
 	SLOPEPOINT	44,-8
 	SLOPEPOINT	-44,-8
 	SLOPEPOINT	-44,8
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 04:02PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 04:02PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_HAKO_0_slo
 	SLOPES	1
 
@@ -4048,7 +4049,7 @@ T_HAKO_0_slo
 	SLOPE	0,16,0,80,80,0,127,0,-25,-25,16,T_HAKO_0_scale,GROUND
 	SLOPE	0,24,0,80,80,0,127,0,-25,-25,24,T_HAKO_0_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 04:03PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 04:03PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_HAKO_1_slo
 	SLOPES	1
 
@@ -4115,7 +4116,7 @@ T_HAKO_1_poly0_6
 	SLOPEPOINT	36,-36
 	SLOPEPOINT	-45,-36
 	SLOPEPOINT	-45,36
-;ÄÄÄÄÄÄ Created with SFCAD (Thursday, 16 February 1995, 02:07PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Thursday, 16 February 1995, 02:07PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_hako_lift_slo
 	SLOPES	1
 
@@ -4125,7 +4126,7 @@ T_hako_lift_s_slo
 
 	SLOPE	0,8,0,72,72,0,127,0,-25,-25,8,T_hako_lift_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 04:02PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 04:02PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_SAKA_0_slo
 	SLOPES	1
 
@@ -4159,7 +4160,7 @@ T_SAKA_0_poly0_2
 	SLOPEPOINT	40,36
 	SLOPEPOINT	40,-36
 	SLOPEPOINT	-40,-36
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 03:58PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 03:58PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_SAKA_1_slo
 	SLOPES	1
 
@@ -4172,7 +4173,7 @@ T_SAKA_1_poly0_0
 	SLOPEPOINT	18,-36
 	SLOPEPOINT	-20,-36
 	SLOPEPOINT	-20,40
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 04:00PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 04:00PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_TO_0_slo
 	SLOPES	1
 
@@ -4186,7 +4187,7 @@ T_TO_0_poly0_0
 	SLOPEPOINT	-10,8
 	SLOPEPOINT	34,8
 	SLOPEPOINT	34,-8
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 04:41PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 04:41PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_TO_1_slo
 	SLOPES	1
 
@@ -4202,7 +4203,7 @@ T_TO_1_slo
 	SLOPE	1,50,0,18,32,0,127,0,-25,-25,50,T_TO_1_scale,GROUND
 	SLOPE	-6,50,0,3,32,0,127,0,-25,-25,50,T_TO_1_scale,GROUND
 
-;ÄÄÄÄÄÄ Created with SFCAD (Tuesday, 31 January 1995, 04:01PM) ÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Created with SFCAD (Tuesday, 31 January 1995, 04:01PM) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 T_TO_2_slo
 	SLOPES	1
 

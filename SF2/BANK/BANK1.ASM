@@ -10,6 +10,7 @@
 
 
 	incpub	mario
+	incpub	mslopes
 
 ;------------------------------------------------------------------
 	bank	1
@@ -54,7 +55,7 @@ rlink	equr	11
 	incfile	MARIO\mdebug.mc
 	incfile	MARIO\mplanclp.mc
 	incfile	MARIO\mboxes.mc
-	incfile	mslopes.mc
+	incfile	MARIO\mslopes.mc
 	mario_off
 
 

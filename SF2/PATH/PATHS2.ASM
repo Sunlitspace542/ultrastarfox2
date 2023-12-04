@@ -16,19 +16,20 @@
 ;�                                                                        �
 ;������������������������������������������������������������������������ͼ
 
+	incpub	paths
 
 paths	=	*&$ff0000
 
 kpaths
-	incfile	ASM\kpathdat.asm
+	incfile	PATH\kpathdat.asm
 bpaths
-	incfile	bpathdat.asm
+	incfile PATH\bpathdat.asm
 tpaths
-	incfile	ASM\tpathdat.asm
+	incfile	PATH\tpathdat.asm
 ppaths
-	incfile	ASM\ppathdat.asm
+	incfile	PATH\ppathdat.asm
 gpaths
-	incfile	ASM\gpathdat.asm
+	incfile	PATH\gpathdat.asm
 
 
 ;--- Close the information file if need be ---

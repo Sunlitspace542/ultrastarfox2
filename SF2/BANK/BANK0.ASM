@@ -61,7 +61,7 @@ abort_vn
 	bankend	0
 	bank	32
 	incfile	ASM\sgtabs.asm
-	incfile	ASM\istrats.asm
+	incfile	STRAT\istrats.asm
 	incfile	ASM\blink.asm
 	IFNE	janglish
 	inccru	e6_ccr,data\e6.ccr
@@ -70,41 +70,64 @@ abort_vn
 	inccru	b4_ccr,data\b4.ccr
 	ENDC
 	bankend	32
-	org    $00ffb0,$7fb0
+	
+	;; ROM HEADER
 
-    db    $30,$31,$58,$4a,$20,$20,$00,$00 ; 01XJ
-    db    $00,$00,$00,$00,$00,$06,$00,$00
+	org $00ffb0,$7fb0
+	db	"01"				; Maker Code
+	db	"XJ  "				; Game Code
+	db	0,0,0,0,0,0,0		; Fixed Value
+	db	6					; Expansion RAM Size (5 = 32kbyte, 6 = 64kbyte)
+	db	0					; Special Version
+	db	0					; Cartridge Type (Sub-number)
 
-	run	" db %q%$version_name%q"
+	org	$00ffc0,$7fc0
 
+	run	" db %q%$version_name%q" ; Game Name
+
+	; hardware info
+	db	$20					; Map Mode (20 = SlowROM, 30 = FastROM) LoROM
+	db	$15					; Cartridge Type
+							 ; (13) Super FX 1 (StarFox 1)
+							 ; (14) Super FX 2 (DOOM)
+							 ; (15) Battery + Super FX 2 (Yoshi's Island, StarFox 2)
+							 ; (1A) Battery + Super FX 1 (Stunt Race FX)
+	db	$0a					; ROM Size (0A = 8mbit, 0B = 16mbit)
+	db	$00					; RAM Size (if 0, use exp RAM size above)
+	db	hdr_region			; Destination Code (from below)
+	db	$33					; Fixed Value
+	db	$00					; Mask ROM Version
+	dw	$ffff				; Compliment Check
+	dw	$0000				; Check Sum
+
+	; region/destination codes
 	IFEQ	JANGLISH
 
 	IFEQ	PAL
 ; american
-	db	$20,$15,$0a,$0,$1,$33,$0,$ff,$ff,$0,$0
+hdr_region	equ	$01	; Destination Code (USA)
 	ELSEIF
 
 	IFEQ	GERMAN+FRENCH
 ; british
-	db	$20,$15,$0a,$0,$2,$33,$0,$ff,$ff,$0,$0
+hdr_region	equ	$2	; Destination Code (PAL)
 
 	ENDC
 
 	IFNE	GERMAN
 ; german
-	db	$20,$15,$0a,$0,$9,$33,$0,$ff,$ff,$0,$0
+hdr_region	equ	$9	; Destination Code (GER)
 	ENDC
 
 	IFNE	FRENCH
 ; france
-	db	$20,$15,$0a,$0,$6,$33,$0,$ff,$ff,$0,$0
+hdr_region	equ	$6 ; Destination Code (FRA)
 	ENDC
 
 	ENDC
 
 	ELSEIF
-
-	db	$20,$15,$0a,$0,$0,$33,$0,$ff,$ff,$0,$0
+hdr_region	equ	$0	; Destination Code (JPN)
 
 	ENDC
 

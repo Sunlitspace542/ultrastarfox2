@@ -9,11 +9,11 @@
 
 ;------------------------------------------------------------------
 	bank	8
-	incfile	paths.asm
+	incfile	PATH\paths.asm
 	bankend	8
 
 	bank	9
-	incfile	paths2.asm
+	incfile	PATH\paths2.asm
 	bankend 9
 
 
@@ -26,7 +26,7 @@
 	incfile	ASM\mapcode.asm
 	incfile	ASM\weapons.asm
 
-	incfile	fonts.asm
+	incfile	ASM\fonts.asm
 	incfile	ASM\result.asm
 
 	incfile	data\arctan.asm

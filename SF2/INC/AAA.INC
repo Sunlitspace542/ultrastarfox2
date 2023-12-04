@@ -1,571 +1,571 @@
-;                            ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;             ษออออออออออออออต             ฦออออออออออออออป
-;             บ              ณ PATH MACROS ณ              บ
-;             ศออออออออออออออต             ฦออออออออออออออผ
-;                            ภฤฤฤฤฤฤฤฤฤฤฤฤฤู
+;                            ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;             ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต             ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;             ๏ฟฝ              ๏ฟฝ PATH MACROS ๏ฟฝ              ๏ฟฝ
+;             ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต             ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
+;                            ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
 
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต MISCELLANEOUS MACROS ฦอออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                               บ
-;บ                                                                           บ
-;บ START_PATH      name               ; define the beginning of a path       บ
-;บ P_END                              ; end of path                          บ
-;บ P_DEBRIS        shape              ; debris explosions to use <shape>     บ
-;บ P_EXPLODE                          ; explodes the object                  บ
-;บ P_REMOVE                           ; remove object                        บ
-;บ P_DEBUG                            ; causes a 'blink'                     บ
-;บ P_PRINT         alvar,mode,user    ; displays the value in alvar          บ
-;บ                                    ; mode = d,b, or h (bin, dec, hex)     บ
-;บ P_SETANIM       value              ; initialise animation to value        บ
-;บ P_ADDANIM       rate,max           ; adds [rate] to anim, max=last frame  บ
-;บ P_SETCOLANIM    value              ; initialise colouranimation to value  บ
-;บ P_ADDCOLANIM    rate,max           ; adds [rate] to colour anim           บ
-;บ P_SPRITE        colour[,size]      ; makes shape a software sprite        บ
-;บ P_TEXT          addr,color[,size]  ; change path type to message          บ
-;บ P_TRAIL         OFF|num            ; (use with P_TEXT) num = trail col    บ
-;บ P_TRIGGER       addr,trigger|OFF   ; trigger routine if (see 'TRIGGERS')  บ
-;บ P_FORCE         addr               ; sets address to begin execution      บ
-;บ                                    ; AFTER current trigger routine has    บ
-;บ                                    ; finished (if breaks DO-NEXT, then    บ
-;บ                                    ; next RETURN is invalid!)             บ
-;บ                                    ; (must only use from triggered code)  บ
-;บ P_START65816                       ; begin 65816 code                     บ
-;บ P_END65816                         ; end 65816 code                       บ
-;บ P_JSL65816      routine            ; call 65816 code                      บ
-;บ P_SWITCHOUT     addr|A             ; switch out of 65816 to <routine>     บ
-;บ P_PARTICLES                        ; create particles shower              บ
-;บ P_SOUND         num                ; trigger continuous sound effect      บ
-;บ P_SOUNDEFFECT         num          ; trigger one-shot sound effect        บ
-;บ P_SOUNDEFTDIST        num          ; trigger sound effect from dist(n,m,l)บ
-;บ P_SOUNDEFTPOS         num          ; trigger sound effect from L/C/R      บ
-;บ P_SOUNDEFTDISTPOS     num          ; trigger sound effect from dist(n,m,l)บ
-;บ                                    ;                & left/center/right   บ
-;บ P_SOUNDEFTNEAR        num          ; trigger sound effect from near dist  บ
-;บ P_SOUNDEFTNEARPOS     num          ; trigger sound effect from L/C/R(near)บ
-;บ P_SOUNDEFTVIS         num          ; trigger sound effect visible		บ
-;บ P_SOUNDEFTDIRECT      num,flag     ; trigger sound effect direct          บ
-;บ 		       ;flag = (nearL,nearC,nearR,midL,midC,midR,far)   บ
-;บ P_BECOME                           ; becomes the last shape created       บ
-;บ P_BECOMESHAPE                      ; become shape                         บ
-;บ P_BECOMEMOTHER                     ; become mother                        บ
-;บ P_BECOMECHILD   num|[alvar,addr]   ; become the child specified           บ
-;บ                                    ; this allows access to a child's      บ
-;บ                                    ; variables                            บ
-;บ                                    ; If an alvar is specified it will     บ
-;บ                                    ; jump to addr if the child isn't      บ
-;บ                                    ; found                                บ
-;บ P_UNBECOME                         ; back to normal                       บ
-;บ P_RADAROBJ      num                ; set the object for the radar display บ
-;บ P_CLEARSTACK                       ; clears the stack (housekeeping)      บ
-;บ P_BEGINDEMO                        ; begin path controlled demo sequence  บ
-;บ P_ENDDEMO                          ; end path controlled demo sequence    บ
-;บ P_ACTIVE        ON|OFF             ; active during demo sequence?         บ
-;บ P_SETCAMERA     [IMMEDIATE]        ; set camera to current position       บ
-;บ P_RANGECHECK    ON|OFF[,MAP]       ; turns off view range checking        บ
-;บ P_SETSWITCH     alvar,[alvar]      ; sets switch to alvar (must be 1-16)  บ
-;บ                                    ; If the second alvar is specified     บ
-;บ                                    ; the flags will be set in that and    บ
-;บ                                    ; not the global map switch            บ
-;บ P_CLRSWITCH     alvar,[alvar]      ; clears switch                        บ
-;บ P_IFSWITCH      alvar[,alvar],addr ; if switch number 'alvar' is set then บ
-;บ                                    ; jump to addr                         บ
-;บ P_SETTYPE       colltype           ; set collision type:                  บ
-;บ P_CLRTYPE       colltype           ; clr collision type:                  บ
-;บ                                    ; enemy1 or enemy2                     บ
-;บ P_AREA          alvar|val,ON|OFF   ; turn an area on or off (blockmap)    บ
-;บ P_SETCLIP       <y>                ; y position to y-clip at              บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต MISCELLANEOUS MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                               ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ START_PATH      name               ; define the beginning of a path       ๏ฟฝ
+;๏ฟฝ P_END                              ; end of path                          ๏ฟฝ
+;๏ฟฝ P_DEBRIS        shape              ; debris explosions to use <shape>     ๏ฟฝ
+;๏ฟฝ P_EXPLODE                          ; explodes the object                  ๏ฟฝ
+;๏ฟฝ P_REMOVE                           ; remove object                        ๏ฟฝ
+;๏ฟฝ P_DEBUG                            ; causes a 'blink'                     ๏ฟฝ
+;๏ฟฝ P_PRINT         alvar,mode,user    ; displays the value in alvar          ๏ฟฝ
+;๏ฟฝ                                    ; mode = d,b, or h (bin, dec, hex)     ๏ฟฝ
+;๏ฟฝ P_SETANIM       value              ; initialise animation to value        ๏ฟฝ
+;๏ฟฝ P_ADDANIM       rate,max           ; adds [rate] to anim, max=last frame  ๏ฟฝ
+;๏ฟฝ P_SETCOLANIM    value              ; initialise colouranimation to value  ๏ฟฝ
+;๏ฟฝ P_ADDCOLANIM    rate,max           ; adds [rate] to colour anim           ๏ฟฝ
+;๏ฟฝ P_SPRITE        colour[,size]      ; makes shape a software sprite        ๏ฟฝ
+;๏ฟฝ P_TEXT          addr,color[,size]  ; change path type to message          ๏ฟฝ
+;๏ฟฝ P_TRAIL         OFF|num            ; (use with P_TEXT) num = trail col    ๏ฟฝ
+;๏ฟฝ P_TRIGGER       addr,trigger|OFF   ; trigger routine if (see 'TRIGGERS')  ๏ฟฝ
+;๏ฟฝ P_FORCE         addr               ; sets address to begin execution      ๏ฟฝ
+;๏ฟฝ                                    ; AFTER current trigger routine has    ๏ฟฝ
+;๏ฟฝ                                    ; finished (if breaks DO-NEXT, then    ๏ฟฝ
+;๏ฟฝ                                    ; next RETURN is invalid!)             ๏ฟฝ
+;๏ฟฝ                                    ; (must only use from triggered code)  ๏ฟฝ
+;๏ฟฝ P_START65816                       ; begin 65816 code                     ๏ฟฝ
+;๏ฟฝ P_END65816                         ; end 65816 code                       ๏ฟฝ
+;๏ฟฝ P_JSL65816      routine            ; call 65816 code                      ๏ฟฝ
+;๏ฟฝ P_SWITCHOUT     addr|A             ; switch out of 65816 to <routine>     ๏ฟฝ
+;๏ฟฝ P_PARTICLES                        ; create particles shower              ๏ฟฝ
+;๏ฟฝ P_SOUND         num                ; trigger continuous sound effect      ๏ฟฝ
+;๏ฟฝ P_SOUNDEFFECT         num          ; trigger one-shot sound effect        ๏ฟฝ
+;๏ฟฝ P_SOUNDEFTDIST        num          ; trigger sound effect from dist(n,m,l)๏ฟฝ
+;๏ฟฝ P_SOUNDEFTPOS         num          ; trigger sound effect from L/C/R      ๏ฟฝ
+;๏ฟฝ P_SOUNDEFTDISTPOS     num          ; trigger sound effect from dist(n,m,l)๏ฟฝ
+;๏ฟฝ                                    ;                & left/center/right   ๏ฟฝ
+;๏ฟฝ P_SOUNDEFTNEAR        num          ; trigger sound effect from near dist  ๏ฟฝ
+;๏ฟฝ P_SOUNDEFTNEARPOS     num          ; trigger sound effect from L/C/R(near)๏ฟฝ
+;๏ฟฝ P_SOUNDEFTVIS         num          ; trigger sound effect visible		๏ฟฝ
+;๏ฟฝ P_SOUNDEFTDIRECT      num,flag     ; trigger sound effect direct          ๏ฟฝ
+;๏ฟฝ 		       ;flag = (nearL,nearC,nearR,midL,midC,midR,far)   ๏ฟฝ
+;๏ฟฝ P_BECOME                           ; becomes the last shape created       ๏ฟฝ
+;๏ฟฝ P_BECOMESHAPE                      ; become shape                         ๏ฟฝ
+;๏ฟฝ P_BECOMEMOTHER                     ; become mother                        ๏ฟฝ
+;๏ฟฝ P_BECOMECHILD   num|[alvar,addr]   ; become the child specified           ๏ฟฝ
+;๏ฟฝ                                    ; this allows access to a child's      ๏ฟฝ
+;๏ฟฝ                                    ; variables                            ๏ฟฝ
+;๏ฟฝ                                    ; If an alvar is specified it will     ๏ฟฝ
+;๏ฟฝ                                    ; jump to addr if the child isn't      ๏ฟฝ
+;๏ฟฝ                                    ; found                                ๏ฟฝ
+;๏ฟฝ P_UNBECOME                         ; back to normal                       ๏ฟฝ
+;๏ฟฝ P_RADAROBJ      num                ; set the object for the radar display ๏ฟฝ
+;๏ฟฝ P_CLEARSTACK                       ; clears the stack (housekeeping)      ๏ฟฝ
+;๏ฟฝ P_BEGINDEMO                        ; begin path controlled demo sequence  ๏ฟฝ
+;๏ฟฝ P_ENDDEMO                          ; end path controlled demo sequence    ๏ฟฝ
+;๏ฟฝ P_ACTIVE        ON|OFF             ; active during demo sequence?         ๏ฟฝ
+;๏ฟฝ P_SETCAMERA     [IMMEDIATE]        ; set camera to current position       ๏ฟฝ
+;๏ฟฝ P_RANGECHECK    ON|OFF[,MAP]       ; turns off view range checking        ๏ฟฝ
+;๏ฟฝ P_SETSWITCH     alvar,[alvar]      ; sets switch to alvar (must be 1-16)  ๏ฟฝ
+;๏ฟฝ                                    ; If the second alvar is specified     ๏ฟฝ
+;๏ฟฝ                                    ; the flags will be set in that and    ๏ฟฝ
+;๏ฟฝ                                    ; not the global map switch            ๏ฟฝ
+;๏ฟฝ P_CLRSWITCH     alvar,[alvar]      ; clears switch                        ๏ฟฝ
+;๏ฟฝ P_IFSWITCH      alvar[,alvar],addr ; if switch number 'alvar' is set then ๏ฟฝ
+;๏ฟฝ                                    ; jump to addr                         ๏ฟฝ
+;๏ฟฝ P_SETTYPE       colltype           ; set collision type:                  ๏ฟฝ
+;๏ฟฝ P_CLRTYPE       colltype           ; clr collision type:                  ๏ฟฝ
+;๏ฟฝ                                    ; enemy1 or enemy2                     ๏ฟฝ
+;๏ฟฝ P_AREA          alvar|val,ON|OFF   ; turn an area on or off (blockmap)    ๏ฟฝ
+;๏ฟฝ P_SETCLIP       <y>                ; y position to y-clip at              ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 ;
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต MODE MACROS ฦออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                        บ
-;บ                                                                           บ
-;บ P_RELTOPLAYER   ON|OFF             ; make z relative to player            บ
-;บ P_ALWAYSGENVECS ON|OFF             ; always generate vectors              บ
-;บ P_SPACESHIP     ON|OFF             ; y rotation is relative to z rotation บ
-;บ P_SMOKE         ON|OFF             ; turn smoke on/off                    บ
-;บ P_INVINCIBLE    ON|OFF             ; turn invincibility off or on         บ
-;บ P_ZREMOVE       ON|OFF             ; automatic removal of shape when z<0  บ
-;บ P_INVISIBLE     ON|OFF             ; shape invisible and no collisions    บ
-;บ P_HITFLASH      ON|OFF             ; hit flash on or off (on is default)  บ
-;บ P_COLLISIONS    ON|OFF             ;  collision detection on or off       บ
-;บ P_SHADOW        ON|OFF             ; shadow on or off (default=on)        บ
-;บ P_BOOST         ON|OFF             ; software sprite boost on/off         บ
-;บ P_POLLEN        ON|OFF             ; pollen on or off                     บ
-;บ P_LOCKPLAYER    ON|OFF             ; lock the position relative to player บ
-;บ P_SLOPE         ON|OFF             ; Switch slope object on or off        บ
-;บ P_CLIPPING      ON|OFF             ; Switch on plane clipping             บ
-;บ P_MOVEPLAYER    ON|OFF             ; move the player with the current obj บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต MODE MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                        ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_RELTOPLAYER   ON|OFF             ; make z relative to player            ๏ฟฝ
+;๏ฟฝ P_ALWAYSGENVECS ON|OFF             ; always generate vectors              ๏ฟฝ
+;๏ฟฝ P_SPACESHIP     ON|OFF             ; y rotation is relative to z rotation ๏ฟฝ
+;๏ฟฝ P_SMOKE         ON|OFF             ; turn smoke on/off                    ๏ฟฝ
+;๏ฟฝ P_INVINCIBLE    ON|OFF             ; turn invincibility off or on         ๏ฟฝ
+;๏ฟฝ P_ZREMOVE       ON|OFF             ; automatic removal of shape when z<0  ๏ฟฝ
+;๏ฟฝ P_INVISIBLE     ON|OFF             ; shape invisible and no collisions    ๏ฟฝ
+;๏ฟฝ P_HITFLASH      ON|OFF             ; hit flash on or off (on is default)  ๏ฟฝ
+;๏ฟฝ P_COLLISIONS    ON|OFF             ;  collision detection on or off       ๏ฟฝ
+;๏ฟฝ P_SHADOW        ON|OFF             ; shadow on or off (default=on)        ๏ฟฝ
+;๏ฟฝ P_BOOST         ON|OFF             ; software sprite boost on/off         ๏ฟฝ
+;๏ฟฝ P_POLLEN        ON|OFF             ; pollen on or off                     ๏ฟฝ
+;๏ฟฝ P_LOCKPLAYER    ON|OFF             ; lock the position relative to player ๏ฟฝ
+;๏ฟฝ P_SLOPE         ON|OFF             ; Switch slope object on or off        ๏ฟฝ
+;๏ฟฝ P_CLIPPING      ON|OFF             ; Switch on plane clipping             ๏ฟฝ
+;๏ฟฝ P_MOVEPLAYER    ON|OFF             ; move the player with the current obj ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต FRIEND MACROS ฦออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                      บ
-;บ                                                                           บ
-;บ P_FRIEND                           ; define path as a friend's path       บ
-;บ P_IFFRIEND      friend,address     ; if friend then goes to address       บ
-;บ P_NOTFRIEND     friend,address     ; if not friend then goes to address   บ
-;บ P_MSG           num|alvar[,METER]  ; Displays msg <num> (METER shows hp)  บ
-;บ P_DAMAGE                           ; takes one unit of damage from friend บ
-;บ P_ALMOSTDEAD    address            ; if friend almost dead then goto addr บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต FRIEND MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                      ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_FRIEND                           ; define path as a friend's path       ๏ฟฝ
+;๏ฟฝ P_IFFRIEND      friend,address     ; if friend then goes to address       ๏ฟฝ
+;๏ฟฝ P_NOTFRIEND     friend,address     ; if not friend then goes to address   ๏ฟฝ
+;๏ฟฝ P_MSG           num|alvar[,METER]  ; Displays msg <num> (METER shows hp)  ๏ฟฝ
+;๏ฟฝ P_DAMAGE                           ; takes one unit of damage from friend ๏ฟฝ
+;๏ฟฝ P_ALMOSTDEAD    address            ; if friend almost dead then goto addr ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต CREATION MACROS ฦออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                    บ
-;บ                                                                           บ
-;บ P_SPAWN         x,y,z,             ; creates a new path object            บ
-;บ                 xrot,yrot,zrot,    ; xyz rotation (relative to original)  บ
-;บ                 shape,path,        ; shape and path name                  บ
-;บ                 hp,ap              ; hit points and attack points         บ
-;บ                 [,LINK]            ; links newly created shape            บ
-;บ                 [,n]               ; n = child number (use child macros)  บ
-;บ P_QSPAWN        shape,path,hp,ap   ; short version of above (x,y,etc = 0) บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต CREATION MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_SPAWN         x,y,z,             ; creates a new path object            ๏ฟฝ
+;๏ฟฝ                 xrot,yrot,zrot,    ; xyz rotation (relative to original)  ๏ฟฝ
+;๏ฟฝ                 shape,path,        ; shape and path name                  ๏ฟฝ
+;๏ฟฝ                 hp,ap              ; hit points and attack points         ๏ฟฝ
+;๏ฟฝ                 [,LINK]            ; links newly created shape            ๏ฟฝ
+;๏ฟฝ                 [,n]               ; n = child number (use child macros)  ๏ฟฝ
+;๏ฟฝ P_QSPAWN        shape,path,hp,ap   ; short version of above (x,y,etc = 0) ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต GENERAL PROGRAM FLOW MACROS ฦออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                        บ
-;บ                                                                           บ
-;บ P_WAIT          frames             ; wait for some time                   บ
-;บ P_GOTO          addr               ; goto specified addr (waits 1 frame)  บ
-;บ P_IGOTO         addr               ; immediately goto specified address   บ
-;บ P_GOSUB         addr|alvar         ; nested gosub (alvar must be word)    บ
-;บ P_RETURN                           ; return to gosub call                 บ
-;บ P_RANDOMGOTO    addr               ; will go to address (50% of the time) บ
-;บ P_LOOP          num,address        ; loop to addr <num>+1 times, (0-255)  บ
-;บ P_DO            num|alvar          ; do until NEXT <num> times, (0-65535) บ
-;บ P_NEXT                             ; repeat DO loop (nested) (1 frame)    บ
-;บ P_INEXT                            ; repeat DO loop (0 frame)             บ
-;บ P_BREAK         [addr]             ; break DO-NEXT loop, goto addr        บ
-;บ P_IFLEVEL       number,addr        ; if level=number then go to addr      บ
-;บ P_IFNOTLEVEL    number,addr        ; if level!=number then go to addr     บ
-;บ P_HITGROUND     ground,addr        ; when hits [ground] goes to addr      บ
-;บ P_NOTHITGROUND  ground,addr        ; if not hitting [ground] goes to addr บ
-;บ P_HITWALL       address            ; goes to addr when hits tunnel walls  บ
-;บ P_SETSTRAT      address            ; sets strategy (active immediately)   บ
-;บ P_IFHITFLAG     addr[,1[,2]]...    ; check for hitflags (and clear them)  บ
-;บ                                    ; if none specified, checks for any    บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต GENERAL PROGRAM FLOW MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                        ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_WAIT          frames             ; wait for some time                   ๏ฟฝ
+;๏ฟฝ P_GOTO          addr               ; goto specified addr (waits 1 frame)  ๏ฟฝ
+;๏ฟฝ P_IGOTO         addr               ; immediately goto specified address   ๏ฟฝ
+;๏ฟฝ P_GOSUB         addr|alvar         ; nested gosub (alvar must be word)    ๏ฟฝ
+;๏ฟฝ P_RETURN                           ; return to gosub call                 ๏ฟฝ
+;๏ฟฝ P_RANDOMGOTO    addr               ; will go to address (50% of the time) ๏ฟฝ
+;๏ฟฝ P_LOOP          num,address        ; loop to addr <num>+1 times, (0-255)  ๏ฟฝ
+;๏ฟฝ P_DO            num|alvar          ; do until NEXT <num> times, (0-65535) ๏ฟฝ
+;๏ฟฝ P_NEXT                             ; repeat DO loop (nested) (1 frame)    ๏ฟฝ
+;๏ฟฝ P_INEXT                            ; repeat DO loop (0 frame)             ๏ฟฝ
+;๏ฟฝ P_BREAK         [addr]             ; break DO-NEXT loop, goto addr        ๏ฟฝ
+;๏ฟฝ P_IFLEVEL       number,addr        ; if level=number then go to addr      ๏ฟฝ
+;๏ฟฝ P_IFNOTLEVEL    number,addr        ; if level!=number then go to addr     ๏ฟฝ
+;๏ฟฝ P_HITGROUND     ground,addr        ; when hits [ground] goes to addr      ๏ฟฝ
+;๏ฟฝ P_NOTHITGROUND  ground,addr        ; if not hitting [ground] goes to addr ๏ฟฝ
+;๏ฟฝ P_HITWALL       address            ; goes to addr when hits tunnel walls  ๏ฟฝ
+;๏ฟฝ P_SETSTRAT      address            ; sets strategy (active immediately)   ๏ฟฝ
+;๏ฟฝ P_IFHITFLAG     addr[,1[,2]]...    ; check for hitflags (and clear them)  ๏ฟฝ
+;๏ฟฝ                                    ; if none specified, checks for any    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต PLAYER MACROS ฦออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                      บ
-;บ                                                                           บ
-;บ P_PLAYER        <number>           ; set which player to check            บ
-;บ P_PLAYERDEAD    addr               ; if player is dead then go to addr    บ
-;บ P_LEFTOFPLAYER  addr               ; if left of player go to addr         บ
-;บ P_RIGHTOFPLAYER addr               ; if right of player go to addr        บ
-;บ P_ABOVEPLAYER   addr               ; if above player go to addr           บ
-;บ P_BELOWPLAYER   addr               ; if below player go to addr           บ
-;บ P_BEHINDPLAYER  addr               ; if behind player go to addr          บ
-;บ P_BEHINDKPLAYER  addr              ; if behind player go to addr (kawa)   บ
-;บ P_WAITFACEPLAYER                   ; turns to the player (until finished) บ
-;บ P_FACEPLAYER    [IMMEDIATE]        ; face player (1 iteration)            บ
-;บ P_FACEPLAYER    Y                  ; face player (only Y rotation)        บ
-;บ P_GOTOPOS       x,y,z,maxspeed     ; goes to position relative to player  บ
-;บ P_DISTLESS      value,addr         ; if distance from player < value      บ
-;บ P_DISTMORE      value,addr         ; if distance from player > value      บ
-;บ P_WITHINRADIUS  radius,addr        ; if player is within <radius>         บ
-;บ P_IFPLAYER      n,addr             ; if player n then goto (see P_PLAYER) บ
-;บ P_SWAPPLAYER                       ; swaps the player      (see P_PLAYER) บ
-;บ P_PLAYERINCONE  range,addr         ; is player within -range๘<->range๘?   บ
-;บ P_SCORE         num                ; add to player's score                บ
-;บ P_MOVEINPLAYER  num|alvar          ; move towards or away from the player บ
-;บ P_CIRCLEPLAYER  angle|alvar        ; rotates object around player (y-rot) บ
-;บ P_COPYPLAYERPOS                    ; copy the player's position           บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต PLAYER MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                      ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_PLAYER        <number>           ; set which player to check            ๏ฟฝ
+;๏ฟฝ P_PLAYERDEAD    addr               ; if player is dead then go to addr    ๏ฟฝ
+;๏ฟฝ P_LEFTOFPLAYER  addr               ; if left of player go to addr         ๏ฟฝ
+;๏ฟฝ P_RIGHTOFPLAYER addr               ; if right of player go to addr        ๏ฟฝ
+;๏ฟฝ P_ABOVEPLAYER   addr               ; if above player go to addr           ๏ฟฝ
+;๏ฟฝ P_BELOWPLAYER   addr               ; if below player go to addr           ๏ฟฝ
+;๏ฟฝ P_BEHINDPLAYER  addr               ; if behind player go to addr          ๏ฟฝ
+;๏ฟฝ P_BEHINDKPLAYER  addr              ; if behind player go to addr (kawa)   ๏ฟฝ
+;๏ฟฝ P_WAITFACEPLAYER                   ; turns to the player (until finished) ๏ฟฝ
+;๏ฟฝ P_FACEPLAYER    [IMMEDIATE]        ; face player (1 iteration)            ๏ฟฝ
+;๏ฟฝ P_FACEPLAYER    Y                  ; face player (only Y rotation)        ๏ฟฝ
+;๏ฟฝ P_GOTOPOS       x,y,z,maxspeed     ; goes to position relative to player  ๏ฟฝ
+;๏ฟฝ P_DISTLESS      value,addr         ; if distance from player < value      ๏ฟฝ
+;๏ฟฝ P_DISTMORE      value,addr         ; if distance from player > value      ๏ฟฝ
+;๏ฟฝ P_WITHINRADIUS  radius,addr        ; if player is within <radius>         ๏ฟฝ
+;๏ฟฝ P_IFPLAYER      n,addr             ; if player n then goto (see P_PLAYER) ๏ฟฝ
+;๏ฟฝ P_SWAPPLAYER                       ; swaps the player      (see P_PLAYER) ๏ฟฝ
+;๏ฟฝ P_PLAYERINCONE  range,addr         ; is player within -range๏ฟฝ<->range๏ฟฝ?   ๏ฟฝ
+;๏ฟฝ P_SCORE         num                ; add to player's score                ๏ฟฝ
+;๏ฟฝ P_MOVEINPLAYER  num|alvar          ; move towards or away from the player ๏ฟฝ
+;๏ฟฝ P_CIRCLEPLAYER  angle|alvar        ; rotates object around player (y-rot) ๏ฟฝ
+;๏ฟฝ P_COPYPLAYERPOS                    ; copy the player's position           ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต  BOSS MACROS  ฦออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                      บ
-;บ                                                                           บ
-;บ P_BOSSMODELIST  bossname           ; Initialises the boss mode definitionsบ
-;บ                                    ; You must follow this with a list of  บ
-;บ                                    ; P_BOSSMODE's                         บ
-;บ P_BOSSMODE      addr[,name]        ; Define a boss mode                   บ
-;บ P_JUMPBOSSMODE                     ; Jump to the current boss mode        บ
-;บ P_SETBOSSMODE   name               ; Set boss into a particular mode      บ
-;บ P_NEXTBOSSMODE                     ; Set the next boss mode               บ
-;บ P_BOSSFLAGLIST                     ; Initialise flag list for this boss   บ
-;บ                                    ; This must be specified somewhere     บ
-;บ                                    ; AFTER the P_BOSSMODELIST definition  บ
-;บ P_BOSSFLAG      name               ; define a boss flag                   บ
-;บ P_IFBOSSFLAG    name,ON|OFF,addr   ; if boss flag on or off then jump     บ
-;บ P_SETBOSSFLAG   name,ON|OFF        ; set a boss flag                      บ
-;บ P_CLRBOSSFLAGS                     ; clear all boss flags                 บ
-;บ P_STOREBOSSMODE                    ; store current boss mode (one level)  บ
-;บ P_RESTOREBOSSMODE                  ; restore previously stored mode       บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต  BOSS MACROS  ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                      ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_BOSSMODELIST  bossname           ; Initialises the boss mode definitions๏ฟฝ
+;๏ฟฝ                                    ; You must follow this with a list of  ๏ฟฝ
+;๏ฟฝ                                    ; P_BOSSMODE's                         ๏ฟฝ
+;๏ฟฝ P_BOSSMODE      addr[,name]        ; Define a boss mode                   ๏ฟฝ
+;๏ฟฝ P_JUMPBOSSMODE                     ; Jump to the current boss mode        ๏ฟฝ
+;๏ฟฝ P_SETBOSSMODE   name               ; Set boss into a particular mode      ๏ฟฝ
+;๏ฟฝ P_NEXTBOSSMODE                     ; Set the next boss mode               ๏ฟฝ
+;๏ฟฝ P_BOSSFLAGLIST                     ; Initialise flag list for this boss   ๏ฟฝ
+;๏ฟฝ                                    ; This must be specified somewhere     ๏ฟฝ
+;๏ฟฝ                                    ; AFTER the P_BOSSMODELIST definition  ๏ฟฝ
+;๏ฟฝ P_BOSSFLAG      name               ; define a boss flag                   ๏ฟฝ
+;๏ฟฝ P_IFBOSSFLAG    name,ON|OFF,addr   ; if boss flag on or off then jump     ๏ฟฝ
+;๏ฟฝ P_SETBOSSFLAG   name,ON|OFF        ; set a boss flag                      ๏ฟฝ
+;๏ฟฝ P_CLRBOSSFLAGS                     ; clear all boss flags                 ๏ฟฝ
+;๏ฟฝ P_STOREBOSSMODE                    ; store current boss mode (one level)  ๏ฟฝ
+;๏ฟฝ P_RESTOREBOSSMODE                  ; restore previously stored mode       ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต WEAPON MACROS ฦออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                      บ
-;บ                                                                           บ
-;บ P_WEAPON        weaponname         ; sets default weapon for path object  บ
-;บ P_FIRE          [CANHIT]           ; fires default weapon                 บ
-;บ P_FIRE          ATPLAYER,[CANHIT]  ; fires default weapon at player       บ
-;บ P_FIRE          ATSHAPE,[CANHIT]   ; fires default weapon at found shape  บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต WEAPON MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                      ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_WEAPON        weaponname         ; sets default weapon for path object  ๏ฟฝ
+;๏ฟฝ P_FIRE          [CANHIT]           ; fires default weapon                 ๏ฟฝ
+;๏ฟฝ P_FIRE          ATPLAYER,[CANHIT]  ; fires default weapon at player       ๏ฟฝ
+;๏ฟฝ P_FIRE          ATSHAPE,[CANHIT]   ; fires default weapon at found shape  ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต VARIABLE MACROS ฦออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                    บ
-;บ                                                                           บ
-;บ P_CHASE         var,value          ; smoothly set var to value            บ
-;บ P_CHASE         var1,var2          ; smoothly set var to another var      บ
-;บ P_WAITCHASE     var,value          ; smoothly set var (until finished)    บ
-;บ P_SET           var,value          ; immediately set var                  บ
-;บ P_SET           var1,var2          ; set var1 = var2                      บ
-;บ P_ZERO          var                ; zero var                             บ
-;บ P_SETRANDOM     var[,rndmask]      ; set var to random value              บ
-;บ                                    ; (rndmask = 1,3,7,15,31...65535)      บ
-;บ P_ADD           var,value          ; add value to var (sign extended)     บ
-;บ P_ADD           var,var            ; add var to var (sign extended)       บ
-;บ P_GADD          dest,source        ; add global to alvar storing result   บ
-;บ                                    ; in dest                              บ
-;บ P_GINC          B|W,global var     ; increment global by 1                บ
-;บ P_GDEC          B|W,global var     ; decrement global by 1                บ
-;บ P_INC           var                ; increment var by 1                   บ
-;บ P_DEC           var                ; decrement var by 1                   บ
-;บ P_NEG           var                ; negate var                           บ
-;บ P_DIV2          var                ; signed divide by 2                   บ
-;บ P_SETVEL        velocity           ; change speed (will remake vectors)   บ
-;บ P_ACCEL         velocity,rate      ; change speed by rate (smooth setvel) บ
-;บ P_IFSAME        var,value,addr     ; if var=value then go to addr         บ
-;บ P_IFSAME        var,var,addr       ; if var=var then go to addr           บ
-;บ P_IFNOTSAME     var,value,addr     ; if var!=value then go to addr        บ
-;บ P_IFNOTSAME     var,var,addr       ; if var!=var then go to addr          บ
-;บ P_IFZERO        var,addr           ; if var=0 then go to addr             บ
-;บ P_IFNOTZERO     var,addr           ; if var!=0 then go to addr            บ
-;บ P_IFBETWEEN     min,var,max,addr   ; if min>var>max then go to addr       บ
-;บ P_IFNOTBETWEEN  min,var,max,addr   ; if min<var | var>max then go to addr บ
-;บ P_IFLARGER      var1,var2,addr     ; if var1>var2 goto <addr> (signed)    บ
-;บ P_IFSMALLER     var1,var2,addr     ; if var1<var2 goto <addr> (signed)    บ
-;บ P_IMPORT        var,global var     ; var = global var                     บ
-;บ P_EXPORT        global var,var     ; global var = var                     บ
-;บ                                    ; global var must be same size as var; บ
-;บ                                    ; ie. a byte=byte or word=word         บ
-;บ                                    ; see 'GLOBAL VARIABLES'               บ
-;บ P_INDEX         dest,table,index   ; indexes into a table (see 'TABLES')  บ
-;บ P_AUTOINDEX     B|W,d,t,i,max      ; same as P_INDEX but increments 'i'   บ
-;บ                                    ; up until 'max'-1 then loops back to 0บ
-;บ                                    ; also value is ADDED to 'd'           บ
-;บ                                    ; Table size is specified with B or W  บ
-;บ P_PUSH          var                ; pushes var onto the stack            บ
-;บ P_PULL          var                ; pulls var from the stack (see stack) บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต VARIABLE MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_CHASE         var,value          ; smoothly set var to value            ๏ฟฝ
+;๏ฟฝ P_CHASE         var1,var2          ; smoothly set var to another var      ๏ฟฝ
+;๏ฟฝ P_WAITCHASE     var,value          ; smoothly set var (until finished)    ๏ฟฝ
+;๏ฟฝ P_SET           var,value          ; immediately set var                  ๏ฟฝ
+;๏ฟฝ P_SET           var1,var2          ; set var1 = var2                      ๏ฟฝ
+;๏ฟฝ P_ZERO          var                ; zero var                             ๏ฟฝ
+;๏ฟฝ P_SETRANDOM     var[,rndmask]      ; set var to random value              ๏ฟฝ
+;๏ฟฝ                                    ; (rndmask = 1,3,7,15,31...65535)      ๏ฟฝ
+;๏ฟฝ P_ADD           var,value          ; add value to var (sign extended)     ๏ฟฝ
+;๏ฟฝ P_ADD           var,var            ; add var to var (sign extended)       ๏ฟฝ
+;๏ฟฝ P_GADD          dest,source        ; add global to alvar storing result   ๏ฟฝ
+;๏ฟฝ                                    ; in dest                              ๏ฟฝ
+;๏ฟฝ P_GINC          B|W,global var     ; increment global by 1                ๏ฟฝ
+;๏ฟฝ P_GDEC          B|W,global var     ; decrement global by 1                ๏ฟฝ
+;๏ฟฝ P_INC           var                ; increment var by 1                   ๏ฟฝ
+;๏ฟฝ P_DEC           var                ; decrement var by 1                   ๏ฟฝ
+;๏ฟฝ P_NEG           var                ; negate var                           ๏ฟฝ
+;๏ฟฝ P_DIV2          var                ; signed divide by 2                   ๏ฟฝ
+;๏ฟฝ P_SETVEL        velocity           ; change speed (will remake vectors)   ๏ฟฝ
+;๏ฟฝ P_ACCEL         velocity,rate      ; change speed by rate (smooth setvel) ๏ฟฝ
+;๏ฟฝ P_IFSAME        var,value,addr     ; if var=value then go to addr         ๏ฟฝ
+;๏ฟฝ P_IFSAME        var,var,addr       ; if var=var then go to addr           ๏ฟฝ
+;๏ฟฝ P_IFNOTSAME     var,value,addr     ; if var!=value then go to addr        ๏ฟฝ
+;๏ฟฝ P_IFNOTSAME     var,var,addr       ; if var!=var then go to addr          ๏ฟฝ
+;๏ฟฝ P_IFZERO        var,addr           ; if var=0 then go to addr             ๏ฟฝ
+;๏ฟฝ P_IFNOTZERO     var,addr           ; if var!=0 then go to addr            ๏ฟฝ
+;๏ฟฝ P_IFBETWEEN     min,var,max,addr   ; if min>var>max then go to addr       ๏ฟฝ
+;๏ฟฝ P_IFNOTBETWEEN  min,var,max,addr   ; if min<var | var>max then go to addr ๏ฟฝ
+;๏ฟฝ P_IFLARGER      var1,var2,addr     ; if var1>var2 goto <addr> (signed)    ๏ฟฝ
+;๏ฟฝ P_IFSMALLER     var1,var2,addr     ; if var1<var2 goto <addr> (signed)    ๏ฟฝ
+;๏ฟฝ P_IMPORT        var,global var     ; var = global var                     ๏ฟฝ
+;๏ฟฝ P_EXPORT        global var,var     ; global var = var                     ๏ฟฝ
+;๏ฟฝ                                    ; global var must be same size as var; ๏ฟฝ
+;๏ฟฝ                                    ; ie. a byte=byte or word=word         ๏ฟฝ
+;๏ฟฝ                                    ; see 'GLOBAL VARIABLES'               ๏ฟฝ
+;๏ฟฝ P_INDEX         dest,table,index   ; indexes into a table (see 'TABLES')  ๏ฟฝ
+;๏ฟฝ P_AUTOINDEX     B|W,d,t,i,max      ; same as P_INDEX but increments 'i'   ๏ฟฝ
+;๏ฟฝ                                    ; up until 'max'-1 then loops back to 0๏ฟฝ
+;๏ฟฝ                                    ; also value is ADDED to 'd'           ๏ฟฝ
+;๏ฟฝ                                    ; Table size is specified with B or W  ๏ฟฝ
+;๏ฟฝ P_PUSH          var                ; pushes var onto the stack            ๏ฟฝ
+;๏ฟฝ P_PULL          var                ; pulls var from the stack (see stack) ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต LINKING MACROS ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                     บ
-;บ                                                                           บ
-;บ P_LINK          shape              ; link path to next path created       บ
-;บ P_FINDSHAPE     shape              ; finds the shape specified            บ
-;บ P_FINDNEXTSHAPE shape              ; finds the next closest shape         บ
-;บ P_FACESHAPE     [IMMEDIATE]        ; faces the found or linked shape      บ
-;บ P_GOTOSHAPEPOS  x,y,z,maxspeed     ; goes to a relative position          บ
-;บ P_IMMUNE                           ; immune to collisions                 บ
-;บ P_SHAPEDISTLESS value,address      ; if distance from shape < value       บ
-;บ P_SHAPEDEAD     address            ; if shape is dead, goes to address    บ
-;บ P_SPAWN         ...,LINK           ; see <CREATION MACROS>                บ
-;บ P_FLAGSHAPE                        ; set flag for linked shape            บ
-;บ                                    ; (only if linked shape is path obj)   บ
-;บ P_IFFLAG        addr               ; if flag set goto addr (clears flag)  บ
-;บ P_SHAPEINRADIUS radius,address     ; if linked shape is within radius     บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต LINKING MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                     ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_LINK          shape              ; link path to next path created       ๏ฟฝ
+;๏ฟฝ P_FINDSHAPE     shape              ; finds the shape specified            ๏ฟฝ
+;๏ฟฝ P_FINDNEXTSHAPE shape              ; finds the next closest shape         ๏ฟฝ
+;๏ฟฝ P_FACESHAPE     [IMMEDIATE]        ; faces the found or linked shape      ๏ฟฝ
+;๏ฟฝ P_GOTOSHAPEPOS  x,y,z,maxspeed     ; goes to a relative position          ๏ฟฝ
+;๏ฟฝ P_IMMUNE                           ; immune to collisions                 ๏ฟฝ
+;๏ฟฝ P_SHAPEDISTLESS value,address      ; if distance from shape < value       ๏ฟฝ
+;๏ฟฝ P_SHAPEDEAD     address            ; if shape is dead, goes to address    ๏ฟฝ
+;๏ฟฝ P_SPAWN         ...,LINK           ; see <CREATION MACROS>                ๏ฟฝ
+;๏ฟฝ P_FLAGSHAPE                        ; set flag for linked shape            ๏ฟฝ
+;๏ฟฝ                                    ; (only if linked shape is path obj)   ๏ฟฝ
+;๏ฟฝ P_IFFLAG        addr               ; if flag set goto addr (clears flag)  ๏ฟฝ
+;๏ฟฝ P_SHAPEINRADIUS radius,address     ; if linked shape is within radius     ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต CHILD MACROS ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                       บ
-;บ                                                                           บ
-;บ P_SPAWN         ...,n              ; see spawn command above              บ
-;บ P_CHILDDEAD     n,address          ; if CHILD n is dead, goto address     บ
-;บ P_FLAGCHILD     n                  ; flag child (from child or mother)    บ
-;บ P_FLAGMOTHER                       ; flag mother (from child)             บ
-;บ P_IFFLAG        addr               ; if flag set goto addr (clears flag)  บ
-;บ P_UNLINKCHILD   n                  ; make child into normal object        บ
-;บ P_REMOVE        n                  ; remove child n                       บ
-;บ P_CIRCLE        angle|alvar        ; rotates child around mother (y-rot)  บ
-;บ P_MOVEIN        n|alvar            ; move closer to mother by val|alvar   บ
-;บ P_SETID         n|alvar            ; set child id number                  บ
-;บ P_BECOMEINERT                      ; changes into an inert object         บ
-;บ P_STAMPSTART                       ; set the restart routine for inerts   บ
-;บ P_ADJUSTROT                        ; adjusts world rotation to child rot  บ
-;บ                                    ; eg. P_FACEPLAYER would normally      บ
-;บ                                    ; not work, however if followed by     บ
-;บ                                    ; P_ADJUSTROT it will                  บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต CHILD MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                       ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_SPAWN         ...,n              ; see spawn command above              ๏ฟฝ
+;๏ฟฝ P_CHILDDEAD     n,address          ; if CHILD n is dead, goto address     ๏ฟฝ
+;๏ฟฝ P_FLAGCHILD     n                  ; flag child (from child or mother)    ๏ฟฝ
+;๏ฟฝ P_FLAGMOTHER                       ; flag mother (from child)             ๏ฟฝ
+;๏ฟฝ P_IFFLAG        addr               ; if flag set goto addr (clears flag)  ๏ฟฝ
+;๏ฟฝ P_UNLINKCHILD   n                  ; make child into normal object        ๏ฟฝ
+;๏ฟฝ P_REMOVE        n                  ; remove child n                       ๏ฟฝ
+;๏ฟฝ P_CIRCLE        angle|alvar        ; rotates child around mother (y-rot)  ๏ฟฝ
+;๏ฟฝ P_MOVEIN        n|alvar            ; move closer to mother by val|alvar   ๏ฟฝ
+;๏ฟฝ P_SETID         n|alvar            ; set child id number                  ๏ฟฝ
+;๏ฟฝ P_BECOMEINERT                      ; changes into an inert object         ๏ฟฝ
+;๏ฟฝ P_STAMPSTART                       ; set the restart routine for inerts   ๏ฟฝ
+;๏ฟฝ P_ADJUSTROT                        ; adjusts world rotation to child rot  ๏ฟฝ
+;๏ฟฝ                                    ; eg. P_FACEPLAYER would normally      ๏ฟฝ
+;๏ฟฝ                                    ; not work, however if followed by     ๏ฟฝ
+;๏ฟฝ                                    ; P_ADJUSTROT it will                  ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป  
-;บ                                                                           บ
-;บ Note #1: NEVER use FINDSHAPE, LINK, or FINDNEXTSHAPE with CHILD macros    บ
-;บ Note #2: P_GOTO P_NEXT, and P_LOOP AUTOMATICALLY do a P_WAIT 1            บ
-;บ Note #3: P_TRIGGER should NOT be used from within a trigger subroutine    บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป  
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ Note #1: NEVER use FINDSHAPE, LINK, or FINDNEXTSHAPE with CHILD macros    ๏ฟฝ
+;๏ฟฝ Note #2: P_GOTO P_NEXT, and P_LOOP AUTOMATICALLY do a P_WAIT 1            ๏ฟฝ
+;๏ฟฝ Note #3: P_TRIGGER should NOT be used from within a trigger subroutine    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต VALID 'VAR's ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                       บ
-;บ                                                                           บ
-;บ                worldx              ; object's x                           บ
-;บ                worldy              ; object's y                           บ
-;บ                rotx                ; object's x rotation                  บ
-;บ                roty                ; object's y rotation                  บ
-;บ                rotz                ; object's z rotation                  บ
-;บ                hp                  ; object's hp                          บ
-;บ                ap                  ; object's ap                          บ
-;บ                shape               ; object's shape                       บ
-;บ                coltab              ; object's colour table                บ
-;บ                tx                  ; tx map x coordinate (or sprite size) บ
-;บ                ty                  ; tx map y coordinate                  บ
-;บ                area                ; set to -1 for permanent existance    บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต VALID 'VAR's ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                       ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ                worldx              ; object's x                           ๏ฟฝ
+;๏ฟฝ                worldy              ; object's y                           ๏ฟฝ
+;๏ฟฝ                rotx                ; object's x rotation                  ๏ฟฝ
+;๏ฟฝ                roty                ; object's y rotation                  ๏ฟฝ
+;๏ฟฝ                rotz                ; object's z rotation                  ๏ฟฝ
+;๏ฟฝ                hp                  ; object's hp                          ๏ฟฝ
+;๏ฟฝ                ap                  ; object's ap                          ๏ฟฝ
+;๏ฟฝ                shape               ; object's shape                       ๏ฟฝ
+;๏ฟฝ                coltab              ; object's colour table                ๏ฟฝ
+;๏ฟฝ                tx                  ; tx map x coordinate (or sprite size) ๏ฟฝ
+;๏ฟฝ                ty                  ; tx map y coordinate                  ๏ฟฝ
+;๏ฟฝ                area                ; set to -1 for permanent existance    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ                                     
-;ษออออต VARS AVAILABLE FOR CHILD MACROS ฦออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                    บ
-;บ                                                                           บ
-;บ                childx              ; relative x                           บ
-;บ                childy              ; relative y                           บ
-;บ                childz              ; relative z (relative to mother)      บ
-;บ                childrotx           ; x rotation                           บ
-;บ                childroty           ; y rotation                           บ
-;บ                childrotz           ; z rotation                           บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ                                     
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต VARS AVAILABLE FOR CHILD MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ                childx              ; relative x                           ๏ฟฝ
+;๏ฟฝ                childy              ; relative y                           ๏ฟฝ
+;๏ฟฝ                childz              ; relative z (relative to mother)      ๏ฟฝ
+;๏ฟฝ                childrotx           ; x rotation                           ๏ฟฝ
+;๏ฟฝ                childroty           ; y rotation                           ๏ฟฝ
+;๏ฟฝ                childrotz           ; z rotation                           ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ                       
-;ษออออต TEMPORARY VARIABLES AVAILABLE FOR GENERAL USE ฦออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                      บ
-;บ                                                                           บ
-;บ                pbyte1              ; temporary byte #1                    บ
-;บ                pbyte2              ; temporary byte #2                    บ
-;บ                pword1              ; temporary word #1                    บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ                       
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต TEMPORARY VARIABLES AVAILABLE FOR GENERAL USE ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                      ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ                pbyte1              ; temporary byte #1                    ๏ฟฝ
+;๏ฟฝ                pbyte2              ; temporary byte #2                    ๏ฟฝ
+;๏ฟฝ                pword1              ; temporary word #1                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต CURRENT VALID WEAPONS ARE (USE WITH 'P_WEAPON') ฦออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                    บ
-;บ                                                                           บ
-;บ  SlowElaser         ; Elaser (use for ground based objects)               บ
-;บ  RelSlowElaserHome  ; Relative slow laser (homes towards player)          บ
-;บ  RelSlowElaser      ; Relative slow laser                                 บ
-;บ  hmissile1          ; Normal homing missile                               บ
-;บ  chickhmissile1     ; Chicken missile                                     บ
-;บ  missile1           ; Straight firing missile                             บ
-;บ  plasma             ; Plasma ball                                         บ
-;บ  shortplasma        ; Plasma ball (disappears quicker)                    บ
-;บ  Hplasma            ; Homing plasma ball                                  บ
-;บ  ovalbeam           ; Oval (ellipse) beam                                 บ
-;บ  ringlaser          ; Ring laser                                          บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต CURRENT VALID WEAPONS ARE (USE WITH 'P_WEAPON') ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ  SlowElaser         ; Elaser (use for ground based objects)               ๏ฟฝ
+;๏ฟฝ  RelSlowElaserHome  ; Relative slow laser (homes towards player)          ๏ฟฝ
+;๏ฟฝ  RelSlowElaser      ; Relative slow laser                                 ๏ฟฝ
+;๏ฟฝ  hmissile1          ; Normal homing missile                               ๏ฟฝ
+;๏ฟฝ  chickhmissile1     ; Chicken missile                                     ๏ฟฝ
+;๏ฟฝ  missile1           ; Straight firing missile                             ๏ฟฝ
+;๏ฟฝ  plasma             ; Plasma ball                                         ๏ฟฝ
+;๏ฟฝ  shortplasma        ; Plasma ball (disappears quicker)                    ๏ฟฝ
+;๏ฟฝ  Hplasma            ; Homing plasma ball                                  ๏ฟฝ
+;๏ฟฝ  ovalbeam           ; Oval (ellipse) beam                                 ๏ฟฝ
+;๏ฟฝ  ringlaser          ; Ring laser                                          ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต TRIGGERS ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤู                                                           บ
-;บ                                                                           บ
-;บ  Always             - calls the routine on every game frame               บ
-;บ  2,4,8,...,128      - ... once every n frames                             บ
-;บ  WhenHit            - ... if hit                                          บ
-;บ  WhenHitByPlayer    - ... if shot by player                               บ
-;บ  WhenFlagged        - ... if flag is set (clears the flag automatically)  บ
-;บ  WhenDead           - ... if hp=0 (explodes anyway, but you can spawn)    บ
-;บ  WhenShapeDead      - ... if the LINK'd or FOUND shape dies               บ
-;บ  WhenThrough        - ... if a player goes through the object             บ
-;บ                       (sets P_PLAYER n automatically)                     บ
-;บ  WhenSteppedOn      - ... if stepped on by the player (must be a slope)   บ
-;บ                       (AL_SLOPENUM specifies which polygon)               บ
-;บ                       (automatically does P_PLAYER to set which player)   บ
-;บ                                                                           บ
-;ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน
-;บ                                                                           บ
-;บ  Note: TRIGGER should not use P_WAIT, P_GOTO, P_LOOP, P_WAITxxxx          บ
-;บ  (anything which causes the next game frame to be displayed -             บ
-;บ  doing so will cause a blue BLINK |^) )                                   บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต TRIGGERS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                           ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ  Always             - calls the routine on every game frame               ๏ฟฝ
+;๏ฟฝ  2,4,8,...,128      - ... once every n frames                             ๏ฟฝ
+;๏ฟฝ  WhenHit            - ... if hit                                          ๏ฟฝ
+;๏ฟฝ  WhenHitByPlayer    - ... if shot by player                               ๏ฟฝ
+;๏ฟฝ  WhenFlagged        - ... if flag is set (clears the flag automatically)  ๏ฟฝ
+;๏ฟฝ  WhenDead           - ... if hp=0 (explodes anyway, but you can spawn)    ๏ฟฝ
+;๏ฟฝ  WhenShapeDead      - ... if the LINK'd or FOUND shape dies               ๏ฟฝ
+;๏ฟฝ  WhenThrough        - ... if a player goes through the object             ๏ฟฝ
+;๏ฟฝ                       (sets P_PLAYER n automatically)                     ๏ฟฝ
+;๏ฟฝ  WhenSteppedOn      - ... if stepped on by the player (must be a slope)   ๏ฟฝ
+;๏ฟฝ                       (AL_SLOPENUM specifies which polygon)               ๏ฟฝ
+;๏ฟฝ                       (automatically does P_PLAYER to set which player)   ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ  Note: TRIGGER should not use P_WAIT, P_GOTO, P_LOOP, P_WAITxxxx          ๏ฟฝ
+;๏ฟฝ  (anything which causes the next game frame to be displayed -             ๏ฟฝ
+;๏ฟฝ  doing so will cause a blue BLINK |^) )                                   ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต GLOBAL VARIABLES ฦอออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                   บ
-;บ                                                                           บ
-;บ Global variables are available for use by all strategies; they are        บ
-;บ completely independent of the strategy that uses them.. ie. if one        บ
-;บ strategy changes a global variable, another strategy can read or change   บ
-;บ it.  Use IMPORT to copy a global variable into an alien variable.         บ
-;บ Use EXPORT to copy an alien variable into a global variable.              บ
-;บ                                                                           บ
-;ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน
-;บ                                                                           บ
-;บ  gbyte1        = global byte 1                                            บ
-;บ  gbyte2        = global byte 2                                            บ
-;บ  gbyte3        = global byte 3                                            บ
-;บ  gword1        = global word 1                                            บ
-;บ  gword2        = global word 2                                            บ
-;บ  gword3        = global word 3                                            บ
-;บ                                                                           บ
-;ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน
-;บ                                                                           บ
-;บ Note: you can ONLY copy a byte into a byte or a word into a word,         บ
-;บ ie.  you cannot copy a byte into a word or vice versa.                    บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต GLOBAL VARIABLES ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                   ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ Global variables are available for use by all strategies; they are        ๏ฟฝ
+;๏ฟฝ completely independent of the strategy that uses them.. ie. if one        ๏ฟฝ
+;๏ฟฝ strategy changes a global variable, another strategy can read or change   ๏ฟฝ
+;๏ฟฝ it.  Use IMPORT to copy a global variable into an alien variable.         ๏ฟฝ
+;๏ฟฝ Use EXPORT to copy an alien variable into a global variable.              ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ  gbyte1        = global byte 1                                            ๏ฟฝ
+;๏ฟฝ  gbyte2        = global byte 2                                            ๏ฟฝ
+;๏ฟฝ  gbyte3        = global byte 3                                            ๏ฟฝ
+;๏ฟฝ  gword1        = global word 1                                            ๏ฟฝ
+;๏ฟฝ  gword2        = global word 2                                            ๏ฟฝ
+;๏ฟฝ  gword3        = global word 3                                            ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ Note: you can ONLY copy a byte into a byte or a word into a word,         ๏ฟฝ
+;๏ฟฝ ie.  you cannot copy a byte into a word or vice versa.                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฟ
-;ษออออต TABLES ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤู                                                             บ
-;บ                                                                           บ
-;บ The INDEX feature allows you to retrieve data from tables.  The index     บ
-;บ should be a byte alien variable, if it is a word then only the bottom     บ
-;บ 8 bits are utilised.                                                      บ
-;บ If the destination is a word then the index is automatically multiplied   บ
-;บ by 2 thus assuming you are indexing into a table of words.                บ
-;บ                                                                           บ
-;ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน
-;บ                                                                           บ
-;บ There are some default tables you can use:                                บ
-;บ                                                                           บ
-;บ   sintab - sin table (index should be 0-255, destination must be a byte)  บ
-;บ   costab - cos table (index should be 0-255, destination must be a byte)  บ
-;บ                                                                           บ
-;ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน
-;บ                                                                           บ
-;บ Example:                                                                  บ
-;บ                                                                           บ
-;บ   P_SET   pbyte1,5                                                        บ
-;บ   P_INDEX pword1,mytab,pbyte1                                             บ
-;บ   ...                                                                     บ
-;บ                                                                           บ
-;บ mytab                                                                     บ
-;บ   dw      0,500,400,300,200,400,500                                       บ
-;บ                                                                           บ
-;บ This will set pword1 = mytab+5*2 (400)                                    บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต TABLES ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                             ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ The INDEX feature allows you to retrieve data from tables.  The index     ๏ฟฝ
+;๏ฟฝ should be a byte alien variable, if it is a word then only the bottom     ๏ฟฝ
+;๏ฟฝ 8 bits are utilised.                                                      ๏ฟฝ
+;๏ฟฝ If the destination is a word then the index is automatically multiplied   ๏ฟฝ
+;๏ฟฝ by 2 thus assuming you are indexing into a table of words.                ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ There are some default tables you can use:                                ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ   sintab - sin table (index should be 0-255, destination must be a byte)  ๏ฟฝ
+;๏ฟฝ   costab - cos table (index should be 0-255, destination must be a byte)  ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ Example:                                                                  ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ   P_SET   pbyte1,5                                                        ๏ฟฝ
+;๏ฟฝ   P_INDEX pword1,mytab,pbyte1                                             ๏ฟฝ
+;๏ฟฝ   ...                                                                     ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ mytab                                                                     ๏ฟฝ
+;๏ฟฝ   dw      0,500,400,300,200,400,500                                       ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ This will set pword1 = mytab+5*2 (400)                                    ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต THE STACK ฦออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤู                                                          บ
-;บ                                                                           บ
-;บ The stack is used for DO-NEXT loops and GOSUB-RETURN subroutines.         บ
-;บ It is also used for the PUSH/PULL commands therefore there is of          บ
-;บ course some possibility of a clash.  You cannot PULL a variable           บ
-;บ from a level different to that from which it was PUSHed.                  บ
-;บ                                                                           บ
-;บ ie.  P_DO    5                                                            บ
-;บ      P_PUSH  pbyte1                                                       บ
-;บ      ...                                                                  บ
-;บ      P_PULL  pbyte1                                                       บ
-;บ      P_NEXT                                                               บ
-;บ                                                                           บ
-;บ is valid, but:                                                            บ
-;บ                                                                           บ
-;บ      P_DO    5                                                            บ
-;บ      P_PUSH  pbyte1                                                       บ
-;บ      ...                                                                  บ
-;บ      P_NEXT                                                               บ
-;บ      P_PULL  pbyte1                                                       บ
-;บ                                                                           บ
-;บ is invalid and will probably crash                                        บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต PLAYER wo CONTROL suru MACROS ฦออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                      บ
-;บ                                                                           บ
-;บ P_FORCEJUMP     	value	; player(ROBOT) wo jump saseru. (normal 5)	บ
-;บ P_FORCETRANSFORM	type	; player wo transform saseru.(ARWING,ROBOT,UFO) บ
-;บ P_PLRTRANSLOCK	P_FORCETRANSFORM no ato ni tsukau.	                บ
-;บ P_PLRTRANSLOCKOFF                                                         บ
-;บ P_INCSPWEAP	num	; special weapon no kazu wo huyasu.(max15)      บ
-;บ P_SETSPWEAP	type	; special weapon no type wo set suru.           บ
-;บ			;(pbyte2 wo tsukau!)                            บ
-;บ                           ; missile1                                      บ
-;บ                           ; dummy                                         บ
-;บ                           ; flamethrower                                  บ
-;บ                           ; smartplasma                                   บ
-;บ P_INCSPWEAP	num,addr; special weapon no kazu wo huyasu.(max15)      บ
-;บ 			(P_SETSPWEAP 1 kai set sitaato ni tsukau!       บ
-;บ                           kazu ga sudeni max ni natte itara,addr ni jump. บ
-;บ                                                                           บ
-;บ P_PLRSHIELD	frame(max255)   ; player no shield wo set suru.         บ
-;บ P_PLRTURN		on/off	; starfox1 mode on/off. on:turn dekinai         บ
-;บ P_PLRFORCETURN	roty,width				                บ
-;บ                                                                           บ
-;บ	roty 	: 1 houkou mode no muki                                 บ
-;บ	width	: idou no haba(hankei)                                  บ
-;บ                                                                           บ
-;บ P_PLRFORCEWAY	roty,width,length				        บ
-;บ                                                                           บ
-;บ	roty 	: 1 houkou mode no muki                                 บ
-;บ	width	: idou no haba(hankei)                                  บ
-;บ	length	: check suru nagasa                                     บ
-;บ P_PLRBURN pos     ;pos = L(wing),C(body),R(wing),ALL                      บ
-;บ                   ; player ga moeru.                                      บ                 บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต THE STACK ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                          ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ The stack is used for DO-NEXT loops and GOSUB-RETURN subroutines.         ๏ฟฝ
+;๏ฟฝ It is also used for the PUSH/PULL commands therefore there is of          ๏ฟฝ
+;๏ฟฝ course some possibility of a clash.  You cannot PULL a variable           ๏ฟฝ
+;๏ฟฝ from a level different to that from which it was PUSHed.                  ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ ie.  P_DO    5                                                            ๏ฟฝ
+;๏ฟฝ      P_PUSH  pbyte1                                                       ๏ฟฝ
+;๏ฟฝ      ...                                                                  ๏ฟฝ
+;๏ฟฝ      P_PULL  pbyte1                                                       ๏ฟฝ
+;๏ฟฝ      P_NEXT                                                               ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ is valid, but:                                                            ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ      P_DO    5                                                            ๏ฟฝ
+;๏ฟฝ      P_PUSH  pbyte1                                                       ๏ฟฝ
+;๏ฟฝ      ...                                                                  ๏ฟฝ
+;๏ฟฝ      P_NEXT                                                               ๏ฟฝ
+;๏ฟฝ      P_PULL  pbyte1                                                       ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ is invalid and will probably crash                                        ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต PLAYER wo CONTROL suru MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                      ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_FORCEJUMP     	value	; player(ROBOT) wo jump saseru. (normal 5)	๏ฟฝ
+;๏ฟฝ P_FORCETRANSFORM	type	; player wo transform saseru.(ARWING,ROBOT,UFO) ๏ฟฝ
+;๏ฟฝ P_PLRTRANSLOCK	P_FORCETRANSFORM no ato ni tsukau.	                ๏ฟฝ
+;๏ฟฝ P_PLRTRANSLOCKOFF                                                         ๏ฟฝ
+;๏ฟฝ P_INCSPWEAP	num	; special weapon no kazu wo huyasu.(max15)      ๏ฟฝ
+;๏ฟฝ P_SETSPWEAP	type	; special weapon no type wo set suru.           ๏ฟฝ
+;๏ฟฝ			;(pbyte2 wo tsukau!)                            ๏ฟฝ
+;๏ฟฝ                           ; missile1                                      ๏ฟฝ
+;๏ฟฝ                           ; dummy                                         ๏ฟฝ
+;๏ฟฝ                           ; flamethrower                                  ๏ฟฝ
+;๏ฟฝ                           ; smartplasma                                   ๏ฟฝ
+;๏ฟฝ P_INCSPWEAP	num,addr; special weapon no kazu wo huyasu.(max15)      ๏ฟฝ
+;๏ฟฝ 			(P_SETSPWEAP 1 kai set sitaato ni tsukau!       ๏ฟฝ
+;๏ฟฝ                           kazu ga sudeni max ni natte itara,addr ni jump. ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_PLRSHIELD	frame(max255)   ; player no shield wo set suru.         ๏ฟฝ
+;๏ฟฝ P_PLRTURN		on/off	; starfox1 mode on/off. on:turn dekinai         ๏ฟฝ
+;๏ฟฝ P_PLRFORCETURN	roty,width				                ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ	roty 	: 1 houkou mode no muki                                 ๏ฟฝ
+;๏ฟฝ	width	: idou no haba(hankei)                                  ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_PLRFORCEWAY	roty,width,length				        ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ	roty 	: 1 houkou mode no muki                                 ๏ฟฝ
+;๏ฟฝ	width	: idou no haba(hankei)                                  ๏ฟฝ
+;๏ฟฝ	length	: check suru nagasa                                     ๏ฟฝ
+;๏ฟฝ P_PLRBURN pos     ;pos = L(wing),C(body),R(wing),ALL                      ๏ฟฝ
+;๏ฟฝ                   ; player ga moeru.                                      ๏ฟฝ                 ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต PLAYER no WEAPON no MACROS ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                       บ
-;บ P_FINDENEMYSHAPE    maxradius,range,addr; find enemy shape                              บ
-;บ P_OBJINCONE          range,addr         ; is "objct(al_ptr)" within -range๘<->range๘?   บ
-;บ                                                                                         บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต PLAYER no WEAPON no MACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                       ๏ฟฝ
+;๏ฟฝ P_FINDENEMYSHAPE    maxradius,range,addr; find enemy shape                              ๏ฟฝ
+;๏ฟฝ P_OBJINCONE          range,addr         ; is "objct(al_ptr)" within -range๏ฟฝ<->range๏ฟฝ?   ๏ฟฝ
+;๏ฟฝ                                                                                         ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต EFFECT MACRO ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤ ฤฤฤู                                                       บ
-;บ                                                                           บ
-;บ P_HITFLASHTRIG		; set hitflash flag                             บ
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต CAMERA MACRO ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                         บ
-;บ                                                                             บ
-;บ P_SHOCKCAM	1or2,value	; camera wo sindou saseru.value=128 kurai.บ
-;บ P_SHOCKCAM	1or2,value	; camera wo sindou saseru.value=128 kurai.บ
-;บ                                                                             บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต ENEMY MARKER MACRO ฦอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                                                                       บ
-;บ                                                                                                 บ
-;บ  P_SETMARKER	1or2,offdist	; enemy marker wo set suru.                                   บ
-;บ  P_ROBOTCAMYOFS   offset(16bit)   ; robot no view no offset. (-) de ue wo muki                  บ
-;บ                                                                                                 บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-;     ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
-;ษออออต PLAYER no STATUS wo check suruMACROS ฦอออออออออออออออออออออออออออออออป
-;บ    ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู                               บ
-;บ                                                                           บ
-;บ P_IFARWING     	addr	; if player is arwing  then goto addr           บ
-;บ P_IFROBOT     	addr	; if player is robot   then goto addr           บ
-;บ P_IFUFO     		addr	; if player is ufo     then goto addr   บ
-;บ P_IFPLAYERFULLHP 	addr	; if player's HP = max then goto addr           บ
-;บ P_IFPILOT		name(FOX,FALCO....),addr	;if pilot = pilot then jmp addr
-;บ P_NOTPILOT	name,addr			;if pilot != pilot then jmp addr
-;บ P_IFPLAYERBOOST   addr    ; if player using "boost" then goto addr
-;บ P_IFPLAYERBRAKE   addr    ; if player using "brake" then goto addr
-;บ                                                                           บ
-;ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต EFFECT MACRO ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                       ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_HITFLASHTRIG		; set hitflash flag                             ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต CAMERA MACRO ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                         ๏ฟฝ
+;๏ฟฝ                                                                             ๏ฟฝ
+;๏ฟฝ P_SHOCKCAM	1or2,value	; camera wo sindou saseru.value=128 kurai.๏ฟฝ
+;๏ฟฝ P_SHOCKCAM	1or2,value	; camera wo sindou saseru.value=128 kurai.๏ฟฝ
+;๏ฟฝ                                                                             ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต ENEMY MARKER MACRO ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                                                                       ๏ฟฝ
+;๏ฟฝ                                                                                                 ๏ฟฝ
+;๏ฟฝ  P_SETMARKER	1or2,offdist	; enemy marker wo set suru.                                   ๏ฟฝ
+;๏ฟฝ  P_ROBOTCAMYOFS   offset(16bit)   ; robot no view no offset. (-) de ue wo muki                  ๏ฟฝ
+;๏ฟฝ                                                                                                 ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
+;     ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝฤฟ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอต PLAYER no STATUS wo check suruMACROS ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;๏ฟฝ    ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ                               ๏ฟฝ
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ P_IFARWING     	addr	; if player is arwing  then goto addr           ๏ฟฝ
+;๏ฟฝ P_IFROBOT     	addr	; if player is robot   then goto addr           ๏ฟฝ
+;๏ฟฝ P_IFUFO     		addr	; if player is ufo     then goto addr   ๏ฟฝ
+;๏ฟฝ P_IFPLAYERFULLHP 	addr	; if player's HP = max then goto addr           ๏ฟฝ
+;๏ฟฝ P_IFPILOT		name(FOX,FALCO....),addr	;if pilot = pilot then jmp addr
+;๏ฟฝ P_NOTPILOT	name,addr			;if pilot != pilot then jmp addr
+;๏ฟฝ P_IFPLAYERBOOST   addr    ; if player using "boost" then goto addr
+;๏ฟฝ P_IFPLAYERBRAKE   addr    ; if player using "brake" then goto addr
+;๏ฟฝ                                                                           ๏ฟฝ
+;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 
 
 
@@ -705,7 +705,7 @@ pathmac_end	MACRO
 
 	FCLOSE
 
-	FOPEN	pathinfo.asm
+	FOPEN	ASM\pathinfo.asm
 	printf	"; ------------ PATH MACRO INFORMATION ------------%n"
 	FCLOSE
 
@@ -717,7 +717,7 @@ pathmac_start	MACRO
 	STRING	pathmacname="%c"
 	run	" IFND pathmac_%$pathmacname"
 
-	FOPEN	+pathinfo.asm
+	FOPEN	+ASM\pathinfo.asm
 
 	printf	" printf %q[20]%$pathmacname: %q,pathmac_%$pathmacname,%q %q,pathmacmem_%$pathmacname,%q%%n%q%n"
 	

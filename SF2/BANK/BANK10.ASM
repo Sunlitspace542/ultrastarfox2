@@ -7,9 +7,9 @@
 
 	bank	10
 
-	incfile	ASM\pathkern.asm
-	incfile	friends.asm
-	incfile	slopedef.asm
+	incfile	PATH\pathkern.asm
+	incfile	ASM\friends.asm
+	incfile	ASM\slopedef.asm
 
  	bankend	10
 

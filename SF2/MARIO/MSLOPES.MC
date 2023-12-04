@@ -15,8 +15,6 @@
 ;**                        m_sprb
 ;**
 ;**********************************************************
-; This file MUST be in the root of the SF2 directory for some reason, or the assembler freaks out. 
-; TODO: find out why
 
 rsp	equr	10
 

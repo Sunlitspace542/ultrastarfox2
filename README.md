@@ -61,8 +61,10 @@ ultrastarfox2
 │   ├── MARIO: .MC SuperFX Code files
 │   ├── MSG: Message files for English and Japanese
 │   ├── MSPRITES: contains 7 BIN files (interleaved textures)
+│   ├── PATH: contains all PATH language code
 │   ├── SHAPES: contains all shape files
-│   └── SOUND: sound/music data
+│   ├── SOUND: sound/music data
+│   └── STRAT: Code for Strategies (Object behaviors)
 ├── TOOLS: tools such as packer and ShapeEd
 ├── DOCS: .md format text files covering various aspects of SF2
 ├── OPTIONALSTUFF: optional graphics files

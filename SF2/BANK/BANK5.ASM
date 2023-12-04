@@ -12,7 +12,7 @@
 
 
 real_istrats =	0
-	include	ASM\istrats.asm
+	include	STRAT\istrats.asm
 
 
 ;------------------------------------------------------------------

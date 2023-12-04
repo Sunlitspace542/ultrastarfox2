@@ -4,7 +4,7 @@
 	include	INC\shmacs.inc
 ;------------------------------------------------------------------
 	bank	6
-	incfile	ASM\tstrats.asm
+	incfile	STRAT\tstrats.asm
 	incfile	INC\players.inc
 	incfile	ASM\player.asm
 	incfile	ASM\kplayer.asm

@@ -15,7 +15,7 @@
 ;�  Modification list:                                                    �
 ;�                                                                        �
 ;������������������������������������������������������������������������ͼ
-
+	incpub	paths
 
 pathinfo	=	0	; output path information?
 
@@ -32,10 +32,10 @@ pathbank	equ	((*>>16)/2+$40)
 
 paths	=	*&$ff8000
 
-	incfile	pathdata.asm
+	incfile	PATH\pathdata.asm
 
 dpaths
-	incfile	dpathdat.asm
+	incfile	PATH\dpathdat.asm
 
 ;	printf	numpaths," paths in ",*-paths," bytes.%n"
 

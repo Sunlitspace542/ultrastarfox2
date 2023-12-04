@@ -1,1 +1,0 @@
-; ------------ PATH MACRO INFORMATION ------------

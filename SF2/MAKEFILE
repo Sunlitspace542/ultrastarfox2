@@ -14,6 +14,7 @@ include symson.mak
 LINK=arglink
 LOPTS=-b30 -h1024
 EXTEND=EXTEND
+EXTOPS= 16 ff
 CHECK=SFCHECK
 COPTS=-s -f
 ANSI=
@@ -33,7 +34,7 @@ finished.sg: $(ALLFILES)
 
 sf.rom: $(ALLFILES)
 	@$(LINK) $(LOPTS) -osf.rom @flist
-    @$(EXTEND) sf.rom
+    @$(EXTEND) sf.rom $(EXTOPS)
 	@$(CHECK) $(COPTS) sf.rom
 
 info: $(ALLFILES)
@@ -48,13 +49,12 @@ remote: $(ALLFILES)
 bank0.sob: BANK\bank0.asm $(STRATFILES) \
 $(STDFILES) ASM\blink.asm data\etabs.dat ASM\sgtabs.asm \
 data\nintendo.pal FONT\font_1.bin MSG\japanese.msg \
-MSG\english.msg ASM\sgdata.asm ASM\istrats.asm \
+MSG\english.msg ASM\sgdata.asm STRAT\istrats.asm \
 SHAPES\ushapes.asm SHAPES\pshapes.asm SHAPES\pshapes2.asm SHAPES\pshapes3.asm SHAPES\shapes.asm \
 SHAPES\shapes2.asm SHAPES\bshapes.asm SHAPES\wshapes.asm SHAPES\eshapes.asm \
 SHAPES\eshapes2.asm FONT\mmj.bin FONT\mme.bin ASM\techdata.asm
 
 ## Bank 1
-## MSLOPES HAS TO BE IN THE ROOT OF THE SF2 DIRECTORY
 bank1.sob: BANK\bank1.asm INC\shmacs.inc INC\gamemsgs.inc \
 $(STDFILES) MARIO\mmacs.mc MARIO\mshtab.mc MARIO\mmaths.mc MARIO\mwrot.mc \
 MARIO\mwcrot.mc MARIO\mobj.mc MARIO\mclip.mc MARIO\mtxtclp.mc \
@@ -65,18 +65,18 @@ MARIO\mbumwipe.mc MARIO\mhud.mc MARIO\mhofs.mc MARIO\mdebug.mc \
 MARIO\mplanclp.mc MARIO\mboxes.mc \
 data\moji_d.fon data\moji_d.trn ASM\gametext.asm ASM\fontdata.asm \
 ASM\defspr.asm data\p_col.col ASM\coltab.asm \
-ASM\light.asm ASM\coltabs.asm mslopes.mc
+ASM\light.asm ASM\coltabs.asm MARIO\mslopes.mc
 
 
 ## Bank 2, 3
 bank2.sob: BANK\bank2.asm INC\bgmacs.inc $(STRATFILES) INC\olsmacs.inc INC\mapmacs.inc INC\mapstruc.inc INC\sound.inc INC\sound2.inc INC\gamelist.inc\
 $(STDFILES) ASM\irq.asm ASM\showview.asm ASM\hdmatabs.asm \
 ASM\mem.asm ASM\ramsrou.asm ASM\colboxes.asm ASM\coldet.asm \
-ASM\ramspr.asm ASM\mmtbl.asm ASM\soslist.asm ASM\kramcalc.asm ramsound.asm \
+ASM\ramspr.asm ASM\mmtbl.asm ASM\soslist.asm ASM\kramcalc.asm ASM\ramsound.asm \
 INC\yajima.inc ASM\yjradar.asm ASM\raster.asm ASM\rammes.asm \
 ASM\ramstuff.asm ASM\trans.asm ASM\main.asm ASM\game.asm \
-ASM\obj.asm ASM\planets.asm ASM\world.asm ASM\sysstrat.asm \
-ASM\stratrou.asm ASM\nmi.asm ASM\screen.asm ASM\intro.asm \
+ASM\obj.asm ASM\planets.asm ASM\world.asm STRAT\sysstrat.asm \
+STRAT\stratrou.asm ASM\nmi.asm ASM\screen.asm ASM\intro.asm \
 ASM\bgs.asm ASM\windows.asm ASM\sndtbl.asm ASM\sound.asm ASM\draw.asm \
 ASM\mapscr.asm ASM\debug.asm ASM\bootnmi.asm ASM\kcalc.asm \
 ASM\titlesub.asm
@@ -89,7 +89,7 @@ ASM\mismap.asm ASM\mismapsub.asm ASM\rammismap.asm ASM\mapanime.asm \
 ASM\config.asm ASM\title.asm
 
 ## Bank 5, bank 13
-bank5.sob: BANK\bank5.asm INC\olsmacs.inc INC\mapmacs.inc ASM\istrats.asm \
+bank5.sob: BANK\bank5.asm INC\olsmacs.inc INC\mapmacs.inc STRAT\istrats.asm \
 $(STDFILES) maps\MAPP.asm maps\titlemap.asm maps\mis\exp1.asm \
 maps\mis\stg1.asm maps\mis\stg2.asm maps\mis\stg3.asm maps\mis\stg4.asm \
 maps\mis\stg5.asm maps\mis\stg6.asm maps\mis\ext1.asm maps\mis\ext2.asm \
@@ -105,26 +105,26 @@ maps\mis\test.asm
 ## Bank 6
 bank6.sob: BANK\bank6.asm \
 $(STDFILES) $(STRATFILES) INC\players.inc ASM\player.asm \
-ASM\tstrats.asm ASM\tplayer.asm ASM\kplayer.asm ASM\gakki.asm ASM\egdata.asm 
+STRAT\tstrats.asm ASM\tplayer.asm ASM\kplayer.asm ASM\gakki.asm ASM\egdata.asm 
 
 ## Bank 7
 bank7.sob: BANK\bank7.asm \
 $(STDFILES) $(STRATFILES) INC\players.inc ASM\views.asm \
 ASM\curdat.asm ASM\display.asm ASM\voffset.asm \
-ASM\xplayer.asm ASM\dstrats.asm ASM\kstrats.asm 
+ASM\xplayer.asm STRAT\dstrats.asm STRAT\kstrats.asm 
 
 ## Bank 8
 bank8.sob: BANK\bank8.asm INC\pathmacs.inc \
-$(STDFILES) $(STRATFILES) pathdata.asm dpathdat.asm \
-ASM\tpathdat.asm ASM\paths.asm ASM\kpathdat.asm bpathdat.asm ASM\ppathdat.asm ASM\gpathdat.asm \
-ASM\paths2.asm ASM\slopes.asm ASM\mapcode.asm ASM\weapons.asm \
-ASM\chart.asm fonts.asm data\arctan.asm \
+$(STDFILES) $(STRATFILES) PATH\pathdata.asm PATH\dpathdat.asm \
+PATH\tpathdat.asm PATH\paths.asm PATH\kpathdat.asm PATH\bpathdat.asm PATH\ppathdat.asm PATH\gpathdat.asm \
+PATH\paths2.asm ASM\slopes.asm ASM\mapcode.asm ASM\weapons.asm \
+ASM\chart.asm ASM\fonts.asm data\arctan.asm \
 ASM\result.asm
 
 ## Bank 10
 bank10.sob: BANK\bank10.asm \
 $(STDFILES) $(STRATFILES) \
-ASM\pathkern.asm friends.asm slopedef.asm
+PATH\pathkern.asm ASM\friends.asm ASM\slopedef.asm
 
 ## Bank 11
 bank11.sob: BANK\bank11.asm \
@@ -136,7 +136,7 @@ ASM\wipedoor.asm ASM\wipeconf.asm ASM\wipegame.asm ASM\wipepsel.asm \
 ASM\wipemap.asm ASM\wipebsel.asm ASM\wipebatt.asm ASM\wipe.asm ASM\wipebeam.asm\
 ASM\missobj.asm ASM\gameover.asm ASM\continue.asm ASM\gameobj.asm \
 ASM\wipetitl.asm \
-ASM\yjdebug.asm ASM\hell.asm yjmap.asm ASM\pselect.asm \
+ASM\yjdebug.asm ASM\hell.asm ASM\yjmap.asm ASM\pselect.asm \
 ASM\clear.asm ASM\pausemap.asm \
 INC\yajima.inc ASM\mapexp.asm ASM\oamset.asm ASM\pselect2.asm ASM\titleobj.asm \
 ASM\bestscore.asm ASM\nameset.asm ASM\mesdata.asm

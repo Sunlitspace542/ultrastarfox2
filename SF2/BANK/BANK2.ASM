@@ -41,8 +41,8 @@ planetdmapos2	dw	100
 	incfile	ASM\obj.asm
 	incfile	ASM\planets.asm
 	incfile	ASM\world.asm
-	incfile	ASM\sysstrat.asm
-	incfile	ASM\stratrou.asm
+	incfile	STRAT\sysstrat.asm
+	incfile	STRAT\stratrou.asm
 	incfile	ASM\nmi.asm
 
 	incfile	ASM\screen.asm

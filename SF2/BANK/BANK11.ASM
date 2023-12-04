@@ -37,7 +37,7 @@ this_bank	=	*&$ff0000
 	incfile	ASM\wipe.asm
 
 	incfile	ASM\missobj.asm
-	incfile	yjmap.asm
+	incfile	ASM\yjmap.asm
 	incfile	ASM\mapexp.asm
 	incfile ASM\gameobj.asm
 	incfile ASM\hell.asm

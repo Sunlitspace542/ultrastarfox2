@@ -1,13 +1,11 @@
-	global	MWHICHSIDE
-	global	MWITHINPOLY
-	global	MROTATEPOINT
-	global	MSCALEXZ_A
-	global	MCLOSESTLINE
-	global	MSCALEXZ_S
-	global	MREVEC
-	global	MDIVIDEVECS
-	global	MSLOPEHEIGHT
-	global	MSLOPEBOUNCE
-	global	MVECLEN
-
-
+	global	mwhichside
+	global	MWithinPoly
+	global	MRotatePoint
+	global	mscalexz_a
+	global	MClosestLine
+	global	mscalexz_s
+	global	mrevec
+	global	mdividevecs
+	global	mslopeheight
+	global	mslopebounce
+	global	mveclen

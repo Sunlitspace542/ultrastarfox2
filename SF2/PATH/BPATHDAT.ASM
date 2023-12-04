@@ -1,26 +1,28 @@
-;���������������������������͵  StarFox II ������������������������������ͻ
-;�                           ���������������                              �
-;�  Copyright Argonaut Software Limited, 1993.                            �
-;�  All Rights Reserved.                                                  �
-;������������������������������������������������������������������������Ķ
-;�  Filename:     BPATHDAT.ASM                                            �
-;������������������������������������������������������������������������Ķ
-;�  Description:  Boss programs (written in the PATH language)            �
-;������������������������������������������������������������������������Ķ
-;�  Date:         29/8/94                                                 �
-;������������������������������������������������������������������������Ķ
-;�  Author:       Dylan Cuthbert                                          �
-;������������������������������������������������������������������������Ķ
-;�  Modification list:                                                    �
-;�    BOSS DODORA                                                         �
-;�    BOSS PIERROT                                                        �
-;�    BOSS CRUSHER                                                        �
-;�    BOSS DRAGON                                                         �
-;�    BOSS TANK                                                           �
-;�    BOSS RUNNER                                                         �
-;�    BOSS ANDORF                                                         �
-;�                                                                        �
-;������������������������������������������������������������������������ͼ
+;############################  StarFox II #################################
+;#                           ###############                              #
+;#  Copyright Argonaut Software Limited, 1993.                            #
+;#  All Rights Reserved.                                                  #
+;##########################################################################
+;#  Filename:     BPATHDAT.ASM                                            #
+;##########################################################################
+;#  Description:  Boss programs (written in the PATH language)            #
+;##########################################################################
+;#  Date:         29/8/94                                                 #
+;##########################################################################
+;#  Author:       Dylan Cuthbert                                          #
+;##########################################################################
+;#  Modification list:                                                    #
+;#    BOSS DODORA                                                         #
+;#    BOSS PIERROT                                                        #
+;#    BOSS CRUSHER                                                        #
+;#    BOSS DRAGON                                                         #
+;#    BOSS TANK                                                           #
+;#    BOSS RUNNER                                                         #
+;#    BOSS ANDORF                                                         #
+;#                                                                        #
+;##########################################################################
+;***** EXTERN *****
+	incpub	bpathdat
 
 	IFEQ	PAL
 
@@ -9771,17 +9773,3 @@ bm_in
 .wolf
 	P_PULL		pbyte1
 	P_RETURN
-
-
-; ls -l /usr/include/linux
-; head /usr/include/linux/version.h
-; #define UTS_RELEASE "1.2.3"
-
-
-;	REPT	50
-;	db	0
-;	ENDR
-
-;	printf	"%nDUMMY 50 bytes reserved for Dylan%n"
-;	printf	"mae mitai ni komaranai you ni%n%n"
-

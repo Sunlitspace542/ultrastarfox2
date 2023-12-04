@@ -1,3 +1,5 @@
+	incpub	fonts
+
 smallfont
 	incbinfile	FONT\font_1.bin
 largefont

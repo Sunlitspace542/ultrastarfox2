@@ -11,8 +11,8 @@
 	incfile	ASM\display.asm
 	incfile	ASM\voffset.asm
 	incfile	ASM\xplayer.asm
-	incfile	ASM\dstrats.asm
-	incfile	ASM\kstrats.asm
+	incfile	STRAT\dstrats.asm
+	incfile	STRAT\kstrats.asm
 
 	bankend	7
 
