@@ -1239,13 +1239,25 @@ COSMO_ARWING_CTL_l
 ;	pl_trans	x,ARMER,transArwing2Robo
 ;	ENDC
 
-	testjoypad	select,ptrig
-	beq		.nobeep
+; Check to see if the player is trying to transform in space
+	testjoypad	select,ptrig ; check if select pressed
+	IFEQ	spaceviewchange ; Start conditional: if spaceviewchange = 0
+	beq		.nobeep ; If select not pressed, do nothing
 
-	ksound	trans_unable
+	ksound	trans_unable ; If select pressed, play buzzer sound (RIP UFO)
 
-.nobeep
-	PULLYP
+.nobeep ; If select not pressed
+	PULLYP ; Pull Y and Processor Status registers
+	ELSEIF ; If spaceviewchange != 0
+	beq	.dontchangeview ; If select not pressed, do nothing
+	ksound	viewchange ; Play view change sound
+	c_cockpitmode_change ; Change view mode
+
+
+.dontchangeview ; If select not pressed
+	PULLYP ; Pull Y and Processor Status registers
+
+	ENDC ; End Conditional
 
 	rtl
 

@@ -20,6 +20,7 @@ forcenormalandross	equ 0	; Force hard mode Andross on all difficulties
 forcehardandross	equ 0	; Force expert mode Andross on all difficulties
 expertbydefault		equ 0	; enable expert mode by default
 walkertwirl			equ 0	; enable walker twirl from WCES 1995 (note: egdata is now in bank 36)
+spaceviewchange		equ	0	; enable changing view in space like in the Aeon Genesis English Translation
 
 nosecuritychk		equ	0	; disable region/controller port checks on boot
 
@@ -68,11 +69,11 @@ user_yajima		equ	8
 
 	run	"user equ user_%$username"
 
-;  ########################
-;  #                     ##
-;  # Version Definitions ##
-;  #                     ##
-;  ########################
+;  #######################
+;  #                     #
+;  # Version Definitions #
+;  #                     #
+;  #######################
 
 	STRING	version[80]
 
@@ -144,12 +145,11 @@ user_yajima		equ	8
 
 
 
-;  ####################     
+;  ##################### 
 ;  #                   #
-;  # Angle Definitions ##
-;  #                   ##
+;  # Angle Definitions #
+;  #                   #
 ;  #####################
-;   #####################
 
 deg360	equ	256
 deg180	equ	deg360/2
@@ -175,12 +175,11 @@ deg216	equ	(deg360*3)/5
 deg288	equ	(deg360*4)/5
 
 
-;  ##################
-;  #                 #
-;  # Processor Flags ##
-;  #                 ##
 ;  ###################
-;   ###################
+;  #                 #
+;  # Processor Flags #
+;  #                 #
+;  ###################
 
 p_n	equ	10000000b
 p_v	equ	01000000b
@@ -193,12 +192,11 @@ p_c	equ	00000001b
 
 
 
-;  ################
-;  #               #
-;  # Key Pad Codes ##
-;  #               ##
 ;  #################
-;   #################
+;  #               #
+;  # Key Pad Codes #
+;  #               #
+;  #################
 
 pad_B	equ	1<<15
 pad_Y	equ	1<<14
@@ -227,12 +225,11 @@ padl_TLEFT	equ	pad_TLEFT
 padl_TRIGHT	equ	pad_TRIGHT
 
 
-;  ############################
-;  #                           #
-;  # Miscellaneous Definitions ##
-;  #                           ##
 ;  #############################
-;   #############################
+;  #                           #
+;  # Miscellaneous Definitions #
+;  #                           #
+;  #############################
 
 NULL	equ	0
 TRUE	equ	-1
@@ -293,12 +290,11 @@ tdcol_LIGHTGREY =	13
 tdcol_WHITE	=	14
 tdcol_GREEN	=	15
 
-;  #################################
-;  #                                #
-;  # Equates For training screen    ##
-;  #                                ##
 ;  ##################################
-;   ##################################
+;  #                                #
+;  # Equates For training screen    #
+;  #                                #
+;  ##################################
 
 bitmapwidth_tr	equ	22
 bitmapheight_tr	equ	24
@@ -307,12 +303,11 @@ bitmapvheight_tr	equ	12
 player1_wx_tr	equ	2	; x position of player 1's window
 player1_wy_tr	equ	2	; x position of player 1's window
 
-;  #################################
-;  #                                #
-;  # Equates For 3d glasses Bitmaps ##
-;  #                                ##
 ;  ##################################
-;   ##################################
+;  #                                #
+;  # Equates For 3d glasses Bitmaps #
+;  #                                #
+;  ##################################
 
 bitmapwidth_3d	equ	22
 bitmapheight_3d	equ	16
@@ -321,12 +316,11 @@ bitmapvheight_3d	equ	16
 player1_wx_3d	equ	5	; x position of player 1's window
 player1_wy_3d	equ	2	; x position of player 1's window
 
-;  #################################
-;  #                                #
-;  # Equates For One Player Bitmaps ##
-;  #                                ##
 ;  ##################################
-;   ##################################
+;  #                                #
+;  # Equates For One Player Bitmaps #
+;  #                                #
+;  ##################################
 
 bitmapwidth_1	equ	28
 bitmapheight_1	equ	24
@@ -346,12 +340,11 @@ player1_wy_1		equ	2	; x position of player 1's window
 player1_wx_1c	equ	2	; x position of player 1's window
 player1_wy_1c	equ	2	; x position of player 1's window
 
-;  #################################
-;  #                                #
-;  # Equates For Two Player Bitmaps ##
-;  #                                ##
 ;  ##################################
-;   ##################################
+;  #                                #
+;  # Equates For Two Player Bitmaps #
+;  #                                #
+;  ##################################
 
 bitmapwidth	equ	22
 bitmapheight	equ	16
@@ -372,12 +365,11 @@ player2_wy	equ	player1_wy+bitmapvheight+1	; x position of player 2's window
 
 
 
-;  ####################################
-;  #                                   #
-;  # VRAM Layout For Two Player Screen ##
-;  #                                   ##
 ;  #####################################
-;   #####################################
+;  #                                   #
+;  # VRAM Layout For Two Player Screen #
+;  #                                   #
+;  #####################################
 
 _bg1_cgx1	equ	(0*k)/2
 _bg1_cgx2	equ	(24*k)/2
@@ -411,12 +403,11 @@ bg2_cgx_len	equ	8*k
 bg2_scr_len	equ	4*k
 
 
-;  ####################################
-;  #                                   #
-;  # Base Addresses For RAM Allocation ##
-;  #                                   ##
 ;  #####################################
-;   #####################################
+;  #                                   #
+;  # Base Addresses For RAM Allocation #
+;  #                                   #
+;  #####################################
 
 zmempt	=	0	;zero page
 wmempt	=	$300	;work space
@@ -427,12 +418,11 @@ mmempt	=	$700200
 
 
 
-;  #######################
-;  #                      #
-;  # Game Limit Variables ##
-;  #                      ##
 ;  ########################
-;   ########################
+;  #                      #
+;  # Game Limit Variables #
+;  #                      #
+;  ########################
 
 number_al	equ	60	;52		;Max aliens
 number_zb	equ	number_al	;Max z srot blocks
@@ -473,24 +463,23 @@ HF6	equ	1<<5
 HF7	equ	1<<6
 HF8	equ	1<<7
 
-;  #######################
-;  #                      #
-;  # Decruncher Variables ##
-;  #                      ##
 ;  ########################
-;   ########################
+;  #                      #
+;  # Decruncher Variables #
+;  #                      #
+;  ########################
 
 dec_base	equ	bitmap1-1200	;2800h
 palettes_base equ	dec_base+13000
 
 
 
-;  #######################
-;  #                      #
-;  # BG variables         ##
-;  #                      ##
 ;  ########################
-;   ########################
+;  #                      #
+;  # BG variables         #
+;  #                      #
+;  ########################
+
 
 
 scr_offset	equ	0	;(vchr_logback-vchr_physback)/16
@@ -509,12 +498,11 @@ if_pollen	equ	64
 ;---------------------------------------------------------------
 
 
-;  #######################
-;  #                      #
-;  # Clipping planes      ##
-;  #                      ##
 ;  ########################
-;   ########################
+;  #                      #
+;  # Clipping planes      #
+;  #                      #
+;  ########################
 
 
 plane_OFF	equ	0
