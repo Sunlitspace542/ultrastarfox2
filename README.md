@@ -1,14 +1,16 @@
 # UltraStarFox2
-Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use.
+Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use.  
 
 ## Notes
 - **This codebase is difficult to work with.**  
-- In the source code, the Normal, Hard and Expert difficulties are referred to as Easy, Normal, and Hard.
-- A lot of source files use the DOS (CP437) encoding.
+- In the source code, the Normal, Hard and Expert difficulties are referred to as Easy, Normal, and Hard.  
+- A lot of source files use the DOS (CP437) encoding.  
+- The assembler will fail to assemble files with Unix (LF) line endings. Make sure your editor is configured for DOS/Windows (CRLF) line endings.  
 
 ## Features
 - PAL version support, change ``pal`` to 1 in ``VARS.INC`` (StarWing 2 Logo by Josete2k, edited by Sunlitspace542)  
-- Kando was involved
+- File structure reorganized to make the codebase somewhat easier to work with    
+- Kando was involved  
 
 ## Building on Windows
 
@@ -57,15 +59,15 @@ ultrastarfox2
 │   ├── FONT: .bin font files
 │   ├── INC: .inc files, arc tangent table
 │   ├── MAPS: map scripts
-│   ├── MARIO: .MC SuperFX Code files
+│   ├── MARIO: .MC MARIO chip (SuperFX) code 
 │   ├── MSG: Message files for English and Japanese
 │   ├── MSPRITES: contains 7 BIN files (interleaved textures)
 │   ├── PATH: contains all PATH language code
 │   ├── SHAPES: contains all shape files
 │   ├── SOUND: sound/music data
 │   └── STRAT: Code for Strategies (Object behaviors)
-├── TOOLS: tools such as packer and ShapeEd
-├── DOCS: .md format text files covering various aspects of SF2
+├── TOOLS: tools such as PACKER and SHAPED
+├── DOCS: .md format text files covering various aspects of Star Fox 2
 ├── OPTIONALSTUFF: optional graphics files
 └── OTHER: Files for building MSPRITES /bin files
 ```
