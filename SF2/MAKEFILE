@@ -77,7 +77,7 @@ allcols:
 	@cd ..\..
 
 # FXGFX files to be interleaved
-msprites: spt_01.bin spt_23.bin spt_45.bin spt_23a.bin spt_45a.bin spt_45p.bin
+msprites: spt_01.bin spt_23.bin spt_45.bin spt_23a.bin spt_45a.bin spt_23p.bin spt_45p.bin
 
 # MSPRITES .BIN recipes
 spt_01.bin:
@@ -94,6 +94,9 @@ spt_23a.bin:
 
 spt_45a.bin:
 	@$(MERGE) MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX MSPRITES\$@ $(MOPTS)
+
+spt_23p.bin:
+	@$(MERGE) MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX MSPRITES\$@ $(MOPTS)
 
 spt_45p.bin:
 	@$(MERGE) MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX MSPRITES\$@ $(MOPTS)
