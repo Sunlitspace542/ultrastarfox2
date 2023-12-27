@@ -29,7 +29,7 @@
 	incfile	ASM\fonts.asm
 	incfile	ASM\result.asm
 
-	incfile	data\arctan.asm
+	incfile	INC\arctan.inc
 
 	bankend	13
 
