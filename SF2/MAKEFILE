@@ -128,7 +128,7 @@ clean:
 	@del DATA\COL\*.TMP
 	@del DATA\*.CCR
 	@del DATA\*.PCR
-	@del msgs.txt
+	@del techdata.txt
 	@del sf2.sfc
 	@del symbols.txt
 	@del ..\BUILD.LOG
