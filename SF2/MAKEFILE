@@ -110,7 +110,7 @@ sf2.sfc: $(ALLFILES)
 # Actions to perform when assembly is completed
 donebld:
 	@copy sf2.sfc ..\sf2.sfc
-	@del *.rom
+	@del sf2.sfc
 	@del BANK\*.sob
 	@del msgtable.tmp
 	@del alvars.txt

@@ -45,9 +45,6 @@ mrndtab
 ;	endr
 
 
-Intro256Pal
-	incbinfile	data\nintendo.pal
-
 ;************************************************
 
 ddbw	macro
