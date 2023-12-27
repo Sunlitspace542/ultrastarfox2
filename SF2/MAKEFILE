@@ -131,7 +131,7 @@ clean:
 	@del msgs.txt
 	@del sf2.sfc
 	@del symbols.txt
-	@del ..\*.LOG
+	@del ..\BUILD.LOG
 
 ## Files to assemble
 bank0.sob: \
