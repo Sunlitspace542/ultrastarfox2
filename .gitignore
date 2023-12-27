@@ -7,6 +7,20 @@
 *.smc
 *.SFC
 *.SMC
+*.ram
+
+#MSU stuff
+*.msu
+*.pcm
+
+#ZIPs
+*.7z
+*.zip
+*.rar
+
+#backups
+*.bak
+*.BAK
 
 # build logs
 *.LOG
@@ -18,3 +32,8 @@
 */SF2/*.txt
 *.TXT
 
+# Files generated during assembly
+*.CCR
+*.PCR
+SF/DATA/COL/*.PAC
+SF/DATA/COL/ALLCOLS.COL
