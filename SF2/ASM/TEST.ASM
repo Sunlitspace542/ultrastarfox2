@@ -1,4 +1,4 @@
 	org 0,0
 
-	incbin	sf.rom
+	incbin	sf2.sfc
 

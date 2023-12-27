@@ -1,6 +1,6 @@
 /*romExtender V2*/
 /*Usage example: 
-romExtender SF.ROM 16 FF*/
+romExtender sf2.sfc 16 FF*/
 
 #include <stdio.h>
 #include <stdlib.h>

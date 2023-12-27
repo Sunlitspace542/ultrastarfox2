@@ -2,53 +2,176 @@
 # Star Fox 2 Makefile #
 #######################
 
+# Assembler
 ASM=ARGSFXX
 ASMFLAGS=-efilelist=0 -xsymbols.txt
+
+# Linker
 LINK=arglink
 LOPTS=-b30 -h1024
+
+# ROM Extender
 EXTEND=EXTEND
+# Extended size in Mbits, byte to pad with
 EXTOPS= 16 ff
+
+# Checksum Fixer
 CHECK=SFCHECK
 COPTS=-s -f
 
+# FXGFX Interleaver
+MERGE=MERGE
+MOPTS= /cgx
+
+# Graphics Cruncher
+CRU=CRU
+
+#!! If you add/remove a cgx in these two lists, make sure to add/remove the corresponding file.
+
+# Crunched tilesets
+CGXFILES= DATA\A0.ccr DATA\A14.ccr DATA\A5.ccr DATA\B0_A.ccr DATA\B14.ccr DATA\B16_P.ccr \
+ DATA\B7.ccr DATA\BG-1.ccr DATA\E2_A.ccr DATA\E5_A.ccr DATA\E8_A.ccr DATA\E9_A_95.ccr DATA\W1.ccr \
+ DATA\A1.ccr DATA\A15.ccr DATA\A6.ccr DATA\B1.ccr DATA\B14_A.ccr DATA\B1_A.ccr DATA\B7_A.ccr \
+ DATA\E0.ccr DATA\E3.ccr DATA\E6.ccr DATA\E9_17.ccr DATA\E9_A_96.ccr DATA\W1_A.ccr DATA\A10.ccr \
+ DATA\A16.ccr DATA\A7.ccr DATA\B10.ccr DATA\B15.ccr DATA\B2.ccr DATA\B8.ccr DATA\E0_A.ccr DATA\E3_A.ccr \
+ DATA\E6_A.ccr DATA\E9_95.ccr DATA\E9_A_97.ccr DATA\W2.ccr DATA\A11.ccr DATA\A2.ccr DATA\A8.ccr \
+ DATA\B12.ccr DATA\B15_A.ccr DATA\B3.ccr DATA\B8_A.ccr DATA\E1.ccr DATA\E4.ccr DATA\E7.ccr DATA\E9_96.ccr \
+ DATA\T-ST.ccr DATA\W3.ccr DATA\A12.ccr DATA\A3.ccr DATA\A9.ccr DATA\B12_A.ccr DATA\B16.ccr DATA\B4.ccr \
+ DATA\B9.ccr DATA\E1_A.ccr DATA\E4_A.ccr DATA\E7_A.ccr DATA\E9_97.ccr DATA\W0.ccr DATA\A13.ccr DATA\A4.ccr \
+ DATA\B0.ccr DATA\B13.ccr DATA\B16_A.ccr DATA\B4_A.ccr DATA\B9_A.ccr DATA\E2.ccr DATA\E5.ccr DATA\E8.ccr \
+ DATA\E9_A_17.ccr DATA\W0_A.ccr \
+
+# Crunched tilemaps
+SCRFILES= DATA\A0.pcr DATA\A12.pcr DATA\A16.pcr DATA\A2.pcr DATA\A23.pcr DATA\A4.pcr DATA\A8.pcr DATA\B1.pcr\
+ DATA\B11_A.pcr DATA\B13_A.pcr DATA\B15_A.pcr DATA\B1_A.pcr DATA\B3_A.pcr DATA\B5_A.pcr DATA\B7_A.pcr DATA\BG-1.pcr \
+ DATA\A1.pcr DATA\A13.pcr DATA\A17.pcr DATA\A20.pcr DATA\A24.pcr DATA\A5.pcr DATA\A9.pcr DATA\B10.pcr DATA\B12.pcr \
+ DATA\B14.pcr DATA\B16.pcr DATA\B2.pcr DATA\B4.pcr DATA\B6.pcr DATA\B8.pcr DATA\T-ST.pcr DATA\A10.pcr DATA\A14.pcr \
+ DATA\A18.pcr DATA\A21.pcr DATA\A25.pcr DATA\A6.pcr DATA\B0.pcr DATA\B10_A.pcr DATA\B12_A.pcr DATA\B14_A.pcr DATA\B16_A.pcr \
+ DATA\B2_A.pcr DATA\B4_A.pcr DATA\B6_A.pcr DATA\B8_A.pcr DATA\A11.pcr DATA\A15.pcr DATA\A19.pcr DATA\A22.pcr DATA\A3.pcr \
+ DATA\A7.pcr DATA\B0_A.pcr DATA\B11.pcr DATA\B13.pcr DATA\B15.pcr DATA\B16_P.pcr DATA\B3.pcr DATA\B5.pcr DATA\B7.pcr DATA\B9.pcr \
+
+# Banks to assemble
 ALLFILES= BANK\bank0.sob BANK\bank1.sob BANK\bank2.sob \
  BANK\bank4.sob BANK\bank5.sob BANK\bank6.sob BANK\bank7.sob \
- BANK\bank8.sob BANK\bank10.sob BANK\bank11.sob BANK\shbanks.sob BANK\incbins.sob BANK\incbins2.sob
+ BANK\bank8.sob BANK\bank10.sob BANK\bank11.sob BANK\shbanks.sob \
+ BANK\incbins.sob BANK\incbins2.sob
 
+# Recipe to assemble a .ASM file and create a linkable .SOB file
 .asm.sob:
 	@$(ASM) -m30 $(ASMFLAGS) $< -v$*.SOB
 
-all: sf.rom
+# Recipes to crunch graphics
+.cgx.ccr:
+	@$(CRU) $< $*.CCR
 
-sf.rom: $(ALLFILES)
-	@$(LINK) $(LOPTS) -osf.rom @flist
-    @$(EXTEND) sf.rom $(EXTOPS)
-	@$(CHECK) $(COPTS) sf.rom
+.scr.pcr:
+	@$(CRU) $< $*.PCR
+
+# Everything that should be done when make is executed
+all: allcols msprites crunch sf2.sfc donebld
+
+# Recipe to crunch palettes
+allcols:
+	@cd DATA\COL
+	@pc.bat
+	@cd ..\..
+
+# FXGFX files to be interleaved
+msprites: spt_01.bin spt_23.bin spt_45.bin spt_23a.bin spt_45a.bin spt_45p.bin
+
+# MSPRITES .BIN recipes
+spt_01.bin:
+	@$(MERGE) MSPRITES\SPT_0.CGX MSPRITES\SPT_1.CGX MSPRITES\$@ $(MOPTS)
+
+spt_23.bin:
+	@$(MERGE) MSPRITES\SPT_2.CGX MSPRITES\SPT_3.CGX MSPRITES\$@ $(MOPTS)
+
+spt_45.bin:
+	@$(MERGE) MSPRITES\SPT_4.CGX MSPRITES\SPT_5.CGX MSPRITES\$@ $(MOPTS)
+
+spt_23a.bin:
+	@$(MERGE) MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX MSPRITES\$@ $(MOPTS)
+
+spt_45a.bin:
+	@$(MERGE) MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX MSPRITES\$@ $(MOPTS)
+
+spt_45p.bin:
+	@$(MERGE) MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX MSPRITES\$@ $(MOPTS)
+
+# Crunch all compressible GFX
+crunch: $(CGXFILES) $(SCRFILES)
+
+# The ROM Itself
+sf2.sfc: $(ALLFILES)
+	@$(LINK) $(LOPTS) -o$@ @flist
+	@$(EXTEND) $@ $(EXTOPS)
+	@$(CHECK) $(COPTS) $@
+
+# Actions to perform when assembly is completed
+donebld:
+	@copy sf2.sfc ..\sf2.sfc
+	@del *.rom
+	@del BANK\*.sob
+	@del msgtable.tmp
+	@del alvars.txt
+	@del techdata.txt
+	@del externs.log
+	@copy symbols.txt ..\symbols.txt
+	@del symbols.txt
+
+# Clean everything up
+clean:
+	@del BANK\*.SOB
+	@del MSPRITES\*.BIN
+	@del DATA\COL\ALLCOLS.COL
+	@del DATA\COL\*.PAC
+	@del DATA\COL\*.TMP
+	@del DATA\*.CCR
+	@del DATA\*.PCR
+	@del msgs.txt
+	@del sf2.sfc
+	@del symbols.txt
+	@del ..\*.LOG
 
 ## Files to assemble
-bank0.sob: BANK\bank0.asm
+bank0.sob: \
+BANK\bank0.asm
 
-bank1.sob: BANK\bank1.asm
+bank1.sob: \
+BANK\bank1.asm
 
-bank2.sob: BANK\bank2.asm
+bank2.sob: \
+BANK\bank2.asm
 
-bank4.sob: BANK\bank4.asm
+bank4.sob: \
+BANK\bank4.asm
 
-bank5.sob: BANK\bank5.asm
+bank5.sob: \
+BANK\bank5.asm
 
-bank6.sob: BANK\bank6.asm
+bank6.sob: \
+BANK\bank6.asm
 
-bank7.sob: BANK\bank7.asm
+bank7.sob: \
+BANK\bank7.asm
 
-bank8.sob: BANK\bank8.asm
+bank8.sob: \
+BANK\bank8.asm
 
-bank10.sob: BANK\bank10.asm
+bank10.sob: \
+BANK\bank10.asm
 
-bank11.sob: BANK\bank11.asm
+bank11.sob: \
+BANK\bank11.asm
 
-shbanks.sob: BANK\shbanks.asm
+shbanks.sob: \
+BANK\shbanks.asm
 
-incbins.sob: BANK\incbins.asm
+incbins.sob: \
+BANK\incbins.asm
 
-incbins2.sob: BANK\incbins2.asm
+incbins2.sob: \
+BANK\incbins2.asm
 
+
+
