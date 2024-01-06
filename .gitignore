@@ -31,6 +31,10 @@
 */SF2/*.tmp
 */SF2/*.txt
 *.TXT
+*.CSV
+*.csv
+*.CSV#
+*.csv#
 
 # Files generated during assembly
 *.CCR

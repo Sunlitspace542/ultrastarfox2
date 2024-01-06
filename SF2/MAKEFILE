@@ -121,6 +121,8 @@ donebld:
 	@del externs.log
 	@copy symbols.txt ..\symbols.txt
 	@del symbols.txt
+	@copy BANKS.CSV ..\BANKS.CSV
+	@del BANKS.CSV
 
 # Clean everything up
 clean:
@@ -133,8 +135,12 @@ clean:
 	@del DATA\*.PCR
 	@del techdata.txt
 	@del sf2.sfc
+	@del ..\sf2.sfc
 	@del symbols.txt
+	@del ..\symbols.txt
 	@del ..\BUILD.LOG
+	@del ..\BANKS.CSV
+	@del BANKS.CSV
 
 ## Files to assemble
 bank0.sob: \

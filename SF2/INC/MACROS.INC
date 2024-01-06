@@ -4409,6 +4409,11 @@ totalromspaceleft = totalromspaceleft+bank\1left
 	error+
 	ENDC
 
+	; Write free space info to BANKS.CSV
+	fopen	+BANKS.CSV
+	printf	"\1,%xbank\1left %n"
+	fclose	BANKS.CSV
+
 	printf	"%01-- %xbank\1left  bytes free.%00%n"
 
 	IFND	_SASM

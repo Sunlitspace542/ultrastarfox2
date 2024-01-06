@@ -5,6 +5,4 @@ cd sf2
 echo Cleaning...
 make clean
 cd ..
-del sf2.SFC
-del symbols.txt
 exit
