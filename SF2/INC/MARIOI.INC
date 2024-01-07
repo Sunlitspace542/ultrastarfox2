@@ -1,6 +1,6 @@
 
 
-;Mario chip flags (mflags)
+;Mario chip flags (m_sfr)
 mf_e	equ	1	;exec flag
 mf_z	equ	2	;zero flag
 mf_c	equ	4	;carry flag
@@ -17,7 +17,7 @@ mf_irq	equ	32768	;mario interrupt flag
 
 
 
-;Mario chip input/output mode (mio_mode)
+;Mario chip input/output mode (m_scmr)
 mm_scm0	equ	1	;\Screen mode (0,1,2)(4,16,256 colours)
 mm_scm1	equ	2	;/
 mm_sch	equ	4	;Screen height (0,1)(128,160 pix high)

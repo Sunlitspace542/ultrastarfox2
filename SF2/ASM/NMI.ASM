@@ -43,7 +43,7 @@ nmihan
 	nop		;$010b
 .irq	ai16		;$010c	irq
 	pha
-	lda.l	mflags
+	lda.l	m_sfr
 	bmi	.qexit
 	phb
 	disable

@@ -28,6 +28,8 @@ DamageHalf			equ 0	; Any damage taken is reduced by half.
 
 kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
+verbose	equ	0 ; more detailed assembler output 
+
 ; debugging:
 
 debuginfo		equ	1	; full strategy debugging
@@ -138,7 +140,6 @@ user_yajima		equ	8
 	ELSEIF
 	defs	version,"%$version/10#Mhz"
 	ENDC
-
 
 	printf	"%01%32-- Generating %$version version for %$username --%00%n"
 
@@ -558,7 +559,6 @@ FastTrans	equ	0	; 0/1 0ff/on Fast transfer
 
 mario_stats3d	equ	0
 
-realchip	equ	1
 mario_showobj equ	1
 mario_spr_demo equ	1
 easytext	equ	0

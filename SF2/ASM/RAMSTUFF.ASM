@@ -57,7 +57,7 @@ pollmario_l
 ;�����������������������������������������������������������������
 ; mario chip running?
 
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	beq	.nopoll
 
@@ -91,7 +91,7 @@ pollmario_l
 	sta.l	xroutines+2
 	ENDC
 	a8
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	bne	.stillgoing	; wait for chip to stop
 
@@ -131,8 +131,8 @@ unpollmario_l
 
 	lda.l	m_pollcon+2
 ;	lda	#mdrawloop_con>>16
-	sta	mcodebank
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	sta	m_pbr
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	a16
 	lda.l	m_pollcon
 	tax
@@ -161,7 +161,7 @@ runmario_l
 	pha
 	plb
 
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	beq	.nopoll
 
@@ -176,7 +176,7 @@ runmario_l
 	sta.l	m_mariopoll
 	nastyon
 .stillgoing
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	bne	.stillgoing	; wait for chip to stop
 
@@ -184,12 +184,12 @@ runmario_l
 ; ok, the chip is ready for our evil deed
 
 	lda	mariocodebank
-	sta	mcodebank
+	sta	m_pbr
 
-	stz	mflags	; = 3030h Append By H.Yajima 1994.10.12
+	stz	m_sfr	; = 3030h Append By H.Yajima 1994.10.12
 	stx	mr15	; GO!
 .stillgoing2
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	bne	.stillgoing2	; wait for our program to stop
 
@@ -201,8 +201,8 @@ runmario_l
 
 	lda.l	m_pollcon+2
 ;	lda	#mdrawloop_con>>16
-	sta	mcodebank
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	sta	m_pbr
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	a16
 	lda.l	m_pollcon
 	tax
@@ -225,14 +225,14 @@ runmario_l
 
 .nopoll
 	lda	mariocodebank
-	sta	mcodebank
+	sta	m_pbr
 
 	storenasty
 	nastyon
 
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	stx	mr15
-.dowait	lda	mflags
+.dowait	lda	m_sfr
 	and	#$20
 	bne	.dowait
 
@@ -256,7 +256,7 @@ do_3d_display1_l
 ;;	lda	drawmap+1
 ;;	lsr	a
 ;;	lsr	a
-;;	sta	mscrbase
+;;	sta	m_scbr
 ;;
 ;;	a16
 ;;	lda	drawmap
@@ -278,15 +278,15 @@ do_3d_display1_l
 ;;
 ;;	lda	#mdo_3d_display>>16
 ;;	ldx	#mdo_3d_display&WM
-;;	sta	mcodebank
+;;	sta	m_pbr
 ;;	nastyon
-;;	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+;;	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 ;;	stx	mr15
 ;;	jsr	parallel_stuff_1
 ;;
 ;;	a8
 ;;.dowait
-;;	lda	mflags
+;;	lda	m_sfr
 ;;	and	#$20
 ;;	bne	.dowait
 ;;	nastyoff
@@ -314,7 +314,7 @@ begin_3d_display1_l
 	lda	drawmap+1
 	lsr	a
 	lsr	a
-	sta	mscrbase
+	sta	m_scbr
 
 ;����������������������������������������������������
 ; set up various mario variables needed for the 3d
@@ -342,9 +342,9 @@ begin_3d_display1_l
 	a8i16
 	lda	#mbegin_3d_display>>16
 	ldx	#mbegin_3d_display&WM
-	sta	mcodebank
+	sta	m_pbr
 	nastyon
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	stx	mr15
 	jsr	parallel_stuff_1
 
@@ -372,7 +372,7 @@ do_3d_display2_l
 ;;	jsl	getview2_l
 ;;
 ;;	lda	#bitmap2>>10
-;;	sta	mscrbase
+;;	sta	m_scbr
 ;;	a16
 ;;	lda	#m_dustpnts2&WM
 ;;	sta.l	m_dustptr
@@ -387,14 +387,14 @@ do_3d_display2_l
 ;;	a8i16
 ;;	lda	#mdo_3d_display>>16
 ;;	ldx	#mdo_3d_display&WM
-;;	sta	mcodebank
+;;	sta	m_pbr
 ;;	nastyon
-;;	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+;;	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 ;;	stx	mr15
 ;;	jsr	parallel_stuff_2
 ;;
 ;;	a8
-;;.dowait	lda	mflags
+;;.dowait	lda	m_sfr
 ;;	and	#$20
 ;;	bne	.dowait
 ;;	nastyoff
@@ -433,7 +433,7 @@ begin_3d_display2_l
 ; set up various mario variables needed for the 3d
 
 	lda	#bitmap2>>10
-	sta	mscrbase
+	sta	m_scbr
 	a16
 	lda	#bitmap2&WM
 	sta.l	m_drawmap
@@ -457,9 +457,9 @@ begin_3d_display2_l
 	a8i16
 	lda	#mbegin_3d_display>>16
 	ldx	#mbegin_3d_display&WM
-	sta	mcodebank
+	sta	m_pbr
 	nastyon
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	stx	mr15
 	jsr	parallel_stuff_2
 
@@ -488,7 +488,7 @@ finish_3d_display2_l
 ; wait for the mario chip to finish
 
 .dowait
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	bne	.dowait
 	nastyoff
@@ -517,7 +517,7 @@ begin_3d_display_l
 	lda	drawmap+1
 	lsr	a
 	lsr	a
-	sta	mscrbase
+	sta	m_scbr
 
 ;����������������������������������������������������
 ; set up various mario variables needed for the 3d
@@ -613,9 +613,9 @@ begin_3d_display_l
 
 	lda	#mbegin_3d_display>>16
 	ldx	#mbegin_3d_display&WM
-	sta	mcodebank
+	sta	m_pbr
 	nastyon
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	stx	mr15
 	jsr	parallel_stuff_3
 
@@ -630,7 +630,7 @@ finishit_l
 	php
 	a8i16
 	nastyon
-.waitfin	lda.l	mflags
+.waitfin	lda.l	m_sfr
 	and	#$20
 	bne	.waitfin
 	plp
@@ -653,7 +653,7 @@ finish_3d_display_l
 ; wait for the mario chip to finish
 
 .dowait
-	lda	mflags
+	lda	m_sfr
 	and	#$20
 	bne	.dowait
 	nastyoff
@@ -679,15 +679,15 @@ do_3d_display_l
 	a8
 	lda	#mdo_3d_display>>16
 	ldx	#mdo_3d_display&WM
-	sta	mcodebank	;code bank
+	sta	m_pbr	;code bank
 	nastyon
-	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 	stx	mr15
 
 	jsr	parallel_stuff
 
 	a8
-.dowait	lda	mflags
+.dowait	lda	m_sfr
 	and	#$20
 	bne	.dowait
 	nastyoff
@@ -709,7 +709,7 @@ KG_3d_display_l
 ;	jsl	getview1_l
 ;
 ;	lda	#bitmap1>>10
-;	sta	mscrbase
+;	sta	m_scbr
 ;	a16
 ;	lda	#m_dustpnts1&WM
 ;	sta.l	m_dustptr
@@ -723,20 +723,20 @@ KG_3d_display_l
 ;	a8i16
 ;	lda	#mdo_3d_display>>16
 ;	ldx	#mdo_3d_display&WM
-;	sta	mcodebank
+;	sta	m_pbr
 ;	lda	mario_draw_mode
 ;	ora	#%00011000
-;	sta	mio_mode
-;	stz	mflags	; = 3030h Append By D.Cuthbert 1994.11.18
+;	sta	m_scmr
+;	stz	m_sfr	; = 3030h Append By D.Cuthbert 1994.11.18
 ;	stx	mr15
 ;	jsr	parallel_stuff
 ;
 ;	a8
-;.dowait	lda	mflags
+;.dowait	lda	m_sfr
 ;	and	#$20
 ;	bne	.dowait
 ;	lda	mario_draw_mode
-;	sta	mio_mode
+;	sta	m_scmr
 
 	rtl
 

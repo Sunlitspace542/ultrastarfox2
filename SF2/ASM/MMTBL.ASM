@@ -30,7 +30,7 @@ mm_startmario_l
 .callmario
 	nastyon		;ROM & RAM Nasty ON
 	lda	#MMakePlanet>>16
-	sta.l	mcodebank
+	sta.l	m_pbr
  	a16
 	lda	#MMakePlanet&WM
 	sta.l	mr15	; GO!
@@ -4598,7 +4598,7 @@ CalcRandomPlanetPtr
 	nastyon
 * Mario Program Start *
 	lda	#MMakePlanet>>16
-	sta.l	mcodebank
+	sta.l	m_pbr
 	a16
 	lda	#MMakePlanet&WM
 	sta.l	mr15	; GO!

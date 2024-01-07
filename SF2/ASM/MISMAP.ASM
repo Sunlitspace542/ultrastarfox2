@@ -6181,8 +6181,8 @@ mm_moveplayer
 	sta	kz_y1
 	jsr	calcarwingxyvelocity
 
-	km_absstavar	kz_x1,kz_tpx+1		;³mm_dx³
-	km_absstavar	kz_y1,kz_textpt+1	;³mm_dy³
+	km_absstavar	kz_x1,kz_tpx+1		;ï¿½mm_dxï¿½
+	km_absstavar	kz_y1,kz_textpt+1	;ï¿½mm_dyï¿½
 
 	lda	kz_x1
 	cmp	kz_y1
@@ -6842,8 +6842,8 @@ mm_calcdxdy
 	km_setvar	mm_spy,mm_sp	;speed y
 .skip_dy
 ;--------------------------------------------------------
-	km_absstavar	mm_dx		;³mm_dx³
-	km_absstavar	mm_dy		;³mm_dy³
+	km_absstavar	mm_dx		;ï¿½mm_dxï¿½
+	km_absstavar	mm_dy		;ï¿½mm_dyï¿½
 ;--------------------------------------------------------
 .end
 	stz	mm_dxdy
@@ -7432,7 +7432,7 @@ Init_MisMapParams
 	a8
 	lda	#height_128!colours_16
 	sta	mario_draw_mode		;V hight = 128dot (16 chr),colour = 16
-	sta.l	mio_mode
+	sta.l	m_scmr
 	a16
 	lda	#mm_bitmaphight*8
 	sta.l	m_screenheight		;Screen Hight
@@ -9234,7 +9234,7 @@ mm_setmarioparms
 	lda	drawmap+1
 	lsr	a
 	lsr	a
-	sta.l	mscrbase
+	sta.l	m_scbr
 	a16
 	lda	drawmap
 	sta.l	m_drawmap

@@ -45,7 +45,7 @@ dl	macro	[address]
 ;km_gmlabel		macro	[name,(step)]		;name	equ	0,1,2,...
 ;km_gmlabellen	macro	[label]			;label	equ	list length
 
-;km_gmflagstart	macro	[codename,(startnum)]	;$ = 0 or (number or label)
+;km_gm_sfrtart	macro	[codename,(startnum)]	;$ = 0 or (number or label)
 ;km_gmflag		macro	[name,(step)]		;name	equ	1,2,4,8,...
 
 ;km_worklabel	macro	[size,label]	;size ... B/W
@@ -161,7 +161,7 @@ dl	macro	[address]
 ;km_addvar		macro	[var,addvar]	;Acc <--- var+addvar
 ;km_addval		macro	[var,val,(reg)]	;Acc <--- var+#val
 ;km_subvar		macro	[var,subvar,(reg)]	;Acc <--- var-subvar
-;km_abssubvar	macro	[var,subvar,(reg)]	;Acc <--- ³var-subvar³
+;km_abssubvar	macro	[var,subvar,(reg)]	;Acc <--- ï¿½var-subvarï¿½
 ;km_subval		macro	[var,val,(reg)]	;Acc <--- var-#val
 
 ;km_cmpvarval	macro	[var,val,(reg)]	;Var cmp #val
@@ -187,7 +187,7 @@ dl	macro	[address]
 ;km_negstavar	macro	[dest,(sour)]	;var = -(var)
 ;km_negstavar	macro	[dest,(sour)]	;var <--- neg var
 ;km_negswapsta	macro	[dest,(sour)]	:(var,var+1) = -(var+1,var) 
-;km_absstavar	macro	[dest,(sour)]	;var <--- ³var³
+;km_absstavar	macro	[dest,(sour)]	;var <--- ï¿½varï¿½
 ;km_aslsta		macro	[dest,(sour)]	;var <--- var*2
 ;km_lsrsta		macro	[dest,(sour)]	;var <--- var/2
 
@@ -1094,7 +1094,7 @@ km_gmlabellen	macro	[label]
 	endm
 ;---------------------------------------------------------------------------
 	string	gmfl[80]
-km_gmflagstart	macro	[codename,startnum]
+km_gm_sfrtart	macro	[codename,startnum]
 MYNARG	=	NARG
 	CHK_NARG	1,2
 
@@ -5307,7 +5307,7 @@ kbetascr_h	macro	[vram,adr,val]
 ;*			Mario Chip Macros			*
 ;*********************************************************************
 km_waitmario		macro
-.dowait\@	lda.l	mflags	;3030h
+.dowait\@	lda.l	m_sfr	;3030h
 	and	#$20
 	bne	.dowait\@
 	endm

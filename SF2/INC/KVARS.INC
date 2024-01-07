@@ -281,7 +281,7 @@ mm_planet6y	equ	$08*8
 ;ep_GAL1		equ	4
 ;ep_GAL2		equ	5
 
-	km_gmflagstart	kpltyf
+	km_gm_sfrtart	kpltyf
 	km_gmflag	fox
 	km_gmflag	falco
 	km_gmflag	peppy

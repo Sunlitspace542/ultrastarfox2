@@ -1084,7 +1084,7 @@ dt_d_sen2	equ	5
 
 ;* kx_demoflag (Yajima's)*
 demof_all	equ	-1
-	km_gmflagstart	demof
+	km_gm_sfrtart	demof
 	km_gmflag	wipeopen	;0/1 ... nothing / wipe open trigger
 	km_gmflag	fell		;0/1 ... nothing / corneria fell
 
@@ -1194,7 +1194,7 @@ demof_all	equ	-1
 	alc	kw_mmBGM,2
 	alc	kw_mmBGMPtr,2
 
-	km_gmflagstart	mmsndf
+	km_gm_sfrtart	mmsndf
 mmsndf_all	equ	-1
 	km_gmflag	sosappear
 	km_gmflag	missileappear
@@ -1319,7 +1319,7 @@ curf_all	equ	-1
 	km_flag	curf_warpcancel	;0/1 ... nothing / select warp cancel
 
 ;* mmx_cursorflag2 (2 byte) *
-	km_gmflagstart	curf2
+	km_gm_sfrtart	curf2
 
 	km_gmflag hitplanet	;0/1 ... moshi A push shitatoki Planet ni Hit shiteitara
 	km_gmflag hitbattleship	;0/1 ... nothing / corneria planet
@@ -1467,7 +1467,7 @@ mmf_all	equ	-1
 
 ;(mmx_message_sos)
 ;(mmx_tmpmessagesos) :mission & Map
-	km_gmflagstart	mesosfl
+	km_gm_sfrtart	mesosfl
 	km_gmflag	planetcannonhit	 ;0 :Hit Planet Canon !!
 	km_gmflag	corneriafell	 ;1 :Corneria Fell
 	km_gmflag	zacoattack	 ;2 :Attack Corneria to Zaco Enemy
@@ -1482,7 +1482,7 @@ mmf_all	equ	-1
 mesosfl_all	equ	mesosfl_planetcannonhit!mesosfl_corneriafell!mesosfl_zacoattack!mesosfl_missileattack!mesosfl_missileappear!mesosfl_zacoappear!mesosfl_battleshipappear!mesosfl_planetcannonarea!mesosfl_virustorituki!mesosfl_zacotubushi
 
 ;(map_trigmessage) :yalcs.inc :Map
-	km_gmflagstart	ymes
+	km_gm_sfrtart	ymes
 	km_gmflag	taimanE			;0 :(taiman easy)
 	km_gmflag	taimanN			;1 :(taiman normal),(planet add)
 	km_gmflag	taimanH			;2 :(taiman hard)
@@ -1702,7 +1702,7 @@ mmbsf_all	equ	-1
 	xalc	kx_houdaiangle,2	; 2 byte :satellite houdai angle
 
 ;(kx_satelliteflag)
-	km_gmflagstart	safl
+	km_gm_sfrtart	safl
 
 	km_gmflag	type		;0/1 ... friend / enemy
 	km_gmflag	charge		;0/1 ... nothing / charge
@@ -1852,7 +1852,7 @@ _enemynum	equ	23
 ;* enmey flags (mmx_enflags)*
 enfl_all	equ	-1
 
-	km_gmflagstart	enfl
+	km_gm_sfrtart	enfl
 
 	km_gmflag	encountplayer	;0/1 ... nothing / encount player
 	km_gmflag	attackcorneria	;0/1 ... not attack / attack corneria
@@ -1882,7 +1882,7 @@ enfl_lockonskip	equ	enfl_encountplayer!enfl_nocollision!enfl_invisible!enfl_ensk
 ;* enmey flags (mmx_enflags2)*
 enfl2_all	equ	-1
 
-	km_gmflagstart	enfl2
+	km_gm_sfrtart	enfl2
 
 	km_gmflag	nosprite	;0/1 ... display / nosprite
 	km_gmflag	asteroid	;0/1 ... asteroid nohit/hit
@@ -2348,7 +2348,7 @@ mpkf_pushXY		equ	%10000000
 	km_worklabel	W,kspriteflag		; 2 byte
 	km_workvalcheck  32
 
-	km_gmflagstart	sf
+	km_gm_sfrtart	sf
 sf_all	equ	-1
 	km_gmflag	corneriaflash
 

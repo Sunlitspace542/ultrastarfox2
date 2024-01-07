@@ -94,7 +94,7 @@ mapscreensetup_l
 
 	lda	timeupr		; clear IRQ's
 	a16
-	lda.l	mflags
+	lda.l	m_sfr
 
 	a8
 ; clear video RAM:

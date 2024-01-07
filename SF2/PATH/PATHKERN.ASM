@@ -108,7 +108,7 @@ pm
 
 	a16
 	IFNE	pathcount
-;	lda.l	mflags
+;	lda.l	m_sfr
 ;	and	#$20
 ;	beq	.noinc
 	inc	pathcommandcount

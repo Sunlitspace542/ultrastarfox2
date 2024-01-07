@@ -4473,7 +4473,7 @@ nastyon	macro
 	lda	mario_draw_mode
 	ora	#mm_ramn+mm_romn
 	sta	mario_draw_mode
- 	sta.l	mio_mode
+ 	sta.l	m_scmr
 	endm
 
 ;------------------------------------------------------------------------
@@ -4485,7 +4485,7 @@ ramnastyon	macro
 	lda	mario_draw_mode
 	ora	#mm_ramn
 	sta	mario_draw_mode
- 	sta.l	mio_mode
+ 	sta.l	m_scmr
 	endm
 
 ;------------------------------------------------------------------------
@@ -4497,7 +4497,7 @@ romnastyon	macro
 	lda	mario_draw_mode
 	ora	#mm_romn
 	sta	mario_draw_mode
- 	sta.l	mio_mode
+ 	sta.l	m_scmr
 	endm
 ;------------------------------------------------------------------------
 storenasty	macro
@@ -4515,7 +4515,7 @@ restorenasty	macro
 	ENDC
 	pla
 	sta	mario_draw_mode
-	sta.l	mio_mode
+	sta.l	m_scmr
 	endm
 
 ;------------------------------------------------------------------------
@@ -4527,7 +4527,7 @@ nastyoff	macro
 	lda	mario_draw_mode
 	and	#~(mm_romn!mm_ramn)
 	sta	mario_draw_mode
- 	sta.l	mio_mode
+ 	sta.l	m_scmr
 	endm
 
 ;------------------------------------------------------------------------
@@ -4539,7 +4539,7 @@ ramnastyoff	macro
 	lda	mario_draw_mode
 	and	#~mm_ramn
 	sta	mario_draw_mode
- 	sta.l	mio_mode
+ 	sta.l	m_scmr
 	endm
 
 ;------------------------------------------------------------------------
@@ -4551,7 +4551,7 @@ romnastyoff	macro
 	lda	mario_draw_mode
 	and	#~mm_romn
 	sta	mario_draw_mode
- 	sta.l	mio_mode
+ 	sta.l	m_scmr
 	endm
 
 ;------------------------------------------------------------------------
@@ -5668,16 +5668,19 @@ filelevel	=	filelevel-1
 	run	"nf	=	numfiles",filelevel
 	run	"fta	=	fn",filelevel,"_",nf
 
+	IFEQ	1 ; removed to simplify assembler output, set to 0 to re-enable
 	run	"	printf	%q[",filelevel*4,"]%q"
 	printf	"%01-- (",filelevel+1,") %00%33",:$fta," ","[17]%01%33{name}:",[5]*-fta,"%00"
+	ENDC
 	IFGT	fmlimit
 	IFGT	(*-fta)-fmlimit
 ;	printf	" %01%31WARNING: File exceeds ",fmlimit,".%00"
 	ENDC
 	ENDC
+	IFEQ	1 ; removed to simplify assembler output, set to 0 to re-enable
 	printf	"%n"
+	ENDC
 	fileslog	{name}
-
 	ENDM
 
 ;------------------------------------------------------------------------

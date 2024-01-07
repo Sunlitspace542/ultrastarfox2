@@ -27,7 +27,7 @@ screensetup_l
 
 	lda	timeupr		; clear IRQ's
 	a16
-	lda.l	mflags
+	lda.l	m_sfr
 
 	lda	#gamevw_pos2
 	sta	screenon_position
@@ -92,7 +92,7 @@ screensetup_l
 	lda	drawmap+1
 	lsr	a
 	lsr	a
-	sta	mscrbase
+	sta	m_scbr
 
 ; set PPU to point to the screen cgx
 
@@ -1496,7 +1496,7 @@ stype	=	stype+2
 	dw	{name}&WM
 	endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_init	macro	[x,vy,y]
 
 	ai16
@@ -1532,12 +1532,12 @@ st_init	macro	[x,vy,y]
 
 	endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_blankchar	macro	[char]
 	lda	#{char}
 	sta	blankchar
 	endm
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_xypos	macro	[x,y,x2,y2]
 
 	lda	#{x}
@@ -1556,7 +1556,7 @@ st_xypos	macro	[x,y,x2,y2]
 
 	endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_palette	macro	[blankpal,pal3d,pal3d2]
 
 	lda	#{pal3d}
@@ -1571,14 +1571,14 @@ st_palette	macro	[blankpal,pal3d,pal3d2]
 
 	endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_screenmode macro	[screenmode]
 	lda	#{screenmode}
 	sta	screenmode
 	endm
 
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_cockpitcgx macro	[cockpitcgx]
 	lda	#{cockpitcgx}&WM
 	sta	cockpitcgxptr
@@ -1588,7 +1588,7 @@ st_cockpitcgx macro	[cockpitcgx]
 	a16
 	endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_cockpitscr macro	[cockpitscr]
 	lda	#{cockpitscr}&WM
 	sta	cockpitscrptr
@@ -1598,7 +1598,7 @@ st_cockpitscr macro	[cockpitscr]
 	a16
 	endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_vramlayout	macro	[bg1_cgx1,bg1_cgx2,bg1_scr,bg2_cgx,bg2_scr,obj_cgx,hvofs1,hvofs2]
 
 ; set up the vram layout for bg1
@@ -1627,7 +1627,7 @@ st_vramlayout	macro	[bg1_cgx1,bg1_cgx2,bg1_scr,bg2_cgx,bg2_scr,obj_cgx,hvofs1,hv
 
 		endm
 
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_vramlayoutbg3	macro	[bg1_cgx1,bg1_cgx2,bg1_scr,bg2_cgx,bg2_scr,bg3_cgx,bg3_scr,obj_cgx]
 
 ; set up the vram layout for bg1
@@ -1657,7 +1657,7 @@ st_vramlayoutbg3	macro	[bg1_cgx1,bg1_cgx2,bg1_scr,bg2_cgx,bg2_scr,bg3_cgx,bg3_sc
 	sta	vram_hvofs_base1
 	sta	vram_bg3_scr
 		endm
-;ÄÄÄÄÄÄÄÄÄÄ
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 st_end	macro
 
 	jmp	setemall
