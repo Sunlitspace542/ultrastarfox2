@@ -28,8 +28,6 @@ DamageHalf			equ 0	; Any damage taken is reduced by half.
 
 kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
-verbose	equ	0 ; more detailed assembler output 
-
 ; debugging:
 
 debuginfo		equ	1	; full strategy debugging
