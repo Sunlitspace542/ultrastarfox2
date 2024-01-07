@@ -45,7 +45,7 @@ dl	macro	[address]
 ;km_gmlabel		macro	[name,(step)]		;name	equ	0,1,2,...
 ;km_gmlabellen	macro	[label]			;label	equ	list length
 
-;km_gm_sfrtart	macro	[codename,(startnum)]	;$ = 0 or (number or label)
+;km_gmflagstart	macro	[codename,(startnum)]	;$ = 0 or (number or label)
 ;km_gmflag		macro	[name,(step)]		;name	equ	1,2,4,8,...
 
 ;km_worklabel	macro	[size,label]	;size ... B/W
@@ -1094,7 +1094,7 @@ km_gmlabellen	macro	[label]
 	endm
 ;---------------------------------------------------------------------------
 	string	gmfl[80]
-km_gm_sfrtart	macro	[codename,startnum]
+km_gmflagstart	macro	[codename,startnum]
 MYNARG	=	NARG
 	CHK_NARG	1,2
 
