@@ -58,7 +58,7 @@ ALLFILES= BANK\bank0.sob BANK\bank1.sob BANK\bank2.sob \
 
 # Recipe to assemble a .ASM file and create a linkable .SOB file
 .asm.sob:
-	@$(ASM) -m30 $(ASMFLAGS) $< -v$*.SOB
+	@$(ASM) $(NOANSI) -m30 $(ASMFLAGS) $< -v$*.SOB
 
 # Recipes to crunch graphics
 .cgx.ccr:
@@ -68,7 +68,10 @@ ALLFILES= BANK\bank0.sob BANK\bank1.sob BANK\bank2.sob \
 	@$(CRU) $< $*.PCR
 
 # Everything that should be done when make is executed
-all: allcols msprites crunch sf2.sfc donebld
+all: setup allcols msprites crunch sf2.sfc donebld
+
+setup:
+	@del BANK\*.SOB
 
 # Recipe to crunch palettes
 allcols:

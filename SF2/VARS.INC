@@ -727,9 +727,9 @@ tm_fox3	equ	14
 tm_planets2	equ	34
 
 ; Date and Time
-day	equ	_DAY
-month	equ	_MONTH
-
+	TIME	_TIME
+_HOUR	=	_TIME>>24&$FF
+_MIN	=	_TIME>>16&$FF
 
 
 

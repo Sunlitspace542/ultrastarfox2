@@ -1,3 +1,19 @@
+;------------------------------------------------------------------------
+	IFD		_ARGSFX
+; Rotates a string left by offset for ARGSFX
+rols	MACRO	[string,offset]
+	substr	{offset},,{string}
+
+	ENDM
+
+; Rotates a string right by offset (ARGSFX only)
+rors	MACRO	[string,offset]
+	substr	0,((strlen {string})-{offset}),{string}
+
+	ENDM
+
+	ENDC	;_ARGSFX
+;------------------------------------------------------------------------
 
 wait	macro
 	a8
@@ -4385,7 +4401,7 @@ bank{banknum}left	=	(({banknum}/2+$41)<<16)-*
 
 bankend	macro
 	IFEQ	NARG
-		IFD	_SASM
+		IFD	_ARGSFX
 		printf	"BANKEND: Which bank are we talking about here?"
 		MEXIT
 		ENDC
@@ -4416,7 +4432,7 @@ totalromspaceleft = totalromspaceleft+bank\1left
 
 	printf	"%01-- %xbank\1left  bytes free.%00%n"
 
-	IFND	_SASM
+	IFND	_ARGSFX
 	?bank\1left
 	ENDC
 
@@ -4440,7 +4456,7 @@ bank64	macro	[banknum]
 bank	macro
 
 	IFEQ	NARG
-		IFD	_SASM
+		IFD	_ARGSFX
 		progress_off
 		printf	"Chigau matey.. the bank macro needs um.. a thingy on the end."
 		progress_on
@@ -4454,7 +4470,7 @@ bank	macro
 
 banknum	=	\1
 Assembling_bank	=	\1
-	IFND	_SASM
+	IFND	_ARGSFX
 	?Assembling_bank
 	ELSEIF
 ;	progress	\1,11
@@ -5331,7 +5347,7 @@ printr	MACRO	string,number of repeats
 
 ;------------------------------------------------------------------------
 
-	IFD	_SASM
+	IFD	_ARGSFX
 	IFNE	PROGRESS_INDICATOR
 
 	IFEQ	progression_thingy&1
@@ -5574,7 +5590,7 @@ timings_report	MACRO
 	ENDM
 
 ;------------------------------------------------------------------------
-	IFND	_SASM
+	IFND	_ARGSFX
 progress_on	MACRO
 	ENDM
 
@@ -5731,7 +5747,7 @@ release	macro
 ;------------------------------------------------------------------------
 
 
-	IFD	_SASM
+	IFD	_ARGSFX
 
 bankinfo	MACRO
 

@@ -1047,53 +1047,87 @@ titx	equ	$20
 tity	equ	$18
 titchr	equ	$0
 TitSPrData
-	km_datacnt	W,TitSprData ; Build date/Compile date (Original was: 95-09-12 PM 07-30)
-	;SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_5)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_9)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_1)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
+	km_datacnt	W,TitSprData ; Build date/Compile date [YY-MM-DD (AM/PM) HH-MM]
 
-	;SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_p)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+3*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+4*8,tity+1*8,(titchr+conf_7)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+5*8,tity+1*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_3)&BM,colpal0,pri3,noflip
-	;SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_0)&BM,colpal0,pri3,noflip
+	STRING	year1[50]=_YEAR
+	STRING	year2[50]=_YEAR
 
-	IFEQ PAL
-	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_a)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_r)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_f)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_o)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_x)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
+; set up 2 digit year
+	rols	year1,2
+	rols	year2,2
+
+; get 1st and second digits
+	rors	year1,1 ; 9
+	rols	year2,1 ; 5
+
+	STRING	mon1[50]=_MONTH
+	STRING	mon2[50]=_MONTH
+
+; check if month is less than 10 
+	IFLT	_MONTH-10
+	STRING	mon1="0"
 	ELSEIF
-	SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_a)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_r)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_w)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_i)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_n)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_g)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+8*8,tity+0*8,(titchr+conf_2)&BM,colpal0,pri3,noflip
+	rors	mon1,1
+	rols	mon2,1
 	ENDC
 
-	SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_e)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+2*8,tity+1*8,(titchr+conf_s)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+3*8,tity+1*8,(titchr+conf_t)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+4*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+5*8,tity+1*8,(titchr+conf_e)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_n)&BM,colpal0,pri3,noflip
-	SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_u)&BM,colpal0,pri3,noflip
+	STRING	day1[50]=_DAY
+	STRING	day2[50]=_DAY
+
+; check if day is less than 10
+	IFLT	_DAY-10
+	STRING	day1="0"
+	ELSEIF
+	rors	day1,1
+	rols	day2,1
+	ENDC
+
+	STRING	hr1[50]=_HOUR
+	STRING	hr2[50]=_HOUR
+
+; check if hour is less than 10
+	IFLT	_HOUR-10
+	STRING	hr1="0"
+	ELSEIF
+	rors	hr1,1
+	rols	hr2,1
+	ENDC
+
+	STRING	min1[50]=_MIN
+	STRING	min2[50]=_MIN
+
+; check if minute is less than 10
+	IFLT	_MIN-10
+	STRING	min1="0"
+	ELSEIF
+	rors	min1,1
+	rols	min2,1
+	ENDC
+
+; Write the tile data for the date and time
+	run "		SpriteDataB	titx+0*8,tity+0*8,(titchr+conf_%$year1)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+1*8,tity+0*8,(titchr+conf_%$year2)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+2*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+3*8,tity+0*8,(titchr+conf_%$mon1)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+4*8,tity+0*8,(titchr+conf_%$mon2)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+5*8,tity+0*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+6*8,tity+0*8,(titchr+conf_%$day1)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+7*8,tity+0*8,(titchr+conf_%$day2)&BM,colpal0,pri3,noflip"
+
+; AM/PM check (check if hours are past 12)
+	IFLT	_HOUR-13
+	run "		SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_a)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip"
+	ELSEIF
+	run "		SpriteDataB	titx+0*8,tity+1*8,(titchr+conf_p)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+1*8,tity+1*8,(titchr+conf_m)&BM,colpal0,pri3,noflip"
+	ENDC
+	run "		SpriteDataB	titx+3*8,tity+1*8,(titchr+conf_%$hr1)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+4*8,tity+1*8,(titchr+conf_%$hr2)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+5*8,tity+1*8,(titchr+conf_bar)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+6*8,tity+1*8,(titchr+conf_%$min1)&BM,colpal0,pri3,noflip"
+	run "		SpriteDataB	titx+7*8,tity+1*8,(titchr+conf_%$min2)&BM,colpal0,pri3,noflip"
+
 TitSPrDataEND
 ;----------------------------------------------------------------------------------------------
 mmx	=	$60
