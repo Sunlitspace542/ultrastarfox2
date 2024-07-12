@@ -1882,7 +1882,7 @@ Select_gamemode
 ;-------------------------------------------------------------------------
 	km_lldx	key_tateptr1
 	lda.l	kgamemodetbl,x
-	cmp	#$ff
+	cmp	#kmode_stereomonoral
 	beq	Select_gamemode ;If stereo/monoral no postion de 
 	km_stagamemode		;mission/battle/another mode
 ;-------------------------------------------------------------------------

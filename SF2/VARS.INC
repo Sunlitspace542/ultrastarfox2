@@ -30,8 +30,8 @@ kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
 
 ; debugging:
 
-debuginfo		equ	1	; full strategy debugging
-debuginfo2		equ	1 	; stage selection/ speed up mode
+debuginfo		equ	0	; full strategy debugging
+debuginfo2		equ	0 	; stage selection/ speed up mode
 portinfo		equ	0	; 0/1 ... sound port display off/on 
 randominfo		equ	0	; 0/1 ... random on/off
 demoinfo		equ	0	; 0/1 ... polygon demo on / off
@@ -39,9 +39,15 @@ blockmap_dbg	equ	0	; display map blockmap?
 pathcount		equ	0	; display amount of path commands executed
 sos_test_egu	equ	0	; 0=off/1=on test mode Set SOS1 and SOS2.
 polllaginfo		equ	0	; display cycles used up while polling mario chip
-enableconfig		equ	1	; restores sound test replacing the stereo/mono menu option (note: config is now in bank 36)
+enableconfig	=	0	; restores sound test replacing the stereo/mono menu option (note: config is now in bank 36)
 configimprovements	equ	1	; improvements to the sound test such as track number wrapping to/from last track and changed songlist
-configcursorsound	equ	0	; enable cursor sound like in vanilla
+configcursorsound	equ	1	; enable cursor sound like in vanilla
+
+; if you use 'equ' that label's value cannot be redefined,
+; so we use '=' instead for this switch so we can disable config in retail
+	ifeq	debuginfo
+enableconfig	=	0
+	endc
 
 ;	###############################################################
 ;	## to tweak other aspects of the game, see INC/GAMELIST.INC. ##

@@ -66,6 +66,8 @@ kbugbreak	equ	$7ffffe
 	km_gameptr	testmissionmap		;
 	km_gameptr	testplanetstep		;
 	km_gameptr	config			;
+;*** STEREO / MONO ***
+kmode_stereomonoral	equ	$FF
 ;*** END ***
 	km_gameptr	end			;
 

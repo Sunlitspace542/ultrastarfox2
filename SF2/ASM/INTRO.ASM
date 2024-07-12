@@ -1544,9 +1544,12 @@ check_title
 	bne	.CheckCancel
 ;-----------------------------------------------------------------------
 ;* Stereo or Monoral Check *
-	IFEQ	enableconfig
 	lda	key_tateptr1
+	IFEQ	debuginfo
 	cmp	#2
+	ELSEIF
+	cmp	#(4+enableconfig)
+	ENDC
  	bne	.notcheck_StereoMonoral
 
 	jsl	Check_triggerLR_l	;[key check]
@@ -1565,7 +1568,6 @@ check_title
 	sta	monoral		;conf_sound
 	jsl	Stereo_l
 .notcheck_StereoMonoral
-	ENDC
 ;-----------------------------------------------------------------------
 ;* Cancel Check *
 .CheckCancel
@@ -1576,7 +1578,7 @@ check_title
 	lda	tiw_sprmode
 	dec	a
 	bne	.skipaaa
-	IFEQ	enableconfig
+	IFEQ	debuginfo
 	lda	key_tateptr1
 	cmp	#2
 	beq	.exit
@@ -1625,7 +1627,7 @@ check_title
 	km_setval	key_tatemaxptr1,3	;(kgamemodetblEND-kgamemodetbl)
 	km_setval	key_yokomaxptr1,2
 	elseif
-	km_setval	key_tatemaxptr1,5	;(kgamemodetblEND-kgamemodetbl)
+	km_setval	key_tatemaxptr1,(5+enableconfig)	;(kgamemodetblEND-kgamemodetbl)
 	km_setval	key_yokomaxptr1,2
 	endc
 	brl	.exit
@@ -1635,7 +1637,7 @@ check_title
 .gameselect
 ;**** 1 kaimeno Start Push ****
  	km_ldatbl_i8x	.kgamemodetbl,key_tateptr1
-	cmp	#$ff
+	cmp	#kmode_stereomonoral
 	km_beq	.exit		;If stereo/monoral mode wo select shitara !!
 	km_statmpgamemode	;Set Game Mode
  
@@ -1750,13 +1752,12 @@ check_title
 .kgamemodetbl
 	db	kmode_demo		;[MISSION]
 	db	kmode_record
-	IFNE	enableconfig
-	db	kmode_config
-	ELSEIF
-	db	$FF		; STEREO/MONO
-	ENDC
 	db	kmode_testmissionmap	;testmissionmap  ;missionresult
 	db	kmode_debugmissionmap	;debugmissionmap ;missionresult
+	IFNE	enableconfig
+	db	kmode_config
+	ENDC
+	db	kmode_stereomonoral		;STEREO/MONORAL
 .kgamemodetblEND
 
 ;=====================================================================

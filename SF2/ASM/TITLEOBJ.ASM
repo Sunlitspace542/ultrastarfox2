@@ -81,7 +81,13 @@ disp_titleselect	equ	20h
 	ifne	debuginfo
 titleselect_size	equ	12
 titleselect_pX	equ	50h
+
+	ifne	enableconfig
+titleselect_pY1	equ	44h+titleselect_size*0
+	elseif
 titleselect_pY1	equ	4eh+titleselect_size*0
+	endc
+
 	elseif
 titleselect_size	equ	14
 titleselect_pX	equ	50h
@@ -92,6 +98,7 @@ titleselect_pY2	equ	titleselect_pY1+titleselect_size*1
 titleselect_pY3	equ	titleselect_pY1+titleselect_size*2
 titleselect_pY4	equ	titleselect_pY1+titleselect_size*3
 titleselect_pY5	equ	titleselect_pY1+titleselect_size*4
+titleselect_pY6	equ	titleselect_pY1+titleselect_size*(4+enableconfig)
 
 ;--------------------------------------------------------------------
 ; 	mission level select
@@ -1065,18 +1072,20 @@ bitmapmes_titleselect
 	Mscore_setcolor		WHITEcolor
 	Mscore_setB_m_xy	titleselect_pX,titleselect_pY1
 	Mscore_setcursorcolor2	key_tateptr1,0
-	Mscore_dispmessageonly	tmd_mission
+	Mscore_dispmessageonly	tmd_mission	;MISSION
 	Mscore_setB_m_xy	titleselect_pX,titleselect_pY2
 	Mscore_setcursorcolor2	key_tateptr1,1
-	Mscore_dispmessageonly	tmd_battle
+	Mscore_dispmessageonly	tmd_battle	;RECORD
 
 ;-------------------------------------------------------------------
-
+	;STEREO / MONO
+	IFEQ	debuginfo
 	Mscore_setB_m_xy	titleselect_pX,titleselect_pY3
 	Mscore_setcursorcolor2	key_tateptr1,2
-	IFNE	enableconfig
-	Mscore_dispmessageonly	tmd_config
 	ELSEIF
+	Mscore_setB_m_xy	titleselect_pX,titleselect_pY6
+	Mscore_setcursorcolor2	key_tateptr1,(4+enableconfig)
+	ENDC
 	Mscore_start65816
 		lda	key_yokoptr1	; 0 OR 1    
 		and	#00ffh
@@ -1085,21 +1094,21 @@ bitmapmes_titleselect
 		sta	yajima_temp
 	Mscore_end65816
 	Mscore_dispmessagework	yajima_temp
-	ENDC
 
 ;-------------------------------------------------------------------
 	ifne	debuginfo
-
+	Mscore_setB_m_xy	titleselect_pX,titleselect_pY3
+	Mscore_setcursorcolor2	key_tateptr1,2
+	Mscore_dispmessageonly	tmd_test	;TEST
 	Mscore_setB_m_xy	titleselect_pX,titleselect_pY4
 	Mscore_setcursorcolor2	key_tateptr1,3
-	Mscore_dispmessageonly	tmd_test
+	Mscore_dispmessageonly	tmd_traning	;TRAINING
+
+	IFNE	enableconfig
 	Mscore_setB_m_xy	titleselect_pX,titleselect_pY5
 	Mscore_setcursorcolor2	key_tateptr1,4
-	Mscore_dispmessageonly	tmd_traning
-
-;;;;	Mscore_setB_m_xy	titleselect_pX,titleselect_pY5
-;;;;	Mscore_setcursorcolor2	key_tateptr1,4
-;;;;	Mscore_dispmessageonly	tmd_config
+	Mscore_dispmessageonly	tmd_config	;CONFIG
+	ENDC
 
 	endc
 ;-------------------------------------------------------------------
