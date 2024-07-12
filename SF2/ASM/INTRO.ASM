@@ -1750,7 +1750,11 @@ check_title
 .kgamemodetbl
 	db	kmode_demo		;[MISSION]
 	db	kmode_record
+	IFNE	enableconfig
 	db	kmode_config
+	ELSEIF
+	db	$FF		; STEREO/MONO
+	ENDC
 	db	kmode_testmissionmap	;testmissionmap  ;missionresult
 	db	kmode_debugmissionmap	;debugmissionmap ;missionresult
 .kgamemodetblEND
