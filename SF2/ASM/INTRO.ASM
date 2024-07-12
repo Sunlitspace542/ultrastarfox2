@@ -867,7 +867,9 @@ jump_testplanetstep
 jump_config
 	shorta
 	longi
-;;;	jsl	configmode_l
+	IFNE	enableconfig
+	jsl	configmode_l
+	ENDC
 	rts
 
 ;=====================================================================
@@ -1542,6 +1544,7 @@ check_title
 	bne	.CheckCancel
 ;-----------------------------------------------------------------------
 ;* Stereo or Monoral Check *
+	IFEQ	enableconfig
 	lda	key_tateptr1
 	cmp	#2
  	bne	.notcheck_StereoMonoral
@@ -1562,6 +1565,7 @@ check_title
 	sta	monoral		;conf_sound
 	jsl	Stereo_l
 .notcheck_StereoMonoral
+	ENDC
 ;-----------------------------------------------------------------------
 ;* Cancel Check *
 .CheckCancel
@@ -1572,9 +1576,11 @@ check_title
 	lda	tiw_sprmode
 	dec	a
 	bne	.skipaaa
+	IFEQ	enableconfig
 	lda	key_tateptr1
 	cmp	#2
 	beq	.exit
+	ENDC
 .skipaaa
 ;-----------------------------------------------------------------------
 ;* Start Check *
@@ -1744,7 +1750,7 @@ check_title
 .kgamemodetbl
 	db	kmode_demo		;[MISSION]
 	db	kmode_record
-	db	$ff
+	db	kmode_config
 	db	kmode_testmissionmap	;testmissionmap  ;missionresult
 	db	kmode_debugmissionmap	;debugmissionmap ;missionresult
 .kgamemodetblEND

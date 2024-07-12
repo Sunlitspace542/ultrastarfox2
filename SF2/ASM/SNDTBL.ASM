@@ -70,6 +70,7 @@ ksf_training			equ	ksf_ground!kbgm_stg1
 ksf_typeselect			equ	ksf_nodata
 
 ksf_endtalk			equ	ksf_space!kbgm_stg1
+ksf_endtalkconfig		equ	ksf_space!kbgm_stg1
 ksf_secretstar			equ	ksf_ground!kbgm_stg1
 
 ;*********************************************************************
@@ -153,6 +154,9 @@ SoundTransTbl
 	sndtbldata	training,music22,music20,sdgrd1,sdgrd2
 
 	sndtbldata	endtalk,music24,music21,music22,sdspac,sdtlk
+	IFNE	configimprovements
+	sndtbldata	endtalkconfig,music24,music21,music22,sdspac	; so other songs won't sound weird when using it in sound test
+	ENDC
 	sndtbldata	secretstar,music20,music05,sdgrd1,sdgrd2,sdst6,grdwtr
 
 	sndtbldata	nodata
@@ -211,6 +215,29 @@ SoundSpecialTransTbl
 ;*								*
 ;=====================================================================
 configSNDtbl
+	IFNE	configimprovements
+	km_gamesoundptr	title			;0	1
+	km_gamesoundptr	selectmissionmap	;1	2
+	km_gamesoundptr	selectmissionplayer	;2	3+14
+	km_gamesoundptr	missionexplain		;3	4
+	km_gamesoundptr	missionstage1		;4	5
+	km_gamesoundptr	missionstage2		;5	6
+	km_gamesoundptr	missionstage3		;6	7
+	km_gamesoundptr	missionstage4		;7	8	
+	km_gamesoundptr	missionstage5		;8	9
+	km_gamesoundptr	missionstage6		;9	10
+	km_gamesoundptr	missionsos1		;a	11
+	km_gamesoundptr	missionsos2		;b	12
+	km_gamesoundptr	missionsos3		;c	13
+	km_gamesoundptr	missionsos4		;d	15
+	km_gamesoundptr	missionsos5		;e	16
+	km_gamesoundptr	playerdown		;f	17
+	km_gamesoundptr	missionextra2		;10	18
+	km_gamesoundptr	missionandrof		;11	18b
+	km_gamesoundptr	endtalkconfig		;12	22
+	km_gamesoundptr	endingdemo		;13	19
+	km_gamesoundptr	corneriafelldemo	;14	23
+	ELSEIF
 	km_gamesoundptr	title			;0	0
 	km_gamesoundptr	title			;1	1
 	km_gamesoundptr	selectmissionmap	;2	2
@@ -235,6 +262,7 @@ configSNDtbl
 	km_gamesoundptr	endingdemo		;15	22
 	km_gamesoundptr	corneriafelldemo	;16	23
 	km_gamesoundptr	missionsos6		;17	25
+	ENDC
 configSNDtblEND
 	km_datalen	configSNDtbl
 
