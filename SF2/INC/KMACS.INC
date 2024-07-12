@@ -10055,10 +10055,12 @@ KSoundBGMTestTrans	macro
 	lda.l	conf_bgm
 	and	#$ff
 	asl	a
+	IFEQ	configimprovements
 	cmp	#configSNDtblLen
 	bcc	.skip\@
 	lda	#0
 .skip\@
+	ENDC
 	tax
 	lda.l	configSNDtbl,x
 	sta	kw_setsndaddr

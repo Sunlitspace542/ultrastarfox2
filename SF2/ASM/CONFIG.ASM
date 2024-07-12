@@ -21,7 +21,7 @@ configmode_l
 ;*								*
 ;*********************************************************************
 CONFIGMODE
-	IFEQ	1
+	IFNE	enableconfig
 	php
 	a8i16
 	phb
@@ -67,7 +67,7 @@ CONFIGMODE
 
 
 
-	IFEQ	1
+	IFNE	enableconfig
 ;=====================================================================
 ;*								*
 ;*		Initial config mode				*
@@ -254,6 +254,16 @@ configkeycheck
 .BGM
 	lda	conf_bgm
 	jsr	SelectConfigSound
+	IFNE	configimprovements
+	bmi	.bgmminus
+	cmp	#configSNDtbllen/2
+	bne	.get_bgm
+	lda	#0
+	bra	.get_bgm
+.bgmminus
+	lda	#configSNDtbllen/2-1
+.get_bgm
+	ENDC
 	sta	conf_bgm
 	bra	.sound
 ;---------------------------------------------------------------------
@@ -289,7 +299,9 @@ configkeycheck
 	sta	conf_se
 ;---------------------------------------------------------------------
 .sound
+	IFNE	configcursorsound
 	ksound	cursor
+	ENDC
 ;---------------------------------------------------------------------
 .exit
 	plb

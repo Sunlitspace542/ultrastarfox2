@@ -39,6 +39,9 @@ blockmap_dbg	equ	0	; display map blockmap?
 pathcount		equ	0	; display amount of path commands executed
 sos_test_egu	equ	0	; 0=off/1=on test mode Set SOS1 and SOS2.
 polllaginfo		equ	0	; display cycles used up while polling mario chip
+enableconfig		equ	1	; restores sound test replacing the stereo/mono menu option (note: config is now in bank 36)
+configimprovements	equ	1	; improvements to the sound test such as track number wrapping to/from last track and changed songlist
+configcursorsound	equ	0	; enable cursor sound like in vanilla
 
 ;	###############################################################
 ;	## to tweak other aspects of the game, see INC/GAMELIST.INC. ##

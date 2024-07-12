@@ -15,7 +15,6 @@
 	incfile	ASM\mismap.asm
 	incfile	ASM\mismapsub.asm
 	incfile	ASM\rammismap.asm
-	incfile	ASM\config.asm
 	incfile	ASM\title.asm
 	incfile	ASM\hvscroll.asm
 	bankend	4

@@ -1074,6 +1074,9 @@ bitmapmes_titleselect
 
 	Mscore_setB_m_xy	titleselect_pX,titleselect_pY3
 	Mscore_setcursorcolor2	key_tateptr1,2
+	IFNE	enableconfig
+	Mscore_dispmessageonly	tmd_config
+	ELSEIF
 	Mscore_start65816
 		lda	key_yokoptr1	; 0 OR 1    
 		and	#00ffh
@@ -1082,6 +1085,7 @@ bitmapmes_titleselect
 		sta	yajima_temp
 	Mscore_end65816
 	Mscore_dispmessagework	yajima_temp
+	ENDC
 
 ;-------------------------------------------------------------------
 	ifne	debuginfo
