@@ -677,7 +677,7 @@ jump_titledemo
 	shorta
 	longi
 
-	ifne	kdemoinfo
+	ifne	kdemoinfo!skiptitledemo
 	km_setgamemode	title
 	rts
 	endc
