@@ -231,12 +231,13 @@ configSNDtbl
 	km_gamesoundptr	missionsos3		;c	13
 	km_gamesoundptr	missionsos4		;d	15
 	km_gamesoundptr	missionsos5		;e	16
-	km_gamesoundptr	playerdown		;f	17
-	km_gamesoundptr	missionextra2		;10	18
-	km_gamesoundptr	missionandrof		;11	18b
-	km_gamesoundptr	endtalkconfig		;12	22
-	km_gamesoundptr	endingdemo		;13	19
-	km_gamesoundptr	corneriafelldemo	;14	23
+	km_gamesoundptr	missionsos6		;f	25
+	km_gamesoundptr	playerdown		;10	17
+	km_gamesoundptr	missionextra2		;11	18
+	km_gamesoundptr	missionandrof		;12	18b
+	km_gamesoundptr	endtalkconfig		;13	22
+	km_gamesoundptr	endingdemo		;14	19
+	km_gamesoundptr	corneriafelldemo	;15	23
 	ELSEIF
 	km_gamesoundptr	title			;0	0
 	km_gamesoundptr	title			;1	1
