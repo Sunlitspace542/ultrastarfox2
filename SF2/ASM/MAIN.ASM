@@ -1467,7 +1467,11 @@ virus_name		db	" BRAIN SPOILER ",0
 speed_name		db	" SPIRAL KITE ",0
 baku_name		db	" CANNON BOMBER ",0
 ninja_name		db	" TEKTRON ",0
+	IFNE	janglish
 stepup_0_name	db	" HUNTER FANTRON ",0
+	ELSEIF
+stepup_0_name	db	" HUNTER PHANTRON ",0
+	ENDC
 
 gattai_name		db	" TURTLE MISSILE ",0
 toge_name		db	" STATION MISSILE ",0
@@ -1483,7 +1487,11 @@ name_leon	db	"LEON",0
 name_wolf	db	"WOLF",0
 name_kani	db	"QUEEN DRAGOON",0
 name_kama	db	"KAMANTIS",0
+	IFNE	janglish
 name_fantron	db	"H.FANTRON",0
+	ELSEIF
+name_fantron	db	"HUNTER PHANTRON",0
+	ENDC
 name_tectron	db	"TEKTRON",0
 name_mirage	db	"MIRAGE DRAGON",0
 name_knight	db	"KNIGHT NACK",0
