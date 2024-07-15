@@ -50,6 +50,9 @@ startboot	disable		;IRQ disable
 	ksoundprogtrans
 	ksoundtrans	ffset1
 	ksoundtrans	ffset2
+	ifne	skiptitledemo
+	ksoundtrans	sdse1
+	endc
 ;---------------------------------------------------------------------
 	ai8
 ;;;;	fast			;21M mode
