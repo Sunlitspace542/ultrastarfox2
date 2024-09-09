@@ -392,11 +392,15 @@ titleobj_startdemo
 	dwnext	titleobj_nintendo_waitend ; nintendo wait end 
 	dwloop	20,titleobj_endwait
 	dwnext	titleobj_pushstart
+	ifne	skiptitledemo
+	dwstop	titleobj_endwait
+	elseif
 	dwloop	120,titleobj_endwait	 ; openning end wait
 	dwloop	120,titleobj_endwait	 ; openning end wait
 	dwloop	120,titleobj_endwait	 ; openning end wait
 	dwloop	120,titleobj_endwait	 ; openning end wait
 	dwstop	titleobj_return		 ; restart title DEMO
+	endc
 
 ;---------------------------------------------------------------------
 ;	Set planet Object !!
