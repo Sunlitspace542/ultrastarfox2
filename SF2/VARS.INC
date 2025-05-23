@@ -14,7 +14,7 @@ french				equ	0	; french version  (unused)
 fast				equ	1	; 21Mhz
 CacheOn				equ	1	; Super FX chip cache on/off
 cesboot				equ	0	; WCES 1995 "Nintendo Presents" screen
-skiptitledemo		equ	1	; Skips the title demo with the Mirage Dragon but not the Arwings entering the Mothership
+skiptitledemo		equ	0	; Skips the title demo with the Mirage Dragon but not the Arwings entering the Mothership
 lockondef			equ 0	; Enable Lock-On by default
 forceeasyandross	equ 0	; Force normal mode Andross on all difficulties
 forcenormalandross	equ 0	; Force hard mode Andross on all difficulties
