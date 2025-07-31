@@ -4,7 +4,7 @@
 
 # Assembler
 ASM=ARGSFXX
-ASMFLAGS=-efilelist=0 -xsymbols.txt
+ASMFLAGS=-e__notitle -efilelist=0 -xsymbols.txt
 
 # Linker
 LINK=arglink
@@ -68,10 +68,16 @@ ALLFILES= BANK\bank0.sob BANK\bank1.sob BANK\bank2.sob \
 	@$(CRU) $< $*.PCR
 
 # Everything that should be done when make is executed
-all: setup allcols msprites crunch sf2.sfc donebld
+all: setup text allcols msprites crunch sf2.sfc donebld
 
 setup:
 	@del BANK\*.SOB
+
+# Tokenize/compress English Script
+text:
+	@cd msg
+	@chrmap.bat chrmapen.dat ENGLISH.INC ENGLISH.MSG
+	@cd ..
 
 # Recipe to crunch palettes
 allcols:
@@ -126,6 +132,7 @@ donebld:
 	@del symbols.txt
 	@copy BANKS.CSV ..\BANKS.CSV
 	@del BANKS.CSV
+	@del MSG\ENGLISH.MSG
 
 # Clean everything up
 clean:
