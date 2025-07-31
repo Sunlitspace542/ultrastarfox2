@@ -26,6 +26,9 @@ MOPTS= /cgx
 # Graphics Cruncher
 CRU=CRU
 
+# Text Tokenizer
+CHRMAP=CHRMAP
+
 #!! If you add/remove a cgx in these two lists, make sure to add/remove the corresponding file.
 
 # Crunched tilesets
@@ -76,7 +79,7 @@ setup:
 # Tokenize/compress English Script
 text:
 	@cd msg
-	@chrmap.bat chrmapen.dat ENGLISH.INC ENGLISH.MSG
+	@$(CHRMAP) --tokenize chrmapen.dat ENGLISH.INC ENGLISH.MSG
 	@cd ..
 
 # Recipe to crunch palettes

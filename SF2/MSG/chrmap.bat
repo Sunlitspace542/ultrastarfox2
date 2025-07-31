@@ -1,1 +1,0 @@
-C:\BIN\chrmap.exe --tokenize %1 %2 > %3
