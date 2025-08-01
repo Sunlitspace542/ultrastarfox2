@@ -49,3 +49,29 @@ The start and end offsets are multiplied by 32.
 To use:  
 ``inccol [.col file] [start offset] [end offset]``  
 Output is written to ``col.tmp``.  
+
+## CHRMAP
+**Tool made by Sunlit**
+Tool to (de)tokenize message files for Star Fox (2).  
+To use:  
+``chrmap --detokenize|--tokenize [charmap txt file] [infile] [outfile]``
+The charmap text file should look something like this:  
+```
+// token byte = "text"
+0x27 = "[St]" // Example of bracketed multi-character symbolic token (and comments!)
+0x80 = "ä" // Example of a quoted UTF-8 token
+```
+### Tokenization example
+Charmap file has:  
+```
+0x83 = "Ü" // Cap. U w/ umlaut
+```
+This line:  
+```
+message	white,fox,<        ASTEROIDEN GÜRTEL>,other	; (94)
+```
+Becomes:  
+```
+message	white,fox,<        ASTEROIDEN GƒRTEL>,other	; (94)
+```
+For detokenization, it does the reverse.  

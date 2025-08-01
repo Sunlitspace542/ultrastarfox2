@@ -6,6 +6,9 @@
 #define MAX_LINE 1024
 #define MAX_MAP 256
 
+// Define to switch to special detokenization handler for Star Fox 2 Japanese version text
+//#define STARFOX2
+
 typedef struct {
     unsigned char byte;
     char utf8[8];
@@ -50,11 +53,35 @@ void parse_charmap(const char *filename) {
         if (sscanf(hex, "0x%x", &byte) != 1 || byte > 255)
             continue;
 
-        // Remove optional quotes/brackets
-        if ((val[0] == '"' && val[strlen(val) - 1] == '"') ||
-            (val[0] == '[' && val[strlen(val) - 1] == ']')) {
+        // Detect if wrapped in quotes or brackets
+        int wrapped_in_quotes = (val[0] == '"' && val[strlen(val) - 1] == '"');
+        int wrapped_in_brackets = (val[1] == '[' && val[strlen(val) - 2] == ']');
+
+        if (wrapped_in_quotes || wrapped_in_brackets) {
             val[strlen(val) - 1] = '\0';
             val++;
+        }
+
+        // Check number of UTF-8 characters
+        int utf8_count = 0;
+        const char *p = val;
+        while (*p) {
+            unsigned char c = (unsigned char)*p;
+            if ((c & 0x80) == 0) p += 1;
+            else if ((c & 0xE0) == 0xC0) p += 2;
+            else if ((c & 0xF0) == 0xE0) p += 3;
+            else if ((c & 0xF8) == 0xF0) p += 4;
+            else break;
+            utf8_count++;
+        }
+
+        if (utf8_count > 1 && wrapped_in_quotes && !wrapped_in_brackets) {
+            fprintf(stderr,
+                "Error in charmap '%s':\n"
+                "  Token symbol for 0x%02X has multiple UTF-8 characters in quotes: \"%s\"\n"
+                "  Hint: Wrap symbols with multiple characters in square brackets: [ %s ]\n",
+                filename, byte, val, val);
+            exit(1);
         }
 
         map[map_len].byte = (unsigned char)byte;
@@ -93,6 +120,7 @@ int read_utf8_char(const char *s, char *out) {
     return len;
 }
 
+#ifndef STARFOX2
 void detokenize_file(FILE *in, FILE *out) {
     int in_tag = 0;
     int c;
@@ -100,8 +128,12 @@ void detokenize_file(FILE *in, FILE *out) {
         if (c == '<') in_tag = 1;
         else if (c == '>') in_tag = 0;
 
-//        if (in_tag && (c >= 0x80)) {
         if (in_tag) {
+            // don't use angle brackets
+            if (c == '<' || c == '>') {
+                fputc(c, out);
+                continue;
+            }
             char *utf = find_utf8((unsigned char)c);
             if (utf)
                 fputs(utf, out);
@@ -112,61 +144,157 @@ void detokenize_file(FILE *in, FILE *out) {
         }
     }
 }
+#endif
 
+#ifdef STARFOX2
+#define SKIP_WORDS 2
+void detokenize_file(FILE *in, FILE *out) {
+    int in_tag = 0;
+    int c;
+    char buffer[1024];
+    int pos = 0;
+
+    while ((c = fgetc(in)) != EOF) {
+        if (!in_tag) {
+            if (c == '<') {
+                in_tag = 1;
+                fputc(c, out);
+                pos = 0;
+            } else {
+                fputc(c, out);
+            }
+            continue;
+        }
+
+        // Inside a tag
+        if (c == '>') {
+            in_tag = 0;
+            buffer[pos] = '\0';
+
+            // ---- Split and preserve first two words ----
+            int word_count = 0, i = 0;
+
+            // Print out the first two space-separated words
+            while (buffer[i] && word_count < SKIP_WORDS) {
+                fputc(buffer[i], out);
+                if (buffer[i] == ' ') word_count++;
+                i++;
+            }
+
+            // Now detokenize the rest
+            for (; buffer[i]; i++) {
+                unsigned char b = (unsigned char)buffer[i];
+
+                // Don't interpret angle brackets inside content
+                if (b == '<' || b == '>') {
+                    fputc(b, out);
+                    continue;
+                }
+
+                char *utf = find_utf8(b);
+                if (utf)
+                    fputs(utf, out);
+                else
+                    fputc(b, out);
+            }
+
+            fputc('>', out); // close tag
+            continue;
+        }
+
+        if (in_tag && pos < (int)sizeof(buffer) - 1) {
+            buffer[pos++] = (char)c;
+        }
+    }
+}
+#endif
 
 void tokenize_file(FILE *in, FILE *out) {
     int in_tag = 0;
     int c;
+
     while ((c = fgetc(in)) != EOF) {
         if (c == '<') {
             in_tag = 1;
             fputc(c, out);
             continue;
+
         } else if (c == '>') {
             in_tag = 0;
             fputc(c, out);
             continue;
         }
 
-        if (in_tag) {
-            if (c == '[') {
-                char token[64];
-                int pos = 0;
-                token[pos++] = (char)c;
-
-                // Read until closing bracket or EOF
-                while ((c = fgetc(in)) != EOF && c != ']' && pos < (int)sizeof(token) - 2)
-                    token[pos++] = (char)c;
-
-                if (c == ']') {
-                    token[pos++] = ']';
-                    token[pos] = '\0';
-
-                    int byte = find_byte(token);
-                    if (byte >= 0) {
-                        fputc(byte, out);
-                        continue;
-                    }
-                }
-
-                // If we didn’t match, output it raw
-                fwrite(token, 1, pos, out);
-            } else {
-                char utf8[8];
-                utf8[0] = (char)c;
-                int len = read_utf8_char((char *)&utf8[0], utf8);
-                int byte = find_byte(utf8);
-                if (byte >= 0)
-                    fputc(byte, out);
-                else
-                    fwrite(utf8, 1, len, out);
-            }
-        } else {
-            // Not in bracketed string: just pass through
+        if (!in_tag) {
             fputc(c, out);
+            continue;
+        }
+
+        // Inside <...>
+        if (c == '<' || c == '>') {
+            // Protect angle brackets inside tag content
+            fputc(c, out);
+            continue;
+        }
+
+        // Inside <...>
+        if (c == '[') {
+            // Try to read symbolic token like [St], [0x83], [D^]
+            char token[64];
+            int pos = 0;
+            token[pos++] = '[';
+
+            while ((c = fgetc(in)) != EOF && c != ']' && pos < (int)sizeof(token) - 2) {
+                token[pos++] = (char)c;
+            }
+
+            if (c == ']') {
+                token[pos++] = ']';
+                token[pos] = '\0';
+
+                int byte = find_byte(token);
+                if (byte >= 0) {
+                    fputc(byte, out);
+                    continue;
+                }
+            }
+
+            // If unmatched or invalid, print raw
+            fwrite(token, 1, pos, out);
+            continue;
+        }
+
+        // UTF-8 handling
+        unsigned char first = (unsigned char)c;
+        char utf8[8];
+        int len = 1;
+
+        utf8[0] = (char)first;
+
+        if ((first & 0xE0) == 0xC0) len = 2;
+        else if ((first & 0xF0) == 0xE0) len = 3;
+        else if ((first & 0xF8) == 0xF0) len = 4;
+
+        for (int i = 1; i < len; i++) {
+            int next = fgetc(in);
+            if (next == EOF) {
+                len = i; // Partial character
+                break;
+            }
+            utf8[i] = (char)next;
+        }
+
+        utf8[len] = '\0';
+
+        int byte = find_byte(utf8);
+        if (byte >= 0) {
+            fputc(byte, out);
+        } else {
+            fwrite(utf8, 1, len, out);
         }
     }
 }
+
 
 
 

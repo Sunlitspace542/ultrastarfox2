@@ -1,4 +1,5 @@
 // Star Fox 2 Japanese Character Map
+// Ranges from 0x21 - 0xFE with one control code (0x11)
 0x11 = "[NOSP]" // control code used when rendering START and SELECT, forces kerning of 0
 0x23 = "[AR]"
 0x24 = "[T)]"
