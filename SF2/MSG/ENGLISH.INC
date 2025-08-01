@@ -1,4 +1,4 @@
-	MSG	<pepper OTHER [St][ar] [Fo]x te[am]-[do] [yo]u [re]ad [me]? I [ha][ve] t[er][ri][bl]e news.>
+	MSG	<pepper OTHER [St][ar] [Fo]x te[am]-[do] [yo]u [re]ad [me]? I [ha][ve] t[er][ri][bl]e [ne]ws.>
 	MSG	<pepper OTHER O[ur] swo[rn] [en][em]y, [th]e [fi][en]d [An][dr]o[ss], [is] [al]i[ve]!>
 	MSG	<pepper OTHER Ev[en] [as] [we] [sp]eak, [he] [is] la[un][ch][in]g [an] [as][sa][ul]t [on] [Co][rn][er][ia].>
 	MSG	<pepper OTHER [Th]e B[at]t[le] C[ar][ri][er]s [an]d [at][ta][ck] f[or][ce]s [of] [An][dr]o[ss]>
