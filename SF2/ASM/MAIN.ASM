@@ -208,8 +208,8 @@ initgame_l
 	jsl	setscreentype_l
 ;---------------------------------------------------
 	a8
-	lda	#1
-	sta	sheildon
+;	lda	#1
+;	sta	sheildon
 	stz	showtype
 	stz	msg_count1
 	stz	msg_count2

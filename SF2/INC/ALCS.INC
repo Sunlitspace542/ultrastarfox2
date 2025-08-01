@@ -47,14 +47,14 @@ alcon	=	1
 	zalc	tpy1,1
 	zalc	tpz,1
 	zalc	tpz1,1
-	zalc	tracept,2
+;	zalc	tracept,2	; unused zp
 	zalc	printpt,2
 	zalc	drawmap,2
 	zalc	showmap,2
-	zalc	drawsprptr,2
+;	zalc	drawsprptr,2	; unused zp
 	zalc	vmap1,2
 	zalc	vmap2,2
-	zalc	vcmap,2
+;	zalc	vcmap,2	; unused zp
 	zalc	textpt,4
 	zalc	tempaddrl,3
 
@@ -87,10 +87,10 @@ alcon	=	1
 	alc	sortz,2
 
 ;game movement vars
-	alc	pwepcnty,1
-	alc	pwepcnta,1
-	alc	pwepYnotA,1
-	alc	tankroty,2
+;	alc	pwepcnty,1
+;	alc	pwepcnta,1
+;	alc	pwepYnotA,1
+;	alc	tankroty,2
 
 	alc	plrotx,2
 	alc	plroty,2
@@ -138,18 +138,18 @@ xlen	=	31*1024+512
 
 
 
-	alc	doingend,1
-	alc	spranimcnt,2
-	alc	crosshairon,1
-	alc	sheildon,1
-	alc	specwepcnt,2
-	alc	spritespos,2
-	alc	mespos,2
-	alc	mesendpos,2
-	alc	scramble,1
-	alc	gameover,1
-	alc	clearsprs,1
-	alc	stageclear,1
+;	alc	doingend,1
+;	alc	spranimcnt,2	; unused work ram
+;	alc	crosshairon,1
+;	alc	sheildon,1	; unused work ram
+;	alc	specwepcnt,2
+;	alc	spritespos,2
+;	alc	mespos,2
+;	alc	mesendpos,2
+;	alc	scramble,1
+;	alc	gameover,1	; unused work ram
+;	alc	clearsprs,1
+;	alc	stageclear,1
 
 
 	alc	stagecnt,2
@@ -203,10 +203,10 @@ xlen	=	31*1024+512
 	zalc	shiftz,1
 	zalc	numnoclip,1
 ;	zalc	noclip,1
-	zalc	noclipx,1
+;	zalc	noclipx,1
 ;	zalc	linedrawvec,2
-	zalc	pauseflag,1
-	zalc	strptr,2
+;	zalc	pauseflag,1
+;	zalc	strptr,2
 
 	zalc	rotx,1
 	zalc	roty,1
@@ -675,11 +675,11 @@ m_cbr		equ	$303E ; Cache Base Register (R)
 	alc	hdmacirclebuf1,2
 	alc	hdmacirclebuf2,2
 	alc	whichcircle,1
-	alc	numhere,2
+;	alc	numhere,2
 	alc	gamevwpos,1
-	alc	planetdead,2
-	alc	oldplanetdead,2
-	alc	coldataval,1
+;	alc	planetdead,2
+;	alc	oldplanetdead,2
+;	alc	coldataval,1
 	zalc	fadedir,1
 	zalc	fade,1
 	alc	hdmabg2hofs1,2
@@ -690,7 +690,7 @@ m_cbr		equ	$303E ; Cache Base Register (R)
 	alc	time1,3
 	alc	time2,3
 	alc	gamemode,2
-	alc	depthnum,1
+;	alc	depthnum,1
 	alc	outvx,2
 	alc	outvy,2
 	alc	outvz,2
@@ -710,13 +710,13 @@ m_cbr		equ	$303E ; Cache Base Register (R)
 	alc	shadowheight,2
 	alc	stayblack,1
 	alc	cgadsub_bak,1
-	alc	coldata_bak,1
-	alc	cgswsel_bak,1
+;	alc	coldata_bak,1
+;	alc	cgswsel_bak,1
 	alc	ts_bak,1
 	alc	texxy,2
 	alc	head,2
 	alc	spare,2
-;	alc	zbblks,zb_size*number_zb
+;	alc	zbblks,zb_size*number_zb			;1400 bytes free!
 
 	alc	numshapes,2
 	alc	dlptr,2
@@ -739,8 +739,8 @@ m_cbr		equ	$303E ; Cache Base Register (R)
 	alc	tmpcl,2
 	alc	temp23,2
 	alc	currshape,2
-	alc	keeppstrat,1
-	alc	monitorcrosshairon,1	; FOR MONITOR TEST ONLY!!!
+;	alc	keeppstrat,1
+;	alc	monitorcrosshairon,1	; FOR MONITOR TEST ONLY!!!
 
 	xalc	gamepalbuff,32
 
