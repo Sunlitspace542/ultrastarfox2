@@ -1,5 +1,5 @@
 # UltraStarFox2
-Star Fox 2, with modifications for easier creation of ROM hacks and general ease-of-use.  
+Star Fox 2 source code, modified for ease-of-use and ROMHacking. 
 
 ## Notes
 - **This codebase is difficult to work with.**  
