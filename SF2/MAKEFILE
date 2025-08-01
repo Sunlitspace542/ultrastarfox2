@@ -4,11 +4,11 @@
 
 # Assembler
 ASM=ARGSFXX
-ASMFLAGS=-e__notitle -efilelist=0 -xsymbols.txt
+ASMFLAGS=-e__notitle -efilelist=0 -z
 
 # Linker
 LINK=arglink
-LOPTS=-b30 -h1024
+LOPTS=-b30 -h1024 -z
 
 # ROM Extender
 EXTEND=EXTEND
@@ -20,14 +20,19 @@ CHECK=SFCHECK
 COPTS=-s -f
 
 # FXGFX Interleaver
-MERGE=MERGE
-MOPTS= /cgx
+MERGE=CGX2FX
+
+# Macro to make a FXGfx BIN file
+MAKEBIN= $(MERGE) $** $@
 
 # Graphics Cruncher
 CRU=CRU
 
 # Text Tokenizer
 CHRMAP=CHRMAP
+
+# ArgBug MAP File Decoder
+MAPDEC=MAPDEC
 
 #!! If you add/remove a cgx in these two lists, make sure to add/remove the corresponding file.
 
@@ -89,30 +94,36 @@ allcols:
 	@pc.bat
 	@cd ..\..
 
+
 # FXGFX files to be interleaved
-msprites: spt_01.bin spt_23.bin spt_45.bin spt_23a.bin spt_45a.bin spt_23p.bin spt_45p.bin
+MSPRITES_BINS= \
+ MSPRITES\spt_01.bin MSPRITES\spt_23.bin MSPRITES\spt_45.bin \
+ MSPRITES\spt_23a.bin MSPRITES\spt_45a.bin MSPRITES\spt_23p.bin \
+ MSPRITES\spt_45p.bin
+
+msprites: $(MSPRITES_BINS)
 
 # MSPRITES .BIN recipes
-spt_01.bin:
-	@$(MERGE) MSPRITES\SPT_0.CGX MSPRITES\SPT_1.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_01.bin: MSPRITES\SPT_0.CGX MSPRITES\SPT_1.CGX
+	@$(MAKEBIN)
 
-spt_23.bin:
-	@$(MERGE) MSPRITES\SPT_2.CGX MSPRITES\SPT_3.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_23.bin: MSPRITES\SPT_2.CGX MSPRITES\SPT_3.CGX
+	@$(MAKEBIN)
 
-spt_45.bin:
-	@$(MERGE) MSPRITES\SPT_4.CGX MSPRITES\SPT_5.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_45.bin: MSPRITES\SPT_4.CGX MSPRITES\SPT_5.CGX
+	@$(MAKEBIN)
 
-spt_23a.bin:
-	@$(MERGE) MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_23a.bin: MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX
+	@$(MAKEBIN)
 
-spt_45a.bin:
-	@$(MERGE) MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_45a.bin: MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX
+	@$(MAKEBIN)
 
-spt_23p.bin:
-	@$(MERGE) MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_23p.bin: MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX
+	@$(MAKEBIN)
 
-spt_45p.bin:
-	@$(MERGE) MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX MSPRITES\$@ $(MOPTS)
+MSPRITES\spt_45p.bin: MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX
+	@$(MAKEBIN)
 
 # Crunch all compressible GFX
 crunch: $(CGXFILES) $(SCRFILES)
@@ -127,13 +138,14 @@ sf2.sfc: $(ALLFILES)
 donebld:
 	@copy sf2.sfc ..\sf2.sfc
 	@del sf2.sfc
-	@del BANK\*.sob
+	@$(MAPDEC) SF2.MAP ..\SYMBOLS.TXT
+	@del SF2.MAP
+	@del BANK\*.SOB
+	@del BANK\*.MAP
 	@del msgtable.tmp
 	@del alvars.txt
 	@del techdata.txt
 	@del externs.log
-	@copy symbols.txt ..\symbols.txt
-	@del symbols.txt
 	@copy BANKS.CSV ..\BANKS.CSV
 	@del BANKS.CSV
 	@del MSG\ENGLISH.MSG
@@ -142,6 +154,8 @@ donebld:
 # Clean everything up
 clean:
 	@del BANK\*.SOB
+	@del BANK\*.MAP
+	@del *.MAP
 	@del MSPRITES\*.BIN
 	@del DATA\COL\ALLCOLS.COL
 	@del DATA\COL\*.PAC
@@ -151,11 +165,12 @@ clean:
 	@del techdata.txt
 	@del sf2.sfc
 	@del ..\sf2.sfc
-	@del symbols.txt
 	@del ..\symbols.txt
 	@del ..\BUILD.LOG
 	@del ..\BANKS.CSV
 	@del BANKS.CSV
+	@del MSG\ENGLISH.MSG
+	@del MSG\JAPANESE.MSG
 
 ## Files to assemble
 bank0.sob: \
