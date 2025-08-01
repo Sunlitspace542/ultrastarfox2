@@ -76,10 +76,11 @@ all: setup text allcols msprites crunch sf2.sfc donebld
 setup:
 	@del BANK\*.SOB
 
-# Tokenize/compress English Script
+# Tokenize/compress Japanese/English Script
 text:
 	@cd msg
 	@$(CHRMAP) --tokenize chrmapen.dat ENGLISH.INC ENGLISH.MSG
+	@$(CHRMAP) --tokenize chrmapjp.dat JAPANESE.INC JAPANESE.MSG
 	@cd ..
 
 # Recipe to crunch palettes
@@ -136,6 +137,7 @@ donebld:
 	@copy BANKS.CSV ..\BANKS.CSV
 	@del BANKS.CSV
 	@del MSG\ENGLISH.MSG
+	@del MSG\JAPANESE.MSG
 
 # Clean everything up
 clean:
