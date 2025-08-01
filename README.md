@@ -1,10 +1,10 @@
 # UltraStarFox2
-Star Fox 2 (SNES, 1996/2017), with modifications for easier creation of ROM hacks and general ease-of-use.  
+Star Fox 2, with modifications for easier creation of ROM hacks and general ease-of-use.  
 
 ## Notes
 - **This codebase is difficult to work with.**  
 - In the source code, the Normal, Hard and Expert difficulties are referred to as Easy, Normal, and Hard.  
-- A lot of source files use the DOS (CP437) encoding.  
+- Many source files use the DOS (CP437) encoding. Make sure you configure this in your editor. Note that the message files are in UTF-8 format.  
 - The assembler will fail to assemble files with Unix (LF) line endings. Make sure your editor is configured for DOS/Windows (CRLF) line endings.  
 
 ## Features
@@ -67,8 +67,8 @@ ultrastarfox2
 │   ├── INC: .inc files, arc tangent table
 │   ├── MAPS: map scripts
 │   ├── MARIO: .MC MARIO chip (SuperFX) code 
-│   ├── MSG: Message files for English and Japanese
-│   ├── MSPRITES: contains 7 BIN files (interleaved textures)
+│   ├── MSG: Message files for English and Japanese (UTF-8)
+│   ├── MSPRITES: contains interleaved FXGfx format textures
 │   ├── PATH: contains all PATH language code
 │   ├── SHAPES: contains all shape files
 │   ├── SOUND: sound/music data
