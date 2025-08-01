@@ -56,7 +56,7 @@ totaltime	=	0
 	gettime	starttime
 
 
-	include	vars.inc
+	include	INC\vars.inc
 	include	INC\kvars.inc
 
 	include INC\sound.inc

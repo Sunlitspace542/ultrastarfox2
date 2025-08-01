@@ -1,58 +1,5 @@
-;  ##################
-;  #                #
-;  # Assembly Flags #
-;  #                #
-;  ##################
-
-cesdemo				equ	0	; 0 is normal, 1/2 (unused)
-janglish			equ	0	; 0 = english, 1 = japanese
-cestime				equ	4	; ces countdown (in minutes) (unused)
-pal					equ	0	; PAL/NTSC (1/0)
-contest				equ	0	; contest version (unused)
-german				equ	0	; german version  (unused)
-french				equ	0	; french version  (unused)
-fast				equ	1	; 21Mhz
-CacheOn				equ	1	; Super FX chip cache on/off
-cesboot				equ	0	; WCES 1995 "Nintendo Presents" screen
-skiptitledemo		equ	0	; Skips the title demo with the Mirage Dragon but not the Arwings entering the Mothership
-lockondef			equ 0	; Enable Lock-On by default
-forceeasyandross	equ 0	; Force normal mode Andross on all difficulties
-forcenormalandross	equ 0	; Force hard mode Andross on all difficulties
-forcehardandross	equ 0	; Force expert mode Andross on all difficulties
-expertbydefault		equ 0	; enable expert mode by default
-walkertwirl			equ 0	; enable walker twirl from WCES 1995 (note: egdata is now in bank 36)
-spaceviewchange		equ	0	; enable changing view in space like in the Aeon Genesis English Translation
-
-nosecuritychk		equ	0	; disable region/controller port checks on boot
-
-DamageHalf			equ 0	; Any damage taken is reduced by half.
-
-kyear				equ	96	; 95/96/97/17 = 1995/1996/1997/2017
-
-; debugging:
-
-debuginfo		equ	0	; full strategy debugging
-debuginfo2		equ	0 	; stage selection/ speed up mode
-portinfo		equ	0	; 0/1 ... sound port display off/on 
-randominfo		equ	0	; 0/1 ... random on/off
-demoinfo		equ	0	; 0/1 ... polygon demo on / off
-blockmap_dbg	equ	0	; display map blockmap?
-pathcount		equ	0	; display amount of path commands executed
-sos_test_egu	equ	0	; 0=off/1=on test mode Set SOS1 and SOS2.
-polllaginfo		equ	0	; display cycles used up while polling mario chip
-enableconfig	=	0	; restores sound test (note: config is now in bank 36)
-configimprovements	equ	1	; improvements to the sound test such as track number wrapping to/from last track and changed songlist
-configcursorsound	equ	1	; enable cursor sound like in vanilla
-
-; if you use 'equ' that label's value cannot be redefined,
-; so we use '=' instead for this switch so we can disable config in retail
-	ifeq	debuginfo
-enableconfig	=	0
-	endc
-
-;	###############################################################
-;	## to tweak other aspects of the game, see INC/GAMELIST.INC. ##
-;	###############################################################
+; Include Master Configuration File
+	include CONFIG\CONFIG.INC
 
 ; user list:
 
@@ -87,7 +34,7 @@ user_yajima		equ	8
 
 	STRING	version[80]
 
-; define the 'version' string from the above variables.
+; define the 'version' string based the language equates (CONFIG\ROM.INC).
 
 	IFEQ	JANGLISH
 	IFEQ	PAL
