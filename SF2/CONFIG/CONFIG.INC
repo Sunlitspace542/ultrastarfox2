@@ -17,7 +17,3 @@ cesdemo				equ	0	; 0 is normal, 1/2 (unused)
 cestime				equ	4	; ces countdown (in minutes) (unused)
 contest				equ	0	; contest version (unused)
 ;###################################################################
-
-;###############################################################
-;## to tweak other aspects of the game, see INC/GAMELIST.INC. ##
-;###############################################################

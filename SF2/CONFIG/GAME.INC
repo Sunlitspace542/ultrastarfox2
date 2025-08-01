@@ -18,6 +18,10 @@ skiptitledemo		equ	0
 ; [0 = off, 1 = on]
 nosecuritychk		equ	0
 
+; Gameplay
+;###############################################################
+;## to tweak other aspects of the game, see INC/GAMELIST.INC. ##
+;###############################################################
 
 ; Gameplay Difficulty
 
