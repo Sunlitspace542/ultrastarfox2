@@ -1,4 +1,4 @@
-	MSG	<pepper OTHER [St][ar] [Fo]x te[am][-][do] [yo]u [re]ad [me]? I [ha][ve] t[er][ri][bl]e news.>
+	MSG	<pepper OTHER [St][ar] [Fo]x te[am]-[do] [yo]u [re]ad [me]? I [ha][ve] t[er][ri][bl]e news.>
 	MSG	<pepper OTHER O[ur] swo[rn] [en][em]y, [th]e [fi][en]d [An][dr]o[ss], [is] [al]i[ve]!>
 	MSG	<pepper OTHER Ev[en] [as] [we] [sp]eak, [he] [is] la[un][ch][in]g [an] [as][sa][ul]t [on] [Co][rn][er][ia].>
 	MSG	<pepper OTHER [Th]e B[at]t[le] C[ar][ri][er]s [an]d [at][ta][ck] f[or][ce]s [of] [An][dr]o[ss]>
@@ -21,18 +21,18 @@
 	MSG	<pepper OTHER R[et][ur]n [to] [yo][ur] Mo[th][er][sh][ip] [to] w[ar]p [to] [an]y [fr]ee [pl][an][et].>
 	MSG	<pepper OTHER Se[le][ct] a [de][st][in][at]i[on] [by] m[ov][in]g [th]e c[ur]s[or], [th][en] p[re][ss] [(B)].>
 	MSG	<ANDROSS OTHER I [ha][ve] [re][tu][rn][ed]! I [sh][al]l [ma][ke] [th]e [Co][rn][er][ia]ns [su]ff[er]!>
-	MSG	<andross help In[ha]b[it][an]ts [of] [Co][rn][er][ia][-][yo]u [sh][al]l fe[ar] my v[en][ge][an][ce].>
+	MSG	<andross help In[ha]b[it][an]ts [of] [Co][rn][er][ia]-[yo]u [sh][al]l fe[ar] my v[en][ge][an][ce].>
 	MSG	<andross down I [wi][ll] [de]m[on][st]r[at]e my a[we][so][me] [po][we]r [on] [al]l [of] Lyl[at]!>
 	MSG	<FOX OTHER D[on]['t] [fo]r[ge]t [to] p[re][ss] [(Y)] [to] [fi][re] [yo][ur] [bo]o[st][er]s!>
 	MSG	<FALCO OTHER [Yo][ur] [bo]o[st][er]s [ar]e a[ct]iv[at][ed] [by] p[re][ss][in]g [(Y)].>
 	MSG	<PEPPY OTHER By p[re][ss][in]g [(Y)], [yo]u c[an] [bo]o[st] [yo][ur] [sp]e[ed].>
-	MSG	<SLIPPY OTHER F[ly] [fa][st][er] [by] p[re][ss][in]g[-][ri][bb][it]![-] [(Y)].>
+	MSG	<SLIPPY OTHER F[ly] [fa][st][er] [by] p[re][ss][in]g-[ri][bb][it]!- [(Y)].>
 	MSG	<GIRL1 OTHER [If] [yo]u w[an]t [to] [sp]e[ed] [up], u[se] [(Y)].>
 	MSG	<GIRL2 OTHER P[re][ss] [(Y)] [an]d [yo]u [wi][ll] a[ct]iv[at]e [yo][ur] [bo]o[st][er]s!>
 	MSG	<FOX OTHER Boo[st] [yo][ur] [sp]e[ed] [an]d [ch]a[se] [do][wn] [en][em][ie]s [wi][th] [(Y)]!>
 	MSG	<FALCO OTHER Y[ou]'[re] f[ly][in]g [to]o sl[ow]! U[se] [(Y)] [to] [sp]e[ed] [up].>
 	MSG	<PEPPY OTHER [We]'[re] [fa][ll][in]g [be]h[in]d. P[re][ss] [(Y)] [to] [bo]o[st] [sp]e[ed]!>
-	MSG	<SLIPPY OTHER [Th][ey]'[re] [ge][tt][in]g [aw][ay]! P[re][ss] [(Y)][-] [rr]r[ri][bb][it]!>
+	MSG	<SLIPPY OTHER [Th][ey]'[re] [ge][tt][in]g [aw][ay]! P[re][ss] [(Y)]- [rr]r[ri][bb][it]!>
 	MSG	<GIRL1 OTHER [Th][ey] [ar]e es[ca]p[in]g! C[at][ch] [th]e [en][em]y [by] p[re][ss][in]g [(Y)]!>
 	MSG	<GIRL2 OTHER [If] [we] d[on]['t] [bo]o[st] o[ur] [sp]e[ed] [wi][th] [(Y)], [th][ey]'[ll] [ge]t [aw][ay]!>
 	MSG	<FOX OTHER [Co][rn][er][ia] [is] [un]d[er] [at][ta][ck]. H[it] [(ST][NOSP][AR][NOSP][T)]!>
@@ -44,7 +44,7 @@
 	MSG	<FOX OTHER [Th][is] [is] [ta]k[in]g [to]o l[on]g. P[re][ss] [(ST][NOSP][AR][NOSP][T)].>
 	MSG	<FALCO OTHER L[et]'s [ge]t [ou]t [of] [he][re]! P[re][ss] [(ST][NOSP][AR][NOSP][T)].>
 	MSG	<PEPPY OTHER It's [no] [go][od]! [To] [ge]t [ou]t [of] [he][re], p[re][ss] [(ST][NOSP][AR][NOSP][T)].>
-	MSG	<SLIPPY OTHER [We]'[re] [wa][st][in]g [ti][me] [he][re]. P[re][ss] [(ST][NOSP][AR][NOSP][T)][-]c[rr]roak!>
+	MSG	<SLIPPY OTHER [We]'[re] [wa][st][in]g [ti][me] [he][re]. P[re][ss] [(ST][NOSP][AR][NOSP][T)]-c[rr]roak!>
 	MSG	<GIRL1 OTHER L[et]'s [ba]g [th][is]. [We] [to]ok [to]o l[on]g. P[re][ss] [(ST][NOSP][AR][NOSP][T)].>
 	MSG	<GIRL2 OTHER Ti[me] [is] lim[it][ed], [so] [le]t's gi[ve] [th][is] [up]. P[re][ss] [(ST][NOSP][AR][NOSP][T)].>
 	MSG	<FOX OTHER [We]'[ve] [le]ft [th]e b[at]t[le][fi]e[ld]. [Fo][ll][ow] [me] [ba][ck]!>
@@ -62,19 +62,19 @@
 	MSG	<FOX OTHER [Co]u[ti][on]! L[an]d[in]g [on] M[ag][ma] [ca]u[se]s [da][ma][ge].>
 	MSG	<FALCO OTHER D[on]['t] l[an]d! Y[ou] [ta][ke] [da][ma][ge] [wh]i[le] [on] [th]e s[ur][fa][ce].>
 	MSG	<PEPPY OTHER [Th]e s[ur][fa][ce] [of] M[ag][ma] [is] bu[rn][in]g hot! D[on]['t] l[an]d.>
-	MSG	<SLIPPY OTHER Hot! Hot! Hot! I'm [dr]y[in]g [ou]t! D[on]['t] l[an]d[-][ri][bb][it].>
+	MSG	<SLIPPY OTHER Hot! Hot! Hot! I'm [dr]y[in]g [ou]t! D[on]['t] l[an]d-[ri][bb][it].>
 	MSG	<GIRL1 OTHER [Th]e s[ur][fa][ce] [is] molt[en]! D[on]['t] l[an]d, ok[ay]?>
 	MSG	<GIRL2 OTHER W[at][ch] [it]! Y[ou] [ta][ke] [da][ma][ge] [if] [yo]u l[an]d [on] M[ag][ma].>
 	MSG	<FOX OTHER At[ta][ck][in]g [fr][om] [he][re] [is] [no] [go][od]. F[in]d a sw[it][ch].>
 	MSG	<FALCO OTHER [We] [ne][ed] [to] [fi]nd a sw[it][ch] [to] op[en] [th]e [en][tr][an][ce].>
-	MSG	<PEPPY OTHER At[ta][ck]s [fr][om] [ou]t[-] [si][de] [ar]e u[se][le][ss]. A[ct]iv[at]e a sw[it][ch].>
+	MSG	<PEPPY OTHER At[ta][ck]s [fr][om] [ou]t- [si][de] [ar]e u[se][le][ss]. A[ct]iv[at]e a sw[it][ch].>
 	MSG	<SLIPPY OTHER [We] [mu][st] f[in]d a sw[it][ch] [th][at] op[en]s [an] [en][tr][an][ce].>
 	MSG	<GIRL1 OTHER Ext[er]n[al] [at][ta][ck]s [ar]e i[ne]ffe[ct]i[ve]. F[in]d a sw[it][ch].>
 	MSG	<GIRL2 OTHER [Th][er]e [is] a sw[it][ch] [so][me][pl]a[ce] [th][at] op[en]s [th]e [en][tr][an][ce].>
 	MSG	<FOX OTHER [Th][er]e's a b[ar][ri][er]! K[no][ck] [ou]t [th]e [sh][ie][ld] g[en][er][at][or]s.>
 	MSG	<FALCO OTHER De[st]roy [th]e [sh][ie][ld] g[en][er][at][or]s, [th][en] [st][ar]t [th]e [as][sa][ul]t!>
 	MSG	<PEPPY OTHER B[ar][ri][er] [de]te[ct][ed]. F[in]d [an]d [de][st]roy [it]s p[ow][er] [so][ur][ce].>
-	MSG	<SLIPPY OTHER A [sh][ie][ld] g[en][er][at][or] [is] [he][re] [so][me]w[he][re]. De[st]roy [it][-][ri][bb][it]!>
+	MSG	<SLIPPY OTHER A [sh][ie][ld] g[en][er][at][or] [is] [he][re] [so][me]w[he][re]. De[st]roy [it]-[ri][bb][it]!>
 	MSG	<GIRL1 OTHER Cut [of]f p[ow][er] [to] [th]e b[ar][ri][er], [th][en] [at][ta][ck] [th]e [ta]rg[et].>
 	MSG	<GIRL2 OTHER [Th][er]e's a [sh][ie][ld]! [We] [mu][st] [de][st]roy [it]s g[en][er][at][or]s.>
 	MSG	<pepper help A B[at]t[le] C[ar][ri][er] [ha]s la[un][ch][ed] [an] [at][ta][ck] [fo]r[ce].>
@@ -128,7 +128,7 @@
 	MSG	<FOX OTHER C[ha][se] [th]e [en][em]y [do][wn] [wi][th] [(X)]!>
 	MSG	<FALCO OTHER Y[ou]'[re] f[ly][in]g [to]o sl[ow]! U[se] [(X)] [to] [bo]o[st] [sp]e[ed].>
 	MSG	<PEPPY OTHER [Th]e [en][em]y [is] w[ay] ahead [of] [us]. U[se] [(X)] [to] [sp]e[ed] [up]!>
-	MSG	<SLIPPY OTHER [Th][ey]'[re] [ge][tt][in]g [aw][ay]! Boo[st] [sp]e[ed] [wi][th] [(X)][-]c[rr]roak!>
+	MSG	<SLIPPY OTHER [Th][ey]'[re] [ge][tt][in]g [aw][ay]! Boo[st] [sp]e[ed] [wi][th] [(X)]-c[rr]roak!>
 	MSG	<GIRL1 OTHER [We]'[re] f[ar] [be]h[in]d! C[at][ch] [up] [by] [us][in]g [(X)]!>
 	MSG	<GIRL2 OTHER Y[ou]'[ll] [ha][ve] [to] u[se] [(X)] [to] [ch]a[se] [th]e [en][em]y [do][wn].>
 	MSG	<ANDROSS OTHER Ah! So [yo][ur] [re][so]l[ve] [is] [st]r[on]g! N[ow] [it]'s [ti][me] [to] g[et] [se][ri]o[us].>
@@ -137,10 +137,10 @@
 	MSG	<ANDROSS OTHER Not [ba]d...[no]t [ba]d [at] [al]l, [St][ar] [Fo]x.>
 	MSG	<ANDROSS OTHER Y[ou] [ar]e impr[ov][in]g, [St][ar] [Fo]x.>
 	MSG	<ANDROSS OTHER So, [yo]u [ma][de] [it] [th][is] f[ar]. I'[ve] [be][en] [wa][it][in]g [fo]r [yo]u.>
-	MSG	<ANDROSS help Imp[re][ss]i[ve]![-]but [yo][ur] ex[is]t[en][ce] [en]ds [he][re].>
+	MSG	<ANDROSS help Imp[re][ss]i[ve]!-but [yo][ur] ex[is]t[en][ce] [en]ds [he][re].>
 	MSG	<ANDROSS help Y[ou] [ar]e ju[st] a p[up]p[et] [of] [th][at] [fo]ol Pepp[er]!>
 	MSG	<ANDROSS help Y[ou]'[ve] [in]t[er]f[er][ed] [fo]r [th]e la[st] [ti][me], [Co][rn][er]i[an] [do]gs!>
-	MSG	<ANDROSS down I [wi][ll] put [yo]u [to] [re][st]. D[on]['t] wo[rr]y[-] [it] [wi][ll] [be] qui[ck].>
+	MSG	<ANDROSS down I [wi][ll] put [yo]u [to] [re][st]. D[on]['t] wo[rr]y- [it] [wi][ll] [be] qui[ck].>
 	MSG	<ANDROSS down I [ha][ve] [no]t y[et] [fo]r[go][tt][en] [wh][at] [yo]u did [to] [me] [be][fo][re].>
 	MSG	<ANDROSS down Ev[er]y[th][in]g [is] [in] my c[on][tr]ol! In [th]e [en]d, [yo]u'[ll] [we]ep.>
 	MSG	<FOX OTHER [Th][er]e [is] a m[is][si][le] [he]ad[in]g [to]w[ar]d [Co][rn][er][ia]! S[to]p [it]!>
@@ -177,14 +177,14 @@
 	MSG	<pepper OTHER [Th]e [en][em]y's [ta]k[en] [th]e s[at]e[ll][it]e [pl][at][fo][rm]. [He]lp [us]!>
 	MSG	<wolf OTHER My opp[on][en]ts [al]w[ay]s eva[po]r[at]e [in][to] [sp]a[ce] du[st]!>
 	MSG	<chameleon OTHER Ho, ho! Y[ou] [ha][ve] [so][me] ski[ll]s, but I [wi][ll] [no]t lo[se]!>
-	MSG	<pig OTHER Y[ou]'[re] [no]t [ba]d[-]  [fo]r [an] [am][at]e[ur]!>
+	MSG	<pig OTHER Y[ou]'[re] [no]t [ba]d-  [fo]r [an] [am][at]e[ur]!>
 	MSG	<monkey OTHER [Th][er]e [is] [no] safe [pl]a[ce] [fo]r [yo]u [no]w!>
 	MSG	<wolf OTHER [He][ar] [me], [St][ar] [Fo]x! I, [St][ar] [Wo][lf], [wi][ll] [de]fe[at] [yo]u [no]w!>
 	MSG	<FOX OTHER W[ay] [to] [go]! Y[ou] did [it], but I w[as] a b[it] w[or][ri][ed].>
 	MSG	<FALCO OTHER I [go]t w[or][ri][ed], [an]d I w[an]t[ed] [to] [ta][ke] [yo][ur] [pl]a[ce].>
 	MSG	<PEPPY OTHER A[re] [yo]u ok[ay]? N[ow] [th][at] w[as] a te[st] [of] [yo][ur] ski[ll]s!>
 	MSG	<SLIPPY OTHER C[rr]roak! I [th][ou]ght [it] w[as] [al]l [ov][er] [fo]r a [mi]nute!>
-	MSG	<GIRL1 OTHER Go[od] job! [Th][at] w[as] a nail[-]b[it][er]!>
+	MSG	<GIRL1 OTHER Go[od] job! [Th][at] w[as] a nail-b[it][er]!>
 	MSG	<GIRL2 OTHER Whew! [We] [al]mo[st] didn['t] [ge]t [ou]t [of] [th][at] scrape!>
 	MSG	<FOX special It's [al]l [ri]ght! Y[ou] ju[st] [go]t[ta] [be]l[ie][ve]!>
 	MSG	<FALCO special Y[ou] [sh][ou][ld]n['t] [ha][ve] wo[rr]i[ed], [it] w[as]n['t] [th][at] [to]ugh!>
