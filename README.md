@@ -76,6 +76,5 @@ ultrastarfox2
 │   └── STRAT: Code for Strategies (Object behaviors)
 ├── TOOLS: tools such as PACKER and SHAPED
 ├── DOCS: .md format text files covering various aspects of Star Fox 2
-├── OPTIONALSTUFF: optional graphics files
-└── OTHER: Files for building MSPRITES /bin files
+└── OPTIONALSTUFF: optional graphics files
 ```
