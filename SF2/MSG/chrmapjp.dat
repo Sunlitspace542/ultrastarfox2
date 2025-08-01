@@ -1,5 +1,4 @@
 // Star Fox 2 Japanese Character Map
-// Some of these may be wrong, this is all a best guess, it makes a matching file though
 0x11 = "[NOSP]" // control code used when rendering START and SELECT, forces kerning of 0
 0x23 = "[AR]"
 0x24 = "[T)]"
