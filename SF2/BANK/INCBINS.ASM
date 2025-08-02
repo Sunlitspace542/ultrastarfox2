@@ -20,7 +20,11 @@ msprites1	incbinfile	msprites\spt_01.bin
 	ifne	janglish
 msprites2	incbinfile	msprites\spt_23.bin
 	elseif
+	IFNE	aeongenesis
+msprites2	incbinfile	msprites\spt_23AG.bin
+	ELSEIF
 msprites2	incbinfile	msprites\spt_23A.bin
+	ENDC	;aeongenesis
 	endc
 	ELSEIF
 msprites2	incbinfile	msprites\spt_23P.bin

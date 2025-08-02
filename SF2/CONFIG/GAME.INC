@@ -37,6 +37,10 @@ forcenormalandross	equ 0
 ; [0 = off, 1 = on]
 forcehardandross	equ 0
 
+; Force Secret Base unlock on all difficulties
+; [0 = off, 1 = on]
+forcesecretbase		equ	0
+
 ; enable expert mode by default
 ; [0 = off, 1 = on]
 expertbydefault		equ 0

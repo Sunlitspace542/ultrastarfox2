@@ -84,6 +84,7 @@ setup:
 # Tokenize/compress Japanese/English Script
 text:
 	@cd msg
+	@$(CHRMAP) --tokenize chrmapag.dat AEONGEN.INC AEONGEN.MSG
 	@$(CHRMAP) --tokenize chrmapen.dat ENGLISH.INC ENGLISH.MSG
 	@$(CHRMAP) --tokenize chrmapjp.dat JAPANESE.INC JAPANESE.MSG
 	@cd ..
@@ -98,8 +99,8 @@ allcols:
 # FXGFX files to be interleaved
 MSPRITES_BINS= \
  MSPRITES\spt_01.bin MSPRITES\spt_23.bin MSPRITES\spt_45.bin \
- MSPRITES\spt_23a.bin MSPRITES\spt_45a.bin MSPRITES\spt_23p.bin \
- MSPRITES\spt_45p.bin
+ MSPRITES\spt_23a.bin  MSPRITES\spt_23ag.bin MSPRITES\spt_45a.bin \
+ MSPRITES\spt_23p.bin MSPRITES\spt_45p.bin
 
 msprites: $(MSPRITES_BINS)
 
@@ -114,6 +115,9 @@ MSPRITES\spt_45.bin: MSPRITES\SPT_4.CGX MSPRITES\SPT_5.CGX
 	@$(MAKEBIN)
 
 MSPRITES\spt_23a.bin: MSPRITES\SPT_2.CGX MSPRITES\SPT_3_A.CGX
+	@$(MAKEBIN)
+
+MSPRITES\spt_23ag.bin: MSPRITES\SPT_2.CGX MSPRITES\SPT_3_AG.CGX
 	@$(MAKEBIN)
 
 MSPRITES\spt_45a.bin: MSPRITES\SPT_4_A.CGX MSPRITES\SPT_5_A.CGX
@@ -148,8 +152,7 @@ donebld:
 	@del externs.log
 	@copy BANKS.CSV ..\BANKS.CSV
 	@del BANKS.CSV
-	@del MSG\ENGLISH.MSG
-	@del MSG\JAPANESE.MSG
+	@del MSG\*.MSG
 
 # Clean everything up
 clean:
@@ -169,8 +172,7 @@ clean:
 	@del ..\BUILD.LOG
 	@del ..\BANKS.CSV
 	@del BANKS.CSV
-	@del MSG\ENGLISH.MSG
-	@del MSG\JAPANESE.MSG
+	@del MSG\*.MSG
 
 ## Files to assemble
 bank0.sob: \

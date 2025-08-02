@@ -6,11 +6,16 @@ largefont
 ;	incbinfile	FONT\font_0.bin
 normalfont
 	IFEQ	JANGLISH
+	IFNE	aeongenesis
+	incbinfile	FONT\mmag.bin
+	fileslog	FONT\mmag.bin
+	ELSEIF
 	incbinfile	FONT\mme.bin
-	fileslog	FONT\mmj.bin
+	fileslog	FONT\mme.bin
+	ENDC
 	ELSEIF
 	incbinfile	FONT\mmj.bin
-	fileslog	FONT\mme.bin
+	fileslog	FONT\mmj.bin
 	ENDC
 
 displayfont
