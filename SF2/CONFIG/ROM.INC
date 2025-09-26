@@ -15,13 +15,15 @@ fast				equ	1
 ; Super FX chip cache on/off
 CacheOn				equ	1
 
+; Rumble on/off
+RUMBLE				equ	1
 
 ; Game Language
 
 ; Switch language between:
 ; 0 = English (NOA 1995 Localization)
 ; and
-; 0 = Japanese
+; 1 = Japanese
 janglish			equ	0
 
 ; Aeon Genesis English Translation (2004), with some slight changes:
@@ -36,7 +38,8 @@ janglish			equ	0
 ; set JANGLISH to 0 and this equate to 1 to enable.
 aeongenesis			equ	0
 
-; German Version  (unused)
+; German Language Version
+; Set JANGLISH to 0 and aeongenesis to 1, along with this equate to enable.
 german				equ	0
 
 ; French Version  (unused)

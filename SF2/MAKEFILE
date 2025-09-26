@@ -81,10 +81,11 @@ all: setup text allcols msprites crunch sf2.sfc donebld
 setup:
 	@del BANK\*.SOB
 
-# Tokenize/compress Japanese/English Script
+# Tokenize/compress Japanese/English/German Script
 text:
 	@cd msg
 	@$(CHRMAP) --tokenize chrmapag.dat AEONGEN.INC AEONGEN.MSG
+	@$(CHRMAP) --tokenize chrmapag.dat GERMAN.INC GERMAN.MSG
 	@$(CHRMAP) --tokenize chrmapen.dat ENGLISH.INC ENGLISH.MSG
 	@$(CHRMAP) --tokenize chrmapjp.dat JAPANESE.INC JAPANESE.MSG
 	@cd ..

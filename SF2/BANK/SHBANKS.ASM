@@ -48,6 +48,7 @@ do_hdr	=	0
 
 	bank	35
 	incshapes	SHAPES\shapes2.asm
+	incfile	ASM\RUMBLEFX.ASM
 	bankend	35
 
 	include	INC\tail.inc

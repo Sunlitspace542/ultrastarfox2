@@ -22,15 +22,23 @@ muldivtab 	equ tabstart+256*8
 	IFNE	JANGLISH
 	include	MSG\japanese.msg
 	fileslog MSG\japanese.msg
-	ELSEIF
+	ELSEIF	;!JANGLISH
 	IFNE	aeongenesis
+
+	IFNE	GERMAN
+	include	MSG\german.msg
+	fileslog MSG\german.msg
+	ELSEIF	;aeongenesis && !GERMAN
 	include	MSG\aeongen.msg
 	fileslog MSG\aeongen.msg
-	ELSEIF
+	ENDC	;GERMAN
+
+	ELSEIF ;!aeongenesis
 	include	MSG\english.msg
 	fileslog MSG\english.msg
-	ENDC
-	ENDC	
+	ENDC	;aeongenesis
+
+	ENDC	;JANGLISH
 
 	FCLOSE	!
 

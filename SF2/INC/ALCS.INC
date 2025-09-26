@@ -718,6 +718,20 @@ m_cbr		equ	$303E ; Cache Base Register (R)
 	alc	spare,2
 ;	alc	zbblks,zb_size*number_zb			;1400 bytes free!
 
+;ADD NEW ALCS HERE
+	IFNE	RUMBLE
+; zeropage alcs for rumble
+	zalc	rumble_cmd,1	; command byte
+	zalc	rumble_time,1	; time (in frames, 0-255) to rumble
+	zalc	rumble_index,1	; index into rumble_table for sequenced rumbles (0-255)
+	zalc	rumble_priority,1
+	ENDC
+
+	IFNE	RUMBLE
+	;alc	rumble_table,rmblseqlen	; cache for sequenced rumble commands (unfortunately it must be done this way)
+	ENDC
+;-----------------
+
 	alc	numshapes,2
 	alc	dlptr,2
 	alc	palfade,2

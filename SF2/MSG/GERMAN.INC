@@ -1,28 +1,28 @@
-	MSG	<PEPPER OTHER Star Fox, we have an emergency!>
-	MSG	<PEPPER OTHER Andross is alive...>
-	MSG	<PEPPER OTHER ...and he's launched an attack against Corneria!>
-	MSG	<PEPPER OTHER Enemy forces have sortied from Andross' motherships and>
-	MSG	<PEPPER OTHER carriers, and are heading towards Corneria.>
-	MSG	<PEPPER OTHER They've also built bases on several planets,>
-	MSG	<PEPPER OTHER and are firing IPBMs at Corneria.>
-	MSG	<PEPPER OTHER Your help is crucial!>
-	MSG	<PEPPER OTHER Corneria can take some hits,>
-	MSG	<PEPPER OTHER but with excessive damage, we will fall!>
-	MSG	<PEPPER OTHER Protect Corneria, and wipe out Andross' army!>
-	MSG	<PEPPER OTHER We're counting on you, Star Fox!>
-	MSG	<PEPPER OTHER Destroy the base from the inside!>
-	MSG	<PEPPER OTHER Attack the carrier and destroy its core!>
-	MSG	<PEPPER DOWN Corneria is taking damage!>
-	MSG	<PEPPER DOWN Corneria is being attacked...!>
-	MSG	<PEPPER DOWN There's no time! Hurry...!>
-	MSG	<PEPPER DOWN Missiles...! What are you doing?!>
-	MSG	<PEPPER DOWN Industrial blocks damaged by Planet Cannon fire!>
-	MSG	<PEPPER OTHER Liberate the planets of the Lylat system!>
-	MSG	<PEPPER OTHER The Mothership can warp to planets that don't have enemy bases.>
-	MSG	<PEPPER OTHER Choose where the Arwing will be deployed with [(B)].>
-	MSG	<ANDROSS OTHER I have returned to take my revenge!>
-	MSG	<ANDROSS HELP Cornerian scum!>
-	MSG	<ANDROSS DOWN You will soon bow before me!>
+	MSG	<PEPPER OTHER Star Fox, die Situation hat sich drastisch verschärft!>
+	MSG	<PEPPER OTHER Andross lebt!>
+	MSG	<PEPPER OTHER Er bereitet eine Offensive gegen Corneria vor.>
+	MSG	<PEPPER OTHER Seine Truppen starten von Zerstörern aus und>
+	MSG	<PEPPER OTHER nehmen Kurs auf Corneria.>
+	MSG	<PEPPER OTHER Auf einigen Planeten hat Andross Basen errichten lassen,>
+	MSG	<PEPPER OTHER um interstellare Raketen auf Corneria abzufeuern.>
+	MSG	<PEPPER OTHER Star Fox, in diesem Kampf sind wir auf Ihre Hilfe angewiesen!>
+	MSG	<PEPPER OTHER Corneria kann eine gewisse Menge an Schaden verkraften,>
+	MSG	<PEPPER OTHER beträgt der Schaden aber [1][0][0]%, ist alles vorbei!>
+	MSG	<PEPPER OTHER Halten Sie den Schaden auf Corneria so gering wie möglich.>
+	MSG	<PEPPER OTHER Wir zählen auf Sie, Star Fox!>
+	MSG	<PEPPER OTHER Dringen Sie in Andross' Basen ein und zerstören Sie sie!>
+	MSG	<PEPPER OTHER Dringen Sie in die Zerstörer ein und eliminieren Sie sie!>
+	MSG	<PEPPER DOWN Corneria hat Schaden genommen!>
+	MSG	<PEPPER DOWN Corneria wird angegriffen!>
+	MSG	<PEPPER DOWN Es bleibt keine Zeit mehr, kommen Sie schnell!>
+	MSG	<PEPPER DOWN Corneria wurde von einer interstellaren Rakete getroffen!>
+	MSG	<PEPPER DOWN Ein Zerstörer hat Corneria Schaden zugefügt!>
+	MSG	<PEPPER OTHER Befreien Sie die Planeten des Lylatsystems!>
+	MSG	<PEPPER OTHER Die Great Fox ermöglicht Warpsprünge zu unbesetzten Planeten.>
+	MSG	<PEPPER OTHER Wählen Sie das Ziel Ihres Arwings und bestätigen Sie mit [(B)].>
+	MSG	<ANDROSS OTHER Ich habe meine Kräfte wiedererlangt! Nun werde ich mich>
+	MSG	<ANDROSS HELP an Corneria rächen! Denen werde ich>
+	MSG	<ANDROSS DOWN zeigen, wer der Herrscher des Universums ist!>
 	MSG	<FOX OTHER You can boost with [(Y)]!>
 	MSG	<FALCO OTHER Hit [(Y)] to accelerate!>
 	MSG	<PEPPY OTHER [(Y)], lets you use the boost!>
@@ -32,7 +32,7 @@
 	MSG	<FOX OTHER Pursue them with the [(Y)] boost!>
 	MSG	<FALCO OTHER Don't doze off! Use the [(Y)] boost!>
 	MSG	<PEPPY OTHER They're getting away! Use [(Y)] to boost!>
-	MSG	<SLIPPY OTHER They're getting away, ribbit! Boost with [(Y)]!>
+	MSG	<SLIPPY OTHER They're getting away, ribbit! Boost with [(Y)]>
 	MSG	<GIRL1 OTHER They're getting away! Chase with the [(Y)] boost!>
 	MSG	<GIRL2 OTHER Give chase with the [(Y)] boost!>
 	MSG	<FOX OTHER Corneria's in danger! Let's retreat with [STRT]!>
@@ -90,19 +90,19 @@
 	MSG	<FOX OTHER Continue with your wingman?>
 	MSG	<FOX OTHER Yes>
 	MSG	<FOX OTHER No>
-	MSG	<PEPPER OTHER The Satellite Defense System.>
+	MSG	<PEPPER OTHER Dies ist Cornerias Satellitensystem.>
 	MSG	<PEPPER OTHER The Satellite System has been captured! Recover it!>
 	MSG	<FOX OTHER MISSION>
-	MSG	<FOX OTHER RECORD>
+	MSG	<FOX OTHER REKORDE>
 	MSG	<FOX OTHER TEST>
 	MSG	<FOX OTHER TRAINING>
 	MSG	<FOX OTHER CONFIG>
 	MSG	<FOX OTHER STEREO>
 	MSG	<FOX OTHER MONO>
+	MSG	<FOX OTHER LEICHT>
 	MSG	<FOX OTHER NORMAL>
-	MSG	<FOX OTHER HARD>
-	MSG	<FOX OTHER EXPERT>
-	MSG	<FOX OTHER Move?                              Yes                  No>
+	MSG	<FOX OTHER SCHWER>
+	MSG	<FOX OTHER Warpsprung mit der Great Fox?       Ja                  Nein>
 	MSG	<FOX OTHER Deploy the Mothership.>
 	MSG	<PEPPER OTHER Good work!>
 	MSG	<FOX OTHER [RARR]>
