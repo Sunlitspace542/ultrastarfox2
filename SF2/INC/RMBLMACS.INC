@@ -64,7 +64,7 @@ P_QUEUERUMBLETAB	MACRO	[table]
 ; For calling long routines from PATHs
 P_EXECRUMBLE	MACRO	[label]
 	P_START65816
-	jsl	[label]
+	jsl	{label}
 	P_END65816
 	ENDM
 

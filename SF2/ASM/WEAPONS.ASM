@@ -235,6 +235,9 @@ fireAWpowerdlaser_twintwin_l
 
 .init	LOCAL
 
+	IFNE	RUMBLE
+	jsl	tamedamarumble_l
+	ENDC
 	s_set_path		y,Ppowerdlaser
 	s_copy_alvar2alvar	B,y,al_rotz,x,al_rotz
 	lda	p1_firerotx
@@ -265,7 +268,6 @@ fireAWlaser_twintwin_l
 	jsr		genPweap_srou
 	rlbcc		weap_badobj
 	s_set_alvar	W,y,al_shape,#beam_2
-
 	bra		fireAWlaser_twin_l.enter
 
 ;旼컴컴컴컴컴컴컴컴컴컴컴컴컴컴커
@@ -309,7 +311,6 @@ fireAWlaser_l
 	jsl		chk_laser_lmt_l
 	rlbcc		weap_badobj
 
-
 ;	toheap	y,x
 ;
 ;	lda	exal_target_x,y
@@ -340,7 +341,9 @@ fireAWlaser_l
 	s_set_alvar	B,y,al_childrotz,#0
 
 .init	LOCAL
-
+	IFNE	RUMBLE
+	jsl		beamballrumble_l
+	ENDC
 	s_set_path	y,Plaser
 
 ;	s_make_child	#childno_Plaser

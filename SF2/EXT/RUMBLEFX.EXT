@@ -1,1 +1,3 @@
-	global	bombexploderumble_l
+	global	bombexploderumble_l,bombshootrumble_l
+	global	singblasterrumble_l,twinblasterrumble_l,beamballrumble_l
+	global	boostrumble_l,brakerumble_l,tamedamarumble_l
