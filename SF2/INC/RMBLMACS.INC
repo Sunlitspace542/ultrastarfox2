@@ -54,9 +54,17 @@ P_QUEUERUMBLE	MACRO	[left,right,time]
 	P_END65816
 	ENDM
 
+; PATH macro for tables
 P_QUEUERUMBLETAB	MACRO	[table]
 	P_START65816
 	s_queue_rumble_table	{table}
+	P_END65816
+	ENDM
+
+; For calling long routines from PATHs
+P_EXECRUMBLE	MACRO	[label]
+	P_START65816
+	jsl	[label]
 	P_END65816
 	ENDM
 

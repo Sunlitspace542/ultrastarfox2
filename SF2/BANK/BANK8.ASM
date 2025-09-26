@@ -6,7 +6,9 @@
 	include	INC\marioi.inc
 	include	INC\shmacs.inc
 	include	INC\gamelist.inc
+	IFNE	RUMBLE
 	include EXT\RUMBLEFX.EXT
+	ENDC
 
 ;------------------------------------------------------------------
 	bank	8

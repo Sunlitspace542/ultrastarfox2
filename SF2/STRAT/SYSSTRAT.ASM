@@ -117,7 +117,9 @@ explode_istrat
 ;	s_set_alvar		W,x,al_shape,#expl_8&WM
 	s_set_alvar		W,x,al_shape,#nullshape b_tank_2&WM
 	s_set_strat		x,explode_strat
+	IFNE	RUMBLE
 	s_queue_rumble	15,15,20
+	ENDC
 	s_jmp			.end
 
 .medium	longa
@@ -147,7 +149,9 @@ explode_istrat
 ;	s_set_alvar		W,x,al_shape,#expl_6&WM
 	s_set_alvar		W,x,al_shape,#nullshape b_tank_2&WM
 	s_set_strat		x,explode_strat
+	IFNE	RUMBLE
 	s_queue_rumble	15,15,20
+	ENDC
 	s_jmp			.end
 
 .small	longa
@@ -176,7 +180,9 @@ explode_istrat
 ;	s_set_alvar		W,x,al_shape,#expl_4&WM
 	s_set_alvar		W,x,al_shape,#nullshape b_tank_2&WM
 	s_set_strat		x,explode_strat
+	IFNE	RUMBLE
 	s_queue_rumble	15,15,20
+	ENDC
 
 
 .end

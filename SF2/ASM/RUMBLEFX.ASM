@@ -1,4 +1,12 @@
 	incpub	rumblefx
+
+bombshootrumble_l
+	php
+	a8
+	P_QUEUERUMBLE	10,10,5
+	plp
+	rtl
+
 bombexploderumble_l
 	php
 	a8

@@ -1498,7 +1498,9 @@ healposx	equ	40
 	p_import	immuneptr,playpt1
 
 	P_SOUNDEFFECT	bomshoot
-	P_QUEUERUMBLE	10,10,5
+	IFNE	RUMBLE
+	P_EXECRUMBLE	bombshootrumble_l
+	ENDC
 	p_invincible	on
 	p_sprite	0,0
 
@@ -1529,9 +1531,9 @@ healposx	equ	40
 	P_END65816
 
 	P_SOUNDEFFECT	bomexplode
-	P_START65816
-	jsl	bombexploderumble_l
-	P_END65816
+	IFNE	RUMBLE
+	P_EXECRUMBLE	bombexploderumble_l
+	ENDC
 	p_setvel	0
 
 	p_set	shape,nullshape
