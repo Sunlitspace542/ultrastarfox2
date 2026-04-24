@@ -78,9 +78,6 @@ ALLFILES= BANK\bank0.sob BANK\bank1.sob BANK\bank2.sob \
 # Everything that should be done when make is executed
 all: setup text allcols msprites crunch sf2.sfc donebld
 
-bank37:
-	@$(ASM) $(NOANSI) -m30 $(ASMFLAGS) BANK\bank37.asm -vBANK\bank37.SOB
-
 setup:
 	@del BANK\*.SOB
 

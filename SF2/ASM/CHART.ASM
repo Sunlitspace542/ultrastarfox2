@@ -4694,7 +4694,7 @@ demodirector_tab
 
 	dw	path_titledirector&WM
 	dl	chart_title		;6
-	dl	(pathbank_titledirector<<16)
+	dl	0
 
 	dw	path_logodirector&WM
 	dl	chart_logo		;7

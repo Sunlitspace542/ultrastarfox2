@@ -949,7 +949,6 @@ start_path	MACRO	[name]
 
 p{name}
 path_{name}	equ	*-paths
-pathbank_{name}	equ	((*>>16)/2+$40)
 
 numpaths	=	numpaths+1
 	pathmac_end
@@ -2144,21 +2143,6 @@ MYNARG	=	NARG
 	pathmac_end
 		ENDM
 ;--------------------------------------------------------------------
-; cross-bank Qspawn: includes target path bank byte
-P_QXSPAWN		MACRO	[shape,path,hp,ap]
-	pathmac_start
-MYNARG	=	NARG
-	PNARG	4
-	pathcode	qxspawn
-	dw	{shape}
-	dw	path_{path}
-
-	db	{hp},{ap}
-	db	pathbank_{path}	; target path bank
-
-	pathmac_end
-		ENDM
-;--------------------------------------------------------------------
 P_DEBUG		MACRO
 	pathmac_start
 MYNARG	=	NARG
@@ -2302,17 +2286,6 @@ MYNARG	=	NARG
 	pathcode	gosub
 	PADDR	{addr}
 	ENDC
-	pathmac_end
-		ENDM
-;--------------------------------------------------------------------
-; cross-bank gosub: includes target path bank byte
-P_QXGOSUB	MACRO	[addr]
-	pathmac_start
-MYNARG	=	NARG
-	PNARG	1
-	pathcode	qxgosub
-	PADDR	{addr}
-	db	((({addr})>>16)/2+$40)
 	pathmac_end
 		ENDM
 ;--------------------------------------------------------------------

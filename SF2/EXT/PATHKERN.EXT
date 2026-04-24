@@ -10,8 +10,6 @@
 	global	p_alwaysgenvecsoff
 	global	p_setvel
 	global	ep_loop
-	global	ep_qxspawn
-	global	ep_qxgosub
 	global	p_addb
 	global	p_addw
 	global	p_faceplayer

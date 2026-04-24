@@ -53,7 +53,6 @@ alcon	=	1
 	defal	ox,2
 	defal	oy,2
 	defal	oz,2
-	defal	pathbankext,1	; per-object path bank for cross-bank execution
 	struct	al_size,0
 
 	alc	viewblk,al_size
@@ -110,8 +109,8 @@ alx_sizeof	=	alx_size-xalblks+alblks
 	error	<Extended alien blocks have exceeded their maximum size!>
 	ENDC
 
-	IF	al_size>64
-	error	<Alien blocks are too large (65 bytes max)>
+	IF	al_size>63
+	error	<Alien blocks are too large (64 bytes max)>
 	ENDC
 ;----------------------------------
 

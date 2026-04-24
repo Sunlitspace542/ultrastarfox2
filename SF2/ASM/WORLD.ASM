@@ -151,7 +151,6 @@ mapjmp	dw	mapobjdo&WM	;0
 	dw	mapinerttargetdo&WM	;160
 	dw	mapgotoifplanetcode&WM	;162
 	dw	mapgotoifsatellite&WM	;164
-	dw	mapsetpathbdo&WM	;166
 
 	REPT	(ols_id-(*-mapjmp))/2
 	dw	0	; Pad out table with zero's up to the ols stuff
@@ -1019,24 +1018,6 @@ mapsetpathdo	tyx
 	lda	mapbase&WM+1,x
 	sta.w	al_sword2,y
 .dekinai	inx
-	inx
-	inx
-	jmp	newobjex
-
-
-	longa
-	longi
-mapsetpathbdo	tyx
-	ifobjinvalid	.dekinai2
-	ldy	lastmapobj
-	lda	mapbase&WM+1,x
-	sta.w	al_sword2,y
-	a8
-	lda	mapbase&WM+3,x
-	sta.w	al_pathbankext,y
-	a16
-.dekinai2	inx
-	inx
 	inx
 	inx
 	jmp	newobjex

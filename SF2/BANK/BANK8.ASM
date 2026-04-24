@@ -16,10 +16,6 @@
 	incfile	PATH\paths2.asm
 	bankend 9
 
-	bank	37
-	incfile	PATH\paths3.asm
-	bankend	37
-
 
 	bank	13
 
