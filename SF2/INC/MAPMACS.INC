@@ -82,6 +82,7 @@ ctrlmapgotoiflevel	equ	158
 ctrlmapinerttarget	equ	160
 ctrlmapgotoifplanet	equ	162
 ctrlmapgotoifsatellite	equ	164
+ctrlmapsetpathb	equ	166
 ;-----------------------------------------------------------------------------
 mapdef	macro
 	dw	((\1)&$7fff)
@@ -91,6 +92,16 @@ mapdef	macro
 mapsetpath	macro	[path]
 	db	ctrlmapsetpath
 	dw	path_{path}
+	endm
+
+mapsetpathb	macro	[path,bank]
+	db	ctrlmapsetpathb
+	dw	path_{path}
+	db	{bank}
+	endm
+
+mapsetpath3	macro	[path]
+	mapsetpathb	{path},pathbank_{path}
 	endm
 
 wipein	macro

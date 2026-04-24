@@ -18,6 +18,8 @@
 
 	incpub	paths
 
+pathbank2	equ	((*>>16)/2+$40)
+
 paths	=	*&$ff0000
 
 kpaths

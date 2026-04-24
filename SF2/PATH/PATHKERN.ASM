@@ -118,7 +118,10 @@ pm
 	lda	al_sword2,x
 	sta	path_pcptr
 	a8
+	lda	al_pathbankext,x
+	bne	.useobjectbank
 	lda	#pathbank
+.useobjectbank
 	sta	path_pcptr+2
 
 	promnastyoff
@@ -663,6 +666,9 @@ smt_modenum	=	0
 	s_mode_entry	p.tamehomon,ep_tamehomon
 	s_mode_entry	p.iftamehomon,ep_iftamehomon
 	s_mode_entry	.alwaysoff_all,ep_alwaysoff_all
+
+	s_mode_entry	.qxspawn,ep_qxspawn	; cross-bank Qspawn (added at end to preserve other mode numbers)
+	s_mode_entry	.qxgosub,ep_qxgosub	; cross-bank gosub
 
 	s_mode_table_end
 
@@ -2127,6 +2133,8 @@ smt_modenum	=	0
 
 	lda		al_area,x
 	sta.w		al_area,y
+	lda	al_pathbankext,x
+	sta.w	al_pathbankext,y
 
 ; path map:
 	a16
@@ -2181,11 +2189,74 @@ smt_modenum	=	0
 
 	lda	al_area,x
 	sta.w	al_area,y
+	lda	al_pathbankext,x
+	sta.w	al_pathbankext,y
 
 	jmp	_padd7
 
 .cantdo2	s_pull_var	W,allst
 	jmp	_padd7
+
+;**********
+.qxspawn	PATHCMD
+	a16
+	getparam	1
+	sta	pathx1
+	getparam	3
+	sta	pathx2
+	a8
+	s_push_var	W,allst
+	stx		allst
+	s_make_obj	pathx1,.qxcantdo
+
+	sty		becomelastobj&WM
+
+	s_pull_var	W,allst
+
+	s_set_strat	y,path_istrat
+	s_set_alvar	W,y,al_sword2,pathx2
+
+	s_copy_pos	y,x
+	s_copy_rots	y,x
+
+	getparam	5
+	sta.w	al_hp,y
+	getparam	6
+	sta.w	al_ap,y
+
+	s_jmp_NOTalsflag	x,sflag10,.qxdontset
+	s_set_alsflag		y,sflag10
+.qxdontset
+
+	lda	al_area,x
+	sta.w	al_area,y
+	getparam	7	; per-target bank byte
+	sta.w	al_pathbankext,y
+
+	jmp	_padd8
+
+.qxcantdo	s_pull_var	W,allst
+	jmp	_padd8
+
+;**********
+.qxgosub	PATHCMD
+	inc	pathgosubcount
+; advance al_sword2 by 1 so on return (.nottrigger -> _padd3) we land
+; past the full 5-byte opcode (p_extracommands+ep_qxgosub+addr+bank).
+; path_pcptr still points at ep_qxgosub byte, so getparam offsets unchanged.
+	a16
+	inc	al_sword2,x
+	a8
+	s_mpush		W,x,x,al_sword2
+	s_mpush		B,x,x,al_pathbankext
+	a8
+	getparam	3
+	sta	al_pathbankext,x
+	a16
+	getparam	1
+	sta	al_sword2,x
+	a8
+	jmp	pm.strat2
 
 ;**********
 .spawn	PATHCMD
@@ -2225,6 +2296,8 @@ smt_modenum	=	0
 
 	lda		al_area,x
 	sta.w		al_area,y	; inherit mother's area
+	lda	al_pathbankext,x
+	sta.w	al_pathbankext,y
 
 	a16
 	getparam	10
@@ -2417,6 +2490,7 @@ smt_modenum	=	0
 	addalvaroffset	1
 	s_dec_alvar	W,x,al_sword2
 	s_mpush		W,x,x,al_sword2
+	s_mpush		B,x,x,al_pathbankext
 	a16
 	lda.w		0,y
 	sta.w		al_sword2,x
@@ -2427,6 +2501,7 @@ smt_modenum	=	0
 .gosub	PATHCMD
 	inc	pathgosubcount
 	s_mpush		W,x,x,al_sword2
+	s_mpush		B,x,x,al_pathbankext
 	jmp		_pjump1
 ;**********
 .return	PATHCMD
@@ -2435,6 +2510,7 @@ smt_modenum	=	0
 	dec		pathgosubcount
 	s_beq		.finishedtrigger
 .nottrigger
+	s_mpull		B,x,x,al_pathbankext
 	s_mpull		W,x,x,al_sword2
 	jmp		_padd3
 
@@ -3026,6 +3102,12 @@ smt_modenum	=	0
 	ldy	al_sword2,x
 	sty	pathptr
 
+; save al_pathbankext so it can be restored after the trigger loop, in case
+; a triggered gosub (or qxgosub) ends with .finishedtrigger (which only
+; restores al_sword2 from pathptr but not the bank).
+	lda	al_pathbankext,x
+	sta	pathtrigsavebank
+
 	ldy	al_stratmem,x
 	s_beq	.nothingdoing
 	lda	heap,y
@@ -3296,9 +3378,6 @@ smt_modenum	=	0
 	lda	#1
 	sta	pathgosubcount
 
-;	a16
-;	lda		#-1
-;	s_mpush		W,x,A	; store return address
 	a16
 	lda		heap,y	; get gosub routine's addr
 	sta		al_sword2,x
@@ -3343,6 +3422,11 @@ smt_modenum	=	0
 	sty	al_sword2,x
 .okset
 .nothingdoing
+; restore al_pathbankext (in case a triggered gosub left it pointing at a
+; cross-bank target). Only restore if we actually saved one (non-zero) and
+; we're returning to the obj's normal path execution.
+	lda	pathtrigsavebank
+	sta	al_pathbankext,x
 	stz	pathptr
 	stz	pathptr+1
 	rts
@@ -3802,8 +3886,11 @@ p
 	pha
 	pea	.ret&WM-1
 
-; push 65816 code address
+; push 65816 code address (use object's bank if cross-bank)
+	lda	al_pathbankext,x
+	bne	.use65816objbank
 	lda	#pathbank
+.use65816objbank
 	pha
 
 	a16
@@ -4927,10 +5014,14 @@ visangle equ	$20
 	PATHCMD
 	s_set_vartobeobj	becomeobj&WM,x
 	s_push_alvar		W,x,al_sword2
+	s_push_alvar		B,x,al_pathbankext	; cross-bank: save current bank too
 
 	s_set_objtobemother	y,x
 	s_copy_alvar2var	W,y,becomepath&WM,al_sword2
+	lda.w	al_pathbankext,y
+	sta	becomepathbank	; save mother's original bank
 	tyx
+	s_pull_alvar		B,x,al_pathbankext	; new x runs with old x's bank
 	s_pull_alvar		W,x,al_sword2
 	jmp	_padd1
 
@@ -5015,8 +5106,12 @@ visangle equ	$20
 .unbecome	LOCAL
 	PATHCMD
 	s_push_alvar	W,x,al_sword2
+	s_push_alvar	B,x,al_pathbankext	; cross-bank: save mother's running bank
 	s_set_alvar	W,x,al_sword2,becomepath&WM
+	lda	becomepathbank
+	sta	al_pathbankext,x	; restore mother's original bank
 	s_set_objtobevar	x,becomeobj&WM
+	s_pull_alvar	B,x,al_pathbankext	; restore original obj's bank
 	s_pull_alvar	W,x,al_sword2
 	jmp		_padd1
 
@@ -5025,10 +5120,14 @@ visangle equ	$20
 	PATHCMD
 	s_set_vartobeobj	becomeobj&WM,x
 	s_push_alvar		W,x,al_sword2
+	s_push_alvar		B,x,al_pathbankext	; cross-bank
 
 	s_set_objtobevar	y,becomelastobj&WM
 	s_copy_alvar2var	W,y,becomepath&WM,al_sword2
+	lda.w	al_pathbankext,y
+	sta	becomepathbank
 	tyx
+	s_pull_alvar		B,x,al_pathbankext
 	s_pull_alvar		W,x,al_sword2
 	jmp	_padd1
 

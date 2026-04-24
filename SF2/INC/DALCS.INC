@@ -1,7 +1,7 @@
  
 	zalc	mariocodebank,1
 
-rampathsize	equ	19*k+512
+rampathsize	equ	19*k+512+192+32	; +32 for cross-bank become/unbecome bank-save vars
 	xxalc	rampatharea,rampathsize
 
 	alc	CurrentArea,1
@@ -10,6 +10,8 @@ rampathsize	equ	19*k+512
 
 	xalc	pathgosubcount,1
 	alc	pathparam,2
+	alc	pathtrigsavebank,1
+	alc	pathx4,1
 	alc	pollstack,1
 	alc	screenheight,2
 	alc	screenvheight,2
@@ -321,6 +323,7 @@ df_animremove	equ	df_sprites!df_coloured	; animate and remove on frame 0
 
 	xalc	becomeobj,2
 	xalc	becomepath,2
+	xalc	becomepathbank,1	; cross-bank: saves new x's al_pathbankext during become/unbecome
 	xalc	becomelastobj,2
 
 	xalc	bossHP,2

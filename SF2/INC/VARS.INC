@@ -380,7 +380,7 @@ mmempt	=	$700200
 ;  #                      #
 ;  ########################
 
-number_al	equ	60	;52		;Max aliens
+number_al	equ	59	;52		;Max aliens
 number_zb	equ	number_al	;Max z srot blocks
 number_inert	equ	512
 number_debug	equ	50

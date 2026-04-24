@@ -5942,6 +5942,10 @@ makedirector_srou_l
 
 ; set path pointer **
 
+	a8
+	lda.l	demodirector_tab+7,x
+	sta	x1
+	a16
 	lda.l	demodirector_tab+0,x
 
 	PLX
@@ -5950,6 +5954,8 @@ makedirector_srou_l
 	sta.w	al_sword2,y
 
 	a8
+	lda	x1
+	sta.w	al_pathbankext,y
 
 	s_set_aldata	y,#1,#1
 	s_set_alsflag	y,colldisable
