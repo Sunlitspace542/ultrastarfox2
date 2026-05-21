@@ -8,7 +8,7 @@ Star Fox 2 source code, modified for ease-of-use and ROMHacking.
 - The assembler will fail to assemble files with Unix (LF) line endings. Make sure your editor is configured for DOS/Windows (CRLF) line endings.  
 
 ## Features
-- PAL version support, change ``pal`` to 1 in ``VARS.INC`` (StarWing 2 Logo by Josete2k, edited by Sunlitspace542)  
+- PAL version support, change ``pal`` to 1 in ``SF2\CONFIG\ROM.INC`` (StarWing 2 Logo by Josete2k, edited by Sunlitspace542)  
 - File structure reorganized to make the codebase somewhat easier to work with    
 - Kando was involved  
 
