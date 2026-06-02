@@ -10,6 +10,10 @@
 ; [0 = off, 1 = on]
 cesboot				equ	0
 
+; Old title screen team graphics from 1995/6/22 build and earlier
+; [0 = off, 1 = on]
+oldtitleteam		equ	0
+
 ; Skips the title demo with the Mirage Dragon but not the Arwings entering the Mothership
 ; [0 = off, 1 = on]
 skiptitledemo		equ	0

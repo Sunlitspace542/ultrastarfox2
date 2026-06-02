@@ -29,8 +29,13 @@ Mdispface	macro	[addr]		; display face program
 	endm
 
 ;---------------------------------------------------------------------
+	IFNE	oldtitleteam
+faceY		equ	140+6+2-8
+faceX		equ	8*2
+	ELSEIF
 faceY		equ	140+6-8
 faceX		equ	8*2+32-8
+	ENDC
 faceXtotalsize	equ	8*4*4
 faceYsize		equ	8*4
 noizy_size		equ	4
@@ -52,16 +57,27 @@ mtitleface
 	ramb
 	romb
 
+	IFNE	oldtitleteam
+	Mdrawface_entry	faceX+8*4*0,faceY,face_fox,0
+	Mdrawface_entry	faceX+8*4*1,faceY,face_falco,0
+	Mdrawface_entry	faceX+8*4*2,faceY,face_peppy,0
+	Mdrawface_entry	faceX+8*4*3,faceY,face_slippy,0
+	Mdrawface_entry	faceX+8*4*4,faceY,face_pony,0
+	Mdrawface_entry	faceX+8*4*5,faceY,face_girl,0
+	ELSEIF
 	Mdrawface_entry	faceX+8*4*0,faceY,face_title1,0
 	Mdrawface_entry	faceX+8*4*1,faceY,face_title2,0
 	Mdrawface_entry	faceX+8*4*2,faceY,face_title3,0
 	Mdrawface_entry	faceX+8*4*3,faceY,face_title4,0
+	ENDC
 
 	ibt	r0,#1
 	cmode
 
+	IFEQ	oldtitleteam
 	Msetcolor	0
 	Mboxfill	faceX,faceY,faceXtotalsize,8
+	ENDC
 
 
 
@@ -70,7 +86,7 @@ mtitleface
 ;=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 ;=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 
-	IFEQ	0
+	IFEQ	oldtitleteam
 
 ;=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 ;=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
