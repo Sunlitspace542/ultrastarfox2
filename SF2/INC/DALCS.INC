@@ -73,7 +73,7 @@ pifnot	=	xpifnot&WM
 
 
 
-	xalc	ramdrawlist,dl_sizeof*numals
+	xalc	ramdrawlist,dl_sizeof*number_al ;@BUG huge typo here, was using numals which is a zeropage address, not a constant
 
 
 	alc	ptrig,2
