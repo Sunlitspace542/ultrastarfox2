@@ -13,7 +13,10 @@ LOPTS=-b30 -h1024 -z
 # ROM Extender
 EXTEND=EXTEND
 # Extended size in Mbits, byte to pad with
+# For GSU-1/GSU-2
 EXTOPS= 16 ff
+# For GSU-3
+#EXTOPS= 32 ff
 
 # Checksum Fixer
 CHECK=SFCHECK
