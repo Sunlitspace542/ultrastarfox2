@@ -28,7 +28,7 @@ domerge	macro	dreg
 
 	lm	r7,[m_r7backup&WM]	; Restore R7
 	ELSEIF
-	domerge	r0
+	merge
 	ENDC
 	endm
 
