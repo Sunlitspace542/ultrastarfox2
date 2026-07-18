@@ -4380,7 +4380,15 @@ setlevel	macro
 ;;	sta	mapbank
 ;;	a16
 	endm
-
+;------------------------------------------------------------------------
+;**
+;* Print an error message and fail assembly.
+;* @param errormsg - string describing the error.
+;*
+printerror	macro	[errormsg]
+	printf	"%q%f%q (%l) %01%31Error: {errormsg}%00%n"
+	error+
+	ENDM
 ;------------------------------------------------------------------------
 bankend	macro
 	IFEQ	NARG
