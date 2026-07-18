@@ -56,6 +56,9 @@ rlink	equr	11
 	incfile	MARIO\mplanclp.mc
 	incfile	MARIO\mboxes.mc
 	incfile	MARIO\mslopes.mc
+	IFNE	SUPERFX3
+	malc	m_r7backup,2	; R7 backup for MERGE emulation on FX3
+	ENDC
 	mario_off
 
 

@@ -7,6 +7,30 @@
 ;      	Copyright 1991
 ;		Argonaut Software Ltd.
 
+; Simulate MERGE instruction in software for Super FX 3
+; Trashes low byte of R7 so we back up R7 to RAM and restore afterward
+domerge	macro	dreg
+	IFNE	SUPERFX3
+	sm	[m_r7backup&WM],r7	; Save R7 to RAM
+
+	from	r8
+	to	\1
+	hib
+
+	with	r7
+	hib
+
+	with	r7
+	swap
+
+	with	\1
+	or	r7
+
+	lm	r7,[m_r7backup&WM]	; Restore R7
+	ELSEIF
+	domerge	r0
+	ENDC
+	endm
 
 ; increment word in memory
 ;

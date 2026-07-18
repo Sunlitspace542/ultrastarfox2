@@ -560,7 +560,7 @@ mtpoly	macro
 ;	ifeq	0	; texture map
 ;	move	r13,pc
 ;
-;	merge		; r0 = (ryp & $ff00) + (rxp & $ff00)>>8
+;	domerge	r0		; r0 = (ryp & $ff00) + (rxp & $ff00)>>8
 ;	and	rmask
 ;	to	r14
 ;	add	rspdata
@@ -1575,7 +1575,7 @@ cthlines
 	ifeq	0	; texture map
 	move	r13,pc
 
-	merge		; r0 = (ryp & $ff00) + (rxp & $ff00)>>8
+	domerge	r0		; r0 = (ryp & $ff00) + (rxp & $ff00)>>8
 	and	rmask
 	to	r14
 	add	rspdata

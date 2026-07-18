@@ -62,6 +62,7 @@ totaltime	=	0
 	include INC\sound.inc
 	include INC\sound2.inc
 
+	include	INC\mregs.inc
 	include	INC\sfxregs.inc
 	include	INC\soundequ.inc
 	include	INC\structs.inc

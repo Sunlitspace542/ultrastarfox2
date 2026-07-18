@@ -92,7 +92,11 @@ abort_vn
 
 	; hardware info
 	db	$20					; Map Mode (20 = SlowROM, 30 = FastROM) LoROM
+	IFEQ	SUPERFX3
 	db	$15					; Cartridge Type
+	ELSEIF
+	db	$17
+	ENDC
 							 ; (13) Super FX 1 (StarFox 1)
 							 ; (14) Super FX 2 (DOOM)
 							 ; (15) Battery + Super FX 2 (Yoshi's Island, StarFox 2)
