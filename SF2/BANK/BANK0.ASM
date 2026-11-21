@@ -51,14 +51,17 @@ start	sei
 	xce
 	jmp.l	startboot
 
+cop_vn
+break_vn
+	IFNE usenewblink
+	jml	newblink
+	ENDC
 
 cop_ve
 abort_ve
 nmi_ve
 irq_ve
-cop_vn
 reset_vn
-break_vn
 abort_vn
 	rti
 
@@ -67,7 +70,11 @@ abort_vn
 	bank	32
 	incfile	ASM\sgtabs.asm
 	incfile	STRAT\istrats.asm
+	IFEQ usenewblink
 	incfile	ASM\blink.asm
+	ELSEIF	;IFNE	usenewblink
+	incfile	ASM\newblink.asm
+	ENDC
 	IFNE	janglish
 	inccru	e6_ccr,data\e6.ccr
 	inccru	e8_ccr,data\e8.ccr

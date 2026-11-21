@@ -49,6 +49,7 @@
 *.PCR
 SF2/DATA/COL/*.PAC
 SF2/DATA/COL/ALLCOLS.COL
+*.MSG
 
 # Object files
 *.sob
