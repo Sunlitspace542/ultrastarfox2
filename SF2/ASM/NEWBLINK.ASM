@@ -391,7 +391,7 @@ newblink_continue
 	plb
 
 	; stop all audio
-	lda	#$F0
+	lda	#$FF
 	sta	apu_port0
 	stz	apu_port1
 	stz	apu_port2
