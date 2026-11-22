@@ -1,4 +1,29 @@
-;------------------------------------------------------------------------
+;---------------------------------------------------------------
+; replicates WDM instruction for SASM
+; Can be used for breakpoints in Mesen (toggle break on WDM in debugger)
+wdm	MACRO ; param
+; example: _mvp	$32,$7E
+	IFEQ	NARG
+	db	$42,$00
+	ELSEIF
+	db	$42,\1
+	ENDC
+	ENDM
+;---------------------------------------------------------------
+; replicates MVN instruction for SASM
+_mvn	MACRO ; src,dest
+; example: _mvn	$32,$7E
+; raw opcodes are little endian so we reverse the arguments
+	db $54,\2,\1
+	ENDM
+;---------------------------------------------------------------
+; replicates MVP instruction for SASM
+_mvp	MACRO ; src,dest
+; example: _mvp	$32,$7E
+; raw opcodes are little endian so we reverse the arguments
+	db $44,\2,\1
+	ENDM
+;---------------------------------------------------------------
 	IFD		_ARGSFX
 ; Rotates a string left by offset for ARGSFX
 rols	MACRO	[string,offset]
