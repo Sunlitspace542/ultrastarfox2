@@ -167,7 +167,7 @@ initialise_ram
 	tax
 	bpl	.sssp
 
-	ldx	#$fe
+	ldx	#$fe+12 ;+12 for the unused bytes after zeropage and before irqhan
 .zpage	stz	0,x
 	dex
 	dex
