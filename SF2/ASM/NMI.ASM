@@ -1,13 +1,13 @@
-;Copy NMI/IRQ handler to RAM at $0101
-copy_to_0101_l
+;Copy IRQ handler to RAM at $010C
+copy_to_010c_l
 	php
 	phb
 
 	ai16
-	ldx	#nmihan&WM ; src data addr
-	ldy	#$0101 ; dest data addr
-	lda	#nmihanend-nmihan-1 ; len of data to copy
-	_mvn	(nmihan>>16),$00
+	ldx	#irqhan&WM ; src data addr
+	ldy	#$010C ; dest data addr
+	lda	#irqhanend-irqhan-1 ; len of data to copy
+	_mvn	(irqhan>>16),$00
 
 	ldx	#xrstart&WM ; src data addr
 	ldy	#xroutines&WM ; dest data addr
@@ -23,16 +23,9 @@ copy_to_0101_l
 	plp
 	rtl
 
-nmihan
-	blink	2
-	blink	2
-;;;;
-	rti				; $0108 NMI
-	nop				; (there was a brl .nmi here and the IRQ handler hates being moved
-	nop				; so i have to NOP out the same footprint as the original code)
-;;;;
-	nop				;$010B
-.irq	ai16		;$010C IRQ
+irqhan
+.irq	;$010C IRQ
+	ai16
 	pha
 	lda.l	m_sfr
 	bpl	.irqq		; Thanks Randy
@@ -60,4 +53,4 @@ nmihan
 	plb
 	pla
 	rti
-nmihanend
+irqhanend

@@ -173,7 +173,7 @@ initialise_ram
 	dex
 	bpl	.zpage
 
-	jsl	copy_to_0101_l
+	jsl	copy_to_010c_l
 
 	a8
 	lda	stat78r		; ntsc/pal
@@ -295,10 +295,6 @@ startsfx_l
 	lda	stat78r	;$213f
 	rtl
 
-	shorta
-	longi
-fnmi_l
-	rtl
 ;*********************************************************************
 ;*								*
 ;*		Super Famicom Version Check	[NTSC/PAL]	*
