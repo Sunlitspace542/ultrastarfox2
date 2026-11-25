@@ -1,6 +1,14 @@
 
 	incpub	irq
 
+; Clocks JOYSER0 16 times for rumble
+clkjoyser016x_l
+; 8 cycles to long jump here
+	REPT	16
+	bit	JOYSER0 ;  4 cycles/instruction == 64 cycles
+	ENDR
+	rtl ; 6 cyles to long return to irqhan
+; == 78 cycles
 
 ; size and position of mid screen blanking area.
 

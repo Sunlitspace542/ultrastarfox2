@@ -664,6 +664,10 @@ smt_modenum	=	0
 	s_mode_entry	p.iftamehomon,ep_iftamehomon
 	s_mode_entry	.alwaysoff_all,ep_alwaysoff_all
 
+	IFNE	RUMBLE
+	s_mode_entry	p.queuerumble,ep_queuerumble
+	ENDC
+
 	s_mode_table_end
 
 	;printf	"%01%31Warning:%00%36 EXTRA Path command wa ",256-smt_modenum," shika nokottenai yo!%00%n" ; original romanized japanese string
@@ -8270,7 +8274,25 @@ visangle equ	$20
 	jmp	_padd3
 
 .itho	jmp	_pjump1
+;**********
+	IFNE	RUMBLE
+.queuerumble	LOCAL
+	PATHCMD
 
+	phb
+	lda	#0
+	pha
+	plb
+
+	getparam	1
+	sta	rumble_cmd
+	getparam	2
+	sta	rumble_time
+
+	plb
+	jmp	_padd3	;_padd3
+	ENDC
+;**********
 
 ;---*---*---*---*---*---*---*---*---*---*---*---*---*---*---*---*---
 ;-*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*-

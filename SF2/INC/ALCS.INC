@@ -683,6 +683,18 @@ xlen	=	31*1024+512
 	alc	spare,2
 ;	alc	zbblks,zb_size*number_zb			;1400 bytes free!
 
+;ADD NEW ALCS HERE------------------------------
+; zeropage alcs for rumble
+	IFNE	RUMBLE
+	zalc	rumble_cmd,1	; combined command byte
+	zalc	rumble_time,1	; time (in frames, 0-255) to rumble
+	zalc	rumble_index,1	; index into rumble_table for sequenced rumbles (0-255)
+	ENDC
+
+	IFNE	RUMBLE
+	alc	rumble_table,rmblseqlen	; cache for sequenced rumble commands (unfortunately it must be done this way)
+	ENDC
+
 	alc	numshapes,2
 	alc	dlptr,2
 	alc	palfade,2

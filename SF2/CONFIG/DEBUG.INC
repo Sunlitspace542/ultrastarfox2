@@ -14,7 +14,7 @@ debuginfo2		equ	0
 
 ; use new verbose crash handler
 ; [0 = off, 1 = on]
-usenewblink	equ	0
+usenewblink	equ	1
 
 ; 0/1 ... sound port display off/on 
 ; [0 = off, 1 = on]

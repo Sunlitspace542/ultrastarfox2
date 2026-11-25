@@ -1,0 +1,98 @@
+; Rumble Controller Macros
+
+;**
+;* Queue up rumble command to be executed on the next NMI/IRQ cycle
+;* @param left - left motor intensity (0-15)
+;* @param right - right motor intensity (0-15)
+;* @param time - time to rumble in frames (0-255)
+;*
+;**
+queue_rumble	MACRO	[left,right,time]
+	ifne	longa
+	printerror	<%m: A must be in 8-bit mode!>
+	endc
+
+; Each nybble controls the strength of each motor.
+; <--RIGHT--> <---LEFT-->
+; R3 R2 R1 R0 L3 L2 L1 L0
+
+	lda	#({right}<<4)+({left})
+	sta	rumble_cmd
+
+	lda	#{time}
+	sta	rumble_time
+	ENDM
+
+; Same as above, but correct DBR for strat/path interpreter
+;**
+;* Queue up rumble command to be executed on the next NMI/IRQ cycle
+;* @param left - left motor intensity (0-15)
+;* @param right - right motor intensity (0-15)
+;* @param time - time to rumble in frames (0-255)
+;*
+;**
+s_queue_rumble	MACRO	[left,right,time]
+	ifne	longa
+	printerror	<%m: A must be in 8-bit mode!>
+	endc
+	PHB
+;	IFNE	FASTROM
+;	lda	#$80
+;	pha
+;	plb
+;	ELSEIF
+	lda	#0
+	pha
+	plb
+;	ENDC
+	queue_rumble	{left},{right},{time}
+	plb
+	ENDM
+
+; Same as above, but for PATHs
+; moved to PATHMACS.INC and made part of the PATH kernal
+
+;**
+;* Queue up rumble sequence table to be executed on the next NMI/IRQ cycle
+;* @param table - label of rumble sequence table
+;**
+s_queue_rumble_table	MACRO	[table]
+	ifne	longa
+	printerror	<%m: A must be in 8-bit mode!>
+	endc
+	phx
+	lda #1
+	sta rumble_index
+	ldx	#0
+.loop\@
+	lda.l {table},x
+	cmp #$19
+	beq	.done2\@
+	sta rumble_table,x
+	inx
+	cpx #40
+	bmi	.loop\@
+	bra	.done\@
+.done2\@
+	sta rumble_table,x
+.done\@
+	plx
+	ENDM
+
+;**
+;* Terminate rumble sequence
+;**
+s_end_rumble_table	MACRO
+	ifne	longa
+	printerror	<%m: A must be in 8-bit mode!>
+	endc
+	stz	rumble_index
+	ENDM
+
+;------------------------------------
+; rumble sequence constants
+rmblseqlen	equ	40	; rumble sequence max length
+
+; special rumble sequence commands
+rmblend		equ	$19	; end sequence
+rmblloop	equ	$91	; loop sequence

@@ -235,6 +235,9 @@ fireAWpowerdlaser_twintwin_l
 
 .init	LOCAL
 
+	IFNE	RUMBLE
+	jsl	tamedamafirerumble_l
+	ENDC
 	s_set_path		y,Ppowerdlaser
 	s_copy_alvar2alvar	B,y,al_rotz,x,al_rotz
 	lda	p1_firerotx

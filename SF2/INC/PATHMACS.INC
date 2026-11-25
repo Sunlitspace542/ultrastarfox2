@@ -4924,5 +4924,28 @@ MYNARG	=	NARG
 
 	ENDM
 ;--------------------------------------------------------------------
+	IFNE	RUMBLE
+;**
+;* Queue up rumble command to be executed on the next NMI/IRQ cycle
+;* @param left - left motor intensity (0-15)
+;* @param right - right motor intensity (0-15)
+;* @param time - time to rumble in frames (0-255)
+;*
+;**
+P_QUEUERUMBLE	MACRO	[left,right,time]
+	pathmac_start
+MYNARG	=	NARG
+	PNARG	3
 
+	pathcode	queuerumble
+
+	db	({right}<<4)+({left})
+	db	{time}
+	; 2 bytes of data
+
+	pathmac_end
+
+	ENDM
+	ENDC
+;--------------------------------------------------------------------
 

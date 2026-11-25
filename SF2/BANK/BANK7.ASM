@@ -3,6 +3,9 @@
 	include	INC\marioi.inc
 	include	INC\bgmacs.inc
 	include	INC\shmacs.inc
+	IFNE	RUMBLE
+	include EXT\RUMBLEFX.EXT
+	ENDC
 
 	bank	7
 

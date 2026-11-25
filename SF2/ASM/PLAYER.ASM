@@ -1544,10 +1544,17 @@ pl_SE_Robowalk_l
 
 	pl_jmp_ifdush		x,.wd,y
 
+	IFNE	RUMBLE
+	jsl	walkersteprumble_l
+	ENDC
 	ksound		Robowalk1,far
 	bra			.exit
 
-.wd	ksound		Robowalk1
+.wd
+	IFNE	RUMBLE
+	jsl	walkersteprumble_l
+	ENDC
+	ksound		Robowalk1
 
 .exit
 	PULLXYP
@@ -2876,9 +2883,17 @@ hitplayer_end
 ;컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
 .hit	jsl		hit_effect_l
 .sound	s_jmp_varless	B,hit_ap,#4,.ss
-.sl	kplsound	x,damage_l
+.sl
+	IFNE	RUMBLE
+	jsl	playerdamagelargerumble_l
+	ENDC
+	kplsound	x,damage_l
 	bra		.exitsound
-.ss	kplsound	x,damage_s
+.ss
+	IFNE	RUMBLE
+	jsl	playerdamagesmallrumble_l
+	ENDC
+	kplsound	x,damage_s
 .exitsound
 ;컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
 .object	;;;jsr	pushobjct_srou

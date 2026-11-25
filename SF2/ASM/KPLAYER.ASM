@@ -655,6 +655,9 @@ ROBOJMP_srou
 
 .jmpsound_srou	LOCAL
 
+	IFNE	RUMBLE
+	jsl	walkerjumprumble_l
+	ENDC
 	kplsound	x,ROBOjmp
 	rts
 
@@ -4530,6 +4533,9 @@ SE_roboland_l_srou_l
 	jsr			ckroboland
 	bcs			SER_land2water
 
+	IFNE	RUMBLE
+	jsl	walkerlandrumble_l
+	ENDC
 	kplsound		x,Roboland_l
 
 	PLP
@@ -4544,6 +4550,9 @@ SE_roboland_s_srou_l
 	jsr			ckroboland
 	bcs			SER_land2water
 
+	IFNE	RUMBLE
+	jsl	walkerlandrumble_l
+	ENDC
 	kplsound		x,Roboland_s
 
 	PLP

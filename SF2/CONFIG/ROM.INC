@@ -10,7 +10,9 @@
 ; Seems to work, but some things may not be up to spec just yet.
 ; Real FX3 hardware does not fire IRQs and the IRQ handler needs to be retrofitted/replaced to reflect this.
 ; MesenCE still fires an IRQ on STOP, thus the game works.
-SUPERFX3	equ 0
+SUPERFX3	equ 1
+
+RUMBLE		equ	1
 
 ; PAL/NTSC (1/0)
 pal					equ	0

@@ -1,0 +1,14 @@
+;	global	bombexploderumble_l
+;	global	bombshootrumble_l
+;	global	singblasterrumble_l
+;	global	twinblasterrumble_l
+;	global	beamballrumble_l
+	global	boostrumble_l
+	global	brakerumble_l
+	global	tamedamachgrumble_l
+	global	tamedamafirerumble_l
+	global	playerdamagesmallrumble_l
+	global	playerdamagelargerumble_l
+	global	walkersteprumble_l
+	global	walkerjumprumble_l
+	global	walkerlandrumble_l

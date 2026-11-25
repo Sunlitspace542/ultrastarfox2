@@ -1312,6 +1312,9 @@ makeboost_srou_l
 	beq		.badobj
 
 	s_set_path	y,boost
+	IFNE	RUMBLE
+	jsl	boostrumble_l
+	ENDC
 
 	jsr	effectpath_init_srou
 
@@ -1359,6 +1362,10 @@ makebrakeR_srou_l
 
 	jsr	.makeobj
 	bcc	.failed
+
+	IFNE	RUMBLE
+	jsl	brakerumble_l
+	ENDC
 
 .ok	LOCAL
 	PULLYP
@@ -3118,6 +3125,9 @@ fire_powerd_srou_l	; -- fire powerd laser
 	bcc	.setpower
 
 	a8
+	IFNE	RUMBLE
+	jsl	tamedamachgrumble_l
+	ENDC
 	kplsound	x,shot_charge
 	a16
 
@@ -3806,10 +3816,17 @@ ARWINGhit_slope_l
 	cmp		#4
 	bcc		.se_s
 
-.se_l	kplsound	x,damage_l
+.se_l
+	IFNE	RUMBLE
+	jsl	playerdamagelargerumble_l
+	ENDC
+	kplsound	x,damage_l
 	bra		.nohit0
-.se_s	kplsound	x,damage_s
-
+.se_s
+	IFNE	RUMBLE
+	jsl	playerdamagesmallrumble_l
+	ENDC
+	kplsound	x,damage_s
 
 .nohit0	PULLXYP
 

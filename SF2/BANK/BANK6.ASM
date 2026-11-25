@@ -3,6 +3,9 @@
 	include	INC\marioi.inc
 	include	INC\shmacs.inc
 	include	INC\bgmacs.inc
+	IFNE	RUMBLE
+	include EXT\RUMBLEFX.EXT
+	ENDC
 ;------------------------------------------------------------------
 	bank	6
 	incfile	STRAT\tstrats.asm

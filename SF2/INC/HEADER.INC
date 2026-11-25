@@ -59,6 +59,11 @@ totaltime	=	0
 	include	INC\vars.inc
 	include	INC\kvars.inc
 
+; Rumble controller macros
+	IFNE	RUMBLE
+	include	INC\RMBLMACS.INC
+	ENDC
+
 	include INC\sound.inc
 	include INC\sound2.inc
 
