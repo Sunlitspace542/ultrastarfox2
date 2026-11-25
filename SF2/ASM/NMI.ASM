@@ -111,6 +111,7 @@ irqhan
 	stz	WRIO				; %0
 	bit	JOYSER0
 .rumblehan_recheck
+	IFNE	RUMBLETABLES
 ; Handle sequenced rumbles
 	lda	rumble_index
 	beq	.notable	; If rumble_index == 0, handle timed rumbles
@@ -124,6 +125,7 @@ irqhan
 	bne	.rumblehan_donerumblecmd2	; If you hit a rmblend, end it all. Otherwise, run it.
 	stz	rumble_index
 	bra	.rumblehan_turnoffmotors
+	ENDC
 
 .notable
 ; Check rumble timer
@@ -132,13 +134,15 @@ irqhan
 	beq	.rumblehan_turnoffmotors	; if 0, turn off motors!
 	lda	rumble_cmd		; get rumble cmd bits
 	bra	.rumblehan_donerumblecmd
-	
+
+	IFNE	RUMBLETABLES
 .rumblehan_donerumblecmd2
 	cmp	#rmblloop	; Is the current table value == rmblloop?
 	bne	.rumblehan_donerumblecmd
 	lda	#1	; Yes! Loop rumble sequence.
 	sta	rumble_index
 	bra .rumblehan_recheck
+	ENDC
 
 .rumblehan_turnoffmotors
 	lda	#0	; 0 = no rumble!

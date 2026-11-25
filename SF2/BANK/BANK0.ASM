@@ -92,7 +92,11 @@ abort_vn
 	db	0,0,0,0,0,0,0		; Fixed Value
 	db	6					; Expansion RAM Size (5 = 32kbyte, 6 = 64kbyte)
 	db	0					; Special Version
+	IFEQ	RUMBLE
 	db	0					; Cartridge Type (Sub-number)
+	ELSEIF
+	db	'R'					; Rumble controller support
+	ENDC
 
 	org	$00ffc0,$7fc0
 

@@ -688,11 +688,15 @@ xlen	=	31*1024+512
 	IFNE	RUMBLE
 	zalc	rumble_cmd,1	; combined command byte
 	zalc	rumble_time,1	; time (in frames, 0-255) to rumble
+	IFNE	RUMBLETABLES
 	zalc	rumble_index,1	; index into rumble_table for sequenced rumbles (0-255)
+	ENDC
 	ENDC
 
 	IFNE	RUMBLE
+	IFNE	RUMBLETABLES
 	alc	rumble_table,rmblseqlen	; cache for sequenced rumble commands (unfortunately it must be done this way)
+	ENDC
 	ENDC
 
 	alc	numshapes,2

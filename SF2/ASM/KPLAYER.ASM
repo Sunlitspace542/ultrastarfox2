@@ -654,10 +654,6 @@ ROBOJMP_srou
 ;
 
 .jmpsound_srou	LOCAL
-
-	IFNE	RUMBLE
-	jsl	walkerjumprumble_l
-	ENDC
 	kplsound	x,ROBOjmp
 	rts
 

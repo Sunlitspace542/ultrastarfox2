@@ -58,7 +58,7 @@ DamageHalf			equ 0
 
 ; Enable Lock-On/Homing by default
 ; [0 = off, 1 = on]
-lockondef			equ 0
+lockondef			equ 1
 
 ; enable walker twirl from WCES 1995 (note: egdata is now in bank 36)
 ; [0 = off, 1 = on]
@@ -66,6 +66,6 @@ walkertwirl			equ 0
 
 ; enable changing view in space like in the Aeon Genesis English Translation
 ; [0 = off, 1 = on]
-spaceviewchange		equ	0
+spaceviewchange		equ	1
 
 ;####################################################################################################################

@@ -10,6 +10,5 @@
 	global	playerdamagesmallrumble_l
 	global	playerdamagelargerumble_l
 	global	walkersteprumble_l
-	global	walkerjumprumble_l
 	global	walkerlandrumble_l
 	global	playerhitwallrumble_l

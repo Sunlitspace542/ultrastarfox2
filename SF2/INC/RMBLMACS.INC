@@ -1,5 +1,7 @@
 ; Rumble Controller Macros
 
+RUMBLETABLES	equ	0	;rumble tables on?
+
 ;**
 ;* Queue up rumble command to be executed on the next NMI/IRQ cycle
 ;* @param left - left motor intensity (0-15)
@@ -57,6 +59,7 @@ s_queue_rumble	MACRO	[left,right,time]
 ;* @param table - label of rumble sequence table
 ;**
 s_queue_rumble_table	MACRO	[table]
+	IFNE	RUMBLETABLES
 	ifne	longa
 	printerror	<%m: A must be in 8-bit mode!>
 	endc
@@ -77,16 +80,19 @@ s_queue_rumble_table	MACRO	[table]
 	sta rumble_table,x
 .done\@
 	plx
+	ENDC
 	ENDM
 
 ;**
 ;* Terminate rumble sequence
 ;**
 s_end_rumble_table	MACRO
+	IFNE	RUMBLETABLES
 	ifne	longa
 	printerror	<%m: A must be in 8-bit mode!>
 	endc
 	stz	rumble_index
+	ENDC
 	ENDM
 
 ;------------------------------------
