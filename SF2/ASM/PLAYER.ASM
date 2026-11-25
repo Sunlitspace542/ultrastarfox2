@@ -4285,18 +4285,21 @@ player_end_strat
 	lda	exal_blockmapstatus,y
 
 	bit	#exal_blockmapstatus_SE
-	beq	.wSEoff
+	lbeq	.wSEoff
 
 	and	#~exal_blockmapstatus_SE
 	sta	exal_blockmapstatus,y
 
 	bit	#exal_blockmapstatus_SEold
-	bne	.nowSE
+	lbne	.nowSE
 	ora	#exal_blockmapstatus_SEold
 	sta	exal_blockmapstatus,y
 
 	sp_jmp_playertype	x,ROBOT,.nowSE
 
+	IFNE	RUMBLE
+	jsl	playerhitwallrumble_l
+	ENDC
 	kplsound	x,wallreflect
 
 	c_addcol_cam	x,shield,plscrflashfrm_s,on,y

@@ -18916,6 +18916,9 @@ from_carier_col
 	P_RANDOMGOTO	.nfl
 	P_HITFLASHTRIG
 	P_SOUNDEFFECT	en_explode_demo	;$8b
+	IFNE	RUMBLE
+	P_QUEUERUMBLE	15,15,20
+	ENDC
 	P_SHOCKCAM	1,128
 .nfl
 	P_GOTO		.fl
@@ -19248,6 +19251,9 @@ mk_spark_core
 	P_RANDOMGOTO	.nfl
 	P_HITFLASHTRIG
 	P_SOUNDEFFECT	en_explode_demo	;$8b
+	IFNE	RUMBLE
+	P_QUEUERUMBLE	15,15,20
+	ENDC
 	P_SHOCKCAM	1,128
 .nfl
 	P_GOTO		.fl

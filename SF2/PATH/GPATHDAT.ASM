@@ -977,6 +977,9 @@ childno_andorf	equ	1
 
 .end	p_Qspawn		explosion2,cds_explode,1,4
 	P_SOUNDEFTDISTPOS	en_explode_demo
+	IFNE	RUMBLE
+	P_QUEUERUMBLE	15,15,20
+	ENDC
 	p_circlewindow	2
 	p_trigger		.whendead,off
 	p_trigger		.fire,off
@@ -3378,6 +3381,9 @@ title_cam_cut6_z	equ	0
 	p_wait	14
 	p_circlewindow	0,big
 	P_SOUNDEFTDISTPOS	en_explode_demo
+	IFNE	RUMBLE
+	P_QUEUERUMBLE	15,15,20
+	ENDC
 	p_wait	1
 
 	p_set		hp,0

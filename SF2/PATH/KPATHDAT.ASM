@@ -269,9 +269,9 @@ col_id_ck
 	P_SLOPE		ON
 	P_RANGECHECK	ON
 	P_END
-;;;;ษอออออออออออออออออออออออป
-;;;;บ SOFTWARE SPRITE SMOKE บ
-;;;;ศอออออออออออออออออออออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SOFTWARE SPRITE SMOKE ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 ;;;dandou_smoke
 ;;;	P_SOUNDEFTDISTPOS	en_wormappear	;$7f
 ;;;	P_QSPAWN	smoke,e_sp_smoke,100,60
@@ -503,9 +503,9 @@ col_id_ck
 	P_NEG		pbyte2
 	P_INC		tx
 	P_RETURN
-;;;;ษอออออออออออออออออออออออออป
-;;;;บ SOFTWARE SPRITE SPARK   บ
-;;;;ศอออออออออออออออออออออออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SOFTWARE SPRITE SPARK   ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 ;;;;-----------
 	START_PATH	e_sp_spark_core
 
@@ -537,9 +537,9 @@ col_id_ck
 	P_NEXT
 	P_REMOVE
 ;;;
-;;;;ษอออออออออออออออออออออออออป
-;;;;บ SOFTWARE SPRITE SPLASH  บ
-;;;;ศอออออออออออออออออออออออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SOFTWARE SPRITE SPLASH  ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 	START_PATH	e_sp_stay_splash
 
 	P_SPRITE	0,1
@@ -596,9 +596,9 @@ col_id_ck
 	P_ADDCOLANIM	1,8
 	P_NEXT
 	P_REMOVE
-;;;;ษออออออออออออออออออออออออออออป
-;;;;บ SOFTWARE SPRITE KIRAKIRA   บ
-;;;;ศออออออออออออออออออออออออออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SOFTWARE SPRITE KIRAKIRA   ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 	START_PATH	e_kira_maker
 	P_INVISIBLE	ON
 	P_CLRTYPE	enemy1
@@ -642,9 +642,9 @@ col_id_ck
 	P_ADD		worldy,pbyte2
 	P_DEC		tx
 	P_RETURN
-;;;;ษออออออออออออออออออออออออออออป
-;;;;บ SOFTWARE SPRITE EXPLOSIONS บ
-;;;;ศออออออออออออออออออออออออออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SOFTWARE SPRITE EXPLOSIONS ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 	START_PATH	e_sp_explosion_stay_apsize
 
 	P_INC		pbyte2
@@ -678,10 +678,16 @@ col_id_ck
 
 	P_IFLARGER	tx,pbyte1,.big_sound
 	P_SOUNDEFTDIST	en_explode_demo	;$8b
+	IFNE	RUMBLE
+	P_QUEUERUMBLE	15,15,20
+	ENDC
 ;	P_SOUNDEFFECT	en_explode_demo	;$8b
 	P_IGOTO		.same
 .big_sound
 	P_SOUNDEFTDIST	en_explode_s	;$70
+	IFNE	RUMBLE
+	P_QUEUERUMBLE	15,15,20
+	ENDC
 ;	P_SOUNDEFFECT	en_explode_s	;$70
 
 .same	LOCAL
@@ -731,9 +737,9 @@ player_vec_neg
 	P_ADD		worldz,pbyte1
 	P_PULL		pbyte1
 	P_RETURN
-;;;;ษอออออออออออออออออออออออป
-;;;;บ SOFTWARE SPRITE BOOST บ
-;;;;ศอออออออออออออออออออออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SOFTWARE SPRITE BOOST ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 	START_PATH	e_friend_boost
 
 	P_SPRITE	0,2
@@ -790,9 +796,9 @@ player_vec_neg
 	P_SETCOLANIM	1
 	P_NEXT
 	P_REMOVE
-;;;;ษอออออป
-;;;;บ SUB บ
-;;;;ศอออออผ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอป
+;;;;๏ฟฝ SUB ๏ฟฝ
+;;;;๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอผ
 roll_msg_tri
 	P_PUSH		pbyte1
 	P_IMPORT	pbyte1,ebyte1

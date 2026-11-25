@@ -95,6 +95,13 @@ walkerjumprumble_l
 walkerlandrumble_l
 	php
 	a8
-	s_queue_rumble	15,15,10
+	s_queue_rumble	15,15,20
+	plp
+	rtl
+
+playerhitwallrumble_l
+	php
+	a8
+	s_queue_rumble	15,15,20
 	plp
 	rtl
