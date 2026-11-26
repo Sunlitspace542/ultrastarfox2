@@ -183,6 +183,9 @@ jump_title
 	km_setval	key_yokomaxptr1,2
 
 * wipe init & open *
+	IFNE	RUMBLE
+	jsl	copy_to_010c_l
+	ENDC
 	km_initwipeopen	title
 	brl	main_intro
 

@@ -207,3 +207,53 @@ irqhan
 	pla
 	rti
 irqhanend
+
+	IFNE	RUMBLE
+;Copy IRQ handler to RAM at $010C
+upload_simple_irqhan_l
+	public	upload_simple_irqhan_l
+	php
+	phb
+
+	ai16
+	ldx	#irqhanalt&WM ; src data addr
+	ldy	#$010C ; dest data addr
+	lda	#irqhanaltend-irqhanalt-1 ; len of data to copy
+	_mvn	(irqhanalt>>16),$00
+
+	plb
+	plp
+	rtl
+
+irqhanalt
+.irq	;$010C IRQ
+	ai16
+	pha
+	lda.l	m_sfr
+	bpl	.irqq		; Thanks Randy
+.qexit	pla
+	rti
+
+.irqq
+	phb
+	disable
+	phx
+	phy
+	ai8
+	lda	#0
+	pha
+	plb
+
+	jsl	irqcode_l
+	a8
+	inc	framec
+	lda	timeupr
+
+.exit	ai16
+	ply
+	plx
+	plb
+	pla
+	rti
+irqhanaltend
+	ENDC

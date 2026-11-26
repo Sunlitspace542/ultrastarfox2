@@ -8,6 +8,7 @@
 	include	INC\gamelist.inc
 	IFNE	RUMBLE
 	include EXT\RUMBLEFX.EXT
+	extern	upload_simple_irqhan_l
 	ENDC
 
 ;------------------------------------------------------------------

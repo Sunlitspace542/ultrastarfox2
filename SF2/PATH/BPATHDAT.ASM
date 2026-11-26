@@ -8981,6 +8981,9 @@ cs_zoomtime	equ	60		; frames taken to zoom teki off
 	sta	rand+2
 	lda	#$7f
 	sta	rand+3
+	IFNE	RUMBLE
+	jsl	upload_simple_irqhan_l
+	ENDC
 	P_END65816
 
 ;	P_IMPORT	pbyte1,Kdifficulty
